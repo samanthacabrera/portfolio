@@ -24,8 +24,8 @@ function Home() {
 
   return (
     <>
-      <div id="home" className="hero overflow-hidden" ref={contentRef}>
-        <div className="content">
+      <div id="home" className="hero" ref={contentRef}>
+        <div className="content overflow-hidden w-fit h-fit">
           <h1>Hello, World</h1>
           <h2>I'm Sam!</h2>
         </div>
