@@ -40,10 +40,7 @@ function Demos() {
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
-
-  // DESCRIPTIONS
-  const demo1Desc = "The development process of creating an emoji tic-tac-toe game involved several key stages, from conceptualization to implementation and testing. Let's delve into each stage to gain insight into the journey of bringing this game to life. \n The initial phase revolved around conceptualizing the game mechanics and visual design.Tic - tac - toe is a classic game known for its simplicity, making it an ideal candidate for adaptation with emojis.The decision to use cat and dog emojis as symbols ('X' and 'O') added a playful element to the game.\n The foundation of the game was laid with the creation of the HTML structure. Div elements were used to represent the game board and individual cells, providing a grid layout for players to interact with.The inclusion of a restart button allowed for easy resetting of the game state.\n The core functionality of the game was implemented using JavaScript.Event listeners were strategically added to each cell, enabling players to click and make their moves.When a cell is clicked, the handleCellClick function is invoked with the index of the clicked cell as an argument.In the handleCellClick function, the game logic checks if the clicked cell is empty(!cells[index].innerText) and if a winner has not already been determined(!winner).If both conditions are met, the current player's symbol (either a cat or a dog emoji) is displayed in the clicked cell using cells[index].innerText = currentPlayer.\n After a player makes a move, the game logic checks for winning conditions by iterating through an array of winning combinations (winningConditions). For each winning combination, the code compares the symbols in the corresponding cells to determine if they match. If a winning combination is found, the game declares a winner by highlighting the winning cells and updating the winner variable.\n If no winner is found after a players move, the game switches to the next player by toggling the currentPlayer variable between cat and dog emojis (currentPlayer = currentPlayer === '🐱' ? '🐶' : '🐱'). This ensures that players take turns making moves until a winner is determined or the game ends in a draw.\n The game provides a restart button that allows players to reset the game board and start a new game. When the restart button is clicked, the restartGame function is invoked, which clears the symbols from all cells, removes any highlighting from winning cells, resets the currentPlayer variable to the cat emoji, and resets the winner variable to false.\n Aesthetic considerations were addressed through CSS styling, enhancing the visual appeal and user experience of the game.Styling adjustments were made to center the game board, define cell dimensions, and ensure responsive design across different screen sizes and devices.\n I tested various scenarios were explored to ensure smooth gameplay, including testing for winning combinations, draw scenarios (still working on this), and responsive behavior."
-                      
+                 
   return (
     <>
       {location.pathname === "/" && (
@@ -68,11 +65,12 @@ function Demos() {
             >
               <div className="hero">
                 <div className="content" ref={contentRef}>
-                  <h1>Explore my</h1>
-                  <h2>demos</h2>
+                  <h1>Explore my Demos</h1>
                 </div>
               </div>
-              <div className="demos">
+              </motion.div>
+            <div className="demos">
+              <h2 className="demo-title">Emoji Tic-Tac-Toe</h2>
                 <iframe
                   height="500"
                   scrolling="no"
@@ -87,9 +85,13 @@ function Demos() {
                   <a href="https://codepen.io/samanthacabrera">@samanthacabrera</a>) on{" "}
                   <a href="https://codepen.io">CodePen</a>.
                 </iframe>
-                <p className="py-8">{demo1Desc}</p>
+                <p>Tic - tac - toe is a classic game known for its simplicity, making it an ideal candidate for adding a playful element to the game. </p>
+                <p>The core functionality of the game was implemented using JavaScript. Event listeners were strategically added to each cell, enabling players to click and make their moves. </p>
+                <p>When a cell is clicked, the handleCellClick function is invoked with the index of the clicked cell as an argument. In the handleCellClick function, the game logic checks if the clicked cell is empty (!cells[index].innerText) and if a winner has not already been determined (!winner).If both conditions are met, the current player's emoji is displayed in the clicked cell using cells[index].innerText = currentPlayer. </p>
+                <p>After a player makes a move, the game logic checks for winning conditions by iterating through an array of winning combinations (winningConditions). If no winner is found after a players move, the game switches to the next player by alternating the currentPlayer variable between cat and dog emojis (currentPlayer = currentPlayer === '🐱' ? '🐶' : '🐱'). </p>
+                <p>The game provides a restart button that allows players to reset the game board and start a new game. When the restart button is clicked, the restartGame function is invoked, which clears the symbols from all cells and resets the winner variable to false.</p>
               </div>
-            </motion.div>
+          
           </div>
         </>
       )}

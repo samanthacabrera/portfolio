@@ -57,18 +57,7 @@ function Portfolio() {
        {location.pathname === "/portfolio" && (
         <>
           <div>
-            {/* <motion.div
-            initial={{ x: 0 }}
-            animate={animationTriggered === false ? { x: 100 } : { x: 0 }}
-            transition={{ type: "bounce", duration: 1, stiffness: 100}}
-            >
-              <div className="hero">
-                <div className="content" ref={contentRef}>
-                  <h1>My portfolio</h1>
-                </div>
-              </div>
-            </motion.div> */}
-            <div>
+            <div className="typewriter">
               Coming soon......
             </div>
           </div>
