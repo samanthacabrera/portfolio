@@ -7,7 +7,7 @@ import Demos from './Demos';
 import About from './About';
 import Portfolio from './Portfolio';
 import Blog from './Blog';
-import Cat from './Cat'
+// import Cat from './Cat'
 import Toggle from './Toggle';
 import Footer from './Footer';
 import './App.css';
@@ -44,21 +44,20 @@ return (
               <About />
             </section>
             <section>
-              <Skills />
-            </section>  
-            <section>
               <Portfolio />
             </section>
-
+            <section>
+              <Skills />
+            </section>  
             <section>
               <Demos />
             </section>
             <section>
             <Blog />
             </section> 
-            <section>
+            {/* <section>
             <Cat />
-            </section> 
+            </section>  */}
             </>
           </Route>
            <Route path='/demos'>
@@ -67,9 +66,9 @@ return (
           <Route path="/portfolio">
             <Portfolio />
           </Route>
-          <Route path="/cat">
+          {/* <Route path="/cat">
             <Cat />
-          </Route>
+          </Route> */}
         </Switch>
       <Footer/>
       </div>

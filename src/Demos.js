@@ -44,7 +44,10 @@ function Demos() {
                   <a href="https://codepen.io/samanthacabrera">@samanthacabrera</a>) on{" "}
                   <a href="https://codepen.io">CodePen</a>.
               </iframe>
-              <div className="py-10 space-y-5">
+              <div classname="demo-skills">
+                <p> Tools I used: Javascript | HTML | CSS </p>
+              </div>
+              <div className="demo-desc py-10 space-y-5">
                 <p>Tic - tac - toe is a classic game known for its simplicity, making it an ideal candidate for adding a playful element to the game. </p>
                 <p>The core functionality of the game was implemented using JavaScript. Event listeners were strategically added to each cell, enabling players to click and make their moves. </p>
                 <p>When a cell is clicked, the handleCellClick function is invoked with the index of the clicked cell as an argument. In the handleCellClick function, the game logic checks if the clicked cell is empty (!cells[index].innerText) and if a winner has not already been determined (!winner).If both conditions are met, the current player's emoji is displayed in the clicked cell using cells[index].innerText = currentPlayer. </p>

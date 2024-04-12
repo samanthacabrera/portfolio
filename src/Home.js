@@ -30,9 +30,10 @@ function Home() {
           <h2>I'm Sam!</h2>
         </div>
       </div>
-      <div className="text-center pt-2 m-20">
+      <div className="text-center m-20">
         <p className="text-xl pb-2">Discover more below</p>
         <p className="text-xs">(Please Scroll Responsibly)</p>
+        <p className="text-xs">&darr;</p>
       </div>
       
     </>
