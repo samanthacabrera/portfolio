@@ -24,3 +24,4 @@ const Toggle = ({ onToggle }) => {
 };
 
 export default Toggle;
+

@@ -20,11 +20,11 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    // Update background image when isDarkMode changes
+    // Update background
     contentRef.current.style.backgroundImage = isDarkMode
       ? 'linear-gradient(#09010da7, rgba(50, 4, 72, 0.397))'
       : 'linear-gradient(#d8c30ba7, rgba(18, 222, 147, 0.388))';
-    // Update text color when isDarkMode changes
+    // Update text color 
     contentRef.current.style.color = isDarkMode ? 'whitesmoke' : 'black';
   }, [isDarkMode]);
 
@@ -59,7 +59,6 @@ return (
             <section>
             <Cat />
             </section> 
-            <Footer/>
             </>
           </Route>
            <Route path='/demos'>
@@ -72,6 +71,7 @@ return (
             <Cat />
           </Route>
         </Switch>
+      <Footer/>
       </div>
     </Router>
   );

@@ -1,51 +1,37 @@
-import React, { useState } from "react";
+import React from "react";
 import { useLocation, useHistory } from "react-router-dom";
-import { motion } from "framer-motion";
-import './App.css';
+import "./App.css";
 
 function Cat() {
+  // ROUTING
   const location = useLocation();
   const history = useHistory();
-  const [animationTriggered, setAnimationTriggered] = useState(false);
 
   const handleNavClick = (route) => {
-    setAnimationTriggered(true)
     setTimeout(() => {
-      history.push(route)
-      setAnimationTriggered(false)
-    }, 500)
-  }
+      history.push(route);
+    }, 500);
+  };
 
   return (
     <>
       {location.pathname === "/" && (
-        <motion.div
-          id="cat"
-          animate={animationTriggered ? { x: 1000 } : { x: 0 }}
-          transition={{ type: "bounce", duration: 1, stiffness: 100 }}
+        <span
+          onClick={() => handleNavClick("/cat")}
+          className="text-xl"
+          style={{ cursor: "pointer" }}
         >
-           <span onClick={() => handleNavClick("/cat")} className="text-xl" style={{  cursor: "pointer"}}> Cat &rarr;</span> 
-        </motion.div>
+          Click me if you dare &rarr;
+        </span>
       )}
 
       {location.pathname === "/cat" && (
-        <>
         <div>
-          <motion.div 
-            initial={{ x: 0 }}
-            animate={animationTriggered === false ? { x: 700 } : { x: 0 }}
-            transition={{ type: "bounce", duration: 1, stiffness: 100}}
-          >
-            <div>
-                Here are some cat pics... 
-            </div>
-          </motion.div>
+          <div className="text-2xl text-center py-80">Coming soon......</div>
         </div>
-        </>
       )}
     </>
   );
 }
 
 export default Cat;
-
