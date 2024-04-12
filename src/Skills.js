@@ -53,7 +53,7 @@ function Skills() {
 
   return (
     <div id="skills" className="mx-40">
-      <h2 className="text-lg mb-16">Skillset</h2>
+      <h2 className="text-lg mb-8">Skillset</h2>
       <motion.div
         className="relative overflow-hidden"
       >

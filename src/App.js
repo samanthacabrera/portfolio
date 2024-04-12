@@ -2,6 +2,7 @@ import React, {useState, useEffect, useRef} from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from './Navbar';
 import Home from './Home';
+import Scroll from './Scroll';
 import Skills from './Skills';
 import Demos from './Demos';
 import About from './About';
@@ -40,6 +41,9 @@ return (
           <Route exact path="/">
           <>
             <Home />
+            <section>
+              <Scroll />
+            </section>
             <section>
               <About />
             </section>
