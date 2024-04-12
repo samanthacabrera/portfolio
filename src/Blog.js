@@ -37,8 +37,8 @@ function Blog() {
         if (blog.items) {
             return blog.items.map((post, index) => (
                 <div key={index}>
-                    <div className='card-body'>
-                        <h1 className='card-title text-lg mb-6 border'>
+                    <div className='card-body p-4 border'>
+                        <h1 className='card-title text-lg mb-4 hover:underline decoration-current'>
                             <a href={post.link} className='postTitle' rel='noreferrer' target='_blank'>{post.title}</a>
                         </h1>
                         <p className='card-text'>{`${ToText(post.description.substring(0, 500))}...`}</p>
@@ -52,7 +52,7 @@ function Blog() {
     return (
         <div id="blog" className="blogs mx-48">
            
-            <div className='container space-y-10'>
+            <div className='space-y-10'>
                  <h2 className="text-xl">Check out some of my writings:</h2>
                 {blog.isLoading ? 'Loading...' : displayBlogs()}
             </div>

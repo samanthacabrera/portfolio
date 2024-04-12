@@ -35,10 +35,8 @@ const Navbar = () => {
     <nav className={navbarClass}>
       <ul className="flex flex-row justify-between align-between">
         <li className="p-4"><a href="/">Home</a></li>
-        <li className="p-4"><a href="/#about">About</a></li>
-        <li className="p-4"><a href="/#demos">Work</a></li>
-        <li className="p-4"><a href="/#blog">Blog</a></li>
-        <li className="p-4"><a href="/#footer">Contact</a></li>
+        <li className="p-4"><a href="/">About</a></li>
+        <li className="p-4"><a href="/">Work</a></li>
       </ul>
     </nav>
   );

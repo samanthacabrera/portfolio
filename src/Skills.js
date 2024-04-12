@@ -66,8 +66,8 @@ function Skills() {
                   initial={{ y: 20 }}
                   animate={animationControls}
                   exit={{ y: -10 }}
-                  transition={{ duration: 0.5, delay: index * 0.5, ease: "easeInOut" }}
-                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                  whileHover={{ scale: 1.2 }}
                   className="py-2 px-3 m-10"
                 >
                   {skill}

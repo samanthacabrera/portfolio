@@ -31,7 +31,7 @@ function Home() {
         </div>
       </div>
       <div className="text-center m-20">
-        <p className="text-xl pb-2">Discover more below</p>
+        <p className="pb-2">Discover more below</p>
         <p>&darr;</p>
       </div>
       

@@ -23,8 +23,9 @@ function App() {
   useEffect(() => {
     // Update background
     contentRef.current.style.backgroundImage = isDarkMode
-      ? 'linear-gradient(#09010da7, rgba(50, 4, 72, 0.397))'
-      : 'linear-gradient(#d8c30ba7, rgba(18, 222, 147, 0.388))';
+      ? 'linear-gradient(90deg, #2d2d44, #1e1e33, #29294e)'
+      : 'linear-gradient(90deg, #59d8e6, #4cc3d9, #3fbfdd)';
+
     // Update text color 
     contentRef.current.style.color = isDarkMode ? 'whitesmoke' : 'black';
   }, [isDarkMode]);
