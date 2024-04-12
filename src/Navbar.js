@@ -33,12 +33,12 @@ const Navbar = () => {
 
   return (
     <nav className={navbarClass}>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/#about">About</a></li>
-        <li><a href="/#demos">Work</a></li>
-        <li><a href="/#blog">Blog</a></li>
-        <li><a href="/#footer">Contact</a></li>
+      <ul className="flex flex-row justify-between align-between">
+        <li className="p-4"><a href="/">Home</a></li>
+        <li className="p-4"><a href="/#about">About</a></li>
+        <li className="p-4"><a href="/#demos">Work</a></li>
+        <li className="p-4"><a href="/#blog">Blog</a></li>
+        <li className="p-4"><a href="/#footer">Contact</a></li>
       </ul>
     </nav>
   );

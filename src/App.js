@@ -41,14 +41,15 @@ return (
           <>
             <Home />
             <section>
-              <Skills isDarkMode={isDarkMode} />
+              <About />
+            </section>
+            <section>
+              <Skills />
             </section>  
             <section>
               <Portfolio />
             </section>
-            <section>
-              <About />
-            </section>
+
             <section>
               <Demos />
             </section>

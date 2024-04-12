@@ -27,7 +27,7 @@ function Footer() {
                 <a href="https://leetcode.com/samcab/" target="_blank" rel="noopener noreferrer" className="mr-4 text-gray-700 hover:text-gray-900">LeetCode</a> 
                 <a href="https://open.spotify.com/user/samantha.n.cabrera?si=mAb874ggRgu9g60cUOlMPw" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-900">Spotify</a>        
             </div>
-            <p className="text-gray-600">Made with ❤️ by Sam</p>
+            <p>Made with ❤️ by Sam</p>
         </div>
     )
 }

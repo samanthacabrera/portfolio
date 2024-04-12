@@ -4,27 +4,27 @@ function Skills(isDarkMode) {
     return (
         <div id="skills">
             <h2 className="text-lg mb-16">Skillset</h2>
-            <ul>
-                <li className={`hover-effect ${isDarkMode ? 'hover:text-slate-50' : 'hover:text-black'}  hover:border-gray-200 transition duration-500 text-black`}>React.js</li>
-                <li className={`hover-effect ${isDarkMode ? 'hover:text-slate-50' : 'hover:text-black'}  hover:border-gray-200 transition duration-500 text-black`}>Tailwind</li>
-                <li className={`hover-effect ${isDarkMode ? 'hover:text-slate-50' : 'hover:text-black'}  hover:border-gray-200 transition duration-500 text-black`}>JavaScript</li>
-                <li className={`hover-effect ${isDarkMode ? 'hover:text-slate-50' : 'hover:text-black'}  hover:border-gray-200 transition duration-500 text-black`}>Framer-Motion</li>
-                <li className={`hover-effect ${isDarkMode ? 'hover:text-slate-50' : 'hover:text-black'}  hover:border-gray-200 transition duration-500 text-black`}>HTML</li>
+            <ul className="flex flex-row justify-between">
+                <li className='hover:text-slate-50 transition duration-300 py-2 px-3 m-10'>React.js</li>
+                <li className='hover:text-slate-50 transition duration-300 py-2 px-3 m-10'>Tailwind</li>
+                <li className='hover:text-slate-50 transition duration-300 py-2 px-3 m-10'>JavaScript</li>
+                <li className='hover:text-slate-50 transition duration-300 py-2 px-3 m-10'>Framer-Motion</li>
+                <li className='hover:text-slate-50 transition duration-300 py-2 px-3 m-10'>HTML</li>
             </ul>
-            <ul>
-                <li className={`hover-effect ${isDarkMode ? 'hover:text-slate-50' : 'hover:text-black'}  hover:border-gray-200 transition duration-500 text-black`}>CSS</li>
-                <li className={`hover-effect ${isDarkMode ? 'hover:text-slate-50' : 'hover:text-black'}  hover:border-gray-200 transition duration-500 text-black`}>Sass</li>
-                <li className={`hover-effect ${isDarkMode ? 'hover:text-slate-50' : 'hover:text-black'}  hover:border-gray-200 transition duration-500 text-black`}>Responsive UI</li>
-                <li className={`hover-effect ${isDarkMode ? 'hover:text-slate-50' : 'hover:text-black'}  hover:border-gray-200 transition duration-500 text-black`}>Node</li>
-                <li className={`hover-effect ${isDarkMode ? 'hover:text-slate-50' : 'hover:text-black'}  hover:border-gray-200 transition duration-500 text-black`}>Express</li>
+            <ul className="flex flex-row justify-between">
+                <li className='hover:text-slate-50 transition duration-300 py-2 px-3 m-10'>CSS</li>
+                <li className='hover:text-slate-50 transition duration-300 py-2 px-3 m-10'>Sass</li>
+                <li className='hover:text-slate-50 transition duration-300 py-2 px-3 m-10'>Responsive UI</li>
+                <li className='hover:text-slate-50 transition duration-300 py-2 px-3 m-10'>Node</li>
+                <li className='hover:text-slate-50 transition duration-300 py-2 px-3 m-10'>Express</li>
             </ul>
-            <ul>
-                <li className={`hover-effect ${isDarkMode ? 'hover:text-slate-50' : 'hover:text-black'}  hover:border-gray-200 transition duration-500 text-black`}>JSON</li>
-                <li className={`hover-effect ${isDarkMode ? 'hover:text-slate-50' : 'hover:text-black'}  hover:border-gray-200 transition duration-500 text-black`}>Postman</li>
-                <li className={`hover-effect ${isDarkMode ? 'hover:text-slate-50' : 'hover:text-black'}  hover:border-gray-200 transition duration-500 text-black`}>Git</li>
-                <li className={`hover-effect ${isDarkMode ? 'hover:text-slate-50' : 'hover:text-black'}  hover:border-gray-200 transition duration-500 text-black`}>SQL</li>
-                <li className={`hover-effect ${isDarkMode ? 'hover:text-slate-50' : 'hover:text-black'}  hover:border-gray-200 transition duration-500 text-black`}>Python</li>
-                <li className={`hover-effect ${isDarkMode ? 'hover:text-slate-50' : 'hover:text-black'}  hover:border-gray-200 transition duration-500 text-black`}>Flask</li>
+            <ul className="flex flex-row justify-between">
+                <li className='hover:text-slate-50 transition duration-300 py-2 px-3 m-10'>JSON</li>
+                <li className='hover:text-slate-50 transition duration-300 py-2 px-3 m-10'>Postman</li>
+                <li className='hover:text-slate-50 transition duration-300 py-2 px-3 m-10'>Git</li>
+                <li className='hover:text-slate-50 transition duration-300 py-2 px-3 m-10'>SQL</li>
+                <li className='hover:text-slate-50 transition duration-300 py-2 px-3 m-10'>Python</li>
+                <li className='hover:text-slate-50 transition duration-300 py-2 px-3 m-10'>Flask</li>
             </ul>
         </div>
     )

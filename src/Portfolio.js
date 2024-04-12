@@ -57,7 +57,7 @@ function Portfolio() {
        {location.pathname === "/portfolio" && (
         <>
           <div>
-            <div className="typewriter">
+            <div className="text-2xl text-center pt-80">
               Coming soon......
             </div>
           </div>

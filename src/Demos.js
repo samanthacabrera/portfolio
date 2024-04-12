@@ -17,30 +17,7 @@ function Demos() {
     }, 500);
   };
 
-  // PARALLAX
-  const contentRef = useRef(null);
-
-  useEffect(() => {
-    const handleMouseMove = (event) => {
-      const content = contentRef.current;
-      if (content) {
-        const { clientX, clientY } = event;
-        const centerX = window.innerWidth / 2;
-        const centerY = window.innerHeight / 2;
-        const offsetX = (clientX - centerX) / 5;
-        const offsetY = (clientY - centerY) / 5;
-
-        content.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
-      }
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
-                 
+      
   return (
     <>
       {location.pathname === "/" && (
@@ -63,14 +40,13 @@ function Demos() {
               animate={animationTriggered === false ? { x: 0 } : { x: 1500 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="hero">
-                <div className="content" ref={contentRef}>
-                  <h1>Explore my Demos</h1>
-                </div>
-              </div>
-              </motion.div>
-            <div className="demos">
-              <h2 className="demo-title">Emoji Tic-Tac-Toe</h2>
+             
+                  <h1>Demos</h1>
+  
+            </motion.div>
+            
+            <div className="demos flex flex-col px-80">
+              <h2 className="demo-title ">Emoji Tic-Tac-Toe</h2>
                 <iframe
                   height="500"
                   scrolling="no"
