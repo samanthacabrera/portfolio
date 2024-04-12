@@ -3,7 +3,7 @@ import React from "react";
 function Scroll() {
     return (
         <div>
-        <p className="text-xs py-80">(Please Scroll Responsibly)</p>
+        <p className="text-xs py-60">(Please Scroll Responsibly)</p>
         </div>
     )
 }
