@@ -86,8 +86,6 @@ section {
 .navbar {
   position: fixed;
   top: -60px;
-  left: 50%;
-  transform: translateX(-50%);
   width: calc(30% - 5%);
   background-color: #ffffff0d;
   backdrop-filter: blur(2px);
