@@ -8,12 +8,13 @@ import Demos from './Demos';
 import About from './About';
 import Portfolio from './Portfolio';
 import Blog from './Blog';
-// import Cat from './Cat'
+import Contact from './Contact';
 import Toggle from './Toggle';
 import Footer from './Footer';
 import './App.css';
 import './tailwind.css';
 import './index.css';
+
 
 
 function App() {
@@ -36,6 +37,10 @@ function App() {
 return (
     <Router>
     <div ref={contentRef} className="parallax"> 
+        {/* Cloud Layer */}
+        <div className="cloud-layer cloud-layer-1"></div>
+        <div className="cloud-layer cloud-layer-2"></div>
+        {/* End Cloud Layer */}
       <Navbar />
       <Toggle onToggle={toggleDarkMode}/>
         <Switch>
@@ -60,9 +65,9 @@ return (
             <section>
             <Blog />
             </section> 
-            {/* <section>
-            <Cat />
-            </section>  */}
+            <section>
+            <Contact />
+            </section>  
             </>
           </Route>
            <Route path='/demos'>
@@ -71,9 +76,6 @@ return (
           <Route path="/portfolio">
             <Portfolio />
           </Route>
-          {/* <Route path="/cat">
-            <Cat />
-          </Route> */}
         </Switch>
       <Footer/>
       </div>

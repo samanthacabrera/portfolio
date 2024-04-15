@@ -34,15 +34,13 @@ const Navbar = () => {
   return (
     <nav className={navbarClass}>
       <ul className="flex flex-row justify-around">
-        <li className="p-4"><a href="/">Home</a></li>
-        <li className="p-4"><a href="/">About</a></li>
-        <li className="p-4"><a href="/">Work</a></li>
+        <li className="p-2"><a href="/">Home</a></li>
+        <li className="p-2"><a href="#Contact">Contact</a></li>
+        <li className="p-2"><a href="/portfolio">Work</a></li>
       </ul>
     </nav>
   );
 };
 
 export default Navbar;
-
-
 

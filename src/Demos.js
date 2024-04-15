@@ -21,15 +21,15 @@ function Demos() {
           className="text-xl"
           style={{ cursor: "pointer" }}
         >
-         &larr; Demos
+          Demos
         </span>
       )}
 
-       {location.pathname === "/demos" && (
+       {location.pathname === "/" && (
         <>
           <div>      
             <div className="demos flex flex-col px-48">
-              <h2 className="demo-title text-5xl text-center mt-20 py-20">Emoji Tic-Tac-Toe</h2>
+              <h2 className="demo-title text-2xl text-center mt-10 py-20">Emoji Tic-Tac-Toe</h2>
                 <iframe
                   height="500"
                   scrolling="no"
