@@ -3,7 +3,7 @@ import me from "./IMG_0897.JPG";
 
 function AboutMe() {
     return (
-        <div className="space-y-12">
+        <div className="space-y-20">
             <h2 className="subHeading">All <br /> About Me </h2>
             <img src={me} alt="Me"/>
             <p>I was born and raised in Southern California. I currently live in Denver with my husband, Justin, and our cute cat, Ares.</p>

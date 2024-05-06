@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from './Navbar';
 import Home from './Home';
-import Scroll from './Welcome';
+import Welcome from './Welcome';
 import Skills from './Skills';
 import Intro from './Intro';
 import Blog from './Blog';
@@ -26,7 +26,7 @@ return (
           <>
             <Home />
             <section>
-              <Scroll />
+              <Welcome />
             </section>
             <section>
               <Intro />

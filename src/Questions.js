@@ -2,7 +2,7 @@ import React from "react";
 
 function QandA() {
     return (
-       <div className="py-20">
+       <div className="space-y-20">
             <h2 className="subHeading">Q & A</h2>
             <ul className="space-y-8">
                 <li>What is your favorite aspect of software engineering?</li>
