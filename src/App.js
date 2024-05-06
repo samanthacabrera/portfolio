@@ -1,48 +1,26 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from './Navbar';
 import Home from './Home';
-import Scroll from './Scroll';
+import Scroll from './Welcome';
 import Skills from './Skills';
-import Demos from './Demos';
-import About from './About';
-import Portfolio from './Portfolio';
+import Intro from './Intro';
 import Blog from './Blog';
-import Contact from './Contact';
-import Toggle from './Toggle';
-import Footer from './Footer';
+import AboutMe from './AboutMe';
 import './App.css';
 import './tailwind.css';
 import './index.css';
+import PyFlows from './PyFlows';
+import QandA from './Questions';
+import Inspo from './Inspo';
 
 
 
 function App() {
-  const contentRef = useRef(null);
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    // Update background
-    contentRef.current.style.backgroundImage = isDarkMode
-      ? 'linear-gradient(90deg, #2d2d44, #1e1e33, #29294e)'
-      : 'linear-gradient(90deg, #59d8e6, #4cc3d9, #3fbfdd)';
-
-    // Update text color 
-    contentRef.current.style.color = isDarkMode ? 'whitesmoke' : 'black';
-  }, [isDarkMode]);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
 return (
     <Router>
-    <div ref={contentRef} className="parallax"> 
-        {/* Cloud Layer */}
-        <div className="cloud-layer cloud-layer-1"></div>
-        <div className="cloud-layer cloud-layer-2"></div>
-        {/* End Cloud Layer */}
+    <div className="parallax"> 
       <Navbar />
-      <Toggle onToggle={toggleDarkMode}/>
         <Switch>
           <Route exact path="/">
           <>
@@ -51,42 +29,36 @@ return (
               <Scroll />
             </section>
             <section>
-              <About />
+              <Intro />
             </section>
             <section>
-              <Portfolio />
+              <PyFlows/>
             </section>
             <section>
               <Skills />
-            </section>  
-            <section>
-              <Demos />
-            </section>
-            <section>
-            <Blog />
             </section> 
             <section>
-            <Contact />
+               <Blog />
             </section>  
             </>
           </Route>
-           <Route path='/demos'>
-            <Demos />
-          </Route>
-          <Route path="/portfolio">
-            <Portfolio />
+          <Route path="/about">
+            <section>
+              <AboutMe/>
+            </section>
+            <section>
+              <QandA/>
+            </section>
+            <section>
+              <Inspo/>
+            </section>
           </Route>
         </Switch>
-      <Footer/>
       </div>
     </Router>
   );
 }
 
 export default App
-
-
-
-
 
 

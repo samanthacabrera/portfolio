@@ -16,19 +16,17 @@ function Portfolio() {
   return (
     <>
       {location.pathname === "/" && (
-        <span
+        <div
           onClick={() => handleNavClick("/portfolio")}
-          className="text-xl"
-          style={{ cursor: "pointer" }}
+          className="text-xl text-center"
+          style={{ cursor: "pointer"}}
         >
           Portfolio &rarr;
-        </span>
+        </div>
       )}
 
       {location.pathname === "/portfolio" && (
-        <div>
-          <div className="text-2xl text-center py-80">Coming soon......</div>
-        </div>
+        <div className="py-64 text-2xl text-center relative z-10">currently working on something really special.........</div>
       )}
     </>
   );

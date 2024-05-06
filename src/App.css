@@ -1,34 +1,36 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Nabla&display=swap"); */
-/* @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nabla&display=swap"); */
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nabla&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 body,
 html {
   margin: 0;
-  padding: 0;
+  padding: 0 0;
   scroll-behavior: smooth;
-  /* font-family: "Ubuntu", sans-serif; */
-  font-family: "Bebas Neue";
-  font-weight: 300;
-  font-style: normal;
+  font-family: "Goli", sans-serif;
+  overflow-x: hidden;
 }
 
 .parallax {
+  color: rgba(250, 240, 202, 0.345);
+  background-color: #18222b;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  text-align: center;
 }
 
 section {
-  text-align: center;
-  padding: 5% 10%;
+  padding: 20rem;
 }
 
-/* HOME  */
+.subHeading {
+  font-family: "Karrik";
+  font-weight: bolder;
+  font-size: 10rem;
+  text-transform: lowercase;
+}
+
 .hero {
   width: 100%;
-  height: 80vh; /* 100vh makes toggle act weid.. */
+  height: 75vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,12 +38,8 @@ section {
 }
 
 .content {
-  font-size: 12rem;
-  text-align: center;
-  text-shadow: 4px 4px 4px rgba(15, 15, 15, 0.129);
-  font-family: "Nabla", sans-serif;
-  color: transparent;
-  -webkit-text-stroke: 1px black;
+  font-size: 8rem;
+  font-family: "Bolota";
   animation: ripple 20s infinite alternate ease-in-out;
 }
 
@@ -57,87 +55,35 @@ section {
   }
 }
 
-/* TOGGLE */
-
-.toggle-label {
-  display: block;
-  width: 50px;
-  height: 30px;
-  background: transparent;
-  border-radius: 25px;
-  border: 1px solid;
-  cursor: pointer;
-  position: sticky;
+#homeIcon {
+  text-transform: uppercase;
 }
-.toggle-label::before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 24px;
-  height: 24px;
-  background-color: #ebeeeabb;
-  border-radius: 50%;
-  transition: transform 0.3s ease;
+#homeIcon span {
+  color: #f95838af;
+  display: inline-block;
+  transition: transform 0.5s ease;
 }
-.toggle-input:checked + .toggle-label::before {
-  transform: translateX(20px);
+#homeIcon:hover span {
+  transform: translateY(-5px) rotate(2deg);
 }
 
 /* NAVBAR */
 .navbar {
   position: fixed;
-  top: -60px;
-  width: calc(20% - 5%);
+  width: 100vw;
+  height: fit-content;
   background-color: #ffffff0d;
   backdrop-filter: blur(2px);
-  border-radius: 100px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
   z-index: 1000;
-  margin: 2%;
-  padding: 1%;
-  transition: top 0.3s ease, opacity 0.3s ease;
+  transition: bottom 0.2s ease, opacity 0.5s ease;
 }
 
 .navbar.show {
-  top: 0;
+  bottom: 0;
   opacity: 1;
 }
 
 .navbar.hide {
-  top: -60px; /* Hidden above the viewport */
+  top: -60px; /* Hidden underneath the viewport */
   opacity: 0;
-}
-
-/* CLOUDS  */
-.cloud-layer {
-  position: absolute;
-  top: 20vh;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Antu_weather-many-clouds.svg/768px-Antu_weather-many-clouds.svg.png");
-  background-repeat: repeat-x;
-  animation: cloudAnimation linear infinite;
-  background-size: auto 30%; /* Adjust animation properties as needed */
-  animation-duration: 40s;
-}
-
-.cloud-layer-1 {
-  animation-duration: 50s;
-  background-size: auto 50%;
-  top: 30vh;
-}
-
-.cloud-layer-2 {
-  animation-duration: 50s; /* Adjust animation duration for different layers */
-}
-
-@keyframes cloudAnimation {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 100% 0;
-  }
 }

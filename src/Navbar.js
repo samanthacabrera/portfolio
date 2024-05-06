@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom'; 
-import './App.css'; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithub, faCodepen, faSpotify } from '@fortawesome/free-brands-svg-icons';
 
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(false);
-  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > window.innerHeight * 0.75) { 
+      if (window.scrollY > window.innerHeight * 0.75) {
         setShowNavbar(true);
       } else {
         setShowNavbar(false);
@@ -22,25 +21,32 @@ const Navbar = () => {
     };
   }, []);
 
-  // Check if the current route is '/demos', '/portfolio', or '/cat'
-  const isSpecialRoute = location.pathname === '/demos' || location.pathname === '/portfolio' || location.pathname === '/cat';
-
-  // Check if the current route is not a special route or if the navbar is shown
-  const shouldShowNavbar = isSpecialRoute || showNavbar;
-
   // Add the 'fixed' class if the navbar should be fixed to the top of the screen
-  const navbarClass = `navbar ${shouldShowNavbar ? 'show' : 'hide'} ${isSpecialRoute ? 'fixed' : ''}`;
+  const shouldShowNavbar = showNavbar;
+  const navbarClass = `navbar ${shouldShowNavbar ? 'show' : 'hide'} `;
 
   return (
     <nav className={navbarClass}>
-      <ul className="flex flex-row justify-around">
-        <li className="p-2"><a href="/">Home</a></li>
-        <li className="p-2"><a href="#Contact">Contact</a></li>
-        <li className="p-2"><a href="/portfolio">Work</a></li>
-      </ul>
+      <div className="flex flex-row items-center justify-between px-4">
+        <a id="homeIcon" href="/">Sam<span> Cab</span></a>
+        <div className="flex flex-row items-center space-x-20 py-2">
+          <a href="https://linkedin.com/in/samcabreraa" target="_blank" rel="noopener noreferrer" className="icon-link hover:-translate-y-1 transition duration-300 ease-in-out">
+            <FontAwesomeIcon icon={faLinkedin} size="2x"/>
+          </a>
+          <a href="https://github.com/samanthacabrera" target="_blank" rel="noopener noreferrer" className="icon-link hover:-translate-y-1 transition duration-300 ease-in-out">
+            <FontAwesomeIcon icon={faGithub} size="2x"/>
+          </a>
+          <a href="https://codepen.io/samanthacabrera" target="_blank" rel="noopener noreferrer" className="icon-link hover:-translate-y-1 transition duration-300 ease-in-out">
+            <FontAwesomeIcon icon={faCodepen} size="2x"/>
+          </a>
+          <a href="https://open.spotify.com/user/samantha.n.cabrera?si=mAb874ggRgu9g60cUOlMPw" target="_blank" rel="noopener noreferrer" className="icon-link hover:-translate-y-1 transition duration-300 ease-in-out">
+            <FontAwesomeIcon icon={faSpotify} size="2x"/>
+          </a>
+        </div>
+        <a href="/about">About</a>
+      </div>
     </nav>
   );
 };
 
 export default Navbar;
-
