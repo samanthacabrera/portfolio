@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Navbar from './Navbar';
 import Home from './Home';
 import Welcome from './Welcome';
@@ -15,43 +15,30 @@ import QandA from './Questions';
 import Inspo from './Inspo';
 
 
-
 function App() {
-return (
+  return (
     <Router>
-    <div className="parallax"> 
-      <Navbar />
+      <div className="parallax">
+        <Navbar/>
         <Switch>
           <Route exact path="/">
-          <>
-            <Home />
-            <section>
-              <Welcome />
-            </section>
-            <section>
-              <Intro />
-            </section>
-            <section>
-              <PyFlows/>
-            </section>
-            <section>
-              <Skills />
-            </section> 
-            <section>
-               <Blog />
-            </section>  
+            <>
+              <div className="md:px-[10rem] md:py-[20rem] py-[15rem] px-2">
+                <Home/>
+                <Welcome/>
+                <Intro/>
+                <PyFlows/>
+                <Skills/>
+                <Blog/>
+              </div>
             </>
           </Route>
           <Route path="/about">
-            <section>
+            <div className="md:px-[10rem] md:py-[20rem] py-[15rem] px-2">
               <AboutMe/>
-            </section>
-            <section>
               <QandA/>
-            </section>
-            <section>
               <Inspo/>
-            </section>
+            </div>
           </Route>
         </Switch>
       </div>
