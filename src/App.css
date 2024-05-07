@@ -24,12 +24,12 @@ section {
 .subHeading {
   font-family: "Karrik";
   font-weight: bolder;
-  font-size: 10rem;
   text-transform: lowercase;
+  line-height: 3rem;
 }
 
 .hero {
-  width: 100%;
+  width: 120%;
   height: 75vh;
   display: flex;
   justify-content: center;
@@ -38,11 +38,14 @@ section {
 }
 
 .content {
-  font-size: 8rem;
   font-family: "Bolota";
   animation: ripple 20s infinite alternate ease-in-out;
 }
 
+
+.lineheight {
+  line-height: 5rem;
+}
 @keyframes ripple {
   0% {
     transform: scale(1);
