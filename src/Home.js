@@ -23,11 +23,9 @@ function Home() {
   return (
     <>
       <div id="home" className="hero" ref={contentRef}>
-        <div
-          className="fixed content md:text-9xl text-5xl overflow-hidden w-[120%] h-fit my-24 py-24 pr-16 md:pr-30">
+        <div className="fixed content md:text-9xl text-5xl overflow-hidden w-[120%] h-fit my-24 py-24 pr-16 md:pr-30">
           <h1>Hello World,</h1>
           <h2>I'm Sam!</h2>
-
         </div>
       </div>
       <div className="text-center m-20">
