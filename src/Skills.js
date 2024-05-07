@@ -1,7 +1,7 @@
 import React from "react";
 
 function Skills() {
-   const skills = [
+  const skills = [
     "React.js",
     "Tailwind",
     "JavaScript",
@@ -17,8 +17,8 @@ function Skills() {
     "SQL",
     "Python",
     "Flask"
-   ];
-  
+  ];
+
   // Function to chunk the skills array into subarrays of size 5
   const chunkSkills = (arr, size) => {
     return arr.reduce((chunks, element, i) => {
@@ -35,19 +35,19 @@ function Skills() {
 
   return (
     <>
-        <div id="skills" >
-          <h2 className="subHeading">Skillset</h2>
-       
-             {skillRows.map((row) => (
-                 <ul className="flex flex-row justify-between">
-                 {row.map((skill) => (
-                     <li className="py-2 px-3">
-                       {skill}
-                     </li>
-                   ))}
-                 </ul>
-             ))}
-       </div>          
+      <div id="skills">
+        <h2 className="subHeading pt-24 md:pb-12 md:text-9xl text-7xl">Skillset</h2>
+
+        {skillRows.map((row) => (
+          <ul className="flex flex-row justify-between">
+            {row.map((skill) => (
+              <li className="py-2 px-3">
+                {skill}
+              </li>
+            ))}
+          </ul>
+        ))}
+      </div>
     </>
   );
 }
