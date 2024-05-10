@@ -16,25 +16,18 @@ function Home() {
     }
     window.addEventListener("mousemove", handleMouseMove);
     return () => {
-    window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
   return (
-    <>
-      <div id="home" className="w-screen h-screen flex items-center justify-center" ref={contentRef}>
-        <div className="content overflow-hidden w-fit h-fit">
-          <h1>Hello World,</h1>
-          <h2>I'm Sam!</h2>
-  
-        </div>
+    <div id="home" className="w-screen h-screen flex items-center justify-center" ref={contentRef}>
+      <div className="content overflow-hidden">
+        <h1>Hello World, <br />
+          I'm Sam
+        </h1>
       </div>
-      <div className="text-center m-20">
-        <p className="pb-2">Discover more below</p>
-        <p>&darr;</p>
-      </div>
-      
-    </>
+    </div >
   );
 }
 

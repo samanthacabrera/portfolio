@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import ToText from "./ToText";
-import './App.css';
 
 function Blog() {
     const mediumURL = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@samantha.n.cabrera";
@@ -27,7 +26,7 @@ function Blog() {
     }, []);
 
     const calculateReadTime = (text) => {
-        const wordsPerMinute = 250; 
+        const wordsPerMinute = 250;
         const words = text.split(' ').length;
         const readTimeMinutes = Math.ceil(words / wordsPerMinute);
         return readTimeMinutes;
@@ -49,9 +48,9 @@ function Blog() {
         }
     };
 
-return (
+    return (
         <div id="blog" className="blogs">
-           <h2 className="subHeading font-bold text-9xl lowercase">Check this out</h2>
+            <h2 className="subHeading font-bold text-9xl lowercase">Check this out</h2>
             <div className='space-y-10'>
                 {blog.isLoading ? 'Loading...' : displayBlogs()}
             </div>
