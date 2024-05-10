@@ -22,7 +22,7 @@ function Home() {
 
   return (
     <>
-      <div id="home" className="hero" ref={contentRef}>
+      <div id="home" className="w-screen h-screen flex items-center justify-center" ref={contentRef}>
         <div className="content overflow-hidden w-fit h-fit">
           <h1>Hello World,</h1>
           <h2>I'm Sam!</h2>

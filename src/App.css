@@ -1,44 +1,13 @@
-body,
-html {
-  margin: 0;
-  padding: 0 0;
-  scroll-behavior: smooth;
-  font-family: "Goli", sans-serif;
-  overflow-x: hidden;
-}
-
 .parallax {
   color: rgba(250, 240, 202, 0.345);
   background-color: #18222b;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-align: center;
-}
-
-section {
-  padding: 10rem 20rem;
 }
 
 .subHeading {
   font-family: "Karrik";
-  font-weight: bolder;
-  font-size: 10rem;
-  text-transform: lowercase;
-}
-
-.hero {
-  width: 100%;
-  height: 75vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
 }
 
 .content {
-  font-size: 8rem;
   font-family: "Bolota";
   animation: ripple 20s infinite alternate ease-in-out;
 }
@@ -55,26 +24,15 @@ section {
   }
 }
 
-#homeIcon {
-  text-transform: uppercase;
-}
 #homeIcon span {
   color: #f95838af;
-  display: inline-block;
   transition: transform 0.5s ease;
 }
 #homeIcon:hover span {
-  transform: translateY(-5px) rotate(2deg);
+  transform: translateY(-5px) rotate(7deg);
 }
 
-/* NAVBAR */
 .navbar {
-  position: fixed;
-  width: 100vw;
-  height: fit-content;
-  background-color: #ffffff0d;
-  backdrop-filter: blur(2px);
-  z-index: 1000;
   transition: bottom 0.2s ease, opacity 0.5s ease;
 }
 

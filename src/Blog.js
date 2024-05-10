@@ -51,7 +51,7 @@ function Blog() {
 
 return (
         <div id="blog" className="blogs">
-           <h2 className="subHeading">Check this out</h2>
+           <h2 className="subHeading font-bold text-9xl lowercase">Check this out</h2>
             <div className='space-y-10'>
                 {blog.isLoading ? 'Loading...' : displayBlogs()}
             </div>

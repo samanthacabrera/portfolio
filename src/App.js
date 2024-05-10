@@ -5,56 +5,42 @@ import Home from './Home';
 import Welcome from './Welcome';
 import Skills from './Skills';
 import Intro from './Intro';
+import Projects from './Projects';
 import Blog from './Blog';
 import AboutMe from './AboutMe';
+import QandA from './Questions';
+import Inspo from './Inspo';
 import './App.css';
 import './tailwind.css';
 import './index.css';
-import PyFlows from './PyFlows';
-import QandA from './Questions';
-import Inspo from './Inspo';
 
 
 
 function App() {
-return (
+  return (
     <Router>
-    <div className="parallax"> 
-      <Navbar />
+      <section className="parallax text-center bg-fixed bg-cover">
+        <Navbar />
         <Switch>
           <Route exact path="/">
-          <>
-            <Home />
-            <section>
+            <>
+              <Home />
               <Welcome />
-            </section>
-            <section>
               <Intro />
-            </section>
-            <section>
-              <PyFlows/>
-            </section>
-            <section>
+              <Projects />
               <Skills />
-            </section> 
-            <section>
-               <Blog />
-            </section>  
+              <Blog />
             </>
           </Route>
           <Route path="/about">
-            <section>
-              <AboutMe/>
-            </section>
-            <section>
-              <QandA/>
-            </section>
-            <section>
-              <Inspo/>
-            </section>
+            <>
+              <AboutMe />
+              <QandA />
+              <Inspo />
+            </>
           </Route>
         </Switch>
-      </div>
+      </section>
     </Router>
   );
 }

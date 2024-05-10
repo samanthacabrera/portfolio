@@ -35,8 +35,8 @@ function Skills() {
 
   return (
     <>
-        <div id="skills" >
-          <h2 className="subHeading">Skillset</h2>
+        <div id="skills">
+          <h2 className="subHeading font-bold text-9xl lowercase">Skillset</h2>
        
              {skillRows.map((row) => (
                  <ul className="flex flex-row justify-between">

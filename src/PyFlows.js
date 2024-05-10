@@ -3,13 +3,11 @@ import React from "react";
 function PyFlows() {
     return (
         <div>
-            <h2 className="subHeading">Projects</h2>
-
-            <h3 className="text-4xl py-8">Py Flows</h3>
+            <h3 className="text-4xl py-12">Py Flows</h3>
             <h6>April 2024 </h6>
             <a href="https://github.com/samanthacabrera/Py_Flows" target="_blank" rel="noreferrer" className="text-decoration-line: underline">download code</a>
 
-            <div className="space-y-2">
+            <div className="space-y-4">
                 <p className="">Below, I've outlined some key insights into the development and core functionalities of Py Flows:</p>
                 <p className="font-semibold">Understanding Yoga Sequences and Their Structure</p>
                 <p>Py Flows was developed with a clear understanding of yoga's structural elements, drawing inspiration from the fluidity and dynamism of Vinyasa yoga. The integration of breath with movement creates a harmonious and meditative experience. Through the implementation of the Pose and Flow classes, Py Flows offers a comprehensive representation of yoga poses and flow templates, empowering users to explore and customize their practice with ease.</p>
