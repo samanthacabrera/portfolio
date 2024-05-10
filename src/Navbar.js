@@ -22,8 +22,8 @@ const Navbar = () => {
   }, []);
 
   // Add the 'fixed' class if the navbar should be fixed to the top of the screen
-  const shouldShowNavbar = showNavbar;
-  const navbarClass = `navbar ${shouldShowNavbar ? 'show' : 'hide'} fixed w-screen backdrop-blur-sm transition-all ease`;
+
+  const navbarClass = `navbar ${showNavbar ? 'opacity-1' : 'opacity-0'} fixed bottom-0 w-screen backdrop-blur-sm transition duration-300 ease-in-out`;
 
   return (
     <nav className={navbarClass} >

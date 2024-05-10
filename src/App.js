@@ -40,7 +40,7 @@ function App() {
           </Route>
         </Switch>
       </section>
-    </Router>
+    </Router >
   );
 }
 

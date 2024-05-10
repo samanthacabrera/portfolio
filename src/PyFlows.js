@@ -3,8 +3,6 @@ import React from "react";
 function PyFlows() {
     return (
         <div>
-            <h2 className="subHeading pt-24 md:pb-12  md:text-9xl text-7xl">Projects</h2>
-
             <h3 className="text-4xl py-8">Py Flows</h3>
             <h6>April 2024 </h6>
             <a href="https://github.com/samanthacabrera/Py_Flows" target="_blank" rel="noreferrer"
