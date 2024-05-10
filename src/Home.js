@@ -7,7 +7,6 @@ function Home() {
     const handleMouseMove = (event) => {
       const content = contentRef.current;
       const { clientX, clientY } = event;
-      const { clientX, clientY } = event;
       const centerX = window.innerWidth / 2;
       const centerY = window.innerHeight / 2;
       const offsetX = (clientX - centerX) / 5;

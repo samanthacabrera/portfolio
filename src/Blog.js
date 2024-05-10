@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import ToText from "./ToText";
-import './App.css';
 
 function Blog() {
     const mediumURL = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@samantha.n.cabrera";

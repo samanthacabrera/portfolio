@@ -10,7 +10,6 @@ import Blog from './Blog';
 import AboutMe from './AboutMe';
 import QandA from './Questions';
 import Inspo from './Inspo';
-import './App.css';
 import './tailwind.css';
 import './index.css';
 
@@ -25,6 +24,7 @@ function App() {
           <Route exact path="/">
             <div className="md:px-[10rem] md:py-[20rem] py-[15rem] px-2">
               <Home />
+              <Welcome />
               <Intro />
               <Projects />
               <Skills />
