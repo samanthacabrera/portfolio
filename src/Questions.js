@@ -2,6 +2,7 @@ import React from "react";
 
 function QandA() {
 <<<<<<< HEAD
+<<<<<<< HEAD
     return (
        <div className="space-y-20">
             <h2 className="subHeading font-bold text-9xl lowercase">Q & A</h2>
@@ -13,6 +14,8 @@ function QandA() {
         </div>
     )
 =======
+=======
+>>>>>>> fcfdafb9507fc833128dd730cbcb1184a57607c5
   return (
     <div className="space-y-20">
       <h2 className="subHeading pt-24 md:pb-12  md:text-9xl text-7xl">Q & A</h2>
@@ -23,6 +26,9 @@ function QandA() {
       </ul>
     </div>
   )
+<<<<<<< HEAD
+>>>>>>> fcfdafb9507fc833128dd730cbcb1184a57607c5
+=======
 >>>>>>> fcfdafb9507fc833128dd730cbcb1184a57607c5
 }
 

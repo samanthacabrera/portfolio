@@ -2,6 +2,7 @@ import React from "react";
 
 function Intro() {
 <<<<<<< HEAD
+<<<<<<< HEAD
     return (
         <div id="intro" className="space-y-20">
             <h2 className="subHeading font-bold text-9xl lowercase">Who am I</h2>
@@ -14,6 +15,8 @@ function Intro() {
         </div>
     )
 =======
+=======
+>>>>>>> fcfdafb9507fc833128dd730cbcb1184a57607c5
   return (
     <div id="intro" className="space-y-20">
       <h2 className="subHeading pt-24 md:pb-12 md:text-9xl text-7xl">Who am I</h2>
@@ -37,6 +40,9 @@ function Intro() {
         work.</p>
     </div>
   )
+<<<<<<< HEAD
+>>>>>>> fcfdafb9507fc833128dd730cbcb1184a57607c5
+=======
 >>>>>>> fcfdafb9507fc833128dd730cbcb1184a57607c5
 }
 

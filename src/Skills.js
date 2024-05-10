@@ -36,6 +36,7 @@ function Skills() {
   return (
     <>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div id="skills">
           <h2 className="subHeading font-bold text-9xl lowercase">Skillset</h2>
        
@@ -50,6 +51,8 @@ function Skills() {
              ))}
        </div>          
 =======
+=======
+>>>>>>> fcfdafb9507fc833128dd730cbcb1184a57607c5
       <div id="skills">
         <h2 className="subHeading pt-24 md:pb-12 md:text-9xl text-7xl">Skillset</h2>
 
@@ -63,6 +66,9 @@ function Skills() {
           </ul>
         ))}
       </div>
+<<<<<<< HEAD
+>>>>>>> fcfdafb9507fc833128dd730cbcb1184a57607c5
+=======
 >>>>>>> fcfdafb9507fc833128dd730cbcb1184a57607c5
     </>
   );
