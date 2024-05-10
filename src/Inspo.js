@@ -2,11 +2,11 @@ import React from "react";
 
 function Inspo() {
   return (
-    <div className="space-y-20">
-      <h2 className="subHeading font-bold text-9xl lowercase">Inspo</h2>
+    <div className="space-y-10 md:m-40 m-12">
+      <h2 className="subHeading lowercase md:text-9xl text-7xl">Inspo</h2>
       <p>I find inspiration through music, art, and cinema. I am drawn to abstract and thought-provoking themes. Below are some of my regular sources of inspiration:</p>
 
-      <ul className="space-y-2">
+      <ul className="text-center space-y-2">
         <li>Jean-Michel Basquiat</li>
         <li>Frida Kahlo</li>
         <li>Damien Hirst</li>

@@ -36,7 +36,7 @@ function Blog() {
         if (blog.items) {
             return blog.items.map((post, index) => (
                 <div key={index}>
-                    <div className='card-body p-4'>
+                    <div className='card-body'>
                         <h1 className='card-title text-lg mb-4 hover:underline decoration-current'>
                             <a href={post.link} className='postTitle' rel='noreferrer' target='_blank'>{post.title}</a>
                         </h1>
@@ -49,11 +49,9 @@ function Blog() {
     };
 
     return (
-        <div id="blog" className="blogs">
-            <div className="subHeading pt-24 md:pb-12  md:text-9xl text-7xl lineheight">Check this out</div>
-            <div className='space-y-10'>
-                {blog.isLoading ? 'Loading...' : displayBlogs()}
-            </div>
+        <div id="blog" className="space-y-20 md:m-40 m-12">
+            <h2 className="subHeading lowercase md:text-9xl text-7xl">Check this out</h2>
+            {blog.isLoading ? 'Loading...' : displayBlogs()}
         </div>
     );
 }

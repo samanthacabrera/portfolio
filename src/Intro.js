@@ -2,8 +2,8 @@ import React from "react";
 
 function Intro() {
   return (
-    <div id="intro" className="space-y-20">
-      <h2 className="subHeading pt-24 md:pb-12 md:text-9xl text-7xl">Who am I</h2>
+    <div className="space-y-20 md:m-40 m-12">
+      <h2 className="subHeading lowercase md:text-9xl text-7xl">Who am I</h2>
       <p> I am a full-stack software engineer based in Denver. I am dedicated to driving positive change and making
         meaningful contributions to our digital world. </p>
       <p> I am equipped with a diverse skill set of programming languages and frameworks, including HTML, CSS,

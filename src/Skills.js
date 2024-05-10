@@ -34,13 +34,13 @@ function Skills() {
   const skillRows = chunkSkills(skills, 2);
 
   return (
-    <div id="skills">
-      <h2 className="subHeading pt-24 md:pb-12 md:text-9xl text-7xl">Skillset</h2>
+    <div className="space-y-20 md:m-40 m-12">
+      <h2 className="subHeading lowercase md:text-9xl text-7xl">Skillset</h2>
 
       {skillRows.map((row) => (
         <ul className="flex flex-row justify-between">
           {row.map((skill) => (
-            <li className="py-2 px-3">
+            <li>
               {skill}
             </li>
           ))}
