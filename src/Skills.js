@@ -7,7 +7,6 @@ function Skills() {
     "JavaScript",
     "CSS",
     "HTML",
-    "Framer-Motion",
     "Responsive UI",
     "Node",
     "Express",
