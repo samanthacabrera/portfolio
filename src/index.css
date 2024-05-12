@@ -10,6 +10,9 @@ body {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  background-image: linear-gradient(#7a95e4, #324376);
+  color: #f5dd90dc;
 }
 .subHeading {
   font-family: "Karrik";
@@ -17,3 +20,9 @@ body {
 .content {
   font-family: "Bolota";
 }
+
+#homeIcon span {
+  color: #f68e5f;
+}
+
+/* Color Palette: #586ba4, #324376, #f5dd90, #f68e5f, #f76c5e */
