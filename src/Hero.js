@@ -2,12 +2,10 @@ import React from "react";
 
 function Hero() {
   return (
-    <div className="w-screen h-screen flex items-center justify-center">
-      <h1>
-        Hello world, <br />
-        my name is Sam!
-      </h1>
-    </div>
+    <div id="hero" className="w-screen h-screen flex items-center justify-center" >
+      <p className="p-2">hi there,</p>
+      <p className="text-9xl">I'm Sam!</p>
+    </div >
   );
 }
 

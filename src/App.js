@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ProgressBar from './Progress';
 import Navbar from './Navbar';
 import Hero from './Hero';
-import Welcome from './Welcome';
 import Skills from './Skills';
 import Intro from './Intro';
 import Projects from './Projects';
@@ -32,7 +31,6 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Hero />
-            <Welcome />
             <Intro />
             <Projects />
             <Skills />

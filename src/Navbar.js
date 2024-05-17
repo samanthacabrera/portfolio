@@ -3,14 +3,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faCodepen, faSpotify } from '@fortawesome/free-brands-svg-icons';
 
 const Navbar = () => {
-  const [showNavbar, setShowNavbar] = useState(false);
+  const [showFooter, setShowFooter] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > window.innerHeight * 0.75) {
-        setShowNavbar(true);
+      if (window.scrollY > window.innerHeight * 0.5) {
+        setShowFooter(true);
       } else {
-        setShowNavbar(false);
+        setShowFooter(false);
       }
     };
 
@@ -21,15 +21,24 @@ const Navbar = () => {
     };
   }, []);
 
-  // Add the 'fixed' class if the navbar should be fixed to the top of the screen
-
-  const navbarClass = `navbar ${showNavbar ? 'opacity-1' : 'opacity-0'} fixed bottom-0 w-screen backdrop-blur-sm transition duration-300 ease-in-out`;
-
   return (
-    <nav className={navbarClass} >
-      <div className="flex flex-row items-center justify-between px-4">
-        <a id="homeIcon" href="/">Sam<span className="inline-block hover:rotate-6 hover:-translate-y-1 transition duration-300 ease-in-out"> Cab</span></a>
-        <div className="flex flex-row items-center space-x-20 py-2">
+    <>
+      <nav className="fixed inset-0 pointer-events-none">
+        <div className="pointer-events-auto absolute top-4 left-4">
+          <a id="homeIcon" href="/">Sam<span className="inline-block hover:rotate-6 hover:-translate-y-1 transition duration-300 ease-in-out"> Cab</span></a>
+        </div>
+        <div className="pointer-events-auto absolute top-4 right-4">
+          <a href="/projects">Projects</a>
+        </div>
+        <div className="pointer-events-auto absolute bottom-4 left-4">
+          <a href="/blog">Blog</a>
+        </div>
+        <div className="pointer-events-auto absolute bottom-4 right-4">
+          <a href="/about">About</a>
+        </div>
+      </nav>
+      <footer className={`fixed max-w-fit bottom-4 rounded-full backdrop-blur-sm inset-x-1/2 transition-opacity duration-500 ease-in-out ${showFooter ? 'opacity-100' : 'opacity-0 hidden'}`}>
+        <div className="flex justify-center items-center space-x-8 py-2 px-4">
           <a href="https://linkedin.com/in/samcabreraa" target="_blank" rel="noopener noreferrer" className="icon-link hover:-translate-y-1 transition duration-300 ease-in-out">
             <FontAwesomeIcon icon={faLinkedin} size="2x" />
           </a>
@@ -43,9 +52,8 @@ const Navbar = () => {
             <FontAwesomeIcon icon={faSpotify} size="2x" />
           </a>
         </div>
-        <a href="/about">About</a>
-      </div>
-    </nav>
+      </footer>
+    </>
   );
 };
 

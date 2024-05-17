@@ -3,6 +3,7 @@ import React from "react";
 function Intro() {
   return (
     <div className="space-y-20 md:m-40 m-12">
+      <p className="h-screen text-center">Welcome to my personal website, an amalgam of everything that makes me... well me. </p>
       <h2 className="subHeading lowercase md:text-9xl text-7xl">Who am I</h2>
       <p> I am a full-stack software engineer based in Denver. I am dedicated to driving positive change and making
         meaningful contributions to our digital world. </p>
