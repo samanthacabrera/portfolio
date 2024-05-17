@@ -32,8 +32,12 @@ function App() {
           <Route exact path="/">
             <Hero />
             <Intro />
-            <Projects />
             <Skills />
+          </Route>
+          <Route path="/projects">
+            <Projects />
+          </Route>
+          <Route path="/blog">
             <Blog />
           </Route>
           <Route path="/about">
