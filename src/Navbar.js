@@ -37,7 +37,7 @@ const Navbar = () => {
           <a href="/about">About</a>
         </div>
       </nav>
-      <footer className={`fixed max-w-fit bottom-4 rounded-full backdrop-blur-sm inset-x-1/2 transition-opacity duration-500 ease-in-out ${showFooter ? 'opacity-100' : 'opacity-0 hidden'}`}>
+      <footer className={`fixed max-w-fit bottom-4 rounded-full backdrop-blur-md inset-x-1/2 transform -translate-x-1/2 transition duration-500 ease-in-out ${showFooter ? 'opacity-100' : 'opacity-0 hidden'}`}>
         <div className="flex justify-center items-center space-x-8 py-2 px-4">
           <a href="https://linkedin.com/in/samcabreraa" target="_blank" rel="noopener noreferrer" className="icon-link hover:-translate-y-1 transition duration-300 ease-in-out">
             <FontAwesomeIcon icon={faLinkedin} size="2x" />
