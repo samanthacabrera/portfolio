@@ -1,35 +1,50 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
 function Hero() {
-  const contentRef = useRef(null);
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const intervalRef = useRef(null);
+  const h1Ref = useRef(null);
 
   useEffect(() => {
-    const content = contentRef.current;
+    const handleMouseOver = event => {
+      let iteration = 0;
 
-    function handleMouseMove(event) {
-      const { clientX, clientY } = event;
-      const centerX = window.innerWidth / 2;
-      const centerY = window.innerHeight / 2;
-      const offsetX = (clientX - centerX) / 5;
-      const offsetY = (clientY - centerY) / 5;
+      clearInterval(intervalRef.current);
 
-      content.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
-    }
+      intervalRef.current = setInterval(() => {
+        event.target.innerText = event.target.innerText
+          .split("")
+          .map((letter, index) => {
+            if (index < iteration) {
+              return event.target.dataset.value[index];
+            }
 
-    window.addEventListener("mousemove", handleMouseMove);
+            return letters[Math.floor(Math.random() * 26)];
+          })
+          .join("");
 
-    // Cleanup function
+        if (iteration >= event.target.dataset.value.length) {
+          clearInterval(intervalRef.current);
+        }
+
+        iteration += 1 / 3;
+      }, 30);
+    };
+
+    const h1Element = h1Ref.current;
+    h1Element.dataset.value = h1Element.innerText;
+    h1Element.addEventListener("mouseover", handleMouseOver);
+
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
+      clearInterval(intervalRef.current);
+      h1Element.removeEventListener("mouseover", handleMouseOver);
     };
   }, []);
 
   return (
-    <div id="hero" className="w-screen h-screen flex items-center justify-center">
-      <div className="relative">
-        <p className="p-2" style={{ position: 'absolute', top: '-50px', left: '-50px' }}>hi there,</p>
-        <p ref={contentRef} className="text-9xl relative">I'm Sam!</p>
-      </div>
+    <div id="hero" className="w-screen h-screen flex items-center justify-center flex-col leading-loose">
+      <h6 className="">hi there,</h6>
+      <h1 ref={h1Ref} id="flutter" className="text-9xl">I'm Sam!</h1>
     </div>
   );
 }

@@ -11,7 +11,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #7a95e4;
-  color: #f5dd90dc;
+  color: #f6e5aedc;
 }
 .subHeading {
   font-family: "Karrik";
@@ -20,11 +20,25 @@ body {
   font-family: "Bolota";
 }
 
-#homeIcon {
-  font-family: "Karrik";
+#flutter {
+  padding: clamp(1rem, 2vw, 3rem);
+  border-radius: clamp(0.4rem, 0.75vw, 1rem);
+  font-size: clamp(3rem, 10vw, 10rem);
 }
+
+#flutter:hover {
+  background-color: #f6e5aedc;
+  color: #7a95e4;
+}
+
+/* #homeIcon {
+  font-family: "Karrik";
+} */
 #homeIcon span {
   color: #f68e5f;
 }
 
-/* Color Palette: #586ba4, #324376, #f5dd90, #f68e5f, #f76c5e */
+nav a {
+  font-family: "Bolota";
+}
+/* Color Palette: #586ba4, #324376, #f6e5aedc, #f68e5f, #f76c5e */
