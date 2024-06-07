@@ -31,14 +31,15 @@ body {
   color: #7a95e4;
 }
 
-/* #homeIcon {
+#homeIcon {
   font-family: "Karrik";
-} */
+}
 #homeIcon span {
   color: #f68e5f;
 }
 
 nav a {
-  font-family: "Bolota";
+  font-family: "Karrik";
 }
+
 /* Color Palette: #586ba4, #324376, #f6e5aedc, #f68e5f, #f76c5e */

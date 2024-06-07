@@ -7,9 +7,7 @@ import Skills from './Skills';
 import Intro from './Intro';
 import Projects from './Projects';
 import Blog from './Blog';
-import Bio from './Bio';
-import QandA from './Questions';
-import Inspo from './Inspo';
+import About from './About';
 import './tailwind.css';
 import './index.css';
 
@@ -41,9 +39,7 @@ function App() {
             <Blog />
           </Route>
           <Route path="/about">
-            <Bio />
-            <QandA />
-            <Inspo />
+            <About />
           </Route>
         </Switch>
       </section>
