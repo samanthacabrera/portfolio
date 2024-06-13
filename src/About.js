@@ -32,8 +32,9 @@ function About() {
         <h2 className="subHeading lowercase md:text-9xl text-7xl">Inspo</h2>
         <p>I find inspiration through music, art, and cinema. I am drawn to abstract and thought-provoking themes. Below are some of my regular sources of inspiration:</p>
 
-        <ul className="text-center space-y-2">
-          <li>Jean-Michel Basquiat</li>
+        <div className="text-center space-y-2">
+          <a href="/">Jean-Michel Basquiat</a>
+          <li>Alejandro Cartagena</li>
           <li>Frida Kahlo</li>
           <li>Damien Hirst</li>
           <li>Steven J. Yazzie</li>
@@ -45,7 +46,7 @@ function About() {
           <li>Emily Bronte</li>
           <li>Gustav Klimt</li>
           <li>Patricia Riggen</li>
-        </ul>
+        </div>
       </div>
     </>
   )
