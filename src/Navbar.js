@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub, faCodepen, faSpotify } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub, faCodepen } from '@fortawesome/free-brands-svg-icons';
 
 const Navbar = () => {
   const [showFooter, setShowFooter] = useState(false);
@@ -48,9 +48,7 @@ const Navbar = () => {
           <a href="https://codepen.io/samanthacabrera" target="_blank" rel="noopener noreferrer" className="icon-link hover:-translate-y-1 transition duration-300 ease-in-out">
             <FontAwesomeIcon icon={faCodepen} size="2x" />
           </a>
-          <a href="https://open.spotify.com/user/samantha.n.cabrera?si=mAb874ggRgu9g60cUOlMPw" target="_blank" rel="noopener noreferrer" className="icon-link hover:-translate-y-1 transition duration-300 ease-in-out">
-            <FontAwesomeIcon icon={faSpotify} size="2x" />
-          </a>
+
         </div>
       </footer>
     </>

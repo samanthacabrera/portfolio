@@ -32,20 +32,15 @@ function About() {
         <h2 className="subHeading lowercase md:text-9xl text-7xl">Inspo</h2>
         <p>I find inspiration through music, art, and cinema. I am drawn to abstract and thought-provoking themes. Below are some of my regular sources of inspiration:</p>
 
-        <div className="text-center space-y-2">
-          <a href="/">Jean-Michel Basquiat</a>
-          <li>Alejandro Cartagena</li>
-          <li>Frida Kahlo</li>
-          <li>Damien Hirst</li>
-          <li>Steven J. Yazzie</li>
-          <li>Tadao Ando</li>
-          <li>Hayao Miyazaki</li>
-          <li>@hozzography</li>
-          <li>Tarsila do Amaral</li>
-          <li>Francisco Goya</li>
-          <li>Emily Bronte</li>
-          <li>Gustav Klimt</li>
-          <li>Patricia Riggen</li>
+        <div className="text-center space-y-2 flex flex-col">
+          <a href="https://www.thebroad.org/art/jean-michel-basquiat" target="_blank" rel="noreferrer">Jean-Michel Basquiat</a>
+          <a href="https://alejandrocartagena.com/?slug=carpoolers-4th-edition" target="_blank" rel="noreferrer">Alejandro Cartagena</a>
+          <a href="https://www.museofridakahlo.org.mx/frida/?lang=en" target="_blank" rel="noreferrer">Frida Kahlo</a>
+          <a href="https://yazziestudio.com/2024-meandered/painting" target="_blank" rel="noreferrer">Steven J. Yazzie</a>
+          <a href="http://www.tadao-ando.com/" target="_blank" rel="noreferrer">Tadao Ando</a>
+          <a href="https://hozzography.com/hozzography/photography" target="_blank" rel="noreferrer">@hozzography</a>
+          <a href="https://en.wikipedia.org/wiki/Emily_Bront%C3%AB" target="_blank" rel="noreferrer">Emily Bronte</a>
+          <a href="https://www.imdb.com/name/nm0726638/" target="_blank" rel="noreferrer">Patricia Riggen</a>
         </div>
       </div>
     </>
