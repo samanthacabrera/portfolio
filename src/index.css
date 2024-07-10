@@ -10,8 +10,11 @@ body {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #7a95e4;
-  color: #f6e5aedc;
+  background-color: rgb(165 180 252);
+  color: #d0cfe4dc;
+  background: linear-gradient(45deg, black, #a5b4fc);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
 }
 .subHeading {
   font-family: "Karrik";
@@ -27,15 +30,15 @@ body {
 }
 
 #flutter:hover {
-  background-color: #f6e5aedc;
-  color: #7a95e4;
+  background-color: #f2e9ccdc;
+  color: #a5b4fc;
 }
 
 #homeIcon {
   font-family: "Karrik";
 }
 #homeIcon span {
-  color: #f68e5f;
+  color: rgb(165 180 252);
 }
 
 nav a {
@@ -44,3 +47,15 @@ nav a {
 }
 
 /* Color Palette: #586ba4, #324376, #f6e5aedc, #f68e5f, #f76c5e */
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
