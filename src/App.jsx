@@ -2,16 +2,12 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ProgressBar from './Progress';
 import Navbar from './Navbar';
-import Hero from './Hero';
-import Skills from './Skills';
-import Intro from './Intro';
+import Home from './Home';
 import Projects from './Projects';
 import Blog from './Blog';
 import About from './About';
 import './tailwind.css';
 import './index.css';
-
-
 
 function App() {
   document.addEventListener("DOMContentLoaded", function () {
@@ -23,26 +19,22 @@ function App() {
 
   return (
     <Router>
-      <section className="parallax">
-        <ProgressBar />
-        <Navbar />
-        <Switch>
-          <Route exact path="/">
-            <Hero />
-            <Intro />
-            <Skills />
-          </Route>
-          <Route path="/projects">
-            <Projects />
-          </Route>
-          <Route path="/blog">
-            <Blog />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-        </Switch>
-      </section>
+      <ProgressBar />
+      <Navbar />
+      <Switch>
+        <Route exact path="/">
+          <Home/>
+        </Route>
+        <Route path="/projects">
+          <Projects />
+        </Route>
+        <Route path="/blog">
+          <Blog />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+      </Switch>
     </Router >
   );
 }

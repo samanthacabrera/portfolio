@@ -42,8 +42,8 @@ function Hero() {
   }, []);
 
   return (
-    <div id="hero" className="w-screen h-screen flex items-center justify-center flex-col leading-loose">
-      <h6 className="">hi there,</h6>
+    <div id="hero" className="w-screen h-screen flex flex-col justify-center items-center text-center">
+      <h6 className="text-lg mb-4">hi there,</h6>
       <h1 ref={h1Ref} id="flutter" className="text-9xl">I'm Sam!</h1>
     </div>
   );

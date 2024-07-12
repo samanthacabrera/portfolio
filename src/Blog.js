@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import LoadingScreen from "./Loading";
 import ToText from "./ToText";
 
 function Blog() {
@@ -17,7 +18,7 @@ function Blog() {
                 const blogs = data.items;
                 setBlog({
                     items: blogs,
-                    isLoading: false
+                    isLoading: true
                 });
             })
             .catch(err => {
@@ -49,10 +50,12 @@ function Blog() {
     };
 
     return (
-        <div id="blog" className="space-y-20 md:m-40 m-12">
-            <h2 className="subHeading text-center lowercase md:text-9xl text-7xl">Check this out</h2>
-            {blog.isLoading ? 'Loading...' : displayBlogs()}
-        </div>
+        <>
+            {blog.isLoading ? <LoadingScreen /> : displayBlogs()}
+            <div id="blog" className="space-y-20 md:m-40 m-12">
+                <h2 className="subHeading text-center lowercase md:text-9xl text-7xl">Check this out</h2>
+            </div>
+        </>
     );
 }
 

@@ -5,12 +5,12 @@
 body {
   margin: 0;
   padding: 0;
+  padding-bottom: 1rem;
   font-family: "Goli", sans-serif;
   overflow-x: hidden;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(165 180 252);
   color: #d0cfe4dc;
   background: linear-gradient(45deg, black, #a5b4fc);
   background-size: 400% 400%;
@@ -19,31 +19,36 @@ body {
 .subHeading {
   font-family: "Karrik";
 }
+
 #hero {
   font-family: "Bolota";
 }
 
 #flutter {
-  padding: clamp(1rem, 2vw, 3rem);
+  /* padding: clamp(1rem, 2vw, 3rem); */
   border-radius: clamp(0.4rem, 0.75vw, 1rem);
   font-size: clamp(3rem, 10vw, 10rem);
 }
 
-#flutter:hover {
+/* #flutter:hover {
   background-color: #f2e9ccdc;
   color: #a5b4fc;
-}
+} */
 
 #homeIcon {
   font-family: "Karrik";
-}
-#homeIcon span {
-  color: rgb(165 180 252);
 }
 
 nav a {
   font-family: "Karrik";
   font-size: 2rem;
+}
+
+/* LOADING */
+#loading {
+  background: linear-gradient(45deg, black, #a5b4fc);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
 }
 
 /* Color Palette: #586ba4, #324376, #f6e5aedc, #f68e5f, #f76c5e */
