@@ -44,13 +44,6 @@ nav a {
   font-size: 2rem;
 }
 
-/* LOADING */
-#loading {
-  background: linear-gradient(45deg, black, #a5b4fc);
-  background-size: 400% 400%;
-  animation: gradientAnimation 10s ease infinite;
-}
-
 /* Color Palette: #586ba4, #324376, #f6e5aedc, #f68e5f, #f76c5e */
 
 @keyframes gradientAnimation {

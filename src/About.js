@@ -1,22 +1,7 @@
-import React, { useState, useEffect } from "react";
-import LoadingScreen from "./Loading";
+import React from "react";
 import me from "./IMG_0897.JPG";
 
 function About() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000); // Simulate loading for 2 seconds
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) {
-    return <LoadingScreen />;
-  }
-
   return (
     <section className="flex flex-col justify-center items-center">
       <div className="text-center w-1/2 space-y-20 md:m-40 m-12">

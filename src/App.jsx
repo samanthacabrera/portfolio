@@ -6,24 +6,19 @@ import Home from './Home';
 import Projects from './Projects';
 import Blog from './Blog';
 import About from './About';
+import Background from './Background'; 
 import './tailwind.css';
 import './index.css';
 
 function App() {
-  document.addEventListener("DOMContentLoaded", function () {
-    document.body.addEventListener("keydown", function (event) {
-      let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-      document.body.style.backgroundColor = randomColor;
-    });
-  });
-
   return (
     <Router>
+      <Background /> 
       <ProgressBar />
       <Navbar />
       <Switch>
         <Route exact path="/">
-          <Home/>
+          <Home />
         </Route>
         <Route path="/projects">
           <Projects />
@@ -35,10 +30,8 @@ function App() {
           <About />
         </Route>
       </Switch>
-    </Router >
+    </Router>
   );
 }
 
-export default App
-
-
+export default App;
