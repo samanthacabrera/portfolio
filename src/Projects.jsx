@@ -29,18 +29,19 @@ const projects = [
         title: "Gratitude Globe",
         description: "Platform for users to share what they are grateful for-- big or small.",
         imageUrl: "/images/Screenshot 2024-07-16 at 12.21.16 PM.png",
-        tags: ["Gratitude", "Community"]
+        tags: ["Gratitude", "JavaScript"]
     },
 ];
 
 const Projects = () => {
     return (
-        <div className="container mb-24 mx-auto py-12 space-y-24 text-center w-1/2">
+        <div id="projects" className="container md:p-24 p-12 py-12 space-y-24 text-center">
             <h2 className="subHeading lowercase md:text-9xl text-7xl">Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 {projects.map((project) => (
-                    <Link key={project.id} to={`/projects/${project.id}`}>
+                    <Link key={project.id} to={`/projects/${project.id}`} >
                         <ProjectCard
+                            id={project.id}
                             title={project.title}
                             description={project.description}
                             imageUrl={project.imageUrl}

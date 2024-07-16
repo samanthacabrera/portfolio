@@ -4,9 +4,8 @@ import ProgressBar from './Progress';
 import Background from './Background';
 import Navbar from './Navbar';
 import Home from './Home';
-import Projects from './Projects';
-import Blog from './Blog';
 import About from './About';
+import ProjectPage from './ProjectPage';
 import './tailwind.css';
 import './index.css';
 
@@ -20,11 +19,8 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/projects">
-          <Projects />
-        </Route>
-        <Route path="/blog">
-          <Blog />
+        <Route path="/projects/:id">
+          <ProjectPage/>
         </Route>
         <Route path="/about">
           <About />

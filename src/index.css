@@ -2,7 +2,8 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-body {
+body,
+html {
   margin: 0;
   padding: 0;
   padding-bottom: 1rem;
@@ -16,6 +17,14 @@ body {
 
 .subHeading {
   font-family: "Karrik";
+  letter-spacing: -0.75rem;
+  transition-property: letter-spacing;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+}
+
+.subHeading:hover {
+  letter-spacing: normal;
 }
 
 #hero {

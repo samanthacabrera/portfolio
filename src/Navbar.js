@@ -28,10 +28,10 @@ const Navbar = () => {
           <a id="homeIcon" href="/">Sam<span className="inline-block hover:rotate-6 hover:-translate-y-1 transition duration-300 ease-in-out"> Cab</span></a>
         </div>
         <div className="pointer-events-auto absolute top-4 right-4">
-          <a href="/projects">Work</a>
+          <a href="#projects">Work</a>
         </div>
         <div className="pointer-events-auto absolute bottom-4 left-4">
-          <a href="/blog">Blog</a>
+          <a href="#blog">Blog</a>
         </div>
         <div className="pointer-events-auto absolute bottom-4 right-4">
           <a href="/about">About</a>
