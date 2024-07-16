@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const Background = () => {
     const [gradient, setGradient] = useState(getRandomGradient());
+    const location = useLocation();
 
     useEffect(() => {
         const handleKeyDown = (event) => {
@@ -18,11 +20,12 @@ const Background = () => {
         };
     }, []);
 
+    const showText = location.pathname === '/';
+
     return (
         <>
-            <div className="" style={{ ...styles.container, background: gradient }}>
-            </div>
-            <h2 className="text-2xl opacity-50" style={styles.text}>[ Press Space Bar ]</h2>
+            <div className="fixed inset-0" style={{ ...styles.container, background: gradient }}></div>
+            {showText && <h2 className="text-2xl opacity-50" style={styles.text}>[ Press Space Bar ]</h2>}
         </>
     );
 };
@@ -45,11 +48,6 @@ const getRandomGradient = () => {
 
 const styles = {
     container: {
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
         zIndex: -1,
         transition: 'background 0.5s ease'
     },
