@@ -19,15 +19,24 @@ const Background = () => {
     }, []);
 
     return (
-        <div className="flex justify-center items-center" style={{ ...styles.container, background: gradient }}>
-            <h2 className="text-2xl opacity-50 pt-52">[ Press Space Bar ]</h2>
-        </div>
+        <>
+            <div className="" style={{ ...styles.container, background: gradient }}>
+            </div>
+            <h2 className="text-2xl opacity-50" style={styles.text}>[ Press Space Bar ]</h2>
+        </>
     );
 };
 
 const getRandomGradient = () => {
     const colors = [
-        '#FF5733', '#33FF57', '#3357FF', '#FF33A1', '#FF33F6', '#33FFF6'
+        'rgba(102, 77, 0, 0.7)',   // Earthy Brown
+        'rgba(110, 42, 12, 0.7)',  // Earthy Red-Brown
+        'rgba(105, 19, 18, 0.7)',  // Earthy Deep Red
+        'rgba(93, 9, 51, 0.7)',    // Earthy Purple
+        'rgba(41, 25, 56, 0.7)',   // Earthy Dark Purple
+        'rgba(4, 45, 58, 0.7)',    // Earthy Dark Blue
+        'rgba(18, 64, 60, 0.7)',   // Earthy Teal
+        'rgba(71, 82, 0, 0.7)'     // Earthy Olive Green
     ];
     const randomColor1 = colors[Math.floor(Math.random() * colors.length)];
     const randomColor2 = colors[Math.floor(Math.random() * colors.length)];
@@ -43,6 +52,11 @@ const styles = {
         height: '100%',
         zIndex: -1,
         transition: 'background 0.5s ease'
+    },
+    text: {
+        position: 'absolute',
+        top: '75vh',
+        left: '43vw'
     }
 };
 

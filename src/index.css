@@ -12,10 +12,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #d0cfe4dc;
-  background: linear-gradient(45deg, black, #a5b4fc);
-  background-size: 400% 400%;
-  animation: gradientAnimation 10s ease infinite;
+  opacity: 60%;
 }
+
 .subHeading {
   font-family: "Karrik";
 }
@@ -44,7 +43,9 @@ nav a {
   font-size: 2rem;
 }
 
-/* Color Palette: #586ba4, #324376, #f6e5aedc, #f68e5f, #f76c5e */
+.progress {
+  background-color: #d0cfe4dc;
+}
 
 @keyframes gradientAnimation {
   0% {
