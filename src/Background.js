@@ -49,7 +49,8 @@ const getRandomGradient = () => {
 const styles = {
     container: {
         zIndex: -1,
-        transition: 'background 0.5s ease'
+        transition: 'background 0.5s ease',
+        opacity: 0.7
     },
     text: {
         position: 'absolute',
