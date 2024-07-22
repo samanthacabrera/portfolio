@@ -16,7 +16,7 @@ html {
 }
 
 .subHeading {
-  font-family: "Karrik";
+  font-family: "Karrik", Helvetica, sans-serif;
   letter-spacing: -0.75rem;
   transition-property: letter-spacing;
   transition-duration: 2s;
@@ -28,7 +28,7 @@ html {
 }
 
 #hero {
-  font-family: "Bolota";
+  font-family: "Bolota", Impact, sans-serif;
 }
 
 #flutter {
@@ -37,7 +37,7 @@ html {
 }
 
 nav {
-  font-family: "Karrik";
+  font-family: "Karrik", Helvetica, sans-serif;
 }
 
 .progress {
