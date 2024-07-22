@@ -32,23 +32,12 @@ html {
 }
 
 #flutter {
-  /* padding: clamp(1rem, 2vw, 3rem); */
   border-radius: clamp(0.4rem, 0.75vw, 1rem);
   font-size: clamp(3rem, 10vw, 10rem);
 }
 
-/* #flutter:hover {
-  background-color: #f2e9ccdc;
-  color: #a5b4fc;
-} */
-
-#homeIcon {
+nav {
   font-family: "Karrik";
-}
-
-nav a {
-  font-family: "Karrik";
-  font-size: 2rem;
 }
 
 .progress {

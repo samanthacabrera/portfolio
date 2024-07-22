@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faCodepen } from '@fortawesome/free-brands-svg-icons';
+import { useLocation, useHistory } from 'react-router-dom';
 
 const Navbar = () => {
   const [showFooter, setShowFooter] = useState(false);
+  const location = useLocation();
+  const history = useHistory();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +24,19 @@ const Navbar = () => {
     };
   }, []);
 
+  const isAboutPage = location.pathname === '/about';
+
+  const handleNavigation = (hash) => {
+    if (isAboutPage) {
+      history.push('/');
+      setTimeout(() => {
+        document.getElementById(hash).scrollIntoView({ behavior: 'smooth' });
+      }, 100); // Slight delay to ensure the page navigates before scrolling
+    } else {
+      document.getElementById(hash).scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <nav className="fixed inset-0 pointer-events-none text-xl">
@@ -28,10 +44,10 @@ const Navbar = () => {
           <a id="homeIcon" href="/">Sam<span className="inline-block hover:rotate-6 hover:-translate-y-1 transition duration-300 ease-in-out"> Cab</span></a>
         </div>
         <div className="pointer-events-auto absolute top-4 right-4">
-          <a href="#projects">Work</a>
+          <button onClick={() => handleNavigation('projects')} className="pointer-events-auto">Work</button>
         </div>
         <div className="pointer-events-auto absolute bottom-4 left-4">
-          <a href="#blog">Blog</a>
+          <button onClick={() => handleNavigation('blog')} className="pointer-events-auto">Blog</button>
         </div>
         <div className="pointer-events-auto absolute bottom-4 right-4">
           <a href="/about">About</a>
@@ -48,7 +64,6 @@ const Navbar = () => {
           <a href="https://codepen.io/samanthacabrera" target="_blank" rel="noopener noreferrer" className="icon-link hover:-translate-y-1 transition duration-300 ease-in-out">
             <FontAwesomeIcon icon={faCodepen} size="2x" />
           </a>
-
         </div>
       </footer>
     </>
@@ -56,5 +71,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
