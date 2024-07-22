@@ -25,7 +25,11 @@ const Background = () => {
     return (
         <>
             <div className="fixed inset-0" style={{ ...styles.container, background: gradient }}></div>
-            {showText && <h2 className="text-2xl opacity-50" style={styles.text}>[ Press Space Bar ]</h2>}
+            {showText && (
+                <div style={styles.textContainer}>
+                    <h2 className="text-2xl opacity-50">[ Press Space Bar ]</h2>
+                </div>
+            )}
         </>
     );
 };
@@ -52,11 +56,16 @@ const styles = {
         transition: 'background 0.5s ease',
         opacity: 0.7
     },
-    text: {
+    textContainer: {
         position: 'absolute',
-        top: '75vh',
-        left: '43vw'
+        top: '80%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
     }
 };
 
 export default Background;
+

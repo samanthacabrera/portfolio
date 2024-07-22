@@ -24,16 +24,27 @@ const Navbar = () => {
     };
   }, []);
 
-  const isAboutPage = location.pathname === '/about';
+  
+  const isSpecialPage = location.pathname !== '/' 
 
   const handleNavigation = (hash) => {
-    if (isAboutPage) {
+    if (isSpecialPage) {
       history.push('/');
       setTimeout(() => {
-        document.getElementById(hash).scrollIntoView({ behavior: 'smooth' });
-      }, 100); // Slight delay to ensure the page navigates before scrolling
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          console.error(`Element with id ${hash} not found.`);
+        }
+      }, 100);
     } else {
-      document.getElementById(hash).scrollIntoView({ behavior: 'smooth' });
+      const element = document.getElementById(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        console.error(`Element with id ${hash} not found.`);
+      }
     }
   };
 
