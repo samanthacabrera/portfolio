@@ -5,144 +5,83 @@ const projects = [
         description: "Recipe Roots is an online platform designed for sharing family recipes, with the goal of preserving and sharing authentic, culturally accurate dishes with a global audience.",
         imageUrl: "/images/Screenshot 2024-07-16 at 12.02.38 PM.png",
         tags: ["React.js", "Community"],
+        techStack: {
+            frontEnd: ["React.js", "Tailwind CSS"],
+            backEnd: ["Flask", "SQLAlchemy"],
+            deployment: ["Cloudflare"]
+        },
+        currentlyWorkingOn: false,
+        deployedLink: "https://reciperoots.com",
         timeline: [
             {
-                title: "Initial Concept & Design",
-                description: "",
+                title: "Conceptualization & Planning",
                 date: "February 2024",
+                subsections: [
+                    {
+                        title: "Market Research",
+                        description: "Analyzed existing recipe-sharing platforms to identify gaps and opportunities. Created user personas and defined project goals."
+                    },
+                    {
+                        title: "Feature Definition",
+                        description: "Outlined core features and functionality, including recipe submission, user profiles, and search capabilities. Drafted project scope document."
+                    }
+                ]
             },
             {
-                title: "Development",
-                description: "",
-                date: "May 2024 - July 2024",
+                title: "Front-End Development",
+                date: "May 2024",
+                subsections: [
+                    {
+                        title: "Component Design",
+                        description: "Developed reusable UI components using React.js. Implemented state management and responsive design with Tailwind CSS."
+                    },
+                ]
             },
             {
-                title: "Testing & Deployment",
-                description: "",
-                date: "estimated August 2024",
+                title: "Back-End Development",
+                date: "May 2024",
+                subsections: [
+                    {
+                        title: "API Development",
+                        description: "Developed RESTful API using Flask. Created endpoints for user management, recipe CRUD operations, and search functionality."
+                    },
+                    {
+                        title: "Database Design & Implementation",
+                        description: "Designed database schema with SQLAlchemy. Implemented database migrations and optimized queries for performance."
+                    },
+                    {
+                        title: "Security & Authentication",
+                        description: "Implemented user authentication and authorization. Applied security best practices to protect user data and prevent vulnerabilities."
+                    }
+                ]
+            },
+            {
+                title: "Testing & Quality Assurance",
+                date: "June - July 2024",
+                subsections: [
+                    {
+                        title: "Beta Testing",
+                        description: "Released a beta version to a small group of users, mostly consisting of peers from my program at FlatIron School. Collected feedback on functionality, usability, and performance."
+                    },
+                    {
+                        title: "Bug Fixing & Refinement",
+                        description: "Addressed bugs reported during beta testing. Refined features and improved user experience based on feedback."
+                    }
+                ]
+            },
+            {
+                title: "Launch & Post-Launch",
+                date: "Aug 2024",
+                subsections: [
+                    {
+                        title: "Official Launch",
+                        description: "Coming soon......"
+                    }
+                ]
             }
         ]
     },
-    {
-        id: 2,
-        title: "YogiAPI",
-        description: "This API provides comprehensive access to a diverse collection of yoga poses, allowing you to integrate yoga pose data into your applications effortlessly.",
-        imageUrl: "/images/Screenshot 2024-07-16 at 12.17.19 PM.png",
-        tags: ["API", "Yoga", "Integration"],
-        timeline: [
-            {
-                title: "Initial Concept & Design",
-                description: "",
-                date: "",
-            },
-            {
-                title: "Development",
-                description: "",
-                date: "",
-            },
-            {
-                title: "Testing & Deployment",
-                description: "",
-                date: "",
-            }
-        ]
-    },
-    {
-        id: 3,
-        title: "Py_Flows",
-        description: "A CLI that generates vinyasa yoga flow sequences powered by Python. It helps users create custom yoga sequences based on their preferences.",
-        imageUrl: "/images/Screenshot 2024-07-16 at 12.29.28 PM.png",
-        tags: ["Python", "CLI", "Yoga"],
-        timeline: [
-            {
-                title: "Initial Concept & Design",
-                description: "",
-                date: "February 2024",
-            },
-            {
-                title: "Development",
-                description: "",
-                date: "May 2024 - July 2024",
-            },
-            {
-                title: "Testing & Deployment",
-                description: "",
-                date: "estimated August 2024",
-            }
-        ]
-    },
-    {
-        id: 4,
-        title: "Gratitude Globe",
-        description: "Platform for users to share what they are grateful for-- big or small. It aims to create a community of gratitude and positivity.",
-        imageUrl: "/images/Screenshot 2024-07-16 at 12.21.16 PM.png",
-        tags: ["Gratitude", "JavaScript"],
-        timeline: [
-            {
-                title: "Initial Concept & Design",
-                description: "",
-                date: "",
-            },
-            {
-                title: "Development",
-                description: "",
-                date: "",
-            },
-            {
-                title: "Testing & Deployment",
-                description: "",
-                date: "",
-            }
-        ]
-    },
-    {
-        id: 5,
-        title: "CatChi",
-        description: "CatChi is a unique game that blends the themes of cats and feng shui to create a harmonious and balanced virtual environment.",
-        imageUrl: "/images/Screenshot 2024-07-24 at 12.00.00 PM.png",
-        tags: ["Game", "Cats", "Feng Shui"],
-        timeline: [
-            {
-                title: "Initial Concept & Design",
-                description: "",
-                date: "",
-            },
-            {
-                title: "Development",
-                description: "",
-                date: "",
-            },
-            {
-                title: "Testing & Deployment",
-                description: "",
-                date: "",
-            }
-        ]
-    },
-    {
-        id: 6,
-        title: "eatBySeason",
-        description: "eatBySeason is a website that displays different produce in season based on the user's location, using Vite, Flask, and Supabase.",
-        imageUrl: "/images/Screenshot 2024-07-24 at 12.30.00 PM.png",
-        tags: ["Web App", "Produce", "Seasonal"],
-        timeline: [
-            {
-                title: "Initial Concept & Design",
-                description: "",
-                date: "",
-            },
-            {
-                title: "Development",
-                description: "",
-                date: "",
-            },
-            {
-                title: "Testing & Deployment",
-                description: "",
-                date: "",
-            }
-        ]
-    }
+    // Other projects...
 ];
 
 export default projects;

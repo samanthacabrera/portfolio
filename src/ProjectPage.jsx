@@ -13,21 +13,51 @@ const ProjectPage = () => {
     return (
         <div className="container mx-auto py-16 px-4 md:px-8 lg:px-16">
             <div className="mb-12">
-                <img src={project.imageUrl} alt={project.title} className="w-full h-auto object-cover" />
+                <img src={project.imageUrl} alt={project.title} className="w-full h-auto object-cover rounded-lg shadow-lg" />
             </div>
-            <div className="space-y-8">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900">{project.title}</h1>
-                <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed">{project.description}</p>
-                <div className="mt-8">
-                    <a
-                        href={project.deployedLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-block text-lg text-blue-600 hover:underline"
-                    >
-                        Visit Deployed Site
-                    </a>
+            <div className="space-y-12">
+                <div className="flex items-center justify-between">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900">{project.title}</h1>
+                    {project.deployedLink && (
+                        <a
+                            href={project.deployedLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block text-lg text-gray-900 bg-slate-200 hover:bg-slate-100 rounded-lg px-6 py-3 transition duration-300 ease-in-out shadow-lg"
+                        >
+                            Visit Deployed Site
+                        </a>
+                    )}
                 </div>
+                <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed">{project.description}</p>
+                
+                <div className="flex flex-wrap gap-8 mb-8">
+                    <div className="flex-1">
+                        <h2 className="text-2xl font-semibold text-gray-900 mb-4">Front-End</h2>
+                        <ul className="list-none space-y-2 text-gray-700">
+                            {project.techStack.frontEnd.map((tech, index) => (
+                                <li key={index} className="text-lg">{tech}</li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div className="flex-1">
+                        <h2 className="text-2xl font-semibold text-gray-900 mb-4">Back-End</h2>
+                        <ul className="list-none space-y-2 text-gray-700">
+                            {project.techStack.backEnd.map((tech, index) => (
+                                <li key={index} className="text-lg">{tech}</li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div className="flex-1">
+                        <h2 className="text-2xl font-semibold text-gray-900 mb-4">Deployment</h2>
+                        <ul className="list-none space-y-2 text-gray-700">
+                            {project.techStack.deployment.map((tech, index) => (
+                                <li key={index} className="text-lg">{tech}</li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+
                 <div className="flex flex-wrap gap-3 mb-8">
                     {project.tags.map((tag, index) => (
                         <span
@@ -38,26 +68,35 @@ const ProjectPage = () => {
                         </span>
                     ))}
                 </div>
-                <div className="timeline relative">
-               
-                    <div className="hidden md:block md:absolute md:left-1/2 md:h-full md:border-l-2 md:border-slate-200 md:transform md:-translate-x-1/2"></div>
-                    {project.timeline.map((item, index) => (
-                        <div
-                            key={index}
-                            className={`timeline-item mb-12 relative ${index % 2 === 0 ? 'md:left-0' : 'md:left-0'} ${index % 2 === 0 ? 'md:ml-0' : 'md:mr-0'}`}
-                        >
-                            <div
-                                className={`flex ${index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'} items-center justify-between ${
-                                    index % 2 === 0 ? 'md:ml-6' : 'md:mr-6'
-                                }`}
-                            >
-                                <div className={`bg-slate-100 bg-opacity-20 p-6 shadow-lg rounded-lg w-full md:w-5/12`}>
-                                    <h2 className="text-3xl font-semibold text-gray-900 mb-4">{item.title}</h2>
-                                    <p className="text-lg text-gray-600 mb-2">{item.date}</p>
-                                    <p className="text-lg text-gray-700 mb-6">{item.description}</p>
-                                </div>
-                
-                                <div className="hidden md:block md:w-3 md:h-3 md:bg-slate-200 md:rounded-full md:absolute md:left-1/2 md:transform md:-translate-x-1/2"></div>
+
+                <div className="relative">
+                    <div className="absolute left-1/2 top-0 h-full border-l-2 border-gray-300 transform -translate-x-1/2"></div>
+                    {project.timeline.map((phase, index) => (
+                        <div key={index} className={`flex flex-col mb-12 ${index % 2 === 0 ? 'items-start' : 'items-end'}`}>
+                            <div className={`bg-white bg-opacity-50 p-6 rounded-lg shadow-md max-w-md w-full ${index % 2 === 0 ? 'ml-8' : 'mr-8'} ${index > 0 ? '-mt-8' : ''}`}>
+                                <h2 className="text-3xl font-semibold text-gray-900 mb-4">{phase.title}</h2>
+                                <p className="text-gray-600 mb-2">{phase.date}</p>
+                                {phase.subsections.map((subsection, subIndex) => (
+                                    <div key={subIndex} className="mb-4">
+                                        <h3 className="text-xl font-semibold text-gray-800">{subsection.title}</h3>
+                                        <p className="text-gray-700">{subsection.description}</p>
+                                        {subsection.hoursSpent && (
+                                            <p className="text-gray-700">Hours Spent: {subsection.hoursSpent}</p>
+                                        )}
+                                        {subsection.commits && (
+                                            <div className="mt-4">
+                                                <h4 className="text-lg font-semibold text-gray-800">Commits:</h4>
+                                                <ul className="list-disc pl-5 space-y-2 text-gray-700">
+                                                    {subsection.commits.map((commit, commitIndex) => (
+                                                        <li key={commitIndex} className="text-sm">
+                                                            <span className="font-semibold">{commit.date}:</span> {commit.message} ({commit.hours} hours)
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        )}
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     ))}
