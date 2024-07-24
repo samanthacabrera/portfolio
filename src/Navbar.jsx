@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub, faCodepen } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { useLocation, useHistory } from 'react-router-dom';
 
 const Navbar = () => {
@@ -24,8 +25,7 @@ const Navbar = () => {
     };
   }, []);
 
-  
-  const isSpecialPage = location.pathname !== '/' 
+  const isSpecialPage = location.pathname !== '/';
 
   const handleNavigation = (hash) => {
     if (isSpecialPage) {
@@ -64,7 +64,8 @@ const Navbar = () => {
           <a href="/about">About</a>
         </div>
       </nav>
-      <footer className={`fixed max-w-fit bottom-4 rounded-full backdrop-blur-md inset-x-1/2 transform -translate-x-1/2 transition duration-500 ease-in-out ${showFooter ? 'opacity-100' : 'opacity-0 hidden'} ease-in-out`}>
+
+      <footer className={`fixed max-w-fit bottom-4 rounded-full backdrop-blur-md inset-x-1/2 transform -translate-x-1/2 transition duration-500 ease-in-out ${showFooter ? 'opacity-100' : 'opacity-0 hidden'}`}>
         <div className="flex justify-center items-center space-x-8 py-2 px-4">
           <a href="https://linkedin.com/in/samcabreraa" target="_blank" rel="noopener noreferrer" className="icon-link hover:-translate-y-1 transition duration-300 ease-in-out">
             <FontAwesomeIcon icon={faLinkedin} size="2x" />
@@ -72,8 +73,8 @@ const Navbar = () => {
           <a href="https://github.com/samanthacabrera" target="_blank" rel="noopener noreferrer" className="icon-link hover:-translate-y-1 transition duration-300 ease-in-out">
             <FontAwesomeIcon icon={faGithub} size="2x" />
           </a>
-          <a href="https://codepen.io/samanthacabrera" target="_blank" rel="noopener noreferrer" className="icon-link hover:-translate-y-1 transition duration-300 ease-in-out">
-            <FontAwesomeIcon icon={faCodepen} size="2x" />
+          <a href="https://leetcode.com/u/samcab/" target="_blank" rel="noopener noreferrer" className="icon-link hover:-translate-y-1 transition duration-300 ease-in-out">
+            <FontAwesomeIcon icon={faCode} size="2x" /> 
           </a>
         </div>
       </footer>

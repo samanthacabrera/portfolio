@@ -25,7 +25,7 @@ const projects = [
     },
     {
         id: 2,
-        title: "Yogi API",
+        title: "YogiAPI",
         description: "This API provides comprehensive access to a diverse collection of yoga poses, allowing you to integrate yoga pose data into your applications effortlessly.",
         imageUrl: "/images/Screenshot 2024-07-16 at 12.17.19 PM.png",
         tags: ["API", "Yoga", "Integration"],
@@ -33,23 +33,23 @@ const projects = [
             {
                 title: "Initial Concept & Design",
                 description: "",
-                date: "February 2024",
+                date: "",
             },
             {
                 title: "Development",
                 description: "",
-                date: "May 2024 - July 2024",
+                date: "",
             },
             {
                 title: "Testing & Deployment",
                 description: "",
-                date: "estimated August 2024",
+                date: "",
             }
         ]
     },
     {
         id: 3,
-        title: "PyFlows",
+        title: "Py_Flows",
         description: "A CLI that generates vinyasa yoga flow sequences powered by Python. It helps users create custom yoga sequences based on their preferences.",
         imageUrl: "/images/Screenshot 2024-07-16 at 12.29.28 PM.png",
         tags: ["Python", "CLI", "Yoga"],
@@ -81,20 +81,68 @@ const projects = [
             {
                 title: "Initial Concept & Design",
                 description: "",
-                date: "February 2024",
+                date: "",
             },
             {
                 title: "Development",
                 description: "",
-                date: "May 2024 - July 2024",
+                date: "",
             },
             {
                 title: "Testing & Deployment",
                 description: "",
-                date: "estimated August 2024",
+                date: "",
             }
         ]
     },
+    {
+        id: 5,
+        title: "CatChi",
+        description: "CatChi is a unique game that blends the themes of cats and feng shui to create a harmonious and balanced virtual environment.",
+        imageUrl: "/images/Screenshot 2024-07-24 at 12.00.00 PM.png",
+        tags: ["Game", "Cats", "Feng Shui"],
+        timeline: [
+            {
+                title: "Initial Concept & Design",
+                description: "",
+                date: "",
+            },
+            {
+                title: "Development",
+                description: "",
+                date: "",
+            },
+            {
+                title: "Testing & Deployment",
+                description: "",
+                date: "",
+            }
+        ]
+    },
+    {
+        id: 6,
+        title: "eatBySeason",
+        description: "eatBySeason is a website that displays different produce in season based on the user's location, using Vite, Flask, and Supabase.",
+        imageUrl: "/images/Screenshot 2024-07-24 at 12.30.00 PM.png",
+        tags: ["Web App", "Produce", "Seasonal"],
+        timeline: [
+            {
+                title: "Initial Concept & Design",
+                description: "",
+                date: "",
+            },
+            {
+                title: "Development",
+                description: "",
+                date: "",
+            },
+            {
+                title: "Testing & Deployment",
+                description: "",
+                date: "",
+            }
+        ]
+    }
 ];
 
 export default projects;

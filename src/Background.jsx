@@ -27,7 +27,7 @@ const Background = () => {
             <div className="fixed inset-0" style={{ ...styles.container, background: gradient }}></div>
             {showText && (
                 <div style={styles.textContainer}>
-                    <h2 className="text-2xl opacity-50">[ Press Space Bar ]</h2>
+                    <h2 className="text-xl opacity-50">[ Press Space Bar ]</h2>
                 </div>
             )}
         </>

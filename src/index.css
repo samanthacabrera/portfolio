@@ -27,6 +27,12 @@ html {
   letter-spacing: normal;
 }
 
+@media (max-width: 640px) {
+  .subHeading {
+    letter-spacing: normal;
+  }
+}
+
 #hero {
   font-family: "Bolota", Impact, sans-serif;
 }
