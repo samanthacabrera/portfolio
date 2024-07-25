@@ -73,7 +73,7 @@ const ProjectPage = () => {
                     <div className="absolute left-1/2 top-0 h-full border-l-2 border-gray-300 transform -translate-x-1/2"></div>
                     {project.timeline.map((phase, index) => (
                         <div key={index} className={`flex flex-col mb-12 ${index % 2 === 0 ? 'items-start' : 'items-end'}`}>
-                            <div className={`bg-white bg-opacity-50 p-6 rounded-lg shadow-md max-w-md w-full ${index % 2 === 0 ? 'ml-8' : 'mr-8'} ${index > 0 ? '-mt-8' : ''}`}>
+                            <div className={`bg-white bg-opacity-30 p-6 rounded-lg shadow-md max-w-md w-full ${index % 2 === 0 ? 'ml-8' : 'mr-8'} ${index > 0 ? '-mt-8' : ''}`}>
                                 <h2 className="text-3xl font-semibold text-gray-900 mb-4">{phase.title}</h2>
                                 <p className="text-gray-600 mb-2">{phase.date}</p>
                                 {phase.subsections.map((subsection, subIndex) => (
