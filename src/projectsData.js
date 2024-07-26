@@ -86,7 +86,7 @@ const projects = [
         title: "YogiAPI",
         description: "YogiAPI is a yoga practice API providing structured data on yoga poses, sequences, and practices. It supports both beginner and advanced yoga practices and can be integrated into various fitness applications.",
         imageUrl: "/images/yogiapi.png",
-        tags: ["API", "Yoga"],
+        tags: ["Fitness", "Yoga"],
         techStack: {
             frontEnd: ["React.js"],
             backEnd: ["Flask", "SQLAlchemy"],
@@ -172,7 +172,7 @@ const projects = [
         title: "EatBySeason",
         description: "EatBySeason is a web application that provides information on seasonal produce based on the user's location. It helps users discover what fruits and vegetables are in season and plan their meals accordingly.",
         imageUrl: "/images/eatbyseason.png",
-        tags: ["Wellness", "API"],
+        tags: ["Wellness", "Lifestyle"],
         techStack: {
             frontEnd: ["React.js", "Tailwind CSS"],
             backEnd: ["Flask", "Supabase"],

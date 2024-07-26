@@ -4,6 +4,7 @@ import Intro from './Intro';
 import Skills from './Skills';
 import Projects from './ProjectsList'
 import Blog from "./Blog";
+import Resume from "./Resume";
 
 function Home() {
     return (
@@ -14,6 +15,7 @@ function Home() {
                 <Skills />
                 <Projects />
                 <Blog />
+                <Resume/>
             </div>
         </section>
     )
