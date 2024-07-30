@@ -11,13 +11,16 @@ const Projects = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 md:gap-12">
                 {projects.map((project) => (
                     <Link key={project.id} to={`/projects/${project.id}`} >
-                        <ProjectCard
-                            id={project.id}
-                            title={project.title}
-                            description={project.description}
-                            imageUrl={project.imageUrl}
-                            tags={project.tags}
-                        />
+                        <div className="relative">
+                            <ProjectCard
+                                id={project.id}
+                                title={project.title}
+                                description={project.description}
+                                imageUrl={project.imageUrl}
+                                tags={project.tags}
+                                currentlyWorkingOn={project.currentlyWorkingOn}
+                            />
+                        </div>
                     </Link>
                 ))}
             </div>

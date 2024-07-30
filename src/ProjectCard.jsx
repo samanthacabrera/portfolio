@@ -1,9 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ProjectCard = ({ id, title, description, imageUrl, tags }) => {
+const ProjectCard = ({ id, title, description, imageUrl, tags, currentlyWorkingOn }) => {
     return (
-        <div className="bg-slate-900 opacity-70 rounded-lg shadow-md overflow-hidden">
+        <div className="relative bg-slate-900 opacity-70 rounded-lg shadow-md overflow-hidden">
+            {currentlyWorkingOn && (
+                <div className="absolute top-2 right-2 bg-gray-600 text-white text-xs font-bold py-1 px-2 rounded-full">
+                    WIP
+                </div>
+            )}
             <img src={imageUrl} alt={title} className="w-full min-h-max object-cover opacity-100" />
             <div className="p-4 opacity-100">
                 <h3 className="text-xl mb-2">{title}</h3>

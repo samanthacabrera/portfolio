@@ -18,14 +18,23 @@ const ProjectPage = () => {
             <div className="space-y-12">
                 <div className="flex items-center justify-between">
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900">{project.title}</h1>
-                    {project.deployedLink && (
+                    {project.deployed ? (
                         <a
-                            href={project.deployedLink}
+                            href={project.link}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-block text-lg text-gray-900 bg-slate-200 hover:bg-slate-100 rounded-lg px-6 py-3 transition duration-300 ease-in-out shadow-lg"
                         >
-                            Visit Deployed Site
+                            Visit Site
+                        </a>
+                    ) : (
+                        <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block text-lg text-gray-900 bg-slate-200 hover:bg-slate-100 rounded-lg px-6 py-3 transition duration-300 ease-in-out shadow-lg"
+                        >
+                            Video Walkthrough
                         </a>
                     )}
                 </div>
@@ -80,21 +89,6 @@ const ProjectPage = () => {
                                     <div key={subIndex} className="mb-4">
                                         <h3 className="text-xl font-semibold text-gray-800">{subsection.title}</h3>
                                         <p className="text-gray-700">{subsection.description}</p>
-                                        {subsection.hoursSpent && (
-                                            <p className="text-gray-700">Hours Spent: {subsection.hoursSpent}</p>
-                                        )}
-                                        {subsection.commits && (
-                                            <div className="mt-4">
-                                                <h4 className="text-lg font-semibold text-gray-800">Commits:</h4>
-                                                <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                                                    {subsection.commits.map((commit, commitIndex) => (
-                                                        <li key={commitIndex} className="text-sm">
-                                                            <span className="font-semibold">{commit.date}:</span> {commit.message} ({commit.hours} hours)
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </div>
-                                        )}
                                     </div>
                                 ))}
                             </div>

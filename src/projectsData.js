@@ -11,7 +11,8 @@ const projects = [
             deployment: ["Cloudflare"]
         },
         currentlyWorkingOn: true,
-        deployedLink: "https://reciperoots.com",
+        deployed: false,
+        link: "",
         timeline: [
             {
                 title: "Conceptualization & Planning",
@@ -93,7 +94,8 @@ const projects = [
             deployment: ["Heroku"]
         },
         currentlyWorkingOn: false,
-        deployedLink: "https://yogiapi.com",
+        deployed: false,
+        link: "",
         timeline: [
             {
                 title: "Conceptualization & Planning",
@@ -126,42 +128,16 @@ const projects = [
                     {
                         title: "API Development",
                         description: "Developed the API using Flask. Implemented endpoints for fetching yoga poses, sequences, and practices."
-                    },
-                    {
-                        title: "Database Integration",
-                        description: "Set up the database with SQLAlchemy. Created migrations and seeded initial data for testing."
-                    },
-                    {
-                        title: "Security & Authentication",
-                        description: "Implemented secure user authentication. Added authorization mechanisms to protect sensitive data."
-                    }
-                ]
-            },
-            {
-                title: "Testing & Quality Assurance",
-                date: "",
-                subsections: [
-                    {
-                        title: "Unit Testing",
-                        description: "Wrote unit tests for the API endpoints to ensure they handle various input cases correctly."
-                    },
-                    {
-                        title: "Bug Fixing & Refinement",
-                        description: "Fixed bugs identified during testing. Refined the API performance and user experience."
                     }
                 ]
             },
             {
                 title: "Launch & Post-Launch",
-                date: "",
+                date: "Aug 2024",
                 subsections: [
                     {
-                        title: "Deployment",
-                        description: "Deployed the API to Heroku and performed final testing to verify that it works in the production environment."
-                    },
-                    {
-                        title: "Ongoing Support",
-                        description: "Provided ongoing support and updates to the API. Monitored performance and user feedback for improvements."
+                        title: "Official Launch",
+                        description: "Coming soon......"
                     }
                 ]
             }
@@ -178,8 +154,9 @@ const projects = [
             backEnd: ["Flask", "Supabase"],
             deployment: ["Vercel"]
         },
-        currentlyWorkingOn: true,
-        deployedLink: "https://eatbyseason.com",
+        currentlyWorkingOn: false,
+        deployed: false,
+        link: "",
         timeline: [
             {
                 title: "Conceptualization & Planning",
@@ -226,34 +203,6 @@ const projects = [
                         description: "Ensured secure access to user data and recommendations. Applied best practices for API security."
                     }
                 ]
-            },
-            {
-                title: "Testing & Quality Assurance",
-                date: "",
-                subsections: [
-                    {
-                        title: "User Testing",
-                        description: "Conducted user testing to gather feedback on functionality and usability. Made adjustments based on user input."
-                    },
-                    {
-                        title: "Bug Fixing & Refinement",
-                        description: "Addressed issues found during testing. Enhanced the application based on feedback and testing results."
-                    }
-                ]
-            },
-            {
-                title: "Launch & Post-Launch",
-                date: "",
-                subsections: [
-                    {
-                        title: "Official Launch",
-                        description: "Launched the application publicly and monitored for any issues or bugs."
-                    },
-                    {
-                        title: "Ongoing Improvements",
-                        description: "Collected user feedback and made continuous improvements to the application's functionality and user experience."
-                    }
-                ]
             }
         ]
     },
@@ -269,7 +218,8 @@ const projects = [
             deployment: [""]
         },
         currentlyWorkingOn: false,
-        deployedLink: "https://gratitudeglobe.com",
+        deployed: false,
+        link: "",
         timeline: [
             {
                 title: "Conceptualization & Planning",
@@ -302,20 +252,6 @@ const projects = [
                     {
                         title: "API Development",
                         description: "Developed RESTful API endpoints using Flask. Created endpoints for journal entry CRUD operations."
-                    },
-                    {
-                        title: "Database Design",
-                        description: "Designed the database schema with SQLAlchemy. Implemented database migrations and initial data seeding."
-                    }
-                ]
-            },
-            {
-                title: "Launch",
-                date: "Aug 2024",
-                subsections: [
-                    {
-                        title: "Official Launch",
-                        description: "Launched the application and monitored for any issues. Provided user support and addressed any feedback."
                     }
                 ]
             }
@@ -333,7 +269,8 @@ const projects = [
             deployment: ["n/a"]
         },
         currentlyWorkingOn: false,
-        deployedLink: "",
+        deployed: false,
+        link: "",
         timeline: [
             {
                 title: "Conceptualization & Planning",
@@ -366,34 +303,6 @@ const projects = [
                         description: "Integrated the flow generation algorithm with the CLI interface. Ensured seamless interaction between different components."
                     }
                 ]
-            },
-            {
-                title: "Testing & Refinement",
-                date: "",
-                subsections: [
-                    {
-                        title: "Unit Testing",
-                        description: "Wrote unit tests for the flow generation algorithm and CLI commands. Ensured all components work correctly under various scenarios."
-                    },
-                    {
-                        title: "User Feedback",
-                        description: "Conducted beta testing with a group of yoga practitioners. Collected feedback and made necessary adjustments to improve the user experience."
-                    }
-                ]
-            },
-            {
-                title: "Launch & Post-Launch",
-                date: "",
-                subsections: [
-                    {
-                        title: "Official Release",
-                        description: "Released the CLI tool on PyPI for public use. Promoted through yoga communities and social media."
-                    },
-                    {
-                        title: "Ongoing Support & Improvements",
-                        description: "Monitored user feedback and released updates to fix bugs and add new features. Continued to enhance the tool based on user needs."
-                    }
-                ]
             }
         ]
     },
@@ -409,11 +318,12 @@ const projects = [
             deployment: ["n/a"]
         },
         currentlyWorkingOn: true,
-        deployedLink: "https://catchi.com",
+        deployed: false,
+        link: "",
         timeline: [
             {
                 title: "Conceptualization & Planning",
-                date: "",
+                date: "Aug 2024",
                 subsections: [
                     {
                         title: "Research",
@@ -422,66 +332,6 @@ const projects = [
                     {
                         title: "Feature Definition",
                         description: "Outlined core features such as location recommendations, feng shui tips, and interactive elements for cats."
-                    }
-                ]
-            },
-            {
-                title: "Front-End Development",
-                date: "",
-                subsections: [
-                    {
-                        title: "UI Design",
-                        description: "Designed an engaging user interface using React.js and Tailwind CSS. Implemented playful animations and interactions."
-                    },
-                    {
-                        title: "Integration",
-                        description: "Integrated the front-end with the back-end API to provide dynamic recommendations and feng shui tips."
-                    }
-                ]
-            },
-            {
-                title: "Back-End Development",
-                date: "",
-                subsections: [
-                    {
-                        title: "API Development",
-                        description: "Developed the API using Flask. Created endpoints for fetching feng shui recommendations and user data."
-                    },
-                    {
-                        title: "Database Design",
-                        description: "Designed the database schema with SQLAlchemy. Implemented data storage for user preferences and recommendations."
-                    },
-                    {
-                        title: "Security & Authentication",
-                        description: "Implemented secure user authentication and data protection. Applied best practices for API security."
-                    }
-                ]
-            },
-            {
-                title: "Testing & Quality Assurance",
-                date: "",
-                subsections: [
-                    {
-                        title: "User Testing",
-                        description: "Conducted user testing to gather feedback on the app's functionality and enjoyment. Made adjustments based on user input."
-                    },
-                    {
-                        title: "Bug Fixing & Refinement",
-                        description: "Identified and fixed bugs. Enhanced features and improved performance based on testing results."
-                    }
-                ]
-            },
-            {
-                title: "Launch & Post-Launch",
-                date: "",
-                subsections: [
-                    {
-                        title: "Official Launch",
-                        description: "Launched the application and monitored for any issues. Provided user support and addressed any feedback."
-                    },
-                    {
-                        title: "Ongoing Updates",
-                        description: "Released updates and new features based on user feedback. Continued to improve the app's functionality and user experience."
                     }
                 ]
             }
