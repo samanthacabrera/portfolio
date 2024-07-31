@@ -19,6 +19,7 @@ const Projects = () => {
                                 imageUrl={project.imageUrl}
                                 tags={project.tags}
                                 currentlyWorkingOn={project.currentlyWorkingOn}
+                                hideImage="sm:hidden" 
                             />
                         </div>
                     </Link>

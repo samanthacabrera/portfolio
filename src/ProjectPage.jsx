@@ -16,14 +16,14 @@ const ProjectPage = () => {
                 <img src={project.imageUrl} alt={project.title} className="w-full h-auto object-cover rounded-lg shadow-lg" />
             </div>
             <div className="space-y-12">
-                <div className="flex items-center justify-between">
+                <div className="flex flex-col md:flex-row items-center justify-between">
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900">{project.title}</h1>
                     {project.deployed ? (
                         <a
                             href={project.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-block text-lg text-gray-900 bg-slate-200 hover:bg-slate-100 rounded-lg px-6 py-3 transition duration-300 ease-in-out shadow-lg"
+                            className="inline-block text-lg text-gray-900 bg-slate-200 hover:bg-slate-100 rounded-lg px-6 py-3 transition duration-300 ease-in-out shadow-lg mt-4 md:mt-0"
                         >
                             Visit Site
                         </a>
@@ -32,7 +32,7 @@ const ProjectPage = () => {
                             href={project.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-block text-lg text-gray-900 bg-slate-200 hover:bg-slate-100 rounded-lg px-6 py-3 transition duration-300 ease-in-out shadow-lg"
+                            className="inline-block text-lg text-gray-900 bg-slate-200 hover:bg-slate-100 rounded-lg px-6 py-3 transition duration-300 ease-in-out shadow-lg mt-4 md:mt-0"
                         >
                             Video Walkthrough
                         </a>
@@ -40,7 +40,7 @@ const ProjectPage = () => {
                 </div>
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed">{project.description}</p>
                 
-                <div className="flex flex-wrap gap-8 mb-8">
+                <div className="flex flex-col md:flex-row flex-wrap gap-8 mb-8">
                     <div className="flex-1">
                         <h2 className="text-2xl font-semibold text-gray-900 mb-4">Front-End</h2>
                         <ul className="list-none space-y-2 text-gray-700">
@@ -78,11 +78,10 @@ const ProjectPage = () => {
                     ))}
                 </div>
 
-                <div className="relative">
-                    <div className="absolute left-1/2 top-0 h-full border-l-2 border-gray-300 transform -translate-x-1/2"></div>
+                <div className="space-y-12">
                     {project.timeline.map((phase, index) => (
-                        <div key={index} className={`flex flex-col mb-12 ${index % 2 === 0 ? 'items-start' : 'items-end'}`}>
-                            <div className={`bg-white bg-opacity-30 p-6 rounded-lg shadow-md max-w-md w-full ${index % 2 === 0 ? 'ml-8' : 'mr-8'} ${index > 0 ? '-mt-8' : ''}`}>
+                        <div key={index} className="flex justify-center mb-12">
+                            <div className="bg-white bg-opacity-30 p-6 rounded-lg shadow-md max-w-md w-full">
                                 <h2 className="text-3xl font-semibold text-gray-900 mb-4">{phase.title}</h2>
                                 <p className="text-gray-600 mb-2">{phase.date}</p>
                                 {phase.subsections.map((subsection, subIndex) => (

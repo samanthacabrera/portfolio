@@ -9,7 +9,11 @@ const ProjectCard = ({ id, title, description, imageUrl, tags, currentlyWorkingO
                     WIP
                 </div>
             )}
-            <img src={imageUrl} alt={title} className="w-full min-h-max object-cover opacity-100" />
+            <img
+                src={imageUrl}
+                alt={title}
+                className="w-full min-h-max object-cover hidden sm:block" // Hide on small devices
+            />
             <div className="p-4 opacity-100">
                 <h3 className="text-xl mb-2">{title}</h3>
                 <p className="text-left mb-4">{description}</p>
