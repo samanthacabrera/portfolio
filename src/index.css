@@ -61,3 +61,35 @@ nav {
     background-position: 0% 50%;
   }
 }
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+
+.nav-menu.active {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+}
