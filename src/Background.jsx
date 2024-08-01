@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 
 const Background = () => {
     const [gradient, setGradient] = useState(getRandomGradient());
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const location = useLocation();
 
     useEffect(() => {
@@ -13,21 +14,40 @@ const Background = () => {
             }
         };
 
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        const handleClick = () => {
+            setGradient(getRandomGradient());
+        };
+
         window.addEventListener('keydown', handleKeyDown);
+        window.addEventListener('resize', handleResize);
+
+        // Attach click event listener for small devices
+        if (windowWidth <= 768) {
+            window.addEventListener('click', handleClick);
+        }
 
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
+            window.removeEventListener('resize', handleResize);
+            if (windowWidth <= 768) {
+                window.removeEventListener('click', handleClick);
+            }
         };
-    }, []);
+    }, [windowWidth]);
 
     const showText = location.pathname === '/';
+    const isSmallDevice = windowWidth <= 768;
 
     return (
         <>
             <div className="fixed inset-0" style={{ ...styles.container, background: gradient }}></div>
             {showText && (
-                <div style={styles.textContainer}>
-                    <h2 className="text-xl opacity-50">[ Press Space Bar ]</h2>
+                <div style={{ ...styles.textContainer, cursor: isSmallDevice ? 'pointer' : 'default' }}>
+                    <h2 className="text-xl opacity-50">{isSmallDevice ? '[ Click Here ]' : '[ Press Space Bar ]'}</h2>
                 </div>
             )}
         </>
@@ -68,4 +88,3 @@ const styles = {
 };
 
 export default Background;
-
