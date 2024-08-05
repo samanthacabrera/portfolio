@@ -36,12 +36,28 @@ const Navbar = () => {
     setIsMenuOpen(prevState => !prevState);
   };
 
+  const gradientColors = [
+    'rgba(102, 77, 0, 0.7)',   // Earthy Brown
+    'rgba(110, 42, 12, 0.7)',  // Earthy Red-Brown
+    'rgba(105, 19, 18, 0.7)',  // Earthy Deep Red
+    'rgba(93, 9, 51, 0.7)',    // Earthy Purple
+    'rgba(41, 25, 56, 0.7)',   // Earthy Dark Purple
+    'rgba(4, 45, 58, 0.7)',    // Earthy Dark Blue
+    'rgba(18, 64, 60, 0.7)',   // Earthy Teal
+    'rgba(71, 82, 0, 0.7)'     // Earthy Olive Green
+  ];
+
+
+  const getRandomGradient = () => {
+    return gradientColors[Math.floor(Math.random() * gradientColors.length)];
+  };
+
   return (
     <>
       <nav className="fixed inset-0 pointer-events-none text-xl">
         <div className="pointer-events-auto absolute top-4 left-4">
-          <a id="homeIcon" href="/" onClick={() => setIsMenuOpen(false)} className="hover:text-pink-100 transition duration-300 ease-in-out">
-            Sam<span className="inline-block hover:rotate-6 hover:-translate-y-1 transition duration-300 ease-in-out"> Cab</span>
+          <a id="homeIcon" href="/" onClick={() => setIsMenuOpen(false)} className="transition-transform transform hover:scale-105 duration-300 ease-in-out">
+            Sam<span className="inline-block transition-transform transform hover:rotate-6 hover:-translate-y-1 duration-300 ease-in-out"> Cab</span>
           </a>
         </div>
         <div className="pointer-events-auto absolute top-4 right-4 md:hidden">
@@ -50,35 +66,38 @@ const Navbar = () => {
           </button>
         </div>
         <div className="pointer-events-auto absolute top-4 right-4 hidden md:flex space-x-4">
-          <button onClick={() => handleNavigation('projects')} className="pointer-events-auto hover:text-pink-100 transition duration-300 ease-in-out">Work</button>
-          <button onClick={() => handleNavigation('blog')} className="pointer-events-auto hover:text-pink-100 transition duration-300 ease-in-out">Blog</button>
-          <a href="/about" className="hover:text-pink-100 transition duration-300 ease-in-out">About</a>
-          <a href="https://github.com/samanthacabrera" target="_blank" rel="noopener noreferrer" className="block w-full text-xl hover:text-pink-100 transition duration-300 ease-in-out">GitHub</a>
+          <button onClick={() => handleNavigation('projects')} className="transition-transform transform hover:scale-105 duration-300 ease-in-out">Work</button>
+          <button onClick={() => handleNavigation('blog')} className="transition-transform transform hover:scale-105 duration-300 ease-in-out">Blog</button>
+          <a href="/about" className="transition-transform transform hover:scale-105 duration-300 ease-in-out">About</a>
+          <a href="https://github.com/samanthacabrera" target="_blank" rel="noopener noreferrer" className="block w-full text-xl transition-transform transform hover:scale-105 duration-300 ease-in-out">GitHub</a>
         </div>
       </nav>
 
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center md:hidden z-50">
-          <div className="relative bg-pink-200 bg-opacity-50 rounded-lg shadow-lg p-12 space-y-4 text-center">
-            <button onClick={toggleMenu} className="absolute top-4 right-4 text-2xl text-white ">
+        <div className="fixed inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center z-50">
+          <div className="relative bg-gray-400 bg-opacity-30 rounded-lg shadow-lg p-8 space-y-6 text-center">
+            <button onClick={toggleMenu} className="absolute top-4 right-4 text-2xl text-gray-600">
               <FontAwesomeIcon icon={faTimes} />
             </button>
-            <div className="mt-10 space-y-2">
+            <div className="space-y-4">
               <button 
                 onClick={() => handleNavigation('projects')} 
-                className="block w-full text-xl text-white hover:text-pink-100 rounded-lg p-2 transition duration-300 ease-in-out"
+                className="block w-full text-xl text-white rounded-lg p-3 transition-transform transform hover:scale-105 duration-300 ease-in-out"
+                style={{ backgroundColor: getRandomGradient() }}
               >
                 Work
               </button>
               <button 
                 onClick={() => handleNavigation('blog')} 
-                className="block w-full text-xl text-white hover:text-pink-100 rounded-lg p-2 transition duration-300 ease-in-out"
+                className="block w-full text-xl text-white rounded-lg p-3 transition-transform transform hover:scale-105 duration-300 ease-in-out"
+                style={{ backgroundColor: getRandomGradient() }}
               >
                 Blog
               </button>
               <a 
                 href="/about" 
-                className="block w-full text-xl text-white hover:text-pink-100 rounded-lg p-2 transition duration-300 ease-in-out"
+                className="block w-full text-xl text-white rounded-lg p-3 transition-transform transform hover:scale-105 duration-300 ease-in-out"
+                style={{ backgroundColor: getRandomGradient() }}
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
@@ -87,7 +106,8 @@ const Navbar = () => {
                 href="https://linkedin.com/in/samcabreraa" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="block w-full text-xl text-white hover:text-pink-100 rounded-lg p-2 transition duration-300 ease-in-out"
+                className="block w-full text-xl text-white rounded-lg p-3 transition-transform transform hover:scale-105 duration-300 ease-in-out"
+                style={{ backgroundColor: getRandomGradient() }}
                 onClick={() => setIsMenuOpen(false)}
               >
                 LinkedIn
@@ -96,7 +116,8 @@ const Navbar = () => {
                 href="https://github.com/samanthacabrera" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="block w-full text-xl text-white hover:text-pink-100 rounded-lg p-2 transition duration-300 ease-in-out"
+                className="block w-full text-xl text-white rounded-lg p-3 transition-transform transform hover:scale-105 duration-300 ease-in-out"
+                style={{ backgroundColor: getRandomGradient() }}
                 onClick={() => setIsMenuOpen(false)}
               >
                 GitHub
@@ -105,7 +126,8 @@ const Navbar = () => {
                 href="https://leetcode.com/u/samcab/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="block w-full text-xl text-white hover:text-pink-100 rounded-lg p-2 transition duration-300 ease-in-out"
+                className="block w-full text-xl text-white rounded-lg p-3 transition-transform transform hover:scale-105 duration-300 ease-in-out"
+                style={{ backgroundColor: getRandomGradient() }}
                 onClick={() => setIsMenuOpen(false)}
               >
                 LeetCode
