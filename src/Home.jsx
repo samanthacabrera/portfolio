@@ -2,9 +2,10 @@ import React from "react";
 import Hero from './Hero';
 import Intro from './Intro';
 import Skills from './Skills';
-import Projects from './ProjectsList'
+import Projects from './ProjectsList';
 import Blog from "./Blog";
 import Resume from "./Resume";
+import About from "./About";
 
 function Home() {
     return (
@@ -15,7 +16,8 @@ function Home() {
                 <Skills />
                 <Projects />
                 <Blog />
-                <Resume/>
+                <Resume />
+                <About/>
             </div>
         </section>
     )

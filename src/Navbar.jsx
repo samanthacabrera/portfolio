@@ -47,7 +47,6 @@ const Navbar = () => {
     'rgba(71, 82, 0, 0.7)'     // Earthy Olive Green
   ];
 
-
   const getRandomGradient = () => {
     return gradientColors[Math.floor(Math.random() * gradientColors.length)];
   };
@@ -68,7 +67,7 @@ const Navbar = () => {
         <div className="pointer-events-auto absolute top-4 right-4 hidden md:flex space-x-4">
           <button onClick={() => handleNavigation('projects')} className="transition-transform transform hover:scale-105 duration-300 ease-in-out">Work</button>
           <button onClick={() => handleNavigation('blog')} className="transition-transform transform hover:scale-105 duration-300 ease-in-out">Blog</button>
-          <a href="/about" className="transition-transform transform hover:scale-105 duration-300 ease-in-out">About</a>
+          <button onClick={() => handleNavigation('about')} className="transition-transform transform hover:scale-105 duration-300 ease-in-out">About</button>
           <a href="https://github.com/samanthacabrera" target="_blank" rel="noopener noreferrer" className="block w-full text-xl transition-transform transform hover:scale-105 duration-300 ease-in-out">GitHub</a>
         </div>
       </nav>
@@ -94,14 +93,13 @@ const Navbar = () => {
               >
                 Blog
               </button>
-              <a 
-                href="/about" 
+              <button 
+                onClick={() => handleNavigation('about')} 
                 className="block w-full text-xl text-white rounded-lg p-3 transition-transform transform hover:scale-105 duration-300 ease-in-out"
                 style={{ backgroundColor: getRandomGradient() }}
-                onClick={() => setIsMenuOpen(false)}
               >
                 About
-              </a>
+              </button>
               <a 
                 href="https://linkedin.com/in/samcabreraa" 
                 target="_blank" 

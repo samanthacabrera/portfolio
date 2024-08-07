@@ -13,10 +13,12 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #d0cfe4dc;
+  text-align: justify;
 }
 
 .subHeading {
   font-family: "Karrik", Helvetica, sans-serif;
+  text-align: center;
   letter-spacing: -0.75rem;
   transition-property: letter-spacing;
   transition-duration: 2s;

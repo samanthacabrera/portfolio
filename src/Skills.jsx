@@ -3,7 +3,7 @@ import React from "react";
 function Skills() {
   const skills = [
     "React.js",
-    "Tailwind",
+    "Tailwind CSS",
     "JavaScript",
     "CSS",
     "HTML",
@@ -13,10 +13,11 @@ function Skills() {
     "Git",
     "SQL",
     "Python",
-    "Flask"
+    "Flask",
+    "Cloudflare",
+    "Vite"
   ];
 
-  // Function to chunk the skills array into subarrays of size 5
   const chunkSkills = (arr, size) => {
     return arr.reduce((chunks, element, i) => {
       if (i % size === 0) {
@@ -31,7 +32,7 @@ function Skills() {
   const skillRows = chunkSkills(skills, 2);
 
   return (
-    <div className="text-center space-y-20 md:p-40 p-12">
+    <div className="text-center space-y-4">
       <h2 className="subHeading lowercase md:text-9xl text-7xl">Skillset</h2>
 
       {skillRows.map((row) => (

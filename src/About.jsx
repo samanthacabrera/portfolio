@@ -3,8 +3,8 @@ import me from "./IMG_0897.JPG";
 
 function About() {
   return (
-    <section className="flex flex-col justify-center items-center">
-      <div className="text-center w-1/2 space-y-20 md:m-40 m-12">
+    <section id="about" className="flex flex-col justify-center items-center">
+      <div className="space-y-20">
         <h2 className="subHeading lowercase md:text-9xl text-7xl">All <br /> About Me </h2>
         <img src={me} alt="Me" />
         <p>
@@ -14,17 +14,17 @@ function About() {
         </p>
       </div>
 
-      <div className="text-center w-1/2 space-y-10 md:m-40 m-12">
-        <h2 className="subHeading lowercase md:text-9xl text-7xl">Q & A</h2>
+      {/* <div className="space-y-10">
+        <h2 className="subHeading lowercase text-center md:text-9xl text-7xl">Q & A</h2>
         <p>What is your favorite aspect of software engineering?</p>
         <p>I love being able to create any idea that pops into my head into a web application.</p>
         <p>What are some goals or aspirations you have for your career in software development?</p>
         <p>Some of my short-term goals are to deploy my passion project Recipe Roots. My dream is to pursue freelance web development full time and travel the world.</p>
         <p>What motivates you to continue to learn and grow as a software engineer?</p>
         <p>Seeing beautiful, functional web applications inspires me to keep improving my craft. It excites me that there is a constant stream of new technologies to learn and leverage in my projects.</p>
-      </div>
+      </div> 
 
-      <div className="text-center w-1/2 space-y-10 md:m-40 m-12">
+      <div className="space-y-10">
         <h2 className="subHeading lowercase md:text-9xl text-7xl">Inspo</h2>
         <p>I find inspiration through music, art, and cinema. I am drawn to abstract and thought-provoking themes. Below are some of my regular sources of inspiration:</p>
         <div className="text-center space-y-2 flex flex-col">
@@ -37,7 +37,7 @@ function About() {
           <a href="https://en.wikipedia.org/wiki/Emily_Bront%C3%AB" target="_blank" rel="noreferrer">Emily Bronte</a>
           <a href="https://www.imdb.com/name/nm0726638/" target="_blank" rel="noreferrer">Patricia Riggen</a>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

@@ -5,10 +5,10 @@ import projects from "./projectsData";
 
 const Projects = () => {
     return (
-        <div id="projects" className="container p-4 md:p-12 lg:p-24 space-y-12 md:space-y-24 text-center">
-            <h2 className="subHeading lowercase text-5xl md:text-7xl lg:text-9xl">Projects</h2>
+        <div id="projects" className="container space-y-12 md:space-y-24">
+            <h2 className="subHeading lowercase md:text-7xl lg:text-9xl">Projects</h2>
             <p className="">Below is a collection of my professional and personal web dev projects. If you have any questions about them don't hesitate to contact me and I can provide more information.</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 md:gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 ">
                 {projects.map((project) => (
                     <Link key={project.id} to={`/projects/${project.id}`} >
                         <div className="relative">

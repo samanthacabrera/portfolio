@@ -2,7 +2,7 @@ import React from "react";
 
 function Intro() {
   return (
-    <div className="text-center space-y-20 md:m-40 m-12">
+    <div className="space-y-10">
       <h2 className="subHeading lowercase md:text-9xl text-7xl">Who am I?</h2>
       <p> I am a full-stack software engineer based in Denver. I am dedicated to driving positive change and making
         meaningful contributions to our digital world. </p>
