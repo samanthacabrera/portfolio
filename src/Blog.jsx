@@ -50,6 +50,7 @@ function Blog() {
         <>
             <div id="blog" className="container md:space-y-8 space-y-4">
                 <h2 className="subHeading lowercase md:text-9xl text-7xl">writings</h2>
+                <p>Here, you'll find my collection of articles ranging from tutorials to histories of various technologies.</p>
                 {displayBlogs()}
             </div>
         </>

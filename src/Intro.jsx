@@ -2,12 +2,15 @@ import React from "react";
 
 function Intro() {
   return (
-    <div className="space-y-10">
+    <div id="intro" className="space-y-10">
       <h2 className="subHeading lowercase md:text-9xl text-7xl">Who am I?</h2>
-      <p> I am a full-stack software engineer based in Denver. I am dedicated to driving positive change and making
-        meaningful contributions to our digital world. </p>
-      <p> I am equipped with a diverse skill set of programming languages and frameworks, including HTML, CSS,
-        JavaScript, React.js, Python, and Flask. </p>
+      {/* <p> I am a full-stack software engineer based in Denver. I am dedicated to driving positive change and making
+        meaningful contributions to our digital world. </p> */}
+      <img src={`${process.env.PUBLIC_URL}/images/me.JPG`} alt="Me" />
+      <p>
+          I was born and raised in Southern California. I currently live in Denver with my husband, Justin, and our cute
+          cat, Ares. 
+      </p>
       <p> My academic journey began at Arizona State University, where I laid the groundwork for my career in software
         engineering. During my time at ASU, I was introduced to various aspects of software engineering, particularly
         focusing on web development. This initial exposure ignited my passion for the field, prompting me to seek
@@ -22,8 +25,10 @@ function Intro() {
         clients and users alike. I draw inspiration for my projects from a wide range of sources, including art, and
         architecture. It is through this fusion of artistry and technology that I find fulfillment and purpose in my
         work.</p>
+      <p>In my free time, you can find me practicing yoga, solving puzzles, or watching movies. When the weather permits, I
+          love to go on picnics and hike. I am in constant pursuit of new experiences, embracing the richness that life has to offer.</p>
     </div>
   )
 }
 
-export default Intro
+export default Intro;
