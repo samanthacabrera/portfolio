@@ -5,6 +5,7 @@ import Background from './Background';
 import Navbar from './Navbar';
 import Home from './Home';
 import ProjectPage from './ProjectPage';
+import Footer from './Footer';
 import './tailwind.css';
 import './index.css';
 
@@ -22,6 +23,7 @@ function App() {
           <ProjectPage/>
         </Route>
       </Switch>
+      <Footer/>
     </Router>
   );
 }

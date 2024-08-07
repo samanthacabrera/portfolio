@@ -6,8 +6,7 @@ body,
 html {
   margin: 0;
   padding: 0;
-  padding-bottom: 1rem;
-  font-family: "Goli", sans-serif;
+  font-family: Helvetica, sans-serif;
   overflow-x: hidden;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
@@ -17,7 +16,6 @@ html {
 }
 
 .subHeading {
-  font-family: "Karrik", Helvetica, sans-serif;
   text-align: center;
   letter-spacing: -0.75rem;
   transition-property: letter-spacing;
@@ -35,17 +33,13 @@ html {
   }
 }
 
-#hero {
+/* #hero h1 {
   font-family: "Bolota", Impact, sans-serif;
-}
+} */
 
 #flutter {
   border-radius: clamp(0.4rem, 0.75vw, 1rem);
-  font-size: clamp(3rem, 10vw, 10rem);
-}
-
-nav {
-  font-family: "Karrik", Helvetica, sans-serif;
+  font-size: clamp(5rem, 5vw, 5rem);
 }
 
 .progress {

@@ -56,7 +56,7 @@ const Navbar = () => {
         </div>
         <div className="pointer-events-auto absolute top-4 right-4 hidden md:flex space-x-4">
           <button onClick={() => handleNavigation('intro')} className="transition-transform transform hover:scale-105 duration-300 ease-in-out">About</button>
-          <button onClick={() => handleNavigation('projects')} className="transition-transform transform hover:scale-105 duration-300 ease-in-out">Work</button>
+          <button onClick={() => handleNavigation('projects')} className="transition-transform transform hover:scale-105 duration-300 ease-in-out">Projects</button>
           <button onClick={() => handleNavigation('blog')} className="transition-transform transform hover:scale-105 duration-300 ease-in-out">Blog</button>
           <a href="https://github.com/samanthacabrera" target="_blank" rel="noopener noreferrer" className="block w-full text-xl transition-transform transform hover:scale-105 duration-300 ease-in-out flex items-center">
             GitHub <FaExternalLinkAlt className="ml-2" />
@@ -83,7 +83,7 @@ const Navbar = () => {
                 className="block w-full text-xl text-gray-800 rounded-lg p-3 transition-transform transform hover:scale-105 duration-300 ease-in-out border border-gray-300 hover:border-gray-200"
                 style={{ backgroundColor: '#b0c4de' }} 
               >
-                Work
+                Projects
               </button>
               <button 
                 onClick={() => handleNavigation('blog')} 

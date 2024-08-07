@@ -4,12 +4,11 @@ function Intro() {
   return (
     <div id="intro" className="space-y-10">
       <h2 className="subHeading lowercase md:text-9xl text-7xl">Who am I?</h2>
-      {/* <p> I am a full-stack software engineer based in Denver. I am dedicated to driving positive change and making
-        meaningful contributions to our digital world. </p> */}
       <img src={`${process.env.PUBLIC_URL}/images/me.JPG`} alt="Me" />
       <p>
-          I was born and raised in Southern California. I currently live in Denver with my husband, Justin, and our cute
-          cat, Ares. 
+        I am a full-stack software engineer dedicated to driving positive change and making
+        meaningful contributions to our digital world. I was born and raised in Southern California. I currently live in Denver with my husband, Justin, and our cute
+        cat, Ares. 
       </p>
       <p> My academic journey began at Arizona State University, where I laid the groundwork for my career in software
         engineering. During my time at ASU, I was introduced to various aspects of software engineering, particularly
