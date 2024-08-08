@@ -8,12 +8,15 @@ body,
 html {
   margin: 0;
   padding: 0;
-  font-family: Helvetica, sans-serif;
+  /* font-family: Helvetica, sans-serif; */
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 900;
   overflow-x: hidden;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #d0cfe4dc;
+  color: rgb(39, 44, 57);
   text-align: justify;
 }
 
@@ -58,4 +61,20 @@ html {
   100% {
     background-position: 0% 50%;
   }
+}
+
+/* ######################################### */
+
+/* Custom styles for horizontal scrolling */
+.horizontal-scroll {
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch; /* For smooth scrolling on mobile */
+}
+
+/* Ensure all child elements are laid out horizontally */
+.horizontal-scroll > * {
+  display: inline-block;
+  vertical-align: top;
+  min-width: 100%;
 }

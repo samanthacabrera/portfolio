@@ -46,7 +46,8 @@ const Navbar = () => {
         </div>
         <div className={`absolute top-4 left-1/2 transform -translate-x-1/2 flex space-x-4 ${isMenuOpen ? 'hidden' : 'block'} hidden md:flex`}>
           <a id="homeIcon" href="/" onClick={() => setIsMenuOpen(false)} className="transition-transform transform hover:scale-105 duration-300 ease-in-out">
-            Sam<span className="inline-block transition-transform transform hover:rotate-6 hover:-translate-y-1 duration-300 ease-in-out"> Cab</span>
+            {/* Sam<span className="inline-block transition-transform transform hover:rotate-6 hover:-translate-y-1 duration-300 ease-in-out"> Cab</span> */}
+            Home
           </a>
           <button onClick={() => handleNavigation('intro')} className="transition-transform transform hover:scale-105 duration-300 ease-in-out">About</button>
           <button onClick={() => handleNavigation('projects')} className="transition-transform transform hover:scale-105 duration-300 ease-in-out">Projects</button>
