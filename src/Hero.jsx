@@ -44,7 +44,7 @@ function Hero() {
   return (
     <div id="hero" className="w-screen h-screen flex flex-col justify-center items-center text-center">
       <h6 className="text-lg mb-4">hi there,</h6>
-      <h1 ref={h1Ref} id="flutter">I'm Sam!</h1>
+      <h1 ref={h1Ref} id="flutter">I'm Sam</h1>
     </div>
   );
 }

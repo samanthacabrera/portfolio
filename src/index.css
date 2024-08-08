@@ -33,9 +33,9 @@ html {
   }
 }
 
-/* #hero h1 {
-  font-family: "Bolota", Impact, sans-serif;
-} */
+#hero h1 {
+  font-family: "Bolota", Helvetica, sans-serif;
+}
 
 #flutter {
   border-radius: clamp(0.4rem, 0.75vw, 1rem);
@@ -55,37 +55,5 @@ html {
   }
   100% {
     background-position: 0% 50%;
-  }
-}
-
-.nav-menu {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  text-align: center;
-}
-
-.nav-menu.active {
-  display: flex;
-  flex-direction: column;
-}
-
-.menu-icon {
-  display: none;
-}
-
-@media screen and (max-width: 960px) {
-  .menu-icon {
-    display: block;
-  }
-
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .nav-menu.active {
-    display: flex;
   }
 }

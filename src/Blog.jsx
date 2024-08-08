@@ -33,14 +33,14 @@ function Blog() {
     const displayBlogs = () => {
         if (blog.items) {
             return blog.items.map((post, index) => (
-                <div key={index}>
-                    <div className='card-body'>
-                        <h1 className='card-title text-xl text-left font-bold decoration-current'>
-                            <a href={post.link} className='postTitle' rel='noreferrer' target='_blank'>{post.title}</a>
-                        </h1>
-                        <p className='card-text hidden md:block'>{`${ToText(post.description.substring(0, 500))}...`}</p>
-                        <p className="">({calculateReadTime(ToText(post.description))} minute read)</p>
-                    </div>
+                <div key={index} >
+
+                    <h6 className="text-base md:text-2xl mb-2">
+                        <a href={post.link} className='postTitle' rel='noreferrer' target='_blank'>{post.title}</a>
+                        <span className="italic"> ({calculateReadTime(ToText(post.description))} minute read)</span>
+                    </h6>
+
+                    <p className='hidden md:block'>{`${ToText(post.description.substring(0, 500))}...`}</p>
                 </div>
             ));
         }
@@ -48,7 +48,7 @@ function Blog() {
 
     return (
         <>
-            <div id="blog" className="container md:space-y-8 space-y-4">
+            <div id="blog" className="container space-y-10 md:space-y-20">
                 <h2 className="subHeading lowercase md:text-9xl text-7xl">writings</h2>
                 <p>Here, you'll find my collection of articles ranging from tutorials to histories of various technologies.</p>
                 {displayBlogs()}

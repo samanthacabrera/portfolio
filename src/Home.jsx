@@ -13,8 +13,8 @@ function Home() {
             <div className="w-2/3 md:space-y-20 space-y-10">
                 <Intro />
                 <Resume />
-                <Skills />
                 <Projects />
+                <Skills />
                 <Blog />
             </div>
         </section>
