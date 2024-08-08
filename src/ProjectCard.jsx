@@ -1,36 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ProjectCard = ({ id, title, description, imageUrl, tags, currentlyWorkingOn }) => {
+const ProjectCard = ({ id, title, description, imageUrl, currentlyWorkingOn }) => {
     return (
-        <div className="relative bg-slate-900 opacity-70 rounded-lg shadow-md overflow-hidden">
+        <div className="relative bg-white bg-opacity-90 rounded-lg shadow-lg overflow-hidden border border-gray-200 flex flex-col">
             {currentlyWorkingOn && (
-                <div className="absolute top-2 right-2 bg-gray-600 text-white text-xs font-bold py-1 px-2 rounded-full">
+                <div className="absolute top-2 right-2 inline-block bg-gray-400 text-white rounded-full px-3 py-1 font-bold mr-2 mb-2">
                     WIP
                 </div>
             )}
             <img
                 src={imageUrl}
                 alt={title}
-                className="w-full min-h-max object-cover hidden sm:block" // Hide on small devices
+                className="w-full h-64 object-cover"
             />
-            <div className="p-4 opacity-100">
-                <h3 className="text-xl mb-2">{title}</h3>
-                <p className="text-left mb-4">{description}</p>
-                <div className="flex flex-wrap mb-4">
-                    {tags.map((tag, index) => (
-                        <span
-                            key={index}
-                            className="inline-block bg-gray-300 text-gray-700 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2 hover:bg-gray-400 hover:text-gray-900 transition duration-300 ease-in-out"
-                            style={{ cursor: "pointer" }}
-                        >
-                            {tag}
-                        </span>
-                    ))}
-                </div>
+            <div className="p-4 space-y-4">
+                <h3 className="text-2xl font-semibold">{title}</h3>
+                <p className="text-gray-700 flex-grow overflow-hidden" style={{ display: '-webkit-box', WebkitBoxOrient: 'vertical', WebkitLineClamp: 4 }}>
+                    {description}
+                </p> 
                 <Link
                     to={`/projects/${id}`}
-                    className="border border-2-white text-white py-2 px-4 rounded-full inline-block hover:bg-gray-700 transition duration-300 ease-in-out"
+                    className="mt-auto inline-block bg-gray-800 text-white rounded-full px-4 py-2 font-bold transition-transform transform hover:scale-105 duration-300"
                     style={{ textDecoration: "none" }}
                 >
                     View Project

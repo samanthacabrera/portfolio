@@ -45,41 +45,46 @@ const Navbar = () => {
           </button>
         </div>
         <div className={`absolute top-4 left-1/2 transform -translate-x-1/2 flex space-x-4 ${isMenuOpen ? 'hidden' : 'block'} hidden md:flex`}>
-          <a id="homeIcon" href="/" onClick={() => setIsMenuOpen(false)} className="transition-transform transform hover:scale-105 duration-300 ease-in-out">
-            {/* Sam<span className="inline-block transition-transform transform hover:rotate-6 hover:-translate-y-1 duration-300 ease-in-out"> Cab</span> */}
+          <a id="homeIcon" href="/" onClick={() => setIsMenuOpen(false)} className="transition-transform transform hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out">
             Home
           </a>
-          <button onClick={() => handleNavigation('intro')} className="transition-transform transform hover:scale-105 duration-300 ease-in-out">About</button>
-          <button onClick={() => handleNavigation('projects')} className="transition-transform transform hover:scale-105 duration-300 ease-in-out">Projects</button>
-          <button onClick={() => handleNavigation('blog')} className="transition-transform transform hover:scale-105 duration-300 ease-in-out">Blog</button>
-          <a href="https://github.com/samanthacabrera" target="_blank" rel="noopener noreferrer" className="block transition-transform transform hover:scale-105 duration-300 ease-in-out flex items-center">
-            GitHub 
+          <button onClick={() => handleNavigation('intro')} className="transition-transform transform hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out">About</button>
+          <button onClick={() => handleNavigation('projects')} className="transition-transform transform hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out">Projects</button>
+          <button onClick={() => handleNavigation('blog')} className="transition-transform transform hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out">Blog</button>
+          <a href="https://github.com/samanthacabrera" target="_blank" rel="noopener noreferrer" className="block transition-transform transform hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out flex items-center">
+            GitHub
           </a>
         </div>
       </nav>
 
       {isMenuOpen && (
         <div className="fixed inset-0 bg-gray-200 bg-opacity-10 text-lg text-gray-600 flex flex-col justify-center items-center z-50 md:hidden">
-          <div className="relative bg-gray-300 bg-opacity-70 border border-gray-300 shadow-lg rounded-lg p-4 w-full max-w-sm space-y-6 text-center">
+          <div className="relative bg-gray-50 bg-opacity-95 border border-gray-300 shadow-lg rounded-lg p-4 w-full max-w-sm space-y-6 text-center">
             <button onClick={toggleMenu} className="absolute top-2 left-4 text-gray-600">
               <FontAwesomeIcon icon={faTimes} />
             </button>
             <div className="space-y-4">
               <button 
+                onClick={() => handleNavigation('/')} 
+                className="block w-full py-3 border-b border-gray-300 text-left transition-transform transform hover:-translate-y-1 duration-300 ease-in-out"
+              >
+                Home
+              </button>
+              <button 
                 onClick={() => handleNavigation('intro')} 
-                className="block w-full bg-blue-200 bg-opacity-50 rounded-lg p-3 transition-transform transform hover:scale-105 duration-300 ease-in-out border border-gray-300 hover:border-gray-200"
+                className="block w-full py-3 border-b border-gray-300 text-left transition-transform transform hover:-translate-y-1 duration-300 ease-in-out"
               >
                 About
               </button>
               <button 
                 onClick={() => handleNavigation('projects')} 
-                className="block w-full bg-red-100 bg-opacity-50 rounded-lg p-3 transition-transform transform hover:scale-105 duration-300 ease-in-out border border-gray-300 hover:border-gray-200"
+                className="block w-full py-3 border-b border-gray-300 text-left transition-transform transform hover:-translate-y-1 duration-300 ease-in-out"
               >
                 Projects
               </button>
               <button 
                 onClick={() => handleNavigation('blog')} 
-                className="block w-full bg-orange-100 bg-opacity-50 rounded-lg p-3 transition-transform transform hover:scale-105 duration-300 ease-in-out border border-gray-300 hover:border-gray-200"
+                className="block w-full py-3 border-b border-gray-300 text-left transition-transform transform hover:-translate-y-1 duration-300 ease-in-out"
               >
                 Blog
               </button>
@@ -87,7 +92,7 @@ const Navbar = () => {
                 href="https://linkedin.com/in/samcabreraa" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="block w-full bg-indigo-200 bg-opacity-50 rounded-lg p-3 transition-transform transform hover:scale-105 duration-300 ease-in-out border border-gray-300 hover:border-gray-200"
+                className="block w-full py-3 border-b border-gray-300 text-left transition-transform transform hover:-translate-y-1 duration-300 ease-in-out"
                 onClick={() => setIsMenuOpen(false)}
               >
                 LinkedIn
@@ -96,19 +101,10 @@ const Navbar = () => {
                 href="https://github.com/samanthacabrera" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="block w-full bg-red-100 bg-opacity-50 rounded-lg p-3 transition-transform transform hover:scale-105 duration-300 ease-in-out border border-gray-300 hover:border-gray-200"
+                className="block w-full py-3 border-b border-gray-300 text-left transition-transform transform hover:-translate-y-1 duration-300 ease-in-out"
                 onClick={() => setIsMenuOpen(false)}
               >
-                GitHub 
-              </a>
-              <a 
-                href="https://leetcode.com/u/samcab/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="block w-full bg-indigo-200 bg-opacity-50 rounded-lg p-3 transition-transform transform hover:scale-105 duration-300 ease-in-out border border-gray-300 hover:border-gray-200"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                LeetCode
+                GitHub
               </a>
             </div>
           </div>

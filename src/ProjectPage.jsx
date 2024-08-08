@@ -42,16 +42,16 @@ const ProjectPage = () => {
             {/* Section Toggle Buttons */}
             <div className="w-full max-w-4xl flex flex-col py-10 md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
                 <button
-                    onClick={() => setActiveSection('gallery')}
-                    className={`w-full max-w-xs text-white ${activeSection === 'gallery' ? 'bg-gray-800' : 'bg-gray-600'} hover:bg-gray-800 rounded-lg px-6 py-3 transition duration-300`}
-                >
-                    Photo Gallery
-                </button>
-                <button
                     onClick={() => setActiveSection('timeline')}
                     className={`w-full max-w-xs text-white ${activeSection === 'timeline' ? 'bg-gray-800' : 'bg-gray-600'} hover:bg-gray-800 rounded-lg px-6 py-3 transition duration-300`}
                 >
                     Timeline
+                </button>
+                <button
+                    onClick={() => setActiveSection('gallery')}
+                    className={`w-full max-w-xs text-white ${activeSection === 'gallery' ? 'bg-gray-800' : 'bg-gray-600'} hover:bg-gray-800 rounded-lg px-6 py-3 transition duration-300`}
+                >
+                    Photo Gallery
                 </button>
                 <button
                     onClick={() => setActiveSection('video')}
