@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import Slider from "react-slick";
 import projects from "./projectsData";
 
 const ProjectPage = () => {
@@ -7,93 +8,101 @@ const ProjectPage = () => {
     const project = projects.find(proj => proj.id === parseInt(id));
 
     if (!project) {
-        return <div className="container mx-auto text-center py-20">Project not found</div>;
+        return <div className="container mx-auto text-center py-20 text-gray-500">Project not found</div>;
     }
 
+    // Carousel settings
+    const carouselSettings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    };
+
     return (
-        <div className="container mx-auto py-16 px-4 md:px-8 lg:px-16">
+        <div className="container mx-auto py-12 px-4">
+            {/* Header Section */}
             <div className="mb-12">
-                <img src={project.imageUrl} alt={project.title} className="w-full h-auto object-cover rounded-lg shadow-lg" />
+                <h1 className="text-3xl font-bold text-gray-900 mb-4">{project.title}</h1>
+                <p className="text-lg text-gray-700 mb-4">{project.description}</p>
+                <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-lg text-white bg-gray-900 hover:bg-gray-800 rounded-lg px-6 py-3 transition duration-300 ease-in-out"
+                >
+                    {project.deployed ? "Visit Site" : "Video Walkthrough"}
+                </a>
             </div>
-            <div className="space-y-12">
-                <div className="flex flex-col md:flex-row items-center justify-between">
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900">{project.title}</h1>
-                    {project.deployed ? (
-                        <a
-                            href={project.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-block text-lg text-gray-900 bg-slate-200 hover:bg-slate-100 rounded-lg px-6 py-3 transition duration-300 ease-in-out shadow-lg mt-4 md:mt-0"
-                        >
-                            Visit Site
-                        </a>
-                    ) : (
-                        <a
-                            href={project.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-block text-lg text-gray-900 bg-slate-200 hover:bg-slate-100 rounded-lg px-6 py-3 transition duration-300 ease-in-out shadow-lg mt-4 md:mt-0"
-                        >
-                            Video Walkthrough
-                        </a>
-                    )}
-                </div>
-                <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed">{project.description}</p>
-                
-                <div className="flex flex-col md:flex-row flex-wrap gap-8 mb-8">
-                    <div className="flex-1">
-                        <h2 className="text-2xl font-semibold text-gray-900 mb-4">Front-End</h2>
-                        <ul className="list-none space-y-2 text-gray-700">
-                            {project.techStack.frontEnd.map((tech, index) => (
-                                <li key={index} className="text-lg">{tech}</li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div className="flex-1">
-                        <h2 className="text-2xl font-semibold text-gray-900 mb-4">Back-End</h2>
-                        <ul className="list-none space-y-2 text-gray-700">
-                            {project.techStack.backEnd.map((tech, index) => (
-                                <li key={index} className="text-lg">{tech}</li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div className="flex-1">
-                        <h2 className="text-2xl font-semibold text-gray-900 mb-4">Deployment</h2>
-                        <ul className="list-none space-y-2 text-gray-700">
-                            {project.techStack.deployment.map((tech, index) => (
-                                <li key={index} className="text-lg">{tech}</li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
 
-                <div className="flex flex-wrap gap-3 mb-8">
-                    {project.tags.map((tag, index) => (
-                        <span
-                            key={index}
-                            className="inline-block bg-gray-300 text-gray-800 rounded-full px-3 py-1 text-sm md:text-base font-medium hover:bg-gray-300 transition duration-300 ease-in-out"
-                        >
-                            {tag}
-                        </span>
-                    ))}
-                </div>
-
-                <div className="space-y-12">
-                    {project.timeline.map((phase, index) => (
-                        <div key={index} className="flex justify-center mb-12">
-                            <div className="bg-white bg-opacity-30 p-6 rounded-lg shadow-md max-w-md w-full">
-                                <h2 className="text-3xl font-semibold text-gray-900 mb-4">{phase.title}</h2>
-                                <p className="text-gray-600 mb-2">{phase.date}</p>
-                                {phase.subsections.map((subsection, subIndex) => (
-                                    <div key={subIndex} className="mb-4">
-                                        <h3 className="text-xl font-semibold text-gray-800">{subsection.title}</h3>
-                                        <p className="text-gray-700">{subsection.description}</p>
-                                    </div>
-                                ))}
-                            </div>
+            {/* Carousel Section */}
+            <div className="mb-12">
+                <Slider {...carouselSettings}>
+                    {[project.imageUrl, project.imageUrl, project.imageUrl].map((src, index) => (
+                        <div key={index} className="w-full h-64 md:h-96">
+                            <img src={src} alt={`Project Image ${index + 1}`} className="w-full h-full object-cover rounded-lg shadow-md" />
                         </div>
                     ))}
+                </Slider>
+            </div>
+
+            {/* Tech Stack Section */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div>
+                    <h2 className="text-xl font-semibold text-gray-900 mb-2">Front-End</h2>
+                    <ul className="list-disc list-inside text-gray-700 space-y-1">
+                        {project.techStack.frontEnd.map((tech, index) => (
+                            <li key={index} className="text-base">{tech}</li>
+                        ))}
+                    </ul>
                 </div>
+                <div>
+                    <h2 className="text-xl font-semibold text-gray-900 mb-2">Back-End</h2>
+                    <ul className="list-disc list-inside text-gray-700 space-y-1">
+                        {project.techStack.backEnd.map((tech, index) => (
+                            <li key={index} className="text-base">{tech}</li>
+                        ))}
+                    </ul>
+                </div>
+                <div>
+                    <h2 className="text-xl font-semibold text-gray-900 mb-2">Deployment</h2>
+                    <ul className="list-disc list-inside text-gray-700 space-y-1">
+                        {project.techStack.deployment.map((tech, index) => (
+                            <li key={index} className="text-base">{tech}</li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+
+            {/* Tags Section */}
+            <div className="flex flex-wrap gap-3 mb-12">
+                {project.tags.map((tag, index) => (
+                    <span
+                        key={index}
+                        className="inline-block bg-gray-200 text-gray-800 rounded-full px-4 py-1 text-sm font-medium"
+                    >
+                        {tag}
+                    </span>
+                ))}
+            </div>
+
+            {/* Timeline Section */}
+            <div>
+                {project.timeline.map((phase, index) => (
+                    <div key={index} className="border-t border-gray-300 py-6 last:border-none">
+                        <h2 className="text-2xl font-semibold text-gray-900 mb-2">{phase.title}</h2>
+                        <p className="text-gray-600 mb-2">{phase.date}</p>
+                        <div className="space-y-4">
+                            {phase.subsections.map((subsection, subIndex) => (
+                                <div key={subIndex}>
+                                    <h3 className="text-lg font-semibold text-gray-800 mb-1">{subsection.title}</h3>
+                                    <p className="text-gray-700">{subsection.description}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     );

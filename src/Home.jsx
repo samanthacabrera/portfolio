@@ -10,7 +10,7 @@ function Home() {
     return (
         <section className="flex flex-col items-center">
             <Hero />
-            <div className="w-2/3 md:space-y-20 space-y-10">
+            <div className="w-2/3 space-y-10 md:space-y-20">
                 <Intro />
                 <Resume />
                 <Projects />
