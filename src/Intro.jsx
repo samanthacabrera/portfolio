@@ -1,8 +1,11 @@
 import React from "react";
 
 function Intro() {
+
+  const resumeDownloadLink = process.env.PUBLIC_URL + '/images/samanthaCabreraResume.pdf';
+  
   return (
-    <div id="intro" className="space-y-10">
+    <div id="intro" className="pt-0 md:pt-40 space-y-10">
       <h2 className="subHeading lowercase md:text-9xl text-7xl">Who am I?</h2>
       <img src={`${process.env.PUBLIC_URL}/images/me.JPG`} alt="Me" />
       <p>
@@ -25,7 +28,17 @@ function Intro() {
         architecture. It is through this fusion of artistry and technology that I find fulfillment and purpose in my
         work.</p>
       <p>In my free time, you can find me practicing yoga, solving puzzles, or watching movies. When the weather permits, I
-          love to go on picnics and hike. I am in constant pursuit of new experiences, embracing the richness that life has to offer.</p>
+        love to go on picnics and hike. I am in constant pursuit of new experiences, embracing the richness that life has to offer.</p>
+      
+        <div className="text-center text-gray-200 transition-transform transform hover:scale-105 duration-300 focus:outline-none focus:shadow-outline">
+        <a
+            href={resumeDownloadLink}
+            download="samanthaCabreraResume.pdf"
+            className="px-4 py-2 border rounded-lg shadow hover:bg-gray-800 hover:bg-opacity-50 duration-300 "
+        >
+            Download Resume
+        </a>
+        </div>
     </div>
   )
 }

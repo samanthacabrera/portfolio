@@ -16,8 +16,18 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #d0cfe4dc;
-  color: rgb(39, 44, 57);
+  color: #272c39;
   text-align: justify;
+}
+
+/* Hide scrollbar for all elements */
+*::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+* {
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .subHeading {
@@ -38,17 +48,30 @@ html {
   }
 }
 
-#hero h1 {
+/* #hero h1 {
   font-family: "Bolota", Helvetica, sans-serif;
-}
+} */
 
 #flutter {
   border-radius: clamp(0.4rem, 0.75vw, 1rem);
   font-size: clamp(5rem, 5vw, 5rem);
 }
 
-.progress {
-  background-color: #d0cfe4dc;
+.scramble:hover {
+  animation: scramble 0.3s steps(5) forwards;
+}
+
+@keyframes scramble {
+  0% {
+    content: attr(data-text);
+  }
+  100% {
+    content: "Scrambled!";
+  }
+}
+
+.bar {
+  background-color: #272c39;
 }
 
 @keyframes gradientAnimation {
@@ -63,16 +86,12 @@ html {
   }
 }
 
-/* ######################################### */
-
-/* Custom styles for horizontal scrolling */
 .horizontal-scroll {
   overflow-x: auto;
   white-space: nowrap;
-  -webkit-overflow-scrolling: touch; /* For smooth scrolling on mobile */
+  -webkit-overflow-scrolling: touch;
 }
 
-/* Ensure all child elements are laid out horizontally */
 .horizontal-scroll > * {
   display: inline-block;
   vertical-align: top;
