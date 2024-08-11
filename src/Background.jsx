@@ -4,6 +4,9 @@ import { useLocation } from 'react-router-dom';
 const Background = () => {
     const [gradient, setGradient] = useState(getRandomGradient());
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [spaceCount, setSpaceCount] = useState(0);
+    const [timer, setTimer] = useState(null);
+    const [isVisible, setIsVisible] = useState(false);
     const location = useLocation();
 
     useEffect(() => {
@@ -11,6 +14,21 @@ const Background = () => {
             if (event.code === 'Space') {
                 event.preventDefault();
                 setGradient(getRandomGradient());
+
+                setSpaceCount((prevCount) => prevCount + 1);
+
+                if (spaceCount === 0) {
+                    const newTimer = setTimeout(() => {
+                        setSpaceCount(0); 
+                    }, 500);
+                    setTimer(newTimer);
+                }
+                if (spaceCount + 1 > 5) {
+                    setIsVisible(true);
+                    setTimeout(() => {
+                        setIsVisible(false);
+                    }, 5000);
+                }
             }
         };
 
@@ -25,7 +43,6 @@ const Background = () => {
         window.addEventListener('keydown', handleKeyDown);
         window.addEventListener('resize', handleResize);
 
-        // Attach click event listener for small devices
         if (windowWidth <= 768) {
             window.addEventListener('click', handleClick);
         }
@@ -36,8 +53,9 @@ const Background = () => {
             if (windowWidth <= 768) {
                 window.removeEventListener('click', handleClick);
             }
+            clearTimeout(timer);
         };
-    }, [windowWidth]);
+    }, [windowWidth, spaceCount, timer]);
 
     const showText = location.pathname === '/';
     const isSmallDevice = windowWidth <= 768;
@@ -49,6 +67,9 @@ const Background = () => {
                 <div style={{ ...styles.textContainer, cursor: isSmallDevice ? 'pointer' : 'default' }}>
                     <h2 className="text-xl opacity-70">{isSmallDevice ? '[ Tap Screen ]' : '[ Press Space Bar ]'}</h2>
                 </div>
+            )}
+            {isVisible && (
+               <p id="content" className="z-50 w-full flex justify-center items-center bg-black text-gray-50 font-light text-xs">Whoa, slow down buddy</p>
             )}
         </>
     );
@@ -84,6 +105,19 @@ const styles = {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+    },
+    popupImage: {
+        position: 'fixed',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        zIndex: 9999, // Ensure it appears on top of everything
+        width: '150px',
+        height: '150px',
+        border: '2px solid #fff',
+        borderRadius: '8px',
+        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+        backgroundColor: '#fff',
     }
 };
 
