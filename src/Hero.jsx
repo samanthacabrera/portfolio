@@ -1,51 +1,36 @@
-import React, { useEffect, useRef } from "react";
+// import React from "react";
+
+// function Hero() {
+//   return (
+//     <div id="hero" className="flex items-center justify-center w-screen h-screen ">
+//       <div className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-12">
+//         <img
+//           src={`${process.env.PUBLIC_URL}/images/me.JPG`}
+//           alt="Me"
+//           className="w-64 h-64 object-cover rounded-lg shadow-lg transition-transform transform hover:scale-105"
+//         />
+//         <div className="text-center md:text-left">
+//           <h1 className="text-4xl md:text-6xl font-bold mb-4">
+//             Hi there, I'm Sam
+//           </h1>
+//           <p className="text-lg md:text-xl max-w-md">
+//             I'm a passionate developer with a love for crafting minimal, intential web experiences. 
+//           </p>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default Hero;
+
+
+import React from "react";
+
 
 function Hero() {
-  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  const intervalRef = useRef(null);
-  const h1Ref = useRef(null);
-
-  useEffect(() => {
-    const handleMouseOver = event => {
-      let iteration = 0;
-
-      clearInterval(intervalRef.current);
-
-      intervalRef.current = setInterval(() => {
-        event.target.innerText = event.target.innerText
-          .split("")
-          .map((letter, index) => {
-            if (index < iteration) {
-              return event.target.dataset.value[index];
-            }
-
-            return letters[Math.floor(Math.random() * 26)];
-          })
-          .join("");
-
-        if (iteration >= event.target.dataset.value.length) {
-          clearInterval(intervalRef.current);
-        }
-
-        iteration += 1 / 3;
-      }, 30);
-    };
-
-    const h1Element = h1Ref.current;
-    h1Element.dataset.value = h1Element.innerText;
-    h1Element.addEventListener("mouseover", handleMouseOver);
-
-    return () => {
-      clearInterval(intervalRef.current);
-      h1Element.removeEventListener("mouseover", handleMouseOver);
-    };
-  }, []);
-
   return (
-    <div id="hero" className="w-screen h-screen flex flex-col justify-center items-center text-center">
-      <h6 className="text-lg mb-4">hi there,</h6>
-      <h1 ref={h1Ref} id="flutter" className="uppercase font-light">I am Sam</h1>
-    </div>
+  <h1 className="flex justify-center items-center w-screen h-screen">Hi, i'm sam :) </h1>
   );
 }
 

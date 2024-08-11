@@ -17,17 +17,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   color: #d0cfe4dc;
   color: #272c39;
-  text-align: justify;
-}
-
-/* Hide scrollbar for all elements */
-*::-webkit-scrollbar {
-  display: none; /* Safari and Chrome */
-}
-
-* {
-  -ms-overflow-style: none; /* Internet Explorer and Edge */
-  scrollbar-width: none; /* Firefox */
+  text-align: left;
 }
 
 .subHeading {
@@ -46,15 +36,6 @@ html {
   .subHeading {
     letter-spacing: normal;
   }
-}
-
-/* #hero h1 {
-  font-family: "Bolota", Helvetica, sans-serif;
-} */
-
-#flutter {
-  border-radius: clamp(0.4rem, 0.75vw, 1rem);
-  font-size: clamp(5rem, 5vw, 5rem);
 }
 
 .scramble:hover {
@@ -96,4 +77,13 @@ html {
   display: inline-block;
   vertical-align: top;
   min-width: 100%;
+}
+
+/* CUSTOM TAILWIND */
+
+.btn-dark {
+  @apply rounded-lg px-4 py-2 border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-300;
+}
+.btn-light {
+  @apply rounded-lg px-4 py-2 border-2 border-gray-300 text-gray-300 hover:bg-gray-300 hover:text-gray-900 duration-300;
 }

@@ -83,13 +83,13 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`fixed top-52 r-4 w-full bg-white z-50 ${isMenuOpen ? 'bg-white shadow-md' : 'bg-transparent'} transition-all duration-300 ease-in-out`}>
-        <div className={`absolute top-4 left-4 ${isMenuOpen ? 'hidden' : 'block'} md:hidden`}>
-          <button onClick={toggleMenu} className="p-2 text-xl">
+      <nav className={`fixed top-2 r-2 w-full bg-white text-xl z-50 ${isMenuOpen ? 'bg-white shadow-md' : 'bg-transparent'} transition-all duration-300 ease-in-out`}>
+        <div className={`absolute top-2 left-2 ${isMenuOpen ? 'hidden' : 'block'} md:hidden`}>
+          <button onClick={toggleMenu} className="text-xl">
             <FontAwesomeIcon icon={faBars} size="1x" />
           </button>
         </div>
-        <div className={`absolute top-2 right-2 flex flex-col items-end space-y-2 ${isMenuOpen ? 'hidden' : 'block'} hidden md:flex`}>
+        <div className={`absolute top-2 left-2 flex flex-col items-start space-y-2 ${isMenuOpen ? 'hidden' : 'block'} hidden md:flex`}>
           <a 
             id="homeIcon" 
             href="/" 
@@ -97,28 +97,28 @@ const Navbar = () => {
             className="transition-transform transform hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
             data-value="Home"
           >
-            Home
+           + Home
           </a>
           <button 
             onClick={() => handleNavigation('intro')} 
             className="transition-transform transform hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
             data-value="About"
           >
-            About
+           + About
           </button>
           <button 
             onClick={() => handleNavigation('projects')} 
             className="transition-transform transform hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
             data-value="Projects"
           >
-            Projects
+          + Projects
           </button>
           <button 
             onClick={() => handleNavigation('blog')} 
             className="transition-transform transform hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
             data-value="Blog"
           >
-            Blog
+          + Blog
           </button>
           <a 
             href="https://github.com/samanthacabrera" 
@@ -127,7 +127,7 @@ const Navbar = () => {
             className="block transition-transform transform hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
             data-value="GitHub"
           >
-            GitHub
+          + GitHub
           </a>
         </div>
       </nav>

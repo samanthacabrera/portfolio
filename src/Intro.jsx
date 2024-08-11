@@ -34,7 +34,7 @@ function Intro() {
         <a
             href={resumeDownloadLink}
             download="samanthaCabreraResume.pdf"
-            className="px-4 py-2 border rounded-lg shadow hover:bg-gray-800 hover:bg-opacity-50 duration-300 "
+            className="btn-dark"
         >
             Download Resume
         </a>

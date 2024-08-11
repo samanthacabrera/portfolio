@@ -14,14 +14,17 @@ const ProjectCard = ({ id, title, description, imageUrl, currentlyWorkingOn }) =
                 alt={title}
                 className="w-full h-64 object-cover"
             />
-            <div className="p-4 space-y-4">
-                <h3 className="">{title}</h3>
-                <p className="flex-grow overflow-hidden" style={{ display: '-webkit-box', WebkitBoxOrient: 'vertical', WebkitLineClamp: 4 }}>
-                    {description}
-                </p> 
+            <div className="p-4 ">
+                <div className="space-y-4 mb-4">
+                    <h3 className="">{title}</h3>
+                    <p className="flex-grow overflow-hidden" style={{ display: '-webkit-box', WebkitBoxOrient: 'vertical', WebkitLineClamp: 4 }}>
+                        {description}
+                    </p> 
+                </div>
+
                 <Link
                     to={`/projects/${id}`}
-                    className="mt-auto inline-block font-bold transition-transform transform hover:scale-105 duration-300"
+                    className="btn-light"
                     style={{ textDecoration: "none" }}
                 >
                     View Project

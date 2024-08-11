@@ -65,7 +65,7 @@ const Background = () => {
             <div className="fixed inset-0" style={{ ...styles.container, background: gradient }}></div>
             {showText && (
                 <div style={{ ...styles.textContainer, cursor: isSmallDevice ? 'pointer' : 'default' }}>
-                    <h2 className="text-xl opacity-70">{isSmallDevice ? '[ Tap Screen ]' : '[ Press Space Bar ]'}</h2>
+                    <h2 className="text-xl opacity-20">{isSmallDevice ? '[ Tap Screen ]' : '[ Press Space Bar ]'}</h2>
                 </div>
             )}
             {isVisible && (
@@ -99,7 +99,7 @@ const styles = {
     },
     textContainer: {
         position: 'absolute',
-        top: '80%',
+        top: '85%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
         display: 'flex',
@@ -111,7 +111,7 @@ const styles = {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        zIndex: 9999, // Ensure it appears on top of everything
+        zIndex: 9999, 
         width: '150px',
         height: '150px',
         border: '2px solid #fff',
