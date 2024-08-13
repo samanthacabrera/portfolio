@@ -35,20 +35,13 @@ function Intro() {
       <p>In my free time, you can find me practicing yoga, solving puzzles, or watching movies. When the weather permits, I
         love to go on picnics and hike. I am in constant pursuit of new experiences, embracing the richness that life has to offer.</p>
       
-        <div className="text-center space-x-4">
+        <div className="text-center">
         <a
             href={resumeDownloadLink}
             download="samanthaCabreraResume.pdf"
             className="btn-dark"
         >
             Download Resume
-        </a>
-        <a
-            href="https://www.linkedin.com/in/samcabreraa/"
-            target="_blank" rel="noreferrer" 
-            className="btn-dark"
-        >
-           View LinkedIn
         </a>
         </div>
     </div>

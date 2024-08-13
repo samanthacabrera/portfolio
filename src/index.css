@@ -70,3 +70,24 @@ html {
 .sub-heading {
   @apply text-7xl font-light;
 }
+
+/* Timeline Container */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Timeline Item */
+.timeline-item {
+  position: relative;
+  width: 50%;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
