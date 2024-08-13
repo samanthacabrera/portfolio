@@ -16,10 +16,12 @@ function Intro() {
         meaningful contributions to our digital world. I was born and raised in Southern California. I currently live in Denver with my husband, Justin, and our cute
         cat, Ares.</p>
       <img src={`${process.env.PUBLIC_URL}/images/me.JPG`} alt="Me" className="w-full max-w-sm self-center" />
+      <p>My journey into tech is a bit unconventional, but it’s one that I’m proud of. I started my career as a barista, where I learned I learned the importance of efficiency, organization, and precision. These experiences have shaped my approach to coding and problem-solving as a developer.</p>
       <p> My academic journey began at Arizona State University, where I laid the groundwork for my career in software
         engineering. During my time at ASU, I was introduced to various aspects of software engineering, particularly
         focusing on web development. This initial exposure ignited my passion for the field, prompting me to seek
-        further education and training. </p>
+          further education and training. </p>
+      <p></p>
       <p> Looking for a quick transition into the industry, I enrolled in the Software Engineering Bootcamp at FlatIron
         School. This decision proved to be pivotal in shaping my professional development, providing me with a
         comprehensive foundation in both front-end and back-end development.</p>

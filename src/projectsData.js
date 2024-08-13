@@ -104,28 +104,6 @@ const projects = [
                     {
                         "title": "Database Integration",
                         "description": "Integrated a SQLAlchemy database to store and retrieve yoga poses and flows."
-                    },
-                    {
-                        "title": "Testing",
-                        "description": "Implemented unit and integration tests to ensure the API delivers accurate and personalized yoga flows."
-                    }
-                ]
-            },
-            {
-                "title": "Launch & Post-Launch",
-                "date": "May 2024",
-                "subsections": [
-                    {
-                        "title": "Deployment",
-                        "description": "Deployed the API using Vercel for serverless architecture, ensuring scalability and performance."
-                    },
-                    {
-                        "title": "User Feedback",
-                        "description": "Gathered feedback from initial users to improve API functionality and expand the yoga flow database."
-                    },
-                    {
-                        "title": "Continued Development",
-                        "description": "Ongoing updates to include more personalized features and expand the API's user base."
                     }
                 ]
             }
