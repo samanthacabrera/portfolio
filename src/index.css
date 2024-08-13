@@ -8,19 +8,17 @@ body,
 html {
   margin: 0;
   padding: 0;
-  /* font-family: Helvetica, sans-serif; */
-  font-family: "Courier New", Courier, monospace;
-  font-weight: 900;
+  font-family: Helvetica, sans-serif;
+  /* font-family: "Courier New", Courier, monospace; */
   overflow-x: hidden;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #d0cfe4dc;
   color: #272c39;
   text-align: left;
 }
 
-.subHeading {
+/* .subHeading {
   text-align: center;
   letter-spacing: -0.75rem;
   transition-property: letter-spacing;
@@ -36,7 +34,7 @@ html {
   .subHeading {
     letter-spacing: normal;
   }
-}
+} */
 
 .scramble:hover {
   animation: scramble 0.3s steps(5) forwards;
@@ -67,23 +65,29 @@ html {
   }
 }
 
-.horizontal-scroll {
-  overflow-x: auto;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
+@keyframes pulseUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
-.horizontal-scroll > * {
-  display: inline-block;
-  vertical-align: top;
-  min-width: 100%;
+.animate-pulseUpDown {
+  animation: pulseUpDown 3s ease-in-out infinite;
 }
 
 /* CUSTOM TAILWIND */
 
 .btn-dark {
-  @apply rounded-lg px-4 py-2 border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-gray-100 duration-300;
+  @apply rounded-lg px-4 py-2 border-2 border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-gray-100 duration-300;
 }
 .btn-light {
-  @apply rounded-lg px-4 py-2 border-2 border-gray-300 text-gray-300 hover:bg-gray-300 hover:text-gray-900 duration-300;
+  @apply rounded-lg px-4 py-2 border-2 border-gray-300 text-gray-100 hover:bg-gray-300 hover:text-gray-800 duration-300;
+}
+
+.sub-heading {
+  @apply text-7xl font-light;
 }

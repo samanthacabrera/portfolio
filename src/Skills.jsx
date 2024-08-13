@@ -1,4 +1,5 @@
 import React from "react";
+import FadeInSection from "./FadeIn";
 
 function Skills() {
   const skills = [
@@ -32,8 +33,9 @@ function Skills() {
   const skillRows = chunkSkills(skills, 2);
 
   return (
-    <div className="container space-y-10 md:space-y-20">
-      <h2 className="subHeading text-center lowercase md:text-9xl text-7xl">Skillset</h2>
+    <FadeInSection>
+    <div className="container space-y-10 ">
+      <h2 className="sub-heading">Skillset</h2>
 
       <p>With a strong foundation in both front-end and back-end development, I leverage a diverse set of tools and technologies to build efficient, scalable, and user-friendly web applications. Below is  a comprehensive list of tools I use daily in my projects: </p>
 
@@ -47,6 +49,7 @@ function Skills() {
         </ul>
       ))}
     </div>
+    </FadeInSection>
   );
 }
 

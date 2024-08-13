@@ -72,7 +72,7 @@ const Navbar = () => {
 
       link.onmouseout = () => {
         clearInterval(interval);
-        link.innerText = originalText; // Restore the original text immediately after mouseout
+        link.innerText = originalText; 
       };
     });
 
@@ -89,43 +89,43 @@ const Navbar = () => {
             <FontAwesomeIcon icon={faBars} size="1x" />
           </button>
         </div>
-        <div className={`absolute top-2 left-2 flex flex-col items-start space-y-2 ${isMenuOpen ? 'hidden' : 'block'} hidden md:flex`}>
+        <div className={`absolute top-2 left-4 flex flex-col items-start space-y-1 ${isMenuOpen ? 'hidden' : 'block'} hidden md:flex`}>
           <a 
             id="homeIcon" 
             href="/" 
             onClick={() => setIsMenuOpen(false)} 
             className="transition-transform transform hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
-            data-value="Home"
+            data-value="+ Home"
           >
-           + Home
+          + Home
           </a>
           <button 
             onClick={() => handleNavigation('intro')} 
             className="transition-transform transform hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
-            data-value="About"
+            data-value="+ About"
           >
            + About
           </button>
           <button 
             onClick={() => handleNavigation('projects')} 
             className="transition-transform transform hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
-            data-value="Projects"
+            data-value="+ Projects"
           >
           + Projects
           </button>
           <button 
             onClick={() => handleNavigation('blog')} 
             className="transition-transform transform hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
-            data-value="Blog"
+            data-value="+ Articles"
           >
-          + Blog
+          + Articles
           </button>
           <a 
             href="https://github.com/samanthacabrera" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="block transition-transform transform hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
-            data-value="GitHub"
+            data-value="+ GitHub"
           >
           + GitHub
           </a>

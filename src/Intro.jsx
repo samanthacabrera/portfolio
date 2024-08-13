@@ -1,18 +1,21 @@
 import React from "react";
+import FadeInSection from "./FadeIn";
 
 function Intro() {
 
   const resumeDownloadLink = process.env.PUBLIC_URL + '/images/samanthaCabreraResume.pdf';
   
   return (
-    <div id="intro" className="pt-0 md:pt-40 space-y-10">
-      <h2 className="subHeading lowercase md:text-9xl text-7xl">Who am I?</h2>
-      <img src={`${process.env.PUBLIC_URL}/images/me.JPG`} alt="Me" />
+    <FadeInSection>
+      <div id="intro" className="flex flex-col pt-0 md:pt-20 space-y-10">
+
+      
+      <p>Hi, my name is Sam.</p>
       <p>
         I am a full-stack software engineer dedicated to driving positive change and making
         meaningful contributions to our digital world. I was born and raised in Southern California. I currently live in Denver with my husband, Justin, and our cute
-        cat, Ares. 
-      </p>
+        cat, Ares.</p>
+      <img src={`${process.env.PUBLIC_URL}/images/me.JPG`} alt="Me" className="w-full max-w-sm self-center" />
       <p> My academic journey began at Arizona State University, where I laid the groundwork for my career in software
         engineering. During my time at ASU, I was introduced to various aspects of software engineering, particularly
         focusing on web development. This initial exposure ignited my passion for the field, prompting me to seek
@@ -30,7 +33,7 @@ function Intro() {
       <p>In my free time, you can find me practicing yoga, solving puzzles, or watching movies. When the weather permits, I
         love to go on picnics and hike. I am in constant pursuit of new experiences, embracing the richness that life has to offer.</p>
       
-        <div className="text-center text-gray-200 transition-transform transform hover:scale-105 duration-300 focus:outline-none focus:shadow-outline">
+        <div className="text-center space-x-4">
         <a
             href={resumeDownloadLink}
             download="samanthaCabreraResume.pdf"
@@ -38,8 +41,16 @@ function Intro() {
         >
             Download Resume
         </a>
+        <a
+            href="https://www.linkedin.com/in/samcabreraa/"
+            target="_blank" rel="noreferrer" 
+            className="btn-dark"
+        >
+           View LinkedIn
+        </a>
         </div>
     </div>
+    </FadeInSection>
   )
 }
 

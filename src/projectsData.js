@@ -29,30 +29,16 @@ const projects = [
                 ]
             },
             {
-                title: "Front-End Development",
+                title: "Development",
                 date: "May 2024",
                 subsections: [
                     {
                         title: "Component Design",
                         description: "Developed reusable UI components using React.js. Implemented state management and responsive design with Tailwind CSS."
-                    }
-                ]
-            },
-            {
-                title: "Back-End Development",
-                date: "May 2024",
-                subsections: [
+                    },
                     {
                         title: "API Development",
                         description: "Developed RESTful API using Flask. Created endpoints for user management, recipe CRUD operations, and search functionality."
-                    },
-                    {
-                        title: "Database Design & Implementation",
-                        description: "Designed database schema with SQLAlchemy. Implemented database migrations and optimized queries for performance."
-                    },
-                    {
-                        title: "Security & Authentication",
-                        description: "Implemented user authentication and authorization. Applied security best practices to protect user data and prevent vulnerabilities."
                     }
                 ]
             },
@@ -69,80 +55,82 @@ const projects = [
                         description: "Addressed bugs reported during beta testing. Refined features and improved user experience based on feedback."
                     }
                 ]
-            },
-            {
-                title: "Launch & Post-Launch",
-                date: "Aug 2024",
-                subsections: [
-                    {
-                        title: "Official Launch",
-                        description: "Coming soon......"
-                    }
-                ]
             }
         ]
     },
     {
-        id: 2,
-        title: "YogiAPI",
-        description: "YogiAPI is a yoga practice API providing structured data on yoga poses, sequences, and practices. It supports both beginner and advanced yoga practices and can be integrated into various fitness applications.",
-        imageUrl: "/images/yogiapi.png",
-        tags: ["Fitness", "Yoga"],
-        techStack: {
-            frontEnd: ["React.js"],
-            backEnd: ["Flask", "SQLAlchemy"],
-            deployment: ["Heroku"]
-        },
-        currentlyWorkingOn: true,
-        deployed: false,
-        link: "",
-        timeline: [
+        "id": 2,
+        "title": "YogiAPI",
+        "description": "A restful API that provides personalized yoga flows based on chakra alignment and difficulty level. Designed to help users find balance and strength through custom-tailored yoga practices.",
+        "tags": ["Python", "Flask", "API", "Yoga", "Health"],
+        "imageUrl": "/images/yogiapi.png",
+        "timeline": [
             {
-                title: "Conceptualization & Planning",
-                date: "",
-                subsections: [
+                "title": "Project Conception",
+                "date": "January 2024",
+                "subsections": [
                     {
-                        title: "API Design",
-                        description: "Defined the API endpoints and data structure. Designed the schema for poses, sequences, and practices."
+                        "title": "Initial Idea",
+                        "description": "The idea was born out of a desire to blend mindfulness and technology, offering users a personalized approach to yoga."
                     },
                     {
-                        title: "User Stories",
-                        description: "Created user stories for different types of users including beginners, advanced practitioners, and app developers."
+                        "title": "Market Research",
+                        "description": "Analyzed existing yoga apps and APIs to identify gaps in personalized yoga recommendations based on chakra alignment."
                     }
                 ]
             },
             {
-                title: "Front-End Development",
-                date: "",
-                subsections: [
+                "title": "Planning & Design",
+                "date": "February 2024",
+                "subsections": [
                     {
-                        title: "Component Design",
-                        description: "Designed reusable UI components using React.js. Implemented state management for the yoga sequences."
+                        "title": "API Design",
+                        "description": "Designed the API structure, focusing on endpoints for chakra-specific and difficulty-based yoga flows."
+                    },
+                    {
+                        "title": "Technology Stack",
+                        "description": "Chose Flask for its simplicity and efficiency in building RESTful APIs, combined with SQLAlchemy for database management."
                     }
                 ]
             },
             {
-                title: "Back-End Development",
-                date: "",
-                subsections: [
+                "title": "Development",
+                "date": "March - April 2024",
+                "subsections": [
                     {
-                        title: "API Development",
-                        description: "Developed the API using Flask. Implemented endpoints for fetching yoga poses, sequences, and practices."
+                        "title": "Backend Development",
+                        "description": "Developed the Flask API with endpoints for different yoga flows, integrating chakra and difficulty parameters."
+                    },
+                    {
+                        "title": "Database Integration",
+                        "description": "Integrated a SQLAlchemy database to store and retrieve yoga poses and flows."
+                    },
+                    {
+                        "title": "Testing",
+                        "description": "Implemented unit and integration tests to ensure the API delivers accurate and personalized yoga flows."
                     }
                 ]
             },
             {
-                title: "Launch & Post-Launch",
-                date: "Aug 2024",
-                subsections: [
+                "title": "Launch & Post-Launch",
+                "date": "May 2024",
+                "subsections": [
                     {
-                        title: "Official Launch",
-                        description: "Coming soon......"
+                        "title": "Deployment",
+                        "description": "Deployed the API using Vercel for serverless architecture, ensuring scalability and performance."
+                    },
+                    {
+                        "title": "User Feedback",
+                        "description": "Gathered feedback from initial users to improve API functionality and expand the yoga flow database."
+                    },
+                    {
+                        "title": "Continued Development",
+                        "description": "Ongoing updates to include more personalized features and expand the API's user base."
                     }
                 ]
             }
         ]
-    },
+    }
     // {
     //     id: 3,
     //     title: "EatBySeason",

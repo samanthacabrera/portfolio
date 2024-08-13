@@ -31,16 +31,16 @@ const ProjectPage = () => {
     };
 
     return (
-        <div className="min-h-screen flex flex-col items-center md:my-10 px-8 lg:px-16">
+        <div className="max-h-fit md:max-h-screen flex flex-col items-center px-8">
             {/* Header Section */}
-            <div className="w-full max-w-4xl mt-16 space-y-6">
-                <h1 className="text-5xl lg:text-6xl font-bold">{project.title}</h1>
-                <p className="lg:text-xl">{project.description}</p>
+            <div className="w-full max-w-4xl mt-8 space-y-4">
+                <h1 className="text-5xl lg:text-7xl">{project.title}</h1>
+                <p className="lg:text-xl">Overview: {project.description}</p>
                 <p className="text-sm md:text-base lg:text-lg">Tags: {project.tags.length ? project.tags.join(", ") : "No tags available"}</p>
             </div>
 
             {/* Section Toggle Buttons */}
-            <div className="w-full max-w-4xl flex flex-col py-10 md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
+            <div className="w-full max-w-4xl flex flex-col py-4 sm:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
                 <button
                     onClick={() => setActiveSection('timeline')}
                     className={`btn-dark ${activeSection === 'timeline' ? 'btn-light' : ''} `}
@@ -48,22 +48,16 @@ const ProjectPage = () => {
                     Timeline
                 </button>
                 <button
-                    onClick={() => setActiveSection('gallery')}
-                    className={`btn-dark ${activeSection === 'gallery' ? 'btn-light' : ''} `}
+                    onClick={() => setActiveSection('walkthrough')}
+                    className={`btn-dark ${activeSection === 'walkthrough' ? 'btn-light' : ''} `}
                 >
-                    Photo Gallery
-                </button>
-                <button
-                    onClick={() => setActiveSection('video')}
-                    className={`btn-dark ${activeSection === 'video' ? 'btn-light' : ''} `}
-                >
-                    Video Walkthrough
+                    Walkthrough
                 </button>
             </div>
 
-            {/* Photo Gallery Section */}
-            {activeSection === 'gallery' && (
-                <div className="w-full max-w-4xl">
+            {/* Walkthrough Section */}
+            {activeSection === 'walkthrough' && (
+                <div className="w-full max-w-2xl">
                     {/* Carousel for md and larger devices */}
                     <div className="hidden md:block">
                         <Slider {...carouselSettings}>
@@ -98,14 +92,46 @@ const ProjectPage = () => {
 
             {/* Timeline Section */}
             {activeSection === 'timeline' && (
-                <div className="w-full max-w-4xl">
-                    <div className="overflow-x-auto">
-                        <div className="flex flex-col space-y-6 md:flex-row md:space-x-6 md:space-y-0">
+                <div className="w-full max-w-2xl">
+                    {/* Carousel for md and larger devices */}
+                    <div className="hidden md:block">
+                        <Slider {...carouselSettings}>
                             {project.timeline.length ? (
                                 project.timeline.map((phase, index) => (
                                     <div
                                         key={index}
-                                        className="min-w-96 bg-white p-6 border border-gray-200 rounded-lg shadow-md"
+                                        className="min-w-96 bg-white p-6 border border-gray-200 rounded-lg"
+                                    >
+                                        <h3 className="text-lg font-semibold text-gray-800 mb-2">{phase.title}</h3>
+                                        <p className="text-gray-600 mb-4">{phase.date}</p>
+                                        <div className="space-y-4">
+                                            {phase.subsections.length ? (
+                                                phase.subsections.map((subsection, subIndex) => (
+                                                    <div key={subIndex}>
+                                                        <h4 className="text-md font-semibold text-gray-700 mb-1">{subsection.title}</h4>
+                                                        <p className="text-gray-600">{subsection.description}</p>
+                                                    </div>
+                                                ))
+                                            ) : (
+                                                <p className="text-gray-400">No details available</p>
+                                            )}
+                                        </div>
+                                    </div>
+                                ))
+                            ) : (
+                                <div className="text-center text-gray-400">No timeline available</div>
+                            )}
+                        </Slider>
+                    </div>
+
+                    {/* Column layout for smaller devices */}
+                    <div className="block md:hidden">
+                        <div className="flex flex-col space-y-4">
+                            {project.timeline.length ? (
+                                project.timeline.map((phase, index) => (
+                                    <div
+                                        key={index}
+                                        className="w-full bg-white p-6 border border-gray-200 rounded-lg shadow-md"
                                     >
                                         <h3 className="text-lg font-semibold text-gray-800 mb-2">{phase.title}</h3>
                                         <p className="text-gray-600 mb-4">{phase.date}</p>
@@ -127,24 +153,6 @@ const ProjectPage = () => {
                                 <div className="text-center text-gray-400">No timeline available</div>
                             )}
                         </div>
-                    </div>
-                </div>
-            )}
-
-            {/* Video Walkthrough Section */}
-            {activeSection === 'video' && project.deployed && (
-                <div className="w-full max-w-4xl">
-                    <h2 className="text-xl md:text-2xl font-semibold text-gray-800 mb-6">Video Walkthrough</h2>
-                    <div className="video-wrapper">
-                        <iframe
-                            width="100%"
-                            height="315"
-                            src={project.videoUrl}
-                            title="Video Walkthrough"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
                     </div>
                 </div>
             )}

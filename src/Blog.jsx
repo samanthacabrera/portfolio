@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ToText from "./ToText";
+import FadeInSection from "./FadeIn";
 
 function Blog() {
     const mediumURL = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@samantha.n.cabrera";
@@ -47,13 +48,13 @@ function Blog() {
     };
 
     return (
-        <>
+        <FadeInSection>
             <div id="blog" className="container space-y-10 md:space-y-20">
-                <h2 className="subHeading lowercase md:text-9xl text-7xl">writings</h2>
+                <h2 className="sub-heading">Articles</h2>
                 <p>Here, you'll find my collection of articles ranging from tutorials to histories of various technologies.</p>
                 {displayBlogs()}
             </div>
-        </>
+        </FadeInSection>
     );
 }
 
