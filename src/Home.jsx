@@ -8,7 +8,6 @@ import Blog from "./Blog";
 function Home() {
     return (
         <section className="flex flex-col items-center">
-          
             <div className="w-2/3 space-y-10 md:space-y-48">
                 <Hero/>
                 <Intro />

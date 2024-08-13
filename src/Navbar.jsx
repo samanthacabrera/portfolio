@@ -83,7 +83,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`fixed top-2 r-2 w-full bg-white text-xl z-50 ${isMenuOpen ? 'bg-white shadow-md' : 'bg-transparent'} transition-all duration-300 ease-in-out`}>
+      <nav className={`fixed top-2 r-2 w-full text-xl z-50 transition-all duration-300 ease-in-out`}>
         <div className={`absolute top-2 left-2 ${isMenuOpen ? 'hidden' : 'block'} md:hidden`}>
           <button onClick={toggleMenu} className="text-xl">
             <FontAwesomeIcon icon={faBars} size="1x" />
@@ -133,9 +133,9 @@ const Navbar = () => {
       </nav>
 
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-gray-200 bg-opacity-10 text-lg text-gray-600 flex flex-col justify-center items-center z-50 md:hidden">
-          <div className="relative bg-gray-50 bg-opacity-95 border border-gray-300 shadow-lg rounded-lg p-4 w-full max-w-sm space-y-6 text-center">
-            <button onClick={toggleMenu} className="absolute top-2 left-4 text-gray-600">
+        <div className="fixed inset-0 bg-gray-800 bg-opacity-10 text-lg text-gray-600 flex flex-col justify-center items-center z-50 md:hidden">
+          <div className="relative text-gray-50 bg-black shadow-lg rounded-lg p-4 w-full max-w-sm space-y-6 text-center">
+            <button onClick={toggleMenu} className="absolute top-2 left-4">
               <FontAwesomeIcon icon={faTimes} />
             </button>
             <div className="space-y-4">

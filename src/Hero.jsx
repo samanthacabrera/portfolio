@@ -2,10 +2,10 @@ import React from "react";
 
 function Hero() {
   return (
-    <div className="flex flex-col justify-center w-screen h-screen space-y-1">
+    <div className="flex flex-col justify-center w-screen h-screen space-y-1 overflow-wrap">
       <p className="text-2xl sm:text-4xl pl-1">From <span className="hover:text-slate-100 hover:text-opacity-50 duration-500">barista</span> to</p>
       <p className="text-7xl sm:text-9xl">
-        Full-Stack{" "}
+        Full-Stack
         <span className="block hover:text-slate-100 hover:text-opacity-50 duration-500">
           Software Engineer
         </span>
