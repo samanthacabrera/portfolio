@@ -22,11 +22,21 @@ const ProjectPage = () => {
     }
 
     return (
-        <div className="flex flex-col items-center p-8 md:ml-16">
+        <div className="flex flex-col items-center min-h-screen p-8 md:ml-16">
             {/* Header */}
             <header className="w-full max-w-4xl mt-8 space-y-4">
                 <h1 className="text-5xl lg:text-7xl">{project.title || "Untitled Project"}</h1>
-                <p className="text-lg">{project.description || "No description available"}</p>
+                <p className="text-lg pb-2">{project.description || "No description available"}</p>
+                {project.link && (
+                    <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-gray-50 transition ease-in-out duration-500"
+                    >
+                        View on GitHub &#x2197;
+                    </a>
+                )}
             </header>
 
             {/* Toggle Buttons */}
@@ -50,16 +60,16 @@ const ProjectPage = () => {
                 {activeSection === 'overview' && (
                     <section className="mb-8">
                         <div className="mb-6">
-                            <h3 className="text-xl font-semibold mb-2">Tech Stack</h3>
-                            <p>{project.overview.techStack.join(", ") || "Not specified"}</p>
-                        </div>
-                        <div className="mb-6">
                             <h3 className="text-xl font-semibold mb-2">Features</h3>
                             <ul className="list-disc pl-5">
                                 {project.overview.features.map((feature, index) => (
                                     <li key={index}>{feature}</li>
                                 ))}
                             </ul>
+                        </div>
+                        <div className="mb-6">
+                            <h3 className="text-xl font-semibold mb-2">Tech Stack</h3>
+                            <p>{project.overview.techStack.join(", ") || "Not specified"}</p>
                         </div>
                         <div className="mb-6">
                             <h3 className="text-xl font-semibold mb-2">Tags</h3>

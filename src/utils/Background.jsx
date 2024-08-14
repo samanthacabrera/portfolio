@@ -65,7 +65,7 @@ const Background = () => {
             <div className="fixed inset-0" style={{ ...styles.container, background: gradient }}></div>
             {showText && (
                 <div style={{ ...styles.textContainer, cursor: isSmallDevice ? 'pointer' : 'default' }}>
-                    <h2 className="text-xl opacity-30">{isSmallDevice ? '' : ''}</h2>
+                    <h2 className="text-black opacity-20">{isSmallDevice ? '[Tap Screen]' : '[Press Spacebar]'}</h2>
                 </div>
             )}
             {isVisible && (
@@ -99,11 +99,10 @@ const styles = {
     },
     textContainer: {
         position: 'absolute',
-        top: '3%',
-        right: '45%',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
+        bottom: '2%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        textAlign: 'center',
     },
     popupImage: {
         position: 'fixed',

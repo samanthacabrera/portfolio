@@ -34,10 +34,10 @@ function Blog() {
     const displayBlogs = () => {
         if (blog.items) {
             return blog.items.map((post, index) => (
-                <div key={index} >
+                <div key={index} className='hover:text-slate-200 hover:scale-105 transition duration-500' >
 
                     <h6 className="text-base md:text-2xl mb-2">
-                        <a href={post.link} className='postTitle' rel='noreferrer' target='_blank'>{post.title}</a>
+                        <a href={post.link}  rel='noreferrer' target='_blank'>{post.title}</a>
                         <span className="italic"> ({calculateReadTime(ToText(post.description))} minute read)</span>
                     </h6>
 

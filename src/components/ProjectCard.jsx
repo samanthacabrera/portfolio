@@ -16,7 +16,7 @@ const ProjectCard = ({ id, title, description, imageUrl, currentlyWorkingOn }) =
             )}
             <div className="absolute inset-0 bg-black bg-opacity-70 text-gray-50 flex flex-col justify-center items-center p-2 space-y-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out ">
                 <h3 className="text-4xl">{title}</h3>
-                <p className="text-xs w-4/5">{description}</p>
+                <p className="text-sm w-4/5">{description}</p>
                 <Link
                     to={`/projects/${id}`}
                     className="btn-light"
