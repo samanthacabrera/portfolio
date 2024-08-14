@@ -21,7 +21,7 @@ function Intro() {
         engineering. During my time at ASU, I was introduced to various aspects of software engineering, particularly
         focusing on web development. This initial exposure ignited my passion for the field, prompting me to seek
           further education and training. </p>
-      <p></p>
+  
       <p> Looking for a quick transition into the industry, I enrolled in the Software Engineering Bootcamp at FlatIron
         School. This decision proved to be pivotal in shaping my professional development, providing me with a
         comprehensive foundation in both front-end and back-end development.</p>

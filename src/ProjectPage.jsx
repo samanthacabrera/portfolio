@@ -28,7 +28,7 @@ const ProjectPage = () => {
             </header>
 
             {/* Toggle Buttons */}
-            <nav className="w-full max-w-4xl mb-8 flex flex-wrap justify-center space-x-4">
+            <nav className="w-full max-w-4xl my-8 flex flex-wrap justify-start space-x-4">
                 {['overview', 'insights', 'timeline', 'gallery'].map((section) => (
                     <button
                         key={section}
