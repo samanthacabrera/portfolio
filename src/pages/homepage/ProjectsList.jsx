@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ProjectCard from "../../components/ProjectCard";
-import projects from '/Users/samanthacabrera/webDev/portfolio/src/data/projectsData.js';
-import FadeInSection from "/Users/samanthacabrera/webDev/portfolio/src/utils/FadeIn.jsx";
+import projects from '../../data/projectsData';
+import FadeInSection from "../../utils/FadeIn";
 
 const Projects = () => {
     return (

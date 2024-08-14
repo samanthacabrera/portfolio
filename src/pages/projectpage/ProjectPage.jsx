@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import projects from '/Users/samanthacabrera/webDev/portfolio/src/data/projectsData.js';
+import projects from '../../data/projectsData';
+
+
 
 const ProjectPage = () => {
     const { id } = useParams();
