@@ -1,8 +1,6 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
 
 body,
 html {
@@ -69,25 +67,4 @@ html {
 }
 .sub-heading {
   @apply text-7xl font-light text-center sm:text-left;
-}
-
-/* Timeline Container */
-.timeline {
-  position: relative;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* Timeline Item */
-.timeline-item {
-  position: relative;
-  width: 50%;
-}
-
-.timeline-item:nth-child(even) {
-  left: 50%;
-}
-
-.timeline-item:nth-child(odd) {
-  left: 0;
 }

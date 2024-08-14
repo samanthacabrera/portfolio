@@ -2,11 +2,11 @@ const projects = [
     {
         id: 1,
         title: 'Recipe Roots',
-        imageUrl: "/images/reciperoots.png",
+        imageUrl: "/reciperoots/reciperoots.png",
         description: 'A web application for organizing and sharing family recipes. Users can upload recipes, add photos, and answer questions about the recipe and its creator.',
         wip: false,
-        deployed: true,
-        link: 'https://example.com/reciperoots',
+        deployed: false,
+        link: '',
         overview: {
             tags: ['React', 'Flask', 'SQLAlchemy', 'Recipes'],
             techStack: ['React', 'Flask', 'SQLAlchemy', 'Tailwind CSS'],
@@ -36,17 +36,17 @@ const projects = [
             }
         ],
         gallery: [
-            'images/reciperoots.png'
+            '/reciperoots/reciperoots.png'
         ]
     },
     {
         id: 2,
         title: 'YogiAPI',
-        imageUrl: "/images/yogiapi.png",
+        imageUrl: "/yogiapi/yogiapi.png",
         description: 'A React and Flask-based API for generating personalized yoga flows based on user preferences and chakra balancing.',
-        wip: false,
-        deployed: true,
-        link: 'https://example.com/yogiapi',
+        wip: true,
+        deployed: false,
+        link: '',
         overview: {
             tags: ['React', 'Flask', 'Yoga', 'API'],
             techStack: ['React', 'Flask', 'SQLAlchemy', 'Tailwind CSS'],
@@ -76,13 +76,13 @@ const projects = [
             }
         ],
         gallery: [
-            '/images/yogiapi.png'
+            '/yogiapi/yogiapi.png'
         ]
     },
     {
         id: 3,
         title: 'EatBySeason',
-        imageUrl: "/images/eatbyseason.png",
+        imageUrl: "/eatbyseason.png",
         description: 'A web app to track seasonal produce based on user location, providing detailed information about crops and their seasonal availability.',
         wip: false,
         deployed: true,
@@ -116,97 +116,17 @@ const projects = [
             }
         ],
         gallery: [
-            '/images/eatbyseason.png'
+            '/eatbyseason.png'
         ]
     },
     {
         id: 4,
-        title: 'GratitudeGlobe',
-        imageUrl: "/images/gratitudeglobe.png",
-        description: 'A platform for users to track and share daily gratitudes with a global community, fostering a sense of positivity and connection.',
-        wip: false,
-        deployed: true,
-        link: 'https://example.com/gratitudeglobe',
-        overview: {
-            tags: ['React', 'Flask', 'Community', 'Gratitude'],
-            techStack: ['React', 'Flask', 'SQLAlchemy', 'Tailwind CSS'],
-            features: [
-                'Allows users to log and share daily gratitudes.',
-                'Includes features for community engagement and personal reflection.',
-                'Provides a global view of shared gratitudes.'
-            ]
-        },
-        insights: "One significant challenge with Gratitude Globe was achieving a visually appealing design that accurately reflected its purpose. Initially, I struggled with creating a more complex and engaging visual style, but I eventually realized that a simpler design would better align with the app's core objective of encouraging daily gratitude reflection.Embracing a minimalist approach, I focused on clarity and ease of use, ensuring that the interface was intuitive and accessible.This shift to a simpler look not only aligned with the app’s purpose but also enhanced the overall user experience by keeping the focus on the meaningful content rather than flashy design elements.",
-        timeline: [
-            {
-                title: 'Conceptualization',
-                date: '2023-05-01',
-                subsections: [
-                    { title: 'Idea Formation', description: 'Developed the concept for a global gratitude-sharing platform.' },
-                    { title: 'Feature Planning', description: 'Outlined key features and user flows.' }
-                ]
-            },
-            {
-                title: 'Execution',
-                date: '2023-06-01',
-                subsections: [
-                    { title: 'Backend Development', description: 'Built Flask APIs and set up the SQLAlchemy database.' },
-                    { title: 'Frontend Design', description: 'Created the user interface with React and Tailwind CSS.' }
-                ]
-            }
-        ],
-        gallery: [
-            '/images/gratitudeglobe.png'
-        ]
-    },
-    {
-        id: 5,
-        title: 'Py_Flows',
-        imageUrl: "/images/pyflows.png",
-        description: 'A CLI tool that generates personalized yoga flows based on chakra and difficulty levels, designed for flexibility and ease of use.',
+        title: 'CatChi',
+        imageUrl: "/catchi.png",
+        description: 'A web app for finding and organizing cat playdates based on compatibility, including scheduling and communication features for cat owners.',
         wip: true,
         deployed: false,
-        link: 'https://example.com/pyflows',
-        overview: {
-            tags: ['Python', 'CLI', 'Yoga', 'Chakra'],
-            techStack: ['Python'],
-            features: [
-                'Generates customized yoga flows based on user input.',
-                'Supports various levels of difficulty and chakra focus.',
-                'Designed for command-line use with clear instructions.'
-            ]
-        },
-        insights: 'Developing Py_Flows posed a unique challenge in balancing the complexity of generating personalized yoga flows with the simplicity of a command-line interface. Users needed to input detailed preferences for their yoga sessions, which required a flexible yet straightforward command structure. The complexity arose from ensuring that the input parameters were validated correctly and that the generated flows were both accurate and user-friendly. I tackled this by designing a clear and concise CLI syntax with detailed help options and error messages. Additionally, managing the logic for creating customized yoga flows involved developing a comprehensive algorithm that could handle various difficulty levels and user preferences, which was a significant part of the development process.',
-        timeline: [
-            {
-                title: 'Planning & Design',
-                date: '2023-09-01',
-                subsections: [
-                    { title: 'Feature Specification', description: 'Defined features and user inputs for the CLI tool.' },
-                    { title: 'Design', description: 'Designed the flow generation logic and CLI interface.' }
-                ]
-            },
-            {
-                title: 'Implementation',
-                date: '2023-10-01',
-                subsections: [
-                    { title: 'Coding', description: 'Developed the Python CLI tool and tested various scenarios.' },
-                    { title: 'Documentation', description: 'Created user documentation and examples for using the tool.' }
-                ]
-            }
-        ],
-        gallery: [
-            'images/pyflows.png'
-        ]
-    },
-    {
-        id: 6,
-        title: 'CatChi',
-        imageUrl: "/images/catchi.png",
-        description: 'A web app for finding and organizing cat playdates based on compatibility, including scheduling and communication features for cat owners.',
-        wip: false,
-        deployed: true,
-        link: 'https://example.com/catchi',
+        link: '',
         overview: {
             tags: ['React', 'Flask', 'Cats', 'Playdates'],
             techStack: ['React', 'Flask', 'SQLAlchemy', 'Tailwind CSS'],
@@ -236,7 +156,7 @@ const projects = [
             }
         ],
         gallery: [
-            'images/catch.png'
+            '/catchi.png'
         ]
     }
 ];

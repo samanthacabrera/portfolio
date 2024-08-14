@@ -1,5 +1,5 @@
 import React from "react";
-import FadeInSection from "./FadeIn";
+import FadeInSection from "/Users/samanthacabrera/webDev/portfolio/src/utils/FadeIn.jsx";
 
 function Skills() {
   const skills = [

@@ -1,10 +1,10 @@
 import React from "react";
-import FadeInSection from "./FadeIn";
+import FadeInSection from "../../utils/FadeIn";
 
 function Intro() {
 
-  const resumeDownloadLink = process.env.PUBLIC_URL + '/images/samanthaCabreraResume.pdf';
-  // <img src={`${process.env.PUBLIC_URL}/images/me.JPG`} alt="Me" className="w-full max-w-sm self-center" />
+  // const resumeDownloadLink = import.meta.env.PUBLIC_URL + '/images/samanthaCabreraResume.pdf';
+  // <img src={`${import.meta.env.PUBLIC_URL}/images/me.JPG`} alt="Me" className="w-full max-w-sm self-center" />
   
   return (
     <FadeInSection>
@@ -34,7 +34,7 @@ function Intro() {
         work.</p>
       <p>In my free time, you can find me practicing yoga, solving puzzles, or watching movies. When the weather permits, I
         love to go on picnics and hike. I am in constant pursuit of new experiences, embracing the richness that life has to offer.</p>
-      
+{/*       
         <div className="text-center">
         <a
             href={resumeDownloadLink}
@@ -43,7 +43,7 @@ function Intro() {
         >
             Download Resume
         </a>
-        </div>
+        </div> */}
     </div>
     </FadeInSection>
   )
