@@ -4,18 +4,18 @@ import FadeInSection from "./FadeIn";
 function Intro() {
 
   const resumeDownloadLink = process.env.PUBLIC_URL + '/images/samanthaCabreraResume.pdf';
+  // <img src={`${process.env.PUBLIC_URL}/images/me.JPG`} alt="Me" className="w-full max-w-sm self-center" />
   
   return (
     <FadeInSection>
-      <div id="intro" className="flex flex-col pt-0 md:pt-20 space-y-10">
+      <div id="intro" className="flex flex-col pt-0 md:pt-10 space-y-10">
 
-      
       <p>Hi, my name is Sam.</p>
       <p>
         I am a full-stack software engineer dedicated to driving positive change and making
         meaningful contributions to our digital world. I was born and raised in Southern California. I currently live in Denver with my husband, Justin, and our cute
         cat, Ares.</p>
-      <img src={`${process.env.PUBLIC_URL}/images/me.JPG`} alt="Me" className="w-full max-w-sm self-center" />
+
       <p>My journey into tech is a bit unconventional, but it’s one that I’m proud of. I started my career as a barista, where I learned I learned the importance of efficiency, organization, and precision. These experiences have shaped my approach to coding and problem-solving as a developer.</p>
       <p> My academic journey began at Arizona State University, where I laid the groundwork for my career in software
         engineering. During my time at ASU, I was introduced to various aspects of software engineering, particularly

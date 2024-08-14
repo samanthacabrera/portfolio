@@ -1,161 +1,128 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Slider from "react-slick";
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import projects from './projectsData';
 
 const ProjectPage = () => {
     const { id } = useParams();
-    const project = projects.find((proj) => proj.id === parseInt(id));
-    const [activeSection, setActiveSection] = useState('video');
+    const project = projects.find((proj) => proj.id === parseInt(id)) || {};
+    const [activeSection, setActiveSection] = useState('overview');
 
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }, []);
 
-    if (!project) {
+    if (!project.id) {
         return (
-            <div className="container mx-auto text-center py-20 text-gray-500">
-                Project not found
+            <div className="flex items-center justify-center min-h-screen">
+                <p className="text-lg font-semibold">Project not found</p>
             </div>
         );
     }
 
-    const carouselSettings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-    };
-
     return (
-        <div className="max-h-fit md:max-h-screen flex flex-col items-center px-8">
-            {/* Header Section */}
-            <div className="w-full max-w-4xl mt-8 space-y-4">
-                <h1 className="text-5xl lg:text-7xl">{project.title}</h1>
-                <p className="lg:text-xl">Overview: {project.description}</p>
-                <p className="text-sm md:text-base lg:text-lg">Tags: {project.tags.length ? project.tags.join(", ") : "No tags available"}</p>
-            </div>
+        <div className="flex flex-col items-center p-8 md:ml-16">
+            {/* Header */}
+            <header className="w-full max-w-4xl mt-8 space-y-4">
+                <h1 className="text-5xl lg:text-7xl">{project.title || "Untitled Project"}</h1>
+                <p className="text-lg">{project.description || "No description available"}</p>
+            </header>
 
-            {/* Section Toggle Buttons */}
-            <div className="w-full max-w-4xl flex flex-col py-4 sm:flex-row items-center md:space-x-4 space-y-4 md:space-y-0">
-                <button
-                    onClick={() => setActiveSection('timeline')}
-                    className={`btn-dark ${activeSection === 'timeline' ? 'btn-light' : ''} `}
-                >
-                    Timeline
-                </button>
-                <button
-                    onClick={() => setActiveSection('walkthrough')}
-                    className={`btn-dark ${activeSection === 'walkthrough' ? 'btn-light' : ''} `}
-                >
-                    Walkthrough
-                </button>
-            </div>
+            {/* Toggle Buttons */}
+            <nav className="w-full max-w-4xl mb-8 flex flex-wrap justify-center space-x-4">
+                {['overview', 'insights', 'timeline', 'gallery'].map((section) => (
+                    <button
+                        key={section}
+                        onClick={() => setActiveSection(section)}
+                        className={`btn-dark ${
+                            activeSection === section ? 'btn-light' : ''
+                        }`}
+                    >
+                        {section.charAt(0).toUpperCase() + section.slice(1)}
+                    </button>
+                ))}
+            </nav>
 
-            {/* Walkthrough Section */}
-            {activeSection === 'walkthrough' && (
-                <div className="w-full max-w-2xl">
-                    {/* Carousel for md and larger devices */}
-                    <div className="hidden md:block">
-                        <Slider {...carouselSettings}>
-                            {[project.imageUrl, project.imageUrl, project.imageUrl].map((src, index) => (
-                                <div key={index} className="w-full h-80">
-                                    <img
-                                        src={src}
-                                        alt={`Project ${index + 1}`}
-                                        className="w-full h-full object-cover rounded-lg"
-                                    />
-                                </div>
-                            ))}
-                        </Slider>
-                    </div>
-
-                    {/* Column layout for smaller devices */}
-                    <div className="block md:hidden">
-                        <div className="flex flex-col space-y-4">
-                            {[project.imageUrl, project.imageUrl, project.imageUrl].map((src, index) => (
-                                <div key={index} className="w-full h-80">
-                                    <img
-                                        src={src}
-                                        alt={`Project ${index + 1}`}
-                                        className="w-full h-full object-cover rounded-lg"
-                                    />
-                                </div>
-                            ))}
+            {/* Main Content */}
+            <main className="w-full max-w-4xl">
+                {/* Overview Section */}
+                {activeSection === 'overview' && (
+                    <section className="mb-8">
+                        <div className="mb-6">
+                            <h3 className="text-xl font-semibold mb-2">Tech Stack</h3>
+                            <p>{project.overview.techStack.join(", ") || "Not specified"}</p>
                         </div>
-                    </div>
-                </div>
-            )}
-
-            {/* Timeline Section */}
-            {activeSection === 'timeline' && (
-                <div className="w-full max-w-2xl">
-                    {/* Carousel for md and larger devices */}
-                    <div className="hidden md:block">
-                        <Slider {...carouselSettings}>
-                            {project.timeline.length ? (
-                                project.timeline.map((phase, index) => (
-                                    <div
-                                        key={index}
-                                        className="min-w-96 bg-white p-6 border border-gray-200 rounded-lg"
-                                    >
-                                        <h3 className="text-lg font-semibold text-gray-800 mb-2">{phase.title}</h3>
-                                        <p className="text-gray-600 mb-4">{phase.date}</p>
-                                        <div className="space-y-4">
-                                            {phase.subsections.length ? (
-                                                phase.subsections.map((subsection, subIndex) => (
-                                                    <div key={subIndex}>
-                                                        <h4 className="text-md font-semibold text-gray-700 mb-1">{subsection.title}</h4>
-                                                        <p className="text-gray-600">{subsection.description}</p>
-                                                    </div>
-                                                ))
-                                            ) : (
-                                                <p className="text-gray-400">No details available</p>
-                                            )}
-                                        </div>
-                                    </div>
-                                ))
-                            ) : (
-                                <div className="text-center text-gray-400">No timeline available</div>
-                            )}
-                        </Slider>
-                    </div>
-
-                    {/* Column layout for smaller devices */}
-                    <div className="block md:hidden">
-                        <div className="flex flex-col space-y-4">
-                            {project.timeline.length ? (
-                                project.timeline.map((phase, index) => (
-                                    <div
-                                        key={index}
-                                        className="w-full bg-white p-6 border border-gray-200 rounded-lg shadow-md"
-                                    >
-                                        <h3 className="text-lg font-semibold text-gray-800 mb-2">{phase.title}</h3>
-                                        <p className="text-gray-600 mb-4">{phase.date}</p>
-                                        <div className="space-y-4">
-                                            {phase.subsections.length ? (
-                                                phase.subsections.map((subsection, subIndex) => (
-                                                    <div key={subIndex}>
-                                                        <h4 className="text-md font-semibold text-gray-700 mb-1">{subsection.title}</h4>
-                                                        <p className="text-gray-600">{subsection.description}</p>
-                                                    </div>
-                                                ))
-                                            ) : (
-                                                <p className="text-gray-400">No details available</p>
-                                            )}
-                                        </div>
-                                    </div>
-                                ))
-                            ) : (
-                                <div className="text-center text-gray-400">No timeline available</div>
-                            )}
+                        <div className="mb-6">
+                            <h3 className="text-xl font-semibold mb-2">Features</h3>
+                            <ul className="list-disc pl-5">
+                                {project.overview.features.map((feature, index) => (
+                                    <li key={index}>{feature}</li>
+                                ))}
+                            </ul>
                         </div>
-                    </div>
-                </div>
-            )}
+                        <div className="mb-6">
+                            <h3 className="text-xl font-semibold mb-2">Tags</h3>
+                            <p>{project.overview.tags?.length ? project.overview.tags.join(", ") : "No tags available"}</p>
+                        </div>
+                    </section>
+                )}
+
+                {/* Insights Section */}
+                {activeSection === 'insights' && (
+                    <section className="mb-8">
+                        <h3 className="text-xl font-semibold mb-2">Insights</h3>
+                        <p className="text-gray-700">{project.insights || "No insights available"}</p>
+                    </section>
+                )}
+
+                {/* Timeline Section */}
+                {activeSection === 'timeline' && (
+                    <section className="mb-8">
+                        <h3 className="text-xl font-semibold mb-2">Timeline</h3>
+                        {project.timeline?.length ? (
+                            project.timeline.map((phase, index) => (
+                                <div key={index} className="mb-6">
+                                    <h4 className="text-lg">{phase.title}</h4>
+                                    <p className="mb-2">{phase.date}</p>
+                                    <div className="pl-4">
+                                        {phase.subsections?.length ? (
+                                            phase.subsections.map((subsection, subIndex) => (
+                                                <div key={subIndex} className="mb-2">
+                                                    <p className="">{subsection.description}</p>
+                                                </div>
+                                            ))
+                                        ) : (
+                                            <p>No details available</p>
+                                        )}
+                                    </div>
+                                </div>
+                            ))
+                        ) : (
+                            <p>No timeline available</p>
+                        )}
+                    </section>
+                )}
+
+                {/* Gallery Section */}
+                {activeSection === 'gallery' && (
+                    <section className="mb-8">
+                        <h3 className="text-xl font-semibold mb-2">Gallery</h3>
+                        {project.gallery?.length ? (
+                            <div className="flex flex-wrap gap-4">
+                                {project.gallery.map((image, index) => (
+                                    <img
+                                        key={index}
+                                        src={image}
+                                        alt={`Project ${index + 1}`}
+                                        className="w-full md:w-1/2 lg:w-1/3 rounded-lg shadow-lg"
+                                    />
+                                ))}
+                            </div>
+                        ) : (
+                            <p>No gallery images available</p>
+                        )}
+                    </section>
+                )}
+            </main>
         </div>
     );
 };

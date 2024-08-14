@@ -3,29 +3,23 @@ import { Link } from "react-router-dom";
 
 const ProjectCard = ({ id, title, description, imageUrl, currentlyWorkingOn }) => {
     return (
-        <div className="relative bg-gray-800 text-gray-50 bg-opacity-90 rounded-lg shadow-lg overflow-hidden flex flex-col">
-            {currentlyWorkingOn && (
-                <div className="absolute top-2 right-2 inline-block bg-gray-400 text-white rounded-full px-3 py-1 font-bold mr-2 mb-2">
-                    WIP
-                </div>
-            )}
+        <div className="relative group w-full sm:w-80 md:w-96 h-64 overflow-hidden rounded-lg shadow-lg">
             <img
                 src={imageUrl}
                 alt={title}
-                className="w-full h-64 object-cover"
+                className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
             />
-            <div className="p-4 ">
-                <div className="space-y-4 mb-4">
-                    <h3 className="">{title}</h3>
-                    <p className="flex-grow overflow-hidden" style={{ display: '-webkit-box', WebkitBoxOrient: 'vertical', WebkitLineClamp: 4 }}>
-                        {description}
-                    </p> 
+            {currentlyWorkingOn && (
+                <div className="absolute top-2 right-2 z-10 opacity-80 bg-gray-400 text-white rounded-full px-3 py-1 text-sm font-bold">
+                    WIP
                 </div>
-
+            )}
+            <div className="absolute inset-0 bg-black bg-opacity-70 text-gray-50 flex flex-col justify-center items-center p-2 space-y-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out ">
+                <h3 className="text-4xl">{title}</h3>
+                <p className="text-xs w-4/5">{description}</p>
                 <Link
                     to={`/projects/${id}`}
                     className="btn-light"
-                    style={{ textDecoration: "none" }}
                 >
                     View Project
                 </Link>

@@ -62,13 +62,13 @@ html {
 
 /* CUSTOM TAILWIND */
 .btn-dark {
-  @apply rounded-lg px-4 py-2 border-2 border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-gray-100 duration-300;
+  @apply rounded-lg px-4 py-2 w-fit h-fit border-2 border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-gray-100 duration-300;
 }
 .btn-light {
-  @apply rounded-lg px-4 py-2 border-2 border-gray-300 text-gray-100 hover:bg-gray-300 hover:text-gray-800 duration-300;
+  @apply rounded-lg px-4 py-2 w-fit h-fit border-2 border-gray-300 text-gray-100 hover:bg-gray-300 hover:text-gray-800 duration-300;
 }
 .sub-heading {
-  @apply text-7xl font-light;
+  @apply text-7xl font-light text-center sm:text-left;
 }
 
 /* Timeline Container */

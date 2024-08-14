@@ -1,309 +1,244 @@
 const projects = [
     {
         id: 1,
-        title: "Recipe Roots",
-        description: "Recipe Roots is an online platform designed for sharing family recipes, with the goal of preserving and sharing authentic, culturally accurate dishes with a global audience.",
+        title: 'Recipe Roots',
         imageUrl: "/images/reciperoots.png",
-        tags: ["Ancestry", "Community", "Family"],
-        techStack: {
-            frontEnd: ["React.js", "Tailwind CSS"],
-            backEnd: ["Flask", "SQLAlchemy"],
-            deployment: ["Cloudflare"]
+        description: 'A web application for organizing and sharing family recipes. Users can upload recipes, add photos, and answer questions about the recipe and its creator.',
+        wip: false,
+        deployed: true,
+        link: 'https://example.com/reciperoots',
+        overview: {
+            tags: ['React', 'Flask', 'SQLAlchemy', 'Recipes'],
+            techStack: ['React', 'Flask', 'SQLAlchemy', 'Tailwind CSS'],
+            features: [
+                'Upload and share family recipes.',
+                'Add photos and detailed descriptions.',
+                'Interactive UI for guiding users through recipe creation.'
+            ]
         },
-        currentlyWorkingOn: false,
-        deployed: false,
-        link: "",
+        insights: 'A significant challenge in developing Recipe Roots was implementing an efficient search and filter functionality that accommodated diverse recipe attributes. Users often had recipes with varying levels of detail, so designing a flexible search mechanism that could handle different ingredient lists, cooking times, and preparation methods was essential. I addressed this by creating a robust indexing system and incorporating faceted search capabilities, which significantly improved the app’s performance and user satisfaction. Additionally, managing recipe images and ensuring they loaded quickly and accurately across different devices required optimizing image storage and retrieval processes.',
         timeline: [
             {
-                title: "Conceptualization & Planning",
-                date: "February 2024",
+                title: 'Design & Planning',
+                date: '2023-01-10',
                 subsections: [
-                    {
-                        title: "Market Research",
-                        description: "Analyzed existing recipe-sharing platforms to identify gaps and opportunities. Created user personas and defined project goals."
-                    },
-                    {
-                        title: "Feature Definition",
-                        description: "Outlined core features and functionality, including recipe submission, user profiles, and search capabilities. Drafted project scope document."
-                    }
+                    { title: 'UI/UX Design', description: 'Designed the user interface and user experience for recipe management.' },
+                    { title: 'Database Schema', description: 'Created schema for storing recipes and user information.' }
                 ]
             },
             {
-                title: "Development",
-                date: "May 2024",
+                title: 'Development',
+                date: '2023-02-01',
                 subsections: [
-                    {
-                        title: "Component Design",
-                        description: "Developed reusable UI components using React.js. Implemented state management and responsive design with Tailwind CSS."
-                    },
-                    {
-                        title: "API Development",
-                        description: "Developed RESTful API using Flask. Created endpoints for user management, recipe CRUD operations, and search functionality."
-                    }
-                ]
-            },
-            {
-                title: "Testing & Quality Assurance",
-                date: "June - July 2024",
-                subsections: [
-                    {
-                        title: "Beta Testing",
-                        description: "Released a beta version to a small group of users, mostly consisting of peers from my program at FlatIron School. Collected feedback on functionality, usability, and performance."
-                    },
-                    {
-                        title: "Bug Fixing & Refinement",
-                        description: "Addressed bugs reported during beta testing. Refined features and improved user experience based on feedback."
-                    }
+                    { title: 'Front End', description: 'Developed React components and integrated Tailwind CSS for styling.' },
+                    { title: 'Back End', description: 'Built Flask APIs and set up SQLAlchemy for data management.' }
                 ]
             }
+        ],
+        gallery: [
+            'images/reciperoots.png'
         ]
     },
     {
-        "id": 2,
-        "title": "YogiAPI",
-        "description": "A restful API that provides personalized yoga flows based on chakra alignment and difficulty level. Designed to help users find balance and strength through custom-tailored yoga practices.",
-        "tags": ["Python", "Flask", "API", "Yoga", "Health"],
-        "imageUrl": "/images/yogiapi.png",
-        "timeline": [
+        id: 2,
+        title: 'YogiAPI',
+        imageUrl: "/images/yogiapi.png",
+        description: 'A React and Flask-based API for generating personalized yoga flows based on user preferences and chakra balancing.',
+        wip: false,
+        deployed: true,
+        link: 'https://example.com/yogiapi',
+        overview: {
+            tags: ['React', 'Flask', 'Yoga', 'API'],
+            techStack: ['React', 'Flask', 'SQLAlchemy', 'Tailwind CSS'],
+            features: [
+                'Generates personalized yoga flows based on user preferences.',
+                'Includes chakra balancing and difficulty level options.',
+                'User-friendly interface for selecting yoga routines.'
+            ]
+        },
+        insights: 'Building YogiAPI was my first experience creating an API from scratch, which presented several learning opportunities and challenges. One of the initial hurdles was designing the API architecture and ensuring it met best practices for RESTful services. Navigating the intricacies of endpoint design, request handling, and response formatting was a steep learning curve. Additionally, integrating with different yoga pose libraries and maintaining data consistency across these sources required careful attention. To overcome these challenges, I spent significant time studying API design principles and experimenting with various tools and libraries. This process not only helped me develop YogiAPI but also provided a solid foundation for future API projects.',
+        timeline: [
             {
-                "title": "Project Conception",
-                "date": "January 2024",
-                "subsections": [
-                    {
-                        "title": "Initial Idea",
-                        "description": "The idea was born out of a desire to blend mindfulness and technology, offering users a personalized approach to yoga."
-                    },
-                    {
-                        "title": "Market Research",
-                        "description": "Analyzed existing yoga apps and APIs to identify gaps in personalized yoga recommendations based on chakra alignment."
-                    }
+                title: 'Project Planning',
+                date: '2023-01-15',
+                subsections: [
+                    { title: 'Research', description: 'Conducted research on yoga flow generation and user preferences.' },
+                    { title: 'Design', description: 'Designed the architecture for integrating Flask with React.' }
                 ]
             },
             {
-                "title": "Planning & Design",
-                "date": "February 2024",
-                "subsections": [
-                    {
-                        "title": "API Design",
-                        "description": "Designed the API structure, focusing on endpoints for chakra-specific and difficulty-based yoga flows."
-                    },
-                    {
-                        "title": "Technology Stack",
-                        "description": "Chose Flask for its simplicity and efficiency in building RESTful APIs, combined with SQLAlchemy for database management."
-                    }
-                ]
-            },
-            {
-                "title": "Development",
-                "date": "March - April 2024",
-                "subsections": [
-                    {
-                        "title": "Backend Development",
-                        "description": "Developed the Flask API with endpoints for different yoga flows, integrating chakra and difficulty parameters."
-                    },
-                    {
-                        "title": "Database Integration",
-                        "description": "Integrated a SQLAlchemy database to store and retrieve yoga poses and flows."
-                    }
+                title: 'Development',
+                date: '2023-02-01',
+                subsections: [
+                    { title: 'Front End', description: 'Developed the React components for user interaction.' },
+                    { title: 'Back End', description: 'Built Flask API endpoints and integrated with SQLAlchemy.' }
                 ]
             }
+        ],
+        gallery: [
+            '/images/yogiapi.png'
+        ]
+    },
+    {
+        id: 3,
+        title: 'EatBySeason',
+        imageUrl: "/images/eatbyseason.png",
+        description: 'A web app to track seasonal produce based on user location, providing detailed information about crops and their seasonal availability.',
+        wip: false,
+        deployed: true,
+        link: 'https://example.com/eatbyseason',
+        overview: {
+            tags: ['React', 'Vite', 'Flask', 'Supabase', 'Seasonal Produce'],
+            techStack: ['Vite', 'React', 'Tailwind CSS', 'Flask', 'Supabase'],
+            features: [
+                'Displays seasonal produce based on user location.',
+                'Provides detailed information on crops and seasons.',
+                'Uses IP-based location detection for user convenience.'
+            ]
+        },
+        insights: 'One of the primary challenges in EatBySeason was ensuring the accuracy and relevance of seasonal produce data across different regions. Seasonal variations can be quite pronounced, and sourcing accurate information for each geographic area required integrating multiple data sources and regularly updating the database. I implemented a system that cross-referenced produce data from agricultural databases and local reports, along with a fallback mechanism for less common regions. This approach helped maintain up-to-date and reliable information for users. Performance optimization was also a key focus, and I used techniques like asynchronous data fetching and regional caching to enhance the app’s responsiveness.',
+        timeline: [
+            {
+                title: 'Initial Setup',
+                date: '2023-03-01',
+                subsections: [
+                    { title: 'Environment Setup', description: 'Configured Vite and Flask for development.' },
+                    { title: 'Database Design', description: 'Designed the Supabase schema for crop data.' }
+                ]
+            },
+            {
+                title: 'User Interface',
+                date: '2023-04-01',
+                subsections: [
+                    { title: 'Frontend Development', description: 'Developed React components and integrated Tailwind CSS.' },
+                    { title: 'Location Services', description: 'Implemented IP-based location detection.' }
+                ]
+            }
+        ],
+        gallery: [
+            '/images/eatbyseason.png'
+        ]
+    },
+    {
+        id: 4,
+        title: 'GratitudeGlobe',
+        imageUrl: "/images/gratitudeglobe.png",
+        description: 'A platform for users to track and share daily gratitudes with a global community, fostering a sense of positivity and connection.',
+        wip: false,
+        deployed: true,
+        link: 'https://example.com/gratitudeglobe',
+        overview: {
+            tags: ['React', 'Flask', 'Community', 'Gratitude'],
+            techStack: ['React', 'Flask', 'SQLAlchemy', 'Tailwind CSS'],
+            features: [
+                'Allows users to log and share daily gratitudes.',
+                'Includes features for community engagement and personal reflection.',
+                'Provides a global view of shared gratitudes.'
+            ]
+        },
+        insights: "One significant challenge with Gratitude Globe was achieving a visually appealing design that accurately reflected its purpose. Initially, I struggled with creating a more complex and engaging visual style, but I eventually realized that a simpler design would better align with the app's core objective of encouraging daily gratitude reflection.Embracing a minimalist approach, I focused on clarity and ease of use, ensuring that the interface was intuitive and accessible.This shift to a simpler look not only aligned with the app’s purpose but also enhanced the overall user experience by keeping the focus on the meaningful content rather than flashy design elements.",
+        timeline: [
+            {
+                title: 'Conceptualization',
+                date: '2023-05-01',
+                subsections: [
+                    { title: 'Idea Formation', description: 'Developed the concept for a global gratitude-sharing platform.' },
+                    { title: 'Feature Planning', description: 'Outlined key features and user flows.' }
+                ]
+            },
+            {
+                title: 'Execution',
+                date: '2023-06-01',
+                subsections: [
+                    { title: 'Backend Development', description: 'Built Flask APIs and set up the SQLAlchemy database.' },
+                    { title: 'Frontend Design', description: 'Created the user interface with React and Tailwind CSS.' }
+                ]
+            }
+        ],
+        gallery: [
+            '/images/gratitudeglobe.png'
+        ]
+    },
+    {
+        id: 5,
+        title: 'Py_Flows',
+        imageUrl: "/images/pyflows.png",
+        description: 'A CLI tool that generates personalized yoga flows based on chakra and difficulty levels, designed for flexibility and ease of use.',
+        wip: true,
+        deployed: false,
+        link: 'https://example.com/pyflows',
+        overview: {
+            tags: ['Python', 'CLI', 'Yoga', 'Chakra'],
+            techStack: ['Python'],
+            features: [
+                'Generates customized yoga flows based on user input.',
+                'Supports various levels of difficulty and chakra focus.',
+                'Designed for command-line use with clear instructions.'
+            ]
+        },
+        insights: 'Developing Py_Flows posed a unique challenge in balancing the complexity of generating personalized yoga flows with the simplicity of a command-line interface. Users needed to input detailed preferences for their yoga sessions, which required a flexible yet straightforward command structure. The complexity arose from ensuring that the input parameters were validated correctly and that the generated flows were both accurate and user-friendly. I tackled this by designing a clear and concise CLI syntax with detailed help options and error messages. Additionally, managing the logic for creating customized yoga flows involved developing a comprehensive algorithm that could handle various difficulty levels and user preferences, which was a significant part of the development process.',
+        timeline: [
+            {
+                title: 'Planning & Design',
+                date: '2023-09-01',
+                subsections: [
+                    { title: 'Feature Specification', description: 'Defined features and user inputs for the CLI tool.' },
+                    { title: 'Design', description: 'Designed the flow generation logic and CLI interface.' }
+                ]
+            },
+            {
+                title: 'Implementation',
+                date: '2023-10-01',
+                subsections: [
+                    { title: 'Coding', description: 'Developed the Python CLI tool and tested various scenarios.' },
+                    { title: 'Documentation', description: 'Created user documentation and examples for using the tool.' }
+                ]
+            }
+        ],
+        gallery: [
+            'images/pyflows.png'
+        ]
+    },
+    {
+        id: 6,
+        title: 'CatChi',
+        imageUrl: "/images/catchi.png",
+        description: 'A web app for finding and organizing cat playdates based on compatibility, including scheduling and communication features for cat owners.',
+        wip: false,
+        deployed: true,
+        link: 'https://example.com/catchi',
+        overview: {
+            tags: ['React', 'Flask', 'Cats', 'Playdates'],
+            techStack: ['React', 'Flask', 'SQLAlchemy', 'Tailwind CSS'],
+            features: [
+                'Matches cats for playdates based on compatibility.',
+                'Provides scheduling and communication tools for cat owners.',
+                'Includes a user-friendly interface for managing playdates.'
+            ]
+        },
+        insights: 'The idea for Cat Chi emerged from a fascination with Feng Shui and a desire to create a unique, interactive experience. I envisioned a game where players help a cat find the best placement for objects in different rooms to achieve harmony based on Feng Shui principles. The goal was to combine education with entertainment by using Pygame to build a drag-and-drop game. This initial phase involved researching Feng Shui concepts, sketching out game levels, and designing the core mechanics to ensure the game would be both fun and informative.',
+        timeline: [
+            {
+                title: 'Research & Planning',
+                date: '2023-07-01',
+                subsections: [
+                    { title: 'Compatibility Algorithm', description: 'Developed the algorithm for matching cats based on compatibility.' },
+                    { title: 'Feature Planning', description: 'Outlined features and user requirements for the app.' }
+                ]
+            },
+            {
+                title: 'Development',
+                date: '2023-08-01',
+                subsections: [
+                    { title: 'Front End', description: 'Built React components and integrated Tailwind CSS for styling.' },
+                    { title: 'Back End', description: 'Developed Flask APIs and set up SQLAlchemy for database management.' }
+                ]
+            }
+        ],
+        gallery: [
+            'images/catch.png'
         ]
     }
-    // {
-    //     id: 3,
-    //     title: "EatBySeason",
-    //     description: "EatBySeason is a web application that provides information on seasonal produce based on the user's location. It helps users discover what fruits and vegetables are in season and plan their meals accordingly.",
-    //     imageUrl: "/images/eatbyseason.png",
-    //     tags: ["Wellness", "Lifestyle"],
-    //     techStack: {
-    //         frontEnd: ["React.js", "Tailwind CSS"],
-    //         backEnd: ["Flask", "Supabase"],
-    //         deployment: ["Vercel"]
-    //     },
-    //     currentlyWorkingOn: false,
-    //     deployed: false,
-    //     link: "",
-    //     timeline: [
-    //         {
-    //             title: "Conceptualization & Planning",
-    //             date: "",
-    //             subsections: [
-    //                 {
-    //                     title: "Research",
-    //                     description: "Researched seasonal produce and gathered data on various crops. Planned the application's features and user interface."
-    //                 },
-    //                 {
-    //                     title: "Feature Set",
-    //                     description: "Defined the core features including location-based produce recommendations and seasonal alerts."
-    //                 }
-    //             ]
-    //         },
-    //         {
-    //             title: "Front-End Development",
-    //             date: "",
-    //             subsections: [
-    //                 {
-    //                     title: "UI Design",
-    //                     description: "Designed the user interface using React.js and Tailwind CSS. Implemented responsive design for mobile and desktop views."
-    //                 },
-    //                 {
-    //                     title: "Integration",
-    //                     description: "Integrated the front-end with the back-end API to fetch and display seasonal produce data."
-    //                 }
-    //             ]
-    //         },
-    //         {
-    //             title: "Back-End Development",
-    //             date: "",
-    //             subsections: [
-    //                 {
-    //                     title: "API Development",
-    //                     description: "Developed RESTful API endpoints using Flask. Integrated with Supabase for database management."
-    //                 },
-    //                 {
-    //                     title: "Location-Based Recommendations",
-    //                     description: "Implemented location-based recommendations using IP geolocation and user permissions."
-    //                 },
-    //                 {
-    //                     title: "Security & Authentication",
-    //                     description: "Ensured secure access to user data and recommendations. Applied best practices for API security."
-    //                 }
-    //             ]
-    //         }
-    //     ]
-    // },
-    // {
-    //     id: 4,
-    //     title: "GratitudeGlobe",
-    //     description: "GratitudeGlobe is a web app that allows users to express gratitude and track their positive experiences. It provides a platform for daily reflections and helps users focus on the positives in their lives.",
-    //     imageUrl: "/images/gratitudeglobe.png",
-    //     tags: ["Community", "Wellness"],
-    //     techStack: {
-    //         frontEnd: ["React.js", "Tailwind CSS"],
-    //         backEnd: ["Flask", "SQLAlchemy"],
-    //         deployment: [""]
-    //     },
-    //     currentlyWorkingOn: false,
-    //     deployed: false,
-    //     link: "",
-    //     timeline: [
-    //         {
-    //             title: "Conceptualization & Planning",
-    //             date: "",
-    //             subsections: [
-    //                 {
-    //                     title: "",
-    //                     description: "Conducted research to understand user needs for a gratitude journaling app. Defined the target audience and their requirements."
-    //                 }
-    //             ]
-    //         },
-    //         {
-    //             title: "Front-End Development",
-    //             date: "",
-    //             subsections: [
-    //                 {
-    //                     title: "Component Design",
-    //                     description: "Designed reusable UI components using React.js. Implemented a responsive layout with Tailwind CSS."
-    //                 },
-    //                 {
-    //                     title: "Integration",
-    //                     description: "Connected the front-end with the back-end API to save and retrieve journal entries."
-    //                 }
-    //             ]
-    //         },
-    //         {
-    //             title: "Back-End Development",
-    //             date: "",
-    //             subsections: [
-    //                 {
-    //                     title: "API Development",
-    //                     description: "Developed RESTful API endpoints using Flask. Created endpoints for journal entry CRUD operations."
-    //                 }
-    //             ]
-    //         }
-    //     ]
-    // },
-    // {
-    //     id: 5,
-    //     title: "Py_Flows",
-    //     description: "Py_Flows is a CLI powered by Python that generates personalized yoga flows based on chakra and difficulty. It offers a unique way to tailor yoga practices to individual needs, enhancing the overall yoga experience.",
-    //     imageUrl: "/images/pyflows.png",
-    //     tags: ["CLI", "Yoga", "Generator"],
-    //     techStack: {
-    //         frontEnd: ["n/a"],
-    //         backEnd: ["Python"],
-    //         deployment: ["n/a"]
-    //     },
-    //     currentlyWorkingOn: false,
-    //     deployed: false,
-    //     link: "",
-    //     timeline: [
-    //         {
-    //             title: "Conceptualization & Planning",
-    //             date: "",
-    //             subsections: [
-    //                 {
-    //                     title: "Market Research",
-    //                     description: "Analyzed existing yoga tools and apps to identify gaps. Conducted surveys to understand user needs and preferences."
-    //                 },
-    //                 {
-    //                     title: "Feature Definition",
-    //                     description: "Outlined core features including personalized flow generation based on chakra and difficulty levels. Drafted project scope document."
-    //                 }
-    //             ]
-    //         },
-    //         {
-    //             title: "Development",
-    //             date: "",
-    //             subsections: [
-    //                 {
-    //                     title: "CLI Design",
-    //                     description: "Designed the CLI interface to be user-friendly and intuitive. Implemented basic commands and options for user interaction."
-    //                 },
-    //                 {
-    //                     title: "Flow Generation Algorithm",
-    //                     description: "Developed the algorithm to generate yoga flows based on input parameters such as chakra focus and difficulty level."
-    //                 },
-    //                 {
-    //                     title: "Integration",
-    //                     description: "Integrated the flow generation algorithm with the CLI interface. Ensured seamless interaction between different components."
-    //                 }
-    //             ]
-    //         }
-    //     ]
-    // },
-    // {
-    //     id: 6,
-    //     title: "CatChi",
-    //     description: "CatChi is a playful web app that combines the themes of cats and feng shui. It helps users find the best spots for their cats to rest and play based on feng shui principles.",
-    //     imageUrl: "/images/catchi.png",
-    //     tags: ["Cats", "Energy", "Lifestyle"],
-    //     techStack: {
-    //         frontEnd: ["React.js", "Tailwind CSS"],
-    //         backEnd: ["Flask", "SQLAlchemy"],
-    //         deployment: ["n/a"]
-    //     },
-    //     currentlyWorkingOn: true,
-    //     deployed: false,
-    //     link: "",
-    //     timeline: [
-    //         {
-    //             title: "Conceptualization & Planning",
-    //             date: "Aug 2024",
-    //             subsections: [
-    //                 {
-    //                     title: "Research",
-    //                     description: "Explored the principles of feng shui and how they can be applied to cat behavior. Defined the application's features and user experience."
-    //                 },
-    //                 {
-    //                     title: "Feature Definition",
-    //                     description: "Outlined core features such as location recommendations, feng shui tips, and interactive elements for cats."
-    //                 }
-    //             ]
-    //         }
-    //     ]
-    // }
 ];
 
 export default projects;
-
