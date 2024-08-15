@@ -94,28 +94,28 @@ const Navbar = () => {
             id="homeIcon" 
             href="/" 
             onClick={() => setIsMenuOpen(false)} 
-            className="transition-transform transform hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
+            className="transition-transform transform  hover:text-slate-200 hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
             data-value="+ Home"
           >
           + Home
           </a>
           <button 
             onClick={() => handleNavigation('intro')} 
-            className="transition-transform transform hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
+            className="transition-transform transform hover:text-slate-200 hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
             data-value="+ About"
           >
            + About
           </button>
           <button 
             onClick={() => handleNavigation('projects')} 
-            className="transition-transform transform hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
+            className="transition-transform transform  hover:text-slate-200 hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
             data-value="+ Projects"
           >
           + Projects
           </button>
           <button 
             onClick={() => handleNavigation('blog')} 
-            className="transition-transform transform hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
+            className="transition-transform transform  hover:text-slate-200 hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
             data-value="+ Articles"
           >
           + Articles
@@ -124,7 +124,7 @@ const Navbar = () => {
             href="https://github.com/samanthacabrera" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="block transition-transform transform hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
+            className="block transition-transform transform  hover:text-slate-200 hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
             data-value="+ GitHub"
           >
           + GitHub
@@ -133,7 +133,7 @@ const Navbar = () => {
             href="https://www.linkedin.com/in/samcabreraa/" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="block transition-transform transform hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
+            className="block transition-transform transform  hover:text-slate-200 hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
             data-value="+ LinkedIn"
           >
           + LinkedIn

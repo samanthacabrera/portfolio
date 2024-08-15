@@ -40,9 +40,9 @@ function Skills() {
       <p>With a strong foundation in both front-end and back-end development, I leverage a diverse set of tools and technologies to build efficient, scalable, and user-friendly web applications. Below is  a comprehensive list of tools I use daily in my projects: </p>
 
       {skillRows.map((row) => (
-        <ul className="flex flex-row justify-between text-base md:text-2xl">
+        <ul className="flex flex-row justify-between">
           {row.map((skill) => (
-            <li className="hover:scale-110 transition duration-500">
+            <li className="hover:text-slate-200 hover:scale-105 transition duration-500">
               {skill}
             </li>
           ))}
