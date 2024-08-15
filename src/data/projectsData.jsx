@@ -37,7 +37,11 @@ const projects = [
             }
         ],
         gallery: [
-            '/reciperoots/reciperoots.png'
+            '/reciperoots/reciperoots.png',
+            '/reciperoots/reciperoots2.png',
+            '/reciperoots/reciperoots3.png',
+            '/reciperoots/reciperoots4.png',
+            '/reciperoots/reciperoots5.png',
         ]
     },
     {
