@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ProjectCard = ({ id, title, description, imageUrl, currentlyWorkingOn }) => {
+const ProjectCard = ({ id, title, description, thumbnail, currentlyWorkingOn }) => {
     return (
         <div className="relative group w-full sm:w-80 md:w-96 h-64 overflow-hidden rounded-lg shadow-lg">
             <img
-                src={imageUrl}
+                src={thumbnail}
                 alt={title}
                 className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
             />

@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import projects from '../../data/projectsData';
 
-
-
 const ProjectPage = () => {
     const { id } = useParams();
     const project = projects.find((proj) => proj.id === parseInt(id)) || {};
@@ -41,7 +39,7 @@ const ProjectPage = () => {
 
             {/* Toggle Buttons */}
             <nav className="w-full max-w-4xl my-8 flex flex-wrap justify-start space-x-4">
-                {['overview', 'insights', 'timeline', 'gallery'].map((section) => (
+                {['overview', 'insights', 'timeline', 'gallery', 'walkthrough'].map((section) => (
                     <button
                         key={section}
                         onClick={() => setActiveSection(section)}
@@ -74,6 +72,23 @@ const ProjectPage = () => {
                         <div className="mb-6">
                             <h3 className="text-xl font-semibold mb-2">Tags</h3>
                             <p>{project.overview.tags?.length ? project.overview.tags.join(", ") : "No tags available"}</p>
+                        </div>
+                    </section>
+                )}
+
+                {/* Walkthrough Section */}
+                {activeSection === 'walkthrough' && project.walkthrough && (
+                    <section className="mb-8">
+                        <h3 className="text-xl font-semibold mb-2">Walkthrough</h3>
+                        <div className="aspect-w-16 aspect-h-9">
+                            <iframe
+                                src={project.walkthrough}
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                                title="Project Walkthrough"
+                                className="w-full h-full"
+                            ></iframe>
                         </div>
                     </section>
                 )}

@@ -18,7 +18,7 @@ const Projects = () => {
                                 id={project.id}
                                 title={project.title}
                                 description={project.description}
-                                imageUrl={project.imageUrl}
+                                thumbnail={project.thumbnail}
                                 tags={project.tags}
                                 currentlyWorkingOn={project.currentlyWorkingOn}
                                 hideImage="sm:hidden" 

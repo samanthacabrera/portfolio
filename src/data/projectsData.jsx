@@ -3,7 +3,7 @@ const projects = [
         id: 1,
         title: 'Recipe Roots',
         link:'https://github.com/samanthacabrera/recipe-roots',
-        imageUrl: "/reciperoots/reciperoots.png",
+        thumbnail: "/reciperoots/reciperoots.png",
         description: 'A web application for sharing family recipes to a global audience. By sharing these recipes, we honor our ancestors and keep their spirits alive in our kitchens.',
         wip: false,
         overview: {
@@ -17,6 +17,7 @@ const projects = [
                 'Interactive UI for guiding users through recipe creation.'
             ]
         },
+        walkthrough: 'https://www.youtube.com/embed/another-example-video-url',
         insights: 'A significant challenge in developing Recipe Roots was implementing an efficient search and filter functionality that accommodated diverse recipe attributes. Users often had recipes with varying levels of detail, so designing a flexible search mechanism that could handle different ingredient lists, cooking times, and preparation methods was essential. I addressed this by creating a robust indexing system and incorporating faceted search capabilities, which significantly improved the app’s performance and user satisfaction. Additionally, managing recipe images and ensuring they loaded quickly and accurately across different devices required optimizing image storage and retrieval processes.',
         timeline: [
             {
@@ -48,7 +49,7 @@ const projects = [
         id: 2,
         title: 'YogiAPI',
         link: 'https://github.com/samanthacabrera/yogi_api',
-        imageUrl: "/yogiapi/yogiapi.png",
+        thumbnail: "/yogiapi/yogiapi.png",
         description: 'This API provides comprehensive access to a diverse collection of yoga poses, allowing you to integrate yoga pose data into your applications effortlessly.',
         wip: true,
         overview: {
@@ -60,6 +61,7 @@ const projects = [
                 'User-friendly interface for browsing yoga poses.'
             ]
         },
+        walkthrough: 'https://www.youtube.com/embed/another-example-video-url',
         insights: 'Building YogiAPI was my first experience creating an API from scratch, which presented several learning opportunities and challenges. One of the initial hurdles was designing the API architecture and ensuring it met best practices for RESTful services. Navigating the intricacies of endpoint design, request handling, and response formatting was a steep learning curve. Additionally, integrating with different yoga pose libraries and maintaining data consistency across these sources required careful attention. To overcome these challenges, I spent significant time studying API design principles and experimenting with various tools and libraries. This process not only helped me develop YogiAPI but also provided a solid foundation for future API projects.',
         timeline: [
             {
