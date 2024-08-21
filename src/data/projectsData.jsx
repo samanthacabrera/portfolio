@@ -17,7 +17,7 @@ const projects = [
                 'Interactive UI for guiding users through recipe creation.'
             ]
         },
-        walkthrough: 'https://www.youtube.com/embed/another-example-video-url',
+        walkthrough: 'https://www.youtube.com/embed/Qso3oxAXWDc',
         insights: 'A significant challenge in developing Recipe Roots was implementing an efficient search and filter functionality that accommodated diverse recipe attributes. Users often had recipes with varying levels of detail, so designing a flexible search mechanism that could handle different ingredient lists, cooking times, and preparation methods was essential. I addressed this by creating a robust indexing system and incorporating faceted search capabilities, which significantly improved the app’s performance and user satisfaction. Additionally, managing recipe images and ensuring they loaded quickly and accurately across different devices required optimizing image storage and retrieval processes.',
         timeline: [
             {
