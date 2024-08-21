@@ -61,7 +61,7 @@ const projects = [
                 'User-friendly interface for browsing yoga poses.'
             ]
         },
-        walkthrough: 'https://www.youtube.com/embed/another-example-video-url',
+        walkthrough: 'https://www.youtube.com/embed/Inhkh8RiL1k',
         insights: 'Building YogiAPI was my first experience creating an API from scratch, which presented several learning opportunities and challenges. One of the initial hurdles was designing the API architecture and ensuring it met best practices for RESTful services. Navigating the intricacies of endpoint design, request handling, and response formatting was a steep learning curve. Additionally, integrating with different yoga pose libraries and maintaining data consistency across these sources required careful attention. To overcome these challenges, I spent significant time studying API design principles and experimenting with various tools and libraries. This process not only helped me develop YogiAPI but also provided a solid foundation for future API projects.',
         timeline: [
             {

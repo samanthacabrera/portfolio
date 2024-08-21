@@ -76,22 +76,24 @@ const ProjectPage = () => {
                     </section>
                 )}
 
-                {/* Walkthrough Section */}
-                {activeSection === 'walkthrough' && project.walkthrough && (
-                    <section className="mb-8">
-                        <h3 className="text-xl font-semibold mb-2">Walkthrough</h3>
-                        <div className="aspect-w-16 aspect-h-9">
-                            <iframe
-                                src={project.walkthrough}
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                                title="Project Walkthrough"
-                                className="w-full h-full"
-                            ></iframe>
-                        </div>
-                    </section>
-                )}
+{/* Walkthrough Section */}
+{activeSection === 'walkthrough' && project.walkthrough && (
+    <section className="mb-8">
+        <h3 className="text-xl font-semibold mb-2">Walkthrough</h3>
+        <div className="relative w-full" style={{ paddingTop: '48.4%' }}> 
+            <iframe
+                src={project.walkthrough}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                title="Project Walkthrough"
+                className="absolute inset-0 w-full h-full"
+                style={{ borderRadius: '8px' }} 
+            ></iframe>
+        </div>
+    </section>
+)}
+
 
                 {/* Insights Section */}
                 {activeSection === 'insights' && (
