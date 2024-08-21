@@ -49,7 +49,7 @@ const projects = [
         id: 2,
         title: 'YogiAPI',
         link: 'https://github.com/samanthacabrera/yogi_api',
-        thumbnail: "/yogiapi/yogiapi.png",
+        thumbnail: '/yogiapi/home.png',
         description: 'This API provides comprehensive access to a diverse collection of yoga poses, allowing you to integrate yoga pose data into your applications effortlessly.',
         wip: true,
         overview: {
@@ -82,7 +82,10 @@ const projects = [
             }
         ],
         gallery: [
-            '/yogiapi/yogiapi.png'
+            '/yogiapi/home.png',
+            '/yogiapi/intro.png',
+            '/yogiapi/howto.png',
+            '/yogiapi/endpoints.png'
         ]
     }
 ];
