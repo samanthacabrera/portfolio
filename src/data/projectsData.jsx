@@ -3,7 +3,7 @@ const projects = [
         id: 1,
         title: 'Recipe Roots',
         link:'https://github.com/samanthacabrera/recipe-roots',
-        thumbnail: "/reciperoots/reciperoots.png",
+        thumbnail: "/reciperoots/home.png",
         description: 'A web application for sharing family recipes to a global audience. By sharing these recipes, we honor our ancestors and keep their spirits alive in our kitchens.',
         wip: false,
         overview: {
@@ -38,11 +38,13 @@ const projects = [
             }
         ],
         gallery: [
-            '/reciperoots/reciperoots.png',
-            '/reciperoots/reciperoots2.png',
-            '/reciperoots/reciperoots3.png',
-            '/reciperoots/reciperoots4.png',
-            '/reciperoots/reciperoots5.png',
+            '/reciperoots/home.png',
+            '/reciperoots/featured.png',
+            '/reciperoots/search.png',
+            '/reciperoots/recipelist.png',
+            '/reciperoots/recipepage.png',
+            '/reciperoots/cta.png',
+            '/reciperoots/mission.png',
         ]
     },
     {
