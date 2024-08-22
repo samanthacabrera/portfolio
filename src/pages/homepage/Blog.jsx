@@ -49,7 +49,7 @@ function Blog() {
 
     return (
         <FadeInSection>
-            <div id="blog" className="container space-y-10 md:space-y-20">
+            <div id="blog" className="container space-y-10 sm:space-y-20 text-center sm:text-left">
                 <h2 className="sub-heading">Articles</h2>
                 <p>Here, you'll find my collection of articles ranging from tutorials to histories of various technologies.</p>
                 {displayBlogs()}

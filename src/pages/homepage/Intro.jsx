@@ -7,7 +7,7 @@ function Intro() {
   
   return (
     <FadeInSection>
-      <div id="intro" className="flex flex-col pt-0 space-y-10">
+      <div id="intro" className="flex flex-col pt-0 space-y-10 text-center sm:text-left">
 
       <img src="/me.png" alt="Me at Newport Beach, CA" className="" /> 
       <p>Hi, my name is Sam.</p> 

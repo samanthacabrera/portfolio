@@ -7,7 +7,7 @@ import FadeInSection from "../../utils/FadeIn";
 const Projects = () => {
     return (
         <FadeInSection>
-        <div id="projects" className="container space-y-10 md:space-y-20">
+        <div id="projects" className="container space-y-10 sm:space-y-20 text-center sm:text-left">
             <h2 className="sub-heading">Projects</h2>
             <p className="">Below is a collection of my professional and personal web dev projects. If you have any questions about them don't hesitate to contact me and I can provide more information.</p>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 ">

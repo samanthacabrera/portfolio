@@ -20,7 +20,7 @@ const ProjectPage = () => {
     }
 
     return (
-        <div className="flex flex-col items-center min-h-screen p-8 md:ml-16">
+        <div className="flex flex-col items-center min-h-screen p-8 sm:ml-16 text-center sm:text-left">
             {/* Header */}
             <header className="w-full max-w-4xl mt-8 space-y-4">
                 <h1 className="text-5xl lg:text-7xl">{project.title || "Untitled Project"}</h1>
@@ -38,7 +38,7 @@ const ProjectPage = () => {
             </header>
 
             {/* Toggle Buttons */}
-            <nav className="w-full max-w-4xl my-8 flex flex-wrap justify-start space-x-4">
+            <nav className="w-full max-w-4xl my-8 flex flex-col sm:flex-row justify-center sm:justify-start items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-4">
                 {['overview', 'insights', 'timeline', 'gallery', 'walkthrough'].map((section) => (
                     <button
                         key={section}
@@ -76,24 +76,23 @@ const ProjectPage = () => {
                     </section>
                 )}
 
-{/* Walkthrough Section */}
-{activeSection === 'walkthrough' && project.walkthrough && (
-    <section className="mb-8">
-        <h3 className="text-xl font-semibold mb-2">Walkthrough</h3>
-        <div className="relative w-full" style={{ paddingTop: '48.4%' }}> 
-            <iframe
-                src={project.walkthrough}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                title="Project Walkthrough"
-                className="absolute inset-0 w-full h-full"
-                style={{ borderRadius: '8px' }} 
-            ></iframe>
-        </div>
-    </section>
-)}
-
+                {/* Walkthrough Section */}
+                {activeSection === 'walkthrough' && project.walkthrough && (
+                    <section className="mb-8">
+                        <h3 className="text-xl font-semibold mb-2">Walkthrough</h3>
+                        <div className="relative w-full" style={{ paddingTop: '48.4%' }}> 
+                            <iframe
+                                src={project.walkthrough}
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                                title="Project Walkthrough"
+                                className="absolute inset-0 w-full h-full"
+                                style={{ borderRadius: '8px' }} 
+                            ></iframe>
+                        </div>
+                    </section>
+                )}
 
                 {/* Insights Section */}
                 {activeSection === 'insights' && (
