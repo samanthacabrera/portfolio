@@ -2,8 +2,8 @@ const projects = [
     {
         id: 1,
         title: 'Recipe Roots',
-        link:'https://github.com/samanthacabrera/recipe-roots',
-        thumbnail: "/reciperoots/home.png",
+        link: 'https://github.com/samanthacabrera/recipe-roots',
+        thumbnail: '/reciperoots/home.png',
         description: 'A web application for sharing family recipes to a global audience. By sharing these recipes, we honor our ancestors and keep their spirits alive in our kitchens.',
         wip: false,
         overview: {
@@ -12,7 +12,7 @@ const projects = [
             features: [
                 'Discover family recipes from various cultures around the world.',
                 'Explore recipes from a randomly featured country.',
-                'Share your own family recipes with the community',
+                'Share your own family recipes with the community.',
                 'Users can save their favorite recipes for quick access.',
                 'Interactive UI for guiding users through recipe creation.'
             ]
@@ -44,7 +44,7 @@ const projects = [
             '/reciperoots/recipelist.png',
             '/reciperoots/recipepage.png',
             '/reciperoots/cta.png',
-            '/reciperoots/mission.png',
+            '/reciperoots/mission.png'
         ]
     },
     {
@@ -53,7 +53,7 @@ const projects = [
         link: 'https://github.com/samanthacabrera/yogi_api',
         thumbnail: '/yogiapi/home.png',
         description: 'This API provides comprehensive access to a diverse collection of yoga poses, allowing you to integrate yoga pose data into your applications effortlessly.',
-        wip: true,
+        wip: false,
         overview: {
             tags: ['Yoga', 'Wellness', 'Lifestyle'],
             techStack: ['React', 'Flask', 'SQLAlchemy', 'Tailwind CSS'],
@@ -89,7 +89,55 @@ const projects = [
             '/yogiapi/howto.png',
             '/yogiapi/endpoints.png'
         ]
+    },
+    {
+        id: 3,
+        title: "My Sister's Closet",
+        link: 'https://github.com/samanthacabrera/summer-over',
+        thumbnail: '/mysiscloset/home.png',
+        description: "My submission to the Summer Over Hack 2024. The prompt was to create a project that 'solves problems for the betterment of society.'",
+        wip: false,
+        overview: {
+            tags: ['Sustainability', 'Community', 'Fashion'],
+            techStack: ['React', 'Vite', 'Tailwind CSS'],
+            features: [
+                'Mockup UI for web app that allows users to browse swap listings.',
+                'Responseive and user-friendly interface for displaying swap listings.',
+                'Filter options to help users find items based on city.',
+                'Stats tracking for completed swaps.'
+                
+            ]
+        },
+        walkthrough: 'https://www.youtube.com/embed/K1sZBvGec2g',
+        insights: "One of the primary technical challenges I encountered was designing the frontend UI to effectively simulate a fully functional application within the time constraints of the hackathon. Ensuring the UI was both responsive and interactive required a careful balance between design and performance. I utilized Vite for its fast build times, which was crucial for rapid development and iteration. I relied on efficient state updates and context management to handle these dynamic interactions smoothly. Additionally, optimizing the mockup's performance while maintaining visual fidelity across different devices posed a challenge. By leveraging Tailwind CSS, I achieved a clean and responsive design that adapted well to various screen sizes.",
+        timeline: [
+            {
+                title: 'Design',
+                date: 'August 2024',
+                subsections: [
+                    { title: 'Conceptualization', description: 'Brainstormed ideas and developed a concept for the fashion exchange app.' },
+                    { title: 'UI/UX Design', description: 'Created a user interface mockup for the app using React and Tailwind CSS.' }
+                ]
+            },
+            {
+                title: 'Development',
+                date: 'August 2024',
+                subsections: [
+                    { title: 'Front End', description: 'Developed the frontend UI as a mockup for the app.' }
+                ]
+            }
+        ],
+        gallery: [
+            '/mysiscloset/home.png',
+            '/mysiscloset/intro.png',
+            '/mysiscloset/guide.png',
+            '/mysiscloset/faq.png',
+            '/mysiscloset/listings.png',
+            '/mysiscloset/profile.png',
+            '/mysiscloset/filter.png'
+        ]
     }
+
 ];
 
 export default projects;
