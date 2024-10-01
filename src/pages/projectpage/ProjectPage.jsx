@@ -69,10 +69,10 @@ const ProjectPage = () => {
                             <h3 className="text-xl font-semibold mb-2">Tech Stack</h3>
                             <p>{project.overview.techStack.join(", ") || "Not specified"}</p>
                         </div>
-                        <div className="mb-6">
+                        {/* <div className="mb-6">
                             <h3 className="text-xl font-semibold mb-2">Tags</h3>
                             <p>{project.overview.tags?.length ? project.overview.tags.join(", ") : "No tags available"}</p>
-                        </div>
+                        </div> */}
                     </section>
                 )}
 
