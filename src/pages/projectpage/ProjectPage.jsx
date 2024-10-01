@@ -39,7 +39,7 @@ const ProjectPage = () => {
 
             {/* Toggle Buttons */}
             <nav className="w-full max-w-4xl my-8 flex flex-col sm:flex-row justify-center sm:justify-start items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-4">
-                {['overview', 'insights', 'timeline', 'gallery', 'walkthrough'].map((section) => (
+                {['overview', 'insights', 'gallery', 'walkthrough'].map((section) => (
                     <button
                         key={section}
                         onClick={() => setActiveSection(section)}
@@ -102,7 +102,7 @@ const ProjectPage = () => {
                     </section>
                 )}
 
-                {/* Timeline Section */}
+                {/* Timeline Section
                 {activeSection === 'timeline' && (
                     <section className="mb-8">
                         <h3 className="text-xl font-semibold mb-2">Timeline</h3>
@@ -128,7 +128,7 @@ const ProjectPage = () => {
                             <p>No timeline available</p>
                         )}
                     </section>
-                )}
+                )} */}
 
                 {/* Gallery Section */}
                 {activeSection === 'gallery' && (
