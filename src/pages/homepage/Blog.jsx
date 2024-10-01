@@ -32,20 +32,20 @@ function Blog() {
     };
 
     const displayBlogs = () => {
-        if (blog.items) {
-            return blog.items.map((post, index) => (
-                <div key={index} className='hover:text-slate-200 hover:scale-105 transition duration-500' >
-
+    if (blog.items) {
+        return blog.items.map((post, index) => (
+            <div key={index} className='hover:text-slate-200 hover:scale-105 transition duration-500'>
+                <a href={post.link} rel='noreferrer' target='_blank' className='block'>
                     <h6 className="text-base md:text-2xl mb-2">
-                        <a href={post.link}  rel='noreferrer' target='_blank'>{post.title}</a>
+                        {post.title}
                         <span className="italic"> ({calculateReadTime(ToText(post.description))} minute read)</span>
                     </h6>
-
                     <p className='hidden md:block'>{`${ToText(post.description.substring(0, 500))}...`}</p>
-                </div>
-            ));
-        }
-    };
+                </a>
+            </div>
+        ));
+    }
+};
 
     return (
         <FadeInSection>
