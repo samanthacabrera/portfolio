@@ -3,7 +3,7 @@ import FadeInSection from "../../utils/FadeIn";
 
 function Intro() {
 
-  const resumeDownloadLink = '/SamanthaCabreraResume.pdf';
+  const resumeDownloadLink = '/samanthaCabreraResume.pdf';
   
   return (
     <FadeInSection>
@@ -27,7 +27,7 @@ function Intro() {
       <div className="text-center">
       <a
           href={resumeDownloadLink}
-          download="SamanthaCabreraResume.pdf"
+          download='samanthaCabreraResume.pdf'
           className="btn-dark"
       >
           Download Resume
