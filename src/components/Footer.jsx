@@ -19,7 +19,7 @@ const Footer = () => {
         </div>
 
 
-        <div className="text-center md:text-right">
+        {/* <div className="text-center md:text-right">
           <p>
             Want to support my work?{' '}
             <a
@@ -31,7 +31,7 @@ const Footer = () => {
               Buy me a coffee <span className="hidden sm:inline">&#x2197;</span>
             </a>
           </p>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
