@@ -177,8 +177,49 @@ const projects = [
             '/runthecity/map.png',
             '/runthecity/featured.png'
         ]
+    },
+     {
+        id: 5,
+        title: 'Calcalooza',
+        link: 'https://github.com/samanthacabrera/conversion-calculator',
+        thumbnail: '/calcalooza/home.png',
+        description: 'A responsive website featuring a variety of math calculators, including unit conversion, area, volume, and more.',
+        wip: true,
+        overview: {
+            tags: ['Math', 'Education', 'Tools'],
+            techStack: ['React', 'Vite', 'Tailwind CSS'],
+            features: [
+                'Provides calculators for different mathematical operations.',
+                'User-friendly interface for easy navigation.',
+                'Responsive design for accessibility across devices.',
+                'Categories for various calculator types including unit conversion, area, and volume.'
+            ]
+        },
+        walkthrough: '', 
+        insights: 'The main challenge in developing Calcalooza is ensuring that all calculators provide accurate results while maintaining a clean and intuitive UI. I focused on creating a seamless user experience by organizing the calculators into categories and optimizing for quick access.',
+        timeline: [
+            {
+                title: 'Design',
+                date: 'October 2024',
+                subsections: [
+                    { title: 'UI/UX Design', description: 'Designed the layout and interactions for various calculators.' },
+                    { title: 'Database Schema', description: 'Created a structure for storing calculator types and functionalities.' }
+                ]
+            },
+            {
+                title: 'Development',
+                date: 'October 2024',
+                subsections: [
+                    { title: 'Front End', description: 'Developed the user interface with React and styled with Tailwind CSS.' },
+                    { title: 'Back End', description: 'Implemented any necessary API functionalities.' }
+                ]
+            }
+        ],
+        gallery: [
+            '/calcalooza/home.png',
+            '/calcalooza/page.png',
+        ]
     }
-
 ];
 
 export default projects;

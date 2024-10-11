@@ -129,15 +129,6 @@ const Navbar = () => {
           >
           + GitHub
           </a>
-          <a 
-            href="https://www.linkedin.com/in/samcabreraa/" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="block transition-transform transform  hover:text-slate-200 hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
-            data-value="+ LinkedIn"
-          >
-          + LinkedIn
-          </a>
         </div>
       </nav>
 
@@ -185,16 +176,6 @@ const Navbar = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 GitHub
-              </a>
-              <a 
-                href="https://www.linkedin.com/in/samcabreraa/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="block w-full py-3 border-b border-gray-300 text-left transition-transform transform hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
-                data-value="LinkedIn"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                LinkedIn
               </a>
             </div>
           </div>
