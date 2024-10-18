@@ -36,11 +36,11 @@ function Blog() {
         return blog.items.map((post, index) => (
             <div key={index} className='hover:text-slate-200 hover:scale-105 transition duration-500'>
                 <a href={post.link} rel='noreferrer' target='_blank' className='block'>
-                    <h6 className="text-base md:text-2xl mb-2">
+                    <h6 className="mb-2">
                         {post.title}
-                        <span className="italic"> ({calculateReadTime(ToText(post.description))} minute read)</span>
+                        <span className="italic text-sm"> ({calculateReadTime(ToText(post.description))} minute read)</span>
                     </h6>
-                    <p className='hidden md:block'>{`${ToText(post.description.substring(0, 500))}...`}</p>
+                    <p className='hidden md:block text-sm'>{`${ToText(post.description.substring(0, 200))}...`}</p>
                 </a>
             </div>
         ));
@@ -49,9 +49,8 @@ function Blog() {
 
     return (
         <FadeInSection>
-            <div id="blog" className="container space-y-10 sm:space-y-20 text-center sm:text-left">
-                <h2 className="sub-heading">Articles</h2>
-                <p>Here, you'll find my collection of articles ranging from tutorials to histories of various technologies.</p>
+            <div id="blog" className="container space-y-2 text-center sm:text-left">
+                <h2 className="text-4xl tracking-wide lowercase mb-4">My two cents ...</h2>
                 {displayBlogs()}
             </div>
         </FadeInSection>

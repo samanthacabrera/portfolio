@@ -1,6 +1,9 @@
 import React from "react";
 
 function Hero() {
+
+  const resumeDownloadLink = '/samanthaCabreraResume.pdf';
+  
   return (
     <div className="flex flex-col justify-center items-center  w-full h-screen space-y-4 text-center sm:text-left">
       <p className="text-2xl sm:text-4xl pl-2">
@@ -15,6 +18,7 @@ function Hero() {
       <p className="text-base pt-4 sm:text-xl animate-pulseUpDown">
         scroll to read about my journey &#8595;&#8595;&#8595;&#8595;&#8595;
       </p>
+      {/* <img src="/me.png" alt="Me at Newport Beach, CA" className="" />  */}
     </div>
   );
 }

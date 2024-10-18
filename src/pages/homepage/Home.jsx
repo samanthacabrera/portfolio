@@ -1,7 +1,6 @@
 import React from "react";
 import Hero from './Hero';
 import Intro from './Intro';
-import Skills from './Skills';
 import ProjectsList from './ProjectsList';
 import Blog from "./Blog";
 
@@ -12,7 +11,6 @@ function Home() {
                 <Hero/>
                 <Intro />
                 <ProjectsList />
-                <Skills />
                 <Blog />
             </div>
         </section>
