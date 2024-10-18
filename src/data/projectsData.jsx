@@ -1,6 +1,48 @@
 const projects = [
-    {
+         {
         id: 1,
+        title: 'Calcalooza',
+        link: 'https://github.com/samanthacabrera/conversion-calculator',
+        thumbnail: '/calcalooza/home.png',
+        description: 'A responsive website featuring a variety of math calculators, including unit conversion, area, volume, and more.',
+        wip: true,
+        overview: {
+            tags: ['Math', 'Education', 'Tools'],
+            techStack: ['React', 'Vite', 'Tailwind CSS'],
+            features: [
+                'Provides calculators for different mathematical operations.',
+                'User-friendly interface for easy navigation.',
+                'Responsive design for accessibility across devices.',
+                'Categories for various calculator types including unit conversion, area, and volume.'
+            ]
+        },
+        walkthrough: '', 
+        insights: 'The main challenge in developing Calcalooza is ensuring that all calculators provide accurate results while maintaining a clean and intuitive UI. I focused on creating a seamless user experience by organizing the calculators into categories and optimizing for quick access.',
+        timeline: [
+            {
+                title: 'Design',
+                date: 'October 2024',
+                subsections: [
+                    { title: 'UI/UX Design', description: 'Designed the layout and interactions for various calculators.' },
+                    { title: 'Database Schema', description: 'Created a structure for storing calculator types and functionalities.' }
+                ]
+            },
+            {
+                title: 'Development',
+                date: 'October 2024',
+                subsections: [
+                    { title: 'Front End', description: 'Developed the user interface with React and styled with Tailwind CSS.' },
+                    { title: 'Back End', description: 'Implemented any necessary API functionalities.' }
+                ]
+            }
+        ],
+        gallery: [
+            '/calcalooza/home.png',
+            '/calcalooza/page.png',
+        ]
+    },
+    {
+        id: 2,
         title: 'Recipe Roots',
         link: 'https://github.com/samanthacabrera/recipe-roots',
         thumbnail: '/reciperoots/home.png',
@@ -48,7 +90,7 @@ const projects = [
         ]
     },
     {
-        id: 2,
+        id: 3,
         title: 'YogiAPI',
         link: 'https://github.com/samanthacabrera/yogi_api',
         thumbnail: '/yogiapi/home.png',
@@ -91,55 +133,8 @@ const projects = [
         ]
     },
     {
-        id: 3,
-        title: "My Sister's Closet",
-        link: 'https://github.com/samanthacabrera/summer-over',
-        thumbnail: '/mysiscloset/home.png',
-        description: "My submission to the Summer Over Hack 2024. The prompt was to create a project that 'solves problems for the betterment of society.'",
-        wip: false,
-        overview: {
-            tags: ['Sustainability', 'Community', 'Fashion'],
-            techStack: ['React', 'Vite', 'Tailwind CSS'],
-            features: [
-                'Mockup UI for web app that allows users to browse swap listings.',
-                'Responseive and user-friendly interface for displaying swap listings.',
-                'Filter options to help users find items based on city.',
-                'Stats tracking for completed swaps.'
-                
-            ]
-        },
-        walkthrough: 'https://www.youtube.com/embed/K1sZBvGec2g',
-        insights: "One of the primary technical challenges I encountered was designing the frontend UI to effectively simulate a fully functional application within the time constraints of the hackathon. Ensuring the UI was both responsive and interactive required a careful balance between design and performance. I utilized Vite for its fast build times, which was crucial for rapid development and iteration. I relied on efficient state updates and context management to handle these dynamic interactions smoothly. Additionally, optimizing the mockup's performance while maintaining visual fidelity across different devices posed a challenge. By leveraging Tailwind CSS, I achieved a clean and responsive design that adapted well to various screen sizes.",
-        timeline: [
-            {
-                title: 'Design',
-                date: 'August 2024',
-                subsections: [
-                    { title: 'Conceptualization', description: 'Brainstormed ideas and developed a concept for the fashion exchange app.' },
-                    { title: 'UI/UX Design', description: 'Created a user interface mockup for the app using React and Tailwind CSS.' }
-                ]
-            },
-            {
-                title: 'Development',
-                date: 'August 2024',
-                subsections: [
-                    { title: 'Front End', description: 'Developed the frontend UI as a mockup for the app.' }
-                ]
-            }
-        ],
-        gallery: [
-            '/mysiscloset/home.png',
-            '/mysiscloset/intro.png',
-            '/mysiscloset/guide.png',
-            '/mysiscloset/faq.png',
-            '/mysiscloset/listings.png',
-            '/mysiscloset/profile.png',
-            '/mysiscloset/filter.png'
-        ]
-    },
-    {
         id: 4,
-        title: "Run The City",
+        title: "RunTheCity",
         link: 'https://github.com/samanthacabrera/learn2build',
         thumbnail: '/runthecity/hero.png',
         description: 'A fitness application to help users explore their city by providing personalized running routes.',
@@ -178,48 +173,6 @@ const projects = [
             '/runthecity/featured.png'
         ]
     },
-     {
-        id: 5,
-        title: 'Calcalooza',
-        link: 'https://github.com/samanthacabrera/conversion-calculator',
-        thumbnail: '/calcalooza/home.png',
-        description: 'A responsive website featuring a variety of math calculators, including unit conversion, area, volume, and more.',
-        wip: true,
-        overview: {
-            tags: ['Math', 'Education', 'Tools'],
-            techStack: ['React', 'Vite', 'Tailwind CSS'],
-            features: [
-                'Provides calculators for different mathematical operations.',
-                'User-friendly interface for easy navigation.',
-                'Responsive design for accessibility across devices.',
-                'Categories for various calculator types including unit conversion, area, and volume.'
-            ]
-        },
-        walkthrough: '', 
-        insights: 'The main challenge in developing Calcalooza is ensuring that all calculators provide accurate results while maintaining a clean and intuitive UI. I focused on creating a seamless user experience by organizing the calculators into categories and optimizing for quick access.',
-        timeline: [
-            {
-                title: 'Design',
-                date: 'October 2024',
-                subsections: [
-                    { title: 'UI/UX Design', description: 'Designed the layout and interactions for various calculators.' },
-                    { title: 'Database Schema', description: 'Created a structure for storing calculator types and functionalities.' }
-                ]
-            },
-            {
-                title: 'Development',
-                date: 'October 2024',
-                subsections: [
-                    { title: 'Front End', description: 'Developed the user interface with React and styled with Tailwind CSS.' },
-                    { title: 'Back End', description: 'Implemented any necessary API functionalities.' }
-                ]
-            }
-        ],
-        gallery: [
-            '/calcalooza/home.png',
-            '/calcalooza/page.png',
-        ]
-    }
 ];
 
 export default projects;
