@@ -44,17 +44,3 @@ html {
     background-position: 0% 50%;
   }
 }
-
-@keyframes pulseUpDown {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
-.animate-pulseUpDown {
-  animation: pulseUpDown 3s ease-in-out infinite;
-}

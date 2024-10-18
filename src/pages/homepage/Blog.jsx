@@ -49,7 +49,7 @@ function Blog() {
 
     return (
         <FadeInSection>
-            <div id="blog" className="container space-y-4 text-center sm:text-left">
+            <div id="blog" className="container space-y-4 text-left pt-12">
                 <h2 className="text-4xl tracking-wide lowercase mb-6">My two cents ...</h2>
                 {displayBlogs()}
             </div>

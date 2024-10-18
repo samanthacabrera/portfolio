@@ -8,7 +8,7 @@ import Contact from "./Contact";
 function Home() {
     return (
         <section className="flex flex-col items-center">
-            <div className="w-2/3 space-y-10 md:space-y-44">
+            <div className="w-2/3 space-y-40 md:space-y-80">
                 <Hero/>
                 <Intro />
                 <ProjectsList />
