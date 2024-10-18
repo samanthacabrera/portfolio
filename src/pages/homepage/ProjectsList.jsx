@@ -7,9 +7,9 @@ import FadeInSection from "../../utils/FadeIn";
 const Projects = () => {
     return (
         <FadeInSection>
-        <div id="projects" className="container space-y-10 sm:space-y-20 text-center sm:text-left">
+        <div id="projects" className="container space-y-10 text-center sm:text-left">
             <h2 className="text-4xl tracking-wide lowercase mb-4">check this out ...</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 ">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 {projects.map((project) => (
                     <Link key={project.id} to={`/projects/${project.id}`} >
                         <div className="relative">

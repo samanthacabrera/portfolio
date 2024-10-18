@@ -40,7 +40,7 @@ function Blog() {
                         {post.title}
                         <span className="italic text-sm"> ({calculateReadTime(ToText(post.description))} minute read)</span>
                     </h6>
-                    <p className='hidden md:block text-sm'>{`${ToText(post.description.substring(0, 200))}...`}</p>
+                    <p className='hidden md:block text-sm'>{`${ToText(post.description.substring(0, 250))}...`}</p>
                 </a>
             </div>
         ));
@@ -49,8 +49,8 @@ function Blog() {
 
     return (
         <FadeInSection>
-            <div id="blog" className="container space-y-2 text-center sm:text-left">
-                <h2 className="text-4xl tracking-wide lowercase mb-4">My two cents ...</h2>
+            <div id="blog" className="container space-y-4 text-center sm:text-left">
+                <h2 className="text-4xl tracking-wide lowercase mb-6">My two cents ...</h2>
                 {displayBlogs()}
             </div>
         </FadeInSection>
