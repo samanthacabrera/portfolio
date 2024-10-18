@@ -65,7 +65,7 @@ const Background = () => {
             <div className="fixed inset-0" style={{ ...styles.container, background: gradient }}></div>
             {showText && (
                 <div style={{ ...styles.textContainer, cursor: isSmallDevice ? 'pointer' : 'default' }}>
-                    <h2 className="text-black opacity-20">{isSmallDevice ? '[Tap Screen]' : '[Press Spacebar]'}</h2>
+                    <h2 className="opacity-20">{isSmallDevice ? '[Tap Screen]' : '[Press Spacebar]'}</h2>
                 </div>
             )}
             {isVisible && (
@@ -82,9 +82,9 @@ const getRandomGradient = () => {
         'rgba(105, 19, 18, 0.7)',  // Earthy Deep Red
         'rgba(93, 9, 51, 0.7)',    // Earthy Purple
         'rgba(41, 25, 56, 0.7)',   // Earthy Dark Purple
-        'rgba(4, 45, 58, 0.7)',    // Earthy Dark Blue
-        'rgba(18, 64, 60, 0.7)',   // Earthy Teal
-        'rgba(71, 82, 0, 0.7)'     // Earthy Olive Green
+        // 'rgba(4, 45, 58, 0.7)',    // Earthy Dark Blue
+        // 'rgba(18, 64, 60, 0.7)',   // Earthy Teal
+        // 'rgba(71, 82, 0, 0.7)'     // Earthy Olive Green
     ];
     const randomColor1 = colors[Math.floor(Math.random() * colors.length)];
     const randomColor2 = colors[Math.floor(Math.random() * colors.length)];
