@@ -25,9 +25,10 @@ const ProjectPage = () => {
             <header className="w-full max-w-4xl mt-8 space-y-4">
                 <h1 className="text-5xl lg:text-7xl">{project.title || "Untitled Project"}</h1>
                 <p className="text-lg pb-2">{project.description || "No description available"}</p>
-                {project.link && (
+                <div className="flex space-x-4">
+                    {project.github && (
                     <a
-                        href={project.link}
+                        href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-gray-50 transition ease-in-out duration-500"
@@ -35,11 +36,33 @@ const ProjectPage = () => {
                         View on GitHub &#x2197;
                     </a>
                 )}
+                {project.deployed ? (
+                    <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-gray-50 transition ease-in-out duration-500"
+                    >
+                        Visit Site &#x2197;
+                    </a>
+                ) : (
+                    project.link && (
+                        <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-gray-50 transition ease-in-out duration-500"
+                        >
+                            Watch Demo &#x2197;
+                        </a>
+                    )
+                )}
+                </div>
             </header>
 
             {/* Toggle Buttons */}
             <nav className="w-full max-w-4xl my-6 flex justify-start items-start space-x-4">
-                {['overview', 'insights', 'walkthrough'].map((section) => (
+                {['overview', 'insights', 'gallery'].map((section) => (
                     <button
                         key={section}
                         onClick={() => setActiveSection(section)}
@@ -73,27 +96,27 @@ const ProjectPage = () => {
                     </section>
                 )}
 
-                {/* Walkthrough Section */}
-                {activeSection === 'walkthrough' && project.walkthrough && (
-                    <section className="mb-8">
-                        <div className="relative" style={{ paddingTop: '48.4%' }}> 
-                            <iframe
-                                src={project.walkthrough}
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                                title="Project Walkthrough"
-                                className="absolute inset-0 w-[300px] h-[200px]"
-                                style={{ borderRadius: '8px' }} 
-                            ></iframe>
-                        </div>
-                    </section>
-                )}
-
                 {/* Insights Section */}
                 {activeSection === 'insights' && (
                     <section className="mb-8">
                         <p>{project.insights || "No insights available"}</p>
+                    </section>
+                )}
+
+                {/* Gallery Section */}
+                {activeSection === 'gallery' && project.gallery && (
+                    <section className="mb-8">
+                        <h3 className="text-xl font-semibold mb-2">Gallery</h3>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                            {project.gallery.map((image, index) => (
+                                <img
+                                    key={index}
+                                    src={image}
+                                    alt={`Gallery image ${index + 1}`}
+                                    className="w-full h-auto rounded-lg"
+                                />
+                            ))}
+                        </div>
                     </section>
                 )}
 
