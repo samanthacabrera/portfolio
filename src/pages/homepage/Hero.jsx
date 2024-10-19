@@ -17,10 +17,8 @@ function Hero() {
           I'm passionate about creating digital solutions that seamlessly combine creativity and functionality. 
           Through this fusion, I find fulfillment and purpose in my work.
         </p>
-        <a href={resumeDownloadLink} download className="self-start hover:scale-105 transition duration-200">
-          <button className="border-2 border-current rounded-full mt-1 p-2 text-sm transition-all duration-300">
+        <a href={resumeDownloadLink}  download='SamanthaCabreraResume.pdf' className="self-start hover:scale-105 border-2 border-current rounded-full mt-1 p-2 text-sm transition-all duration-300">
             Download Resume
-          </button>
         </a>
       </div>
 
