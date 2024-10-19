@@ -150,23 +150,6 @@ const projects = [
         },
         walkthrough: 'https://www.youtube.com/embed/z9GeI03I_Yo?si=Iu83t3Mc7AHGYb-_',
         insights: 'One of the challenges was integrating Mapbox to display real-time routes and distances. Ensuring the app dynamically updated based on location and selected landmarks required careful event handling and map state management. This also required optimization for mobile users who wanted to track routes on the go.',
-        timeline: [
-            {
-                title: 'Design',
-                date: 'Sept 2024',
-                subsections: [
-                    { title: 'Map UI Design', description: 'Designed map interaction and route creation UI.' }
-                ]
-            },
-            {
-                title: 'Development',
-                date: 'Sept 2024',
-                subsections: [
-                    { title: 'Front End', description: 'Implemented route tracking and interaction with Mapbox API.' },
-                    { title: 'Back End', description: 'Integrated route saving and retrieval features.' }
-                ]
-            }
-        ],
         gallery: [
             '/runthecity/hero.png',
             '/runthecity/map.png',

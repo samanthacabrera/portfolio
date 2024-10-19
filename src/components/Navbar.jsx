@@ -132,7 +132,7 @@ const Navbar = () => {
 
       {isMenuOpen && (
         <div className="fixed inset-0 bg-gray-800 bg-opacity-10 text-lg text-gray-600 flex flex-col justify-center items-center z-50 md:hidden">
-          <div className="relative text-gray-50 bg-black shadow-lg rounded-lg p-4 w-full max-w-sm space-y-6 text-center">
+          <div className="relative text-gray-50 bg-[#380e16] shadow-lg rounded-lg p-4 w-full max-w-sm space-y-6 text-center">
             <button onClick={toggleMenu} className="absolute top-2 left-2">
               <FontAwesomeIcon icon={faTimes} />
             </button>
@@ -140,37 +140,37 @@ const Navbar = () => {
               <button 
                 onClick={() => handleNavigation('/')} 
                 className="block w-full py-3 border-b border-gray-300 text-left transition-transform transform hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
-                data-value="Home"
+                data-value="home"
               >
-                Home
+                home
               </button>
               <button 
                 onClick={() => handleNavigation('intro')} 
                 className="block w-full py-3 border-b border-gray-300 text-left transition-transform transform hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
-                data-value="About"
+                data-value="about"
               >
-                About
+                about
               </button>
               <button 
                 onClick={() => handleNavigation('projects')} 
                 className="block w-full py-3 border-b border-gray-300 text-left transition-transform transform hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
-                data-value="Projects"
+                data-value="work"
               >
-                Projects
+               work
               </button>
               <button 
                 onClick={() => handleNavigation('blog')} 
                 className="block w-full py-3 border-b border-gray-300 text-left transition-transform transform hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
-                data-value="Blog"
+                data-value="articles"
               >
-                Blog
+                articles
               </button>
                <button 
                 onClick={() => handleNavigation('contact')} 
                 className="block w-full py-3 border-b border-gray-300 text-left transition-transform transform hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
-                data-value="Contact"
+                data-value="contact"
               >
-                Contact
+                contact
               </button>
             </div>
           </div>

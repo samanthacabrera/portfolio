@@ -68,9 +68,9 @@ const Background = () => {
                     <h2 className="opacity-20">{isSmallDevice ? '[Tap Screen]' : '[Press Spacebar]'}</h2>
                 </div>
             )}
-            {isVisible && (
+            {/* {isVisible && (
                <p id="content" className="z-50 w-full flex justify-center items-center bg-black text-gray-50 font-light text-xs">Whoa, slow down buddy</p>
-            )}
+            )} */}
         </>
     );
 };
