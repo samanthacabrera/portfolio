@@ -2,7 +2,7 @@ import React from "react";
 
 function Hero() {
 
-  const resumeDownloadLink = '/samanthaCabreraResume.pdf';
+  const resumeDownloadLink = '/SamanthaCabreraResume.pdf';
 
   return (
     <div className="h-screen flex">
@@ -28,6 +28,7 @@ function Hero() {
         <img 
           src="/me.png" 
           alt="Me at Newport Beach" 
+          style={{ objectPosition: '25% 50%' }}
           className="rounded-lg shadow-md object-cover h-[450px] w-[330px]"
         />
       </div>
