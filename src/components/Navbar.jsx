@@ -94,35 +94,35 @@ const Navbar = () => {
             id="homeIcon" 
             href="/" 
             onClick={() => setIsMenuOpen(false)} 
-            className="transition-transform transform  hover:text-slate-200 hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
+            className="hover-effect ease-in-out scramble-hover"
             data-value="+ Home"
           >
           + Home
           </a>
           <button 
             onClick={() => handleNavigation('intro')} 
-            className="transition-transform transform hover:text-slate-200 hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
+            className="hover-effect ease-in-out scramble-hover"
             data-value="+ About"
           >
            + About
           </button>
           <button 
             onClick={() => handleNavigation('projects')} 
-            className="transition-transform transform  hover:text-slate-200 hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
+            className="hover-effect ease-in-out scramble-hover"
             data-value="+ Work"
           >
           + Work
           </button>
           <button 
             onClick={() => handleNavigation('blog')} 
-            className="transition-transform transform  hover:text-slate-200 hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
+            className="hover-effect ease-in-out scramble-hover"
             data-value="+ Articles"
           >
           + Articles
           </button>
           <button 
             onClick={() => handleNavigation('contact')} 
-            className="transition-transform transform  hover:text-slate-200 hover:scale-105 hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
+            className="hover-effect ease-in-out scramble-hover"
             data-value="+ Contact"
           >
           + Contact
