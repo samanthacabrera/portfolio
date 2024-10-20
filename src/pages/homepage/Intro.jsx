@@ -4,7 +4,7 @@ import FadeInSection from "../../utils/FadeIn";
 function Intro() {  
   return (
     <FadeInSection>
-      <div id="intro" className="flex flex-col space-y-4 text-left pt-12">
+      <div id="intro" className="flex flex-col justify-center space-y-4 text-left min-h-screen">
       <h2 className="text-4xl tracking-wide lowercase mb-4">Long Story Short ...</h2>
      
       <p>In February 2024, I joined FlatIron School’s Software Engineering Bootcamp, a transformative experience in my professional journey.</p>

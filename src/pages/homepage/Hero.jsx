@@ -2,7 +2,7 @@ import React from "react";
 
 function Hero() {
 
-  const resumeDownloadLink = '/SamanthaCabreraResume.pdf';
+  const resumeDownloadLink = '/samanthaCabreraResume.pdf';
 
   return (
     <div className="h-screen flex">
@@ -17,9 +17,12 @@ function Hero() {
           I'm passionate about creating digital solutions that seamlessly combine creativity and functionality. 
           Through this fusion, I find fulfillment and purpose in my work.
         </p>
-        <a href={resumeDownloadLink}  download='SamanthaCabreraResume.pdf' className="self-start hover:scale-105 border-2 border-current rounded-full mt-1 p-2 text-sm transition-all duration-300">
+
+        <div className="self-start border-2 border-current rounded-full mt-1 p-2 text-sm">
+        <a href={resumeDownloadLink}  download="samanthaCabreraResume.pdf" className="">
             Download Resume
         </a>
+        </div>
       </div>
 
       <div className="w-1/2 self-center hidden lg:flex pl-24">

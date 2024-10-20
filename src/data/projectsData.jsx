@@ -58,7 +58,7 @@ const projects = [
         link: 'https://www.youtube.com/embed/Inhkh8RiL1k',
         wip: false,
         deployed: false,
-        description: 'This API provides comprehensive access to a diverse collection of yoga poses, allowing you to integrate yoga pose data into your applications effortlessly.',
+        description: 'This API provides comprehensive access to a diverse collection of yoga poses.',
         overview: {
             techStack: ['React', 'Flask', 'SQLAlchemy', 'Tailwind CSS'],
             features: [
