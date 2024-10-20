@@ -22,10 +22,9 @@ const ProjectPage = () => {
     return (
         <div className="flex flex-col items-center min-h-screen p-12 sm:text-left">
             {/* Header */}
-            <header className="w-full max-w-4xl mt-8 space-y-4">
+            <header className="w-full max-w-4xl mt-8 space-y-8">
                 <h1 className="text-5xl lg:text-7xl">{project.title || "Untitled Project"}</h1>
-                <p className="text-lg pb-2">{project.description || "No description available"}</p>
-                <div className="flex space-x-4">
+                <div className="flex space-x-4 text-lg">
                     {project.github && (
                     <a
                         href={project.github}
@@ -79,14 +78,18 @@ const ProjectPage = () => {
             <main className="w-full max-w-4xl">
                 {/* Overview Section */}
                 {activeSection === 'overview' && (
-                    <section className="mb-8">
-                        <div className="mb-6">
-                            <h3 className="text-xl font-semibold mb-2">Tech Stack</h3>
-                            <p>{project.overview.techStack.join(", ") || "Not specified"}</p>
+                    <section className="space-y-4">
+                        <div className="">
+                            <h3 className="text-xl mb-2">Description</h3>
+                            <p className="font-normal">{project.description || "No description available"}</p>
                         </div>
-                        <div className="mb-6">
-                            <h3 className="text-xl font-semibold mb-2">Features</h3>
-                            <ul className="pl-2">
+                        <div className="">
+                            <h3 className="text-xl mb-2">Tech Stack</h3>
+                            <p className="font-normal">{project.overview.techStack.join(", ") || "Not specified"}</p>
+                        </div>
+                        <div className="">
+                            <h3 className="text-xl mb-2">Features</h3>
+                            <ul className="font-normal">
                                 {project.overview.features.map((feature, index) => (
                                     <li key={index}>{feature}</li>
                                 ))}
@@ -99,7 +102,7 @@ const ProjectPage = () => {
                 {/* Insights Section */}
                 {activeSection === 'insights' && (
                     <section className="mb-8">
-                        <p>{project.insights || "No insights available"}</p>
+                        <p className="font-normal">{project.insights || "No insights available"}</p>
                     </section>
                 )}
 
