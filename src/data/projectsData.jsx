@@ -16,7 +16,7 @@ const projects = [
                 'Categories for various calculator types including unit conversion, area, and volume.'
             ]
         },
-        insights: 'The main challenge in developing Calcalooza is ensuring that all calculators provide accurate results while maintaining a clean and intuitive UI. I focused on creating a seamless user experience by organizing the calculators into categories and optimizing for quick access.',
+        insights: 'The primary challenge was ensuring each calculator delivered accurate results across all operations. Structuring the UI to accommodate a wide range of tools while keeping navigation simple and efficient was a focus. I aimed on creating a seamless user experience by organizing the calculators into categories and optimizing for quick access. The project was built with an emphasis on scalability, allowing for additional calculators or categories without disrupting the user experience. This approach helped ensure a clean and intuitive interface with minimal user friction.',
         gallery: [
             '/calcalooza/home.png',
             '/calcalooza/page.png',
@@ -40,7 +40,7 @@ const projects = [
                 'Interactive UI for guiding users through recipe creation.'
             ]
         },
-        insights: 'A significant challenge in developing Recipe Roots was implementing an efficient search and filter functionality that accommodated diverse recipe attributes. Users often had recipes with varying levels of detail, so designing a flexible search mechanism that could handle different ingredient lists, cooking times, and preparation methods was essential. I addressed this by creating a robust indexing system and incorporating faceted search capabilities, which significantly improved the app’s performance and user satisfaction. Additionally, managing recipe images and ensuring they loaded quickly and accurately across different devices required optimizing image storage and retrieval processes.',
+        insights: 'Connecting the front end to the back end was a challenging aspect of developing Recipe Roots. It took three weeks of intensive work to bridge these two components effectively, and this experience significantly enhanced my understanding of full-stack development. The challenges of integrating the user interface with the database taught me valuable lessons about state management and API consumption. As a result, I gained the skills essential for building a full-stack application that provides a seamless user experience, which I consider a significant achievement.',
         gallery: [
             '/reciperoots/home.png',
             '/reciperoots/featured.png',
@@ -67,7 +67,7 @@ const projects = [
                 'User-friendly interface for browsing yoga poses.'
             ]
         },
-        insights: 'Building YogiAPI was my first experience creating an API from scratch, which presented several learning opportunities and challenges. One of the initial hurdles was designing the API architecture and ensuring it met best practices for RESTful services. Navigating the intricacies of endpoint design, request handling, and response formatting was a steep learning curve. Additionally, integrating with different yoga pose libraries and maintaining data consistency across these sources required careful attention. To overcome these challenges, I spent significant time studying API design principles and experimenting with various tools and libraries. This process not only helped me develop YogiAPI but also provided a solid foundation for future API projects.',
+        insights: 'Developing YogiAPI was my first experience creating an API, which came with its share of mistakes and learning opportunities. I encountered several challenges, such as correctly structuring endpoints and managing data flows. Each mistake provided valuable lessons that deepened my understanding of API design and best practices. Through trial and error, I learned how to handle errors more gracefully and ensure data integrity, ultimately resulting in a more robust and user-friendly API. This experience was pivotal in shaping my skills for future projects.',
         gallery: [
             '/yogiapi/home.png',
             '/yogiapi/intro.png',
@@ -91,7 +91,7 @@ const projects = [
                 'Users can pause and resume their runs seamlessly.'
             ]
         },
-        insights: 'One of the challenges was integrating Mapbox to display real-time routes and distances. Ensuring the app dynamically updated based on location and selected landmarks required careful event handling and map state management. This also required optimization for mobile users who wanted to track routes on the go.',
+        insights: 'Integrating Mapbox to provide real-time running routes presented technical challenges around event handling and dynamic map updates. The project required effective map state management to ensure smooth user interaction, especially on mobile devices. Additionally, optimizing the app for mobile users while keeping real-time data updates accurate was a significant consideration throughout development. This project gave me invaluable experience using geoLocation API that I plan to leverage in future projects.',
         gallery: [
             '/runthecity/hero.png',
             '/runthecity/map.png',

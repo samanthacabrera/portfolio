@@ -102,6 +102,7 @@ const ProjectPage = () => {
                 {/* Insights Section */}
                 {activeSection === 'insights' && (
                     <section className="mb-8">
+                        <h3 className="text-xl font-semibold mb-2">Insights</h3>
                         <p className="font-normal">{project.insights || "No insights available"}</p>
                     </section>
                 )}
