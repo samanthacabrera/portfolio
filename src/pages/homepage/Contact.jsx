@@ -26,7 +26,7 @@ const Contact = () => {
                     <FaLinkedin />
                 </a>
                 <a
-                    href="https://medium.com/@samantha.cabrera"
+                    href="https://medium.com/@samantha.n.cabrera"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover-effect"
