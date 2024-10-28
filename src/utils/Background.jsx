@@ -65,7 +65,7 @@ const Background = () => {
             <div className="fixed inset-0" style={{ ...styles.container, background: gradient }}></div>
             {showText && (
                 <div style={{ ...styles.textContainer, cursor: isSmallDevice ? 'pointer' : 'default' }}>
-                    <h2 className="opacity-20">{isSmallDevice ? '[Tap Screen]' : '[Press Spacebar]'}</h2>
+                    <h2 className="opacity-20">{isSmallDevice ? '' : '[Press Spacebar]'}</h2>
                 </div>
             )}
             {/* {isVisible && (
