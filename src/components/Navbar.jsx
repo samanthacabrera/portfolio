@@ -120,13 +120,13 @@ const Navbar = () => {
           >
           + Articles
           </button>
-          <button 
+          {/* <button 
             onClick={() => handleNavigation('contact')} 
             className="hover-effect ease-in-out scramble-hover"
             data-value="+ Contact"
           >
           + Contact
-          </button>
+          </button> */}
         </div>
       </nav>
 
@@ -165,13 +165,13 @@ const Navbar = () => {
               >
                 articles
               </button>
-               <button 
+               {/* <button 
                 onClick={() => handleNavigation('contact')} 
                 className="block w-full py-3 border-b border-gray-300 text-left transition-transform transform hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
                 data-value="contact"
               >
                 contact
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

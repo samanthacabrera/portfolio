@@ -38,9 +38,9 @@ function Blog() {
                 <a href={post.link} rel='noreferrer' target='_blank' className='block'>
                     <h6 className="mb-2">
                         {post.title}
-                        <span className="italic text-sm"> ({calculateReadTime(ToText(post.description))} minute read)</span>
+                        <span className="italic"> ({calculateReadTime(ToText(post.description))} minute read)</span>
                     </h6>
-                    <p className='hidden md:block text-sm'>{`${ToText(post.description.substring(0, 250))}...`}</p>
+                    <p className='hidden md:block font-light'>{`${ToText(post.description.substring(0, 250))}...`}</p>
                 </a>
             </div>
         ));

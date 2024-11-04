@@ -7,10 +7,10 @@ const ProjectCard = ({ id, title, description, currentlyWorkingOn }) => {
             <Link
                 to={`/projects/${id}`}
             >
-            <h3 className="text-2xl tracking-wide">
+            <h3 className="group-hover:text-slate-100 group-hover:text-opacity-50 transition duration-300 text-2xl tracking-wide mb-2">
                 {title} &rarr;
             </h3>
-            <p className="text-sm tracking-wide max-w-xs font-light">
+            <p className="font-light">
                 {description}
             </p>
             </Link>

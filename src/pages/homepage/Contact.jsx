@@ -3,9 +3,9 @@ import { FaGithub, FaLinkedin, FaMedium } from 'react-icons/fa';
 
 const Contact = () => {
     return (
-        <div id="contact" className="h-[20vh] flex flex-col justify-center items-center p-8">
+        <div id="contact" className="flex flex-col justify-center items-center">
          
-            <div className="flex space-x-16 text-5xl">
+            <div className="flex space-x-6 text-xl">
                 <a
                     href="https://linkedin.com/in/samcabreraa"
                     target="_blank"
