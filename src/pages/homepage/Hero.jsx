@@ -35,13 +35,13 @@ function Hero() {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <div className="relative shadow-xl transform -translate-x-4 -translate-y-4">
+        <div className="relative ">
           {/* Image */}
           <img
             src="/me.png"
             alt="Sam"
             style={{ objectPosition: '25% 50%' }}
-            className="rounded-lg shadow-lg object-cover h-[450px] w-[330px] transition-transform duration-1000 ease-in-out transform"
+            className="rounded-lg shadow-lg object-cover h-[450px] w-[330px] transition-transform duration-1000 ease-in-out transform -rotate-2"
           />
 
       
@@ -57,7 +57,7 @@ function Hero() {
             <img
               src="/tape.png" 
               alt="Tape"
-              className="h-20 opacity-90 "
+              className="h-24 opacity-90 "
             />
           </div>
 
