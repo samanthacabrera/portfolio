@@ -98,6 +98,30 @@ const projects = [
             '/runthecity/featured.png'
         ]
     },
+    {
+        id: 5,
+        title: "Learn Yoga Online",
+        github: "https://github.com/samanthacabrera/yoga-library",
+        link: "https://learnyoga.online/",
+        wip: true,
+        deployed: true,
+        description: "A yoga pose glossary designed to help users learn and explore yoga poses with ease.",
+        overview: {
+            techStack: ["React", "Vite", "Tailwind CSS"],
+            features: [
+                "Comprehensive glossary featuring the top 100 common yoga poses.",
+                "Search functionality for quickly finding specific poses.",
+                "Detailed pose descriptions and benefits.",
+                "Responsive design optimized for mobile and desktop."
+            ]
+        },
+        insights: "The most challenging aspect of Learn Yoga Online was the extensive research required for each pose. On average, I spent 4 to 5 hours per pose to ensure the descriptions were accurate, detailed, and informative. This involved consulting multiple reliable sources to provide users with clear guidance on the pose's execution, benefits, and variations. This meticulous process deepened my understanding of yoga and reinforced the importance of accuracy in educational content.",
+        gallery: [
+            '/learnyogaonline/pose-list.png',
+            '/learnyogaonline/article-list.png',
+            '/learnyogaonline/article.png',
+        ]
+    }
 ];
 
 export default projects;
