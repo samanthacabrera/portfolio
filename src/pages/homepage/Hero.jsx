@@ -14,7 +14,7 @@ function Hero() {
         </h1>
         <p className="text-lg tracking-tight max-w-lg relative z-10">
           I'm a full-stack software engineer based in Denver, specializing in web development and UX/UI design.
-          I'm <span className="group-hover:text-slate-100 group-hover:text-opacity-50 transition duration-500 delay-200">passionate</span> about creating digital solutions that seamlessly combine <span className="group-hover:text-slate-100 group-hover:text-opacity-50 transition duration-500 delay-500">creativity</span> and <span className="group-hover:text-slate-100 group-hover:text-opacity-50 transition duration-500 delay-700">functionality</span>.
+          I'm <span className="group-hover:text-slate-100 group-hover:text-opacity-50 transition duration-500 delay-200">passionate</span> about creating digital solutions that combine <span className="group-hover:text-slate-100 group-hover:text-opacity-50 transition duration-500 delay-500">creativity</span> and <span className="group-hover:text-slate-100 group-hover:text-opacity-50 transition duration-500 delay-700">functionality</span>.
           Through this fusion, I find fulfillment and purpose in my work.
         </p>
 

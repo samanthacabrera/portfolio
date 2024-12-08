@@ -1,6 +1,30 @@
 const projects = [
     {
         id: 1,
+        title: "Learn Yoga Online",
+        github: "https://github.com/samanthacabrera/yoga-library",
+        link: "https://learnyoga.online/",
+        wip: true,
+        deployed: true,
+        description: "A yoga pose glossary designed to help users learn and explore yoga poses with ease.",
+        overview: {
+            techStack: ["React", "Vite", "Tailwind CSS"],
+            features: [
+                "Comprehensive glossary featuring the top 100 common yoga poses.",
+                "Search functionality for quickly finding specific poses.",
+                "Detailed pose descriptions and benefits.",
+                "Responsive design optimized for mobile and desktop."
+            ]
+        },
+        insights: "The most challenging aspect of Learn Yoga Online was the extensive research required for each pose. On average, I spent 4 to 5 hours per pose to ensure the descriptions were accurate, detailed, and informative. This involved consulting multiple reliable sources to provide users with clear guidance on the pose's execution, benefits, and variations. This meticulous process deepened my understanding of yoga and reinforced the importance of accuracy in educational content.",
+        gallery: [
+            '/learnyogaonline/pose-list.png',
+            '/learnyogaonline/article-list.png',
+            '/learnyogaonline/article.png',
+        ]
+    },
+    {
+        id: 2,
         title: 'Calcalooza',
         github: 'https://github.com/samanthacabrera/conversion-calculator',
         link: 'https://calcalooza.com', 
@@ -23,7 +47,7 @@ const projects = [
         ]
     },
     {
-        id: 2,
+        id: 3,
         title: 'Recipe Roots',
         github: 'https://github.com/samanthacabrera/recipe-roots',
         link: 'https://www.youtube.com/embed/Qso3oxAXWDc',
@@ -52,7 +76,7 @@ const projects = [
         ]
     },
     {
-        id: 3,
+        id: 4,
         title: 'YogiAPI',
         github: 'https://github.com/samanthacabrera/yogi_api',
         link: 'https://www.youtube.com/embed/Inhkh8RiL1k',
@@ -76,7 +100,7 @@ const projects = [
         ]
     },
     {
-        id: 4,
+        id: 5,
         title: "RunTheCity",
         github: 'https://github.com/samanthacabrera/learn2build',
         link: 'https://www.youtube.com/embed/z9GeI03I_Yo?si=Iu83t3Mc7AHGYb-_',
@@ -96,30 +120,6 @@ const projects = [
             '/runthecity/hero.png',
             '/runthecity/map.png',
             '/runthecity/featured.png'
-        ]
-    },
-    {
-        id: 5,
-        title: "Learn Yoga Online",
-        github: "https://github.com/samanthacabrera/yoga-library",
-        link: "https://learnyoga.online/",
-        wip: true,
-        deployed: true,
-        description: "A yoga pose glossary designed to help users learn and explore yoga poses with ease.",
-        overview: {
-            techStack: ["React", "Vite", "Tailwind CSS"],
-            features: [
-                "Comprehensive glossary featuring the top 100 common yoga poses.",
-                "Search functionality for quickly finding specific poses.",
-                "Detailed pose descriptions and benefits.",
-                "Responsive design optimized for mobile and desktop."
-            ]
-        },
-        insights: "The most challenging aspect of Learn Yoga Online was the extensive research required for each pose. On average, I spent 4 to 5 hours per pose to ensure the descriptions were accurate, detailed, and informative. This involved consulting multiple reliable sources to provide users with clear guidance on the pose's execution, benefits, and variations. This meticulous process deepened my understanding of yoga and reinforced the importance of accuracy in educational content.",
-        gallery: [
-            '/learnyogaonline/pose-list.png',
-            '/learnyogaonline/article-list.png',
-            '/learnyogaonline/article.png',
         ]
     }
 ];
