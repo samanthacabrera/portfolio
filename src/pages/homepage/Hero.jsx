@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function Hero() {
-  const resumeDownloadLink = '/samanthaCabreraResume.pdf';
+  // const resumeDownloadLink = '/samanthaCabreraResume.pdf';
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -18,13 +18,18 @@ function Hero() {
           Through this fusion, I find fulfillment and purpose in my work.
         </p>
 
-        <a
+        {/* <a
           href={resumeDownloadLink}
           download="samanthaCabreraResume.pdf"
           className="hover:scale-105 transition duration-500 self-start border-2 border-current rounded-full mt-1 px-4 py-2 text-xs relative z-10"
         >
           <span className="group-hover:text-slate-100 group-hover:text-opacity-60 transition duration-500 delay-1000">
             Download Resume
+          </span>
+        </a> */}
+        <a href="https://calendly.com/samantha-n-cabrera/30min" target="_blank"  className="hover:scale-105 transition duration-500 self-start border-2 border-current rounded-full mt-1 px-4 py-2 text-xs relative">
+           <span className="group-hover:text-slate-100 group-hover:text-opacity-60 transition duration-500 delay-1000">
+            get in touch
           </span>
         </a>
       </div>
