@@ -89,16 +89,14 @@ const Navbar = () => {
             <FontAwesomeIcon icon={faBars} size="1x" />
           </button>
         </div>
-        <div className={`absolute top-52 left-4 flex flex-col items-start space-y-4 ${isMenuOpen ? 'hidden' : 'block'} hidden md:flex`}>
-          <a 
-            id="homeIcon" 
-            href="/" 
-            onClick={() => setIsMenuOpen(false)} 
+        <div className={`absolute top-0 left-2 flex items-start space-x-6 ${isMenuOpen ? 'hidden' : 'block'} hidden md:flex`}>
+          <button 
+            onClick={() => handleNavigation('hero')} 
             className="hover-effect ease-in-out scramble-hover"
             data-value="+ Home"
           >
-          + Home
-          </a>
+           + Home
+          </button>
           <button 
             onClick={() => handleNavigation('intro')} 
             className="hover-effect ease-in-out scramble-hover"
@@ -120,19 +118,12 @@ const Navbar = () => {
           >
           + Articles
           </button>
-          {/* <button 
-            onClick={() => handleNavigation('contact')} 
-            className="hover-effect ease-in-out scramble-hover"
-            data-value="+ Contact"
-          >
-          + Contact
-          </button> */}
         </div>
       </nav>
 
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-gray-800 bg-opacity-10 text-lg text-gray-600 flex flex-col justify-center items-center z-50 md:hidden">
-          <div className="relative text-gray-50 bg-[#380e16] shadow-lg rounded-lg p-4 w-full max-w-sm space-y-6 text-center">
+        <div className="fixed inset-0 bg-black bg-opacity-10 text-lg text-gray-600 flex flex-col justify-center items-center z-50 md:hidden">
+          <div className="relative text-gray-50 bg-[#0d113d] shadow-lg rounded-lg p-4 w-full max-w-sm space-y-6 text-center">
             <button onClick={toggleMenu} className="absolute top-2 left-2">
               <FontAwesomeIcon icon={faTimes} />
             </button>
@@ -165,13 +156,6 @@ const Navbar = () => {
               >
                 articles
               </button>
-               {/* <button 
-                onClick={() => handleNavigation('contact')} 
-                className="block w-full py-3 border-b border-gray-300 text-left transition-transform transform hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
-                data-value="contact"
-              >
-                contact
-              </button> */}
             </div>
           </div>
         </div>

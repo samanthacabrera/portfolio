@@ -68,9 +68,6 @@ const Background = () => {
                     <h2 className="opacity-20">{isSmallDevice ? '' : '[Press Spacebar]'}</h2>
                 </div>
             )}
-            {/* {isVisible && (
-               <p id="content" className="z-50 w-full flex justify-center items-center bg-black text-gray-50 font-light text-xs">Whoa, slow down buddy</p>
-            )} */}
         </>
     );
 };
@@ -80,10 +77,10 @@ const getRandomGradient = () => {
         'rgba(102, 77, 0, 0.7)',   // Earthy Brown
         'rgba(110, 42, 12, 0.7)',  // Earthy Red-Brown
         'rgba(105, 19, 18, 0.7)',  // Earthy Deep Red
-        'rgba(93, 9, 51, 0.7)',    // Earthy Purple
+        // 'rgba(93, 9, 51, 0.7)',    // Earthy Purple
         'rgba(41, 25, 56, 0.7)',   // Earthy Dark Purple
         // 'rgba(4, 45, 58, 0.7)',    // Earthy Dark Blue
-        // 'rgba(18, 64, 60, 0.7)',   // Earthy Teal
+        'rgba(18, 64, 60, 0.7)',    // Earthy Teal
         // 'rgba(71, 82, 0, 0.7)'     // Earthy Olive Green
     ];
     const randomColor1 = colors[Math.floor(Math.random() * colors.length)];
@@ -99,23 +96,11 @@ const styles = {
     },
     textContainer: {
         position: 'absolute',
-        bottom: '2%',
-        left: '50%',
+        top: '150%',
+        left: '150%',
         transform: 'translate(-50%, -50%)',
         textAlign: 'center',
-    },
-    popupImage: {
-        position: 'fixed',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        zIndex: 9999, 
-        width: '150px',
-        height: '150px',
-        border: '2px solid #fff',
-        borderRadius: '8px',
-        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-        backgroundColor: '#fff',
+        whiteSpace: 'nowrap'
     }
 };
 

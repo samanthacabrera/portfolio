@@ -30,7 +30,7 @@ const ProjectPage = () => {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-gray-50 transition ease-in-out duration-500"
+                        className="hover:underline"
                     >
                         View on GitHub &#x2197;
                     </a>
@@ -40,7 +40,7 @@ const ProjectPage = () => {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-gray-50 transition ease-in-out duration-500"
+                        className="hover:underline"
                     >
                         Visit Site &#x2197;
                     </a>
@@ -50,7 +50,7 @@ const ProjectPage = () => {
                             href={project.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hover:text-gray-50 transition ease-in-out duration-500"
+                            className="hover:underline"
                         >
                             Watch Demo &#x2197;
                         </a>

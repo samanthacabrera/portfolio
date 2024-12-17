@@ -34,7 +34,7 @@ function Blog() {
     const displayBlogs = () => {
     if (blog.items) {
         return blog.items.map((post, index) => (
-            <div key={index} className='hover:text-slate-100 hover:opacity-50 hover:scale-105 transition duration-500'>
+            <div key={index} className='hover:text-orange-500 hover:scale-105 transition duration-500'>
                 <a href={post.link} rel='noreferrer' target='_blank' className='block'>
                     <h6 className="mb-2">
                         {post.title}
@@ -49,8 +49,8 @@ function Blog() {
 
     return (
         <FadeInSection>
-            <div id="blog" className="min-h-screen flex flex-col justify-center space-y-4 text-left">
-                <h2 className="text-4xl tracking-wide lowercase mb-6">My two cents ...</h2>
+            <div className="min-h-screen max-w-3xl 2 flex flex-col justify-center space-y-4 text-left">
+                <h2 className="text-4xl tracking-wide lowercase mb-2">My two cents ...</h2>
                 {displayBlogs()}
             </div>
         </FadeInSection>

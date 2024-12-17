@@ -10,11 +10,11 @@ function Hero() {
       <div className="group flex flex-col justify-center space-y-4 text-left w-full lg:w-1/2 p-8 relative">
         <h1 className="text-4xl lg:text-6xl tracking-wider mb-2 relative z-10">
           Hello world!<br />
-          I'm <span className="group-hover:text-slate-100 group-hover:text-opacity-50 transition duration-500">Sam</span> :)
+          I'm <span className="group-hover:text-orange-500 transition duration-500">Sam</span> :)
         </h1>
         <p className="text-lg tracking-tight max-w-lg relative z-10">
           I'm a full-stack software engineer based in Denver, specializing in web development and UX/UI design.
-          I'm <span className="group-hover:text-slate-100 group-hover:text-opacity-50 transition duration-500 delay-200">passionate</span> about creating digital solutions that combine <span className="group-hover:text-slate-100 group-hover:text-opacity-50 transition duration-500 delay-500">creativity</span> and <span className="group-hover:text-slate-100 group-hover:text-opacity-50 transition duration-500 delay-700">functionality</span>.
+          I'm <span className="group-hover:text-lime-600 transition duration-500 delay-200">passionate</span> about creating digital solutions that combine <span className="group-hover:text-yellow-500 transition duration-500 delay-500">creativity</span> and <span className="group-hover:text-cyan-600 transition duration-500 delay-700">functionality</span>.
           Through this fusion, I find fulfillment and purpose in my work.
         </p>
 
@@ -27,11 +27,6 @@ function Hero() {
             Download Resume
           </span>
         </a> */}
-        <a href="https://calendly.com/samantha-n-cabrera/30min" target="_blank"  className="hover:scale-105 transition duration-500 self-start border-2 border-current rounded-full mt-1 px-4 py-2 text-xs relative">
-           <span className="group-hover:text-slate-100 group-hover:text-opacity-60 transition duration-500 delay-1000">
-            get in touch
-          </span>
-        </a>
       </div>
 
   
