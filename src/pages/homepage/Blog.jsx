@@ -34,7 +34,7 @@ function Blog() {
     const displayBlogs = () => {
     if (blog.items) {
         return blog.items.map((post, index) => (
-            <div key={index} className='hover:text-orange-500 hover:scale-105 transition duration-500'>
+            <div key={index} className='hover:text-lime-500 hover:scale-105 transition duration-500'>
                 <a href={post.link} rel='noreferrer' target='_blank' className='block'>
                     <h6 className="mb-2">
                         {post.title}
