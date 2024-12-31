@@ -80,7 +80,7 @@ function Home() {
                     <a 
                         href="https://calendly.com/samantha-n-cabrera/30min" 
                         target="_blank" 
-                        className="text-xl hover:italic hover:underline hover:text-yellow-500"
+                        className="text-4xl hover:italic hover:underline hover:text-yellow-500"
                     >
                         let's get in touch! 
                     </a>

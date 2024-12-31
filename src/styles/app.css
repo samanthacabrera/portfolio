@@ -11,7 +11,16 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #0d113d;
+}
+
+body.day-mode {
+  background-color: white;
+  color: black;
+}
+
+body.night-mode {
+  background-color: black;
+  color: white;
 }
 
 .hover-effect {
@@ -32,21 +41,5 @@ html {
   }
   100% {
     content: "Scrambled!";
-  }
-}
-
-.bar {
-  background-color: #380e16;
-}
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
   }
 }

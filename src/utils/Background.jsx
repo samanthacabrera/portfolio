@@ -1,107 +1,52 @@
-import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useEffect } from 'react';
 
 const Background = () => {
-    const [gradient, setGradient] = useState(getRandomGradient());
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-    const [spaceCount, setSpaceCount] = useState(0);
-    const [timer, setTimer] = useState(null);
-    const [isVisible, setIsVisible] = useState(false);
-    const location = useLocation();
 
     useEffect(() => {
-        const handleKeyDown = (event) => {
-            if (event.code === 'Space') {
-                event.preventDefault();
-                setGradient(getRandomGradient());
-
-                setSpaceCount((prevCount) => prevCount + 1);
-
-                if (spaceCount === 0) {
-                    const newTimer = setTimeout(() => {
-                        setSpaceCount(0); 
-                    }, 500);
-                    setTimer(newTimer);
-                }
-                if (spaceCount + 1 > 5) {
-                    setIsVisible(true);
-                    setTimeout(() => {
-                        setIsVisible(false);
-                    }, 5000);
-                }
-            }
-        };
-
-        const handleResize = () => {
-            setWindowWidth(window.innerWidth);
-        };
-
-        const handleClick = () => {
-            setGradient(getRandomGradient());
-        };
-
-        window.addEventListener('keydown', handleKeyDown);
-        window.addEventListener('resize', handleResize);
-
-        if (windowWidth <= 768) {
-            window.addEventListener('click', handleClick);
+      
+        const savedMode = localStorage.getItem('theme');
+        if (savedMode) {
+            document.body.classList.add(savedMode);
+        } else {
+            document.body.classList.add('day-mode');
         }
+    }, []);
 
-        return () => {
-            window.removeEventListener('keydown', handleKeyDown);
-            window.removeEventListener('resize', handleResize);
-            if (windowWidth <= 768) {
-                window.removeEventListener('click', handleClick);
-            }
-            clearTimeout(timer);
-        };
-    }, [windowWidth, spaceCount, timer]);
 
-    const showText = location.pathname === '/';
-    const isSmallDevice = windowWidth <= 768;
+    const toggleDayNight = () => {
+        const isDayMode = document.body.classList.contains('day-mode');
+        if (isDayMode) {
+            document.body.classList.remove('day-mode');
+            document.body.classList.add('night-mode');
+            localStorage.setItem('theme', 'night-mode');
+            console.log('Toggled to Night');
+        } else {
+            document.body.classList.remove('night-mode');
+            document.body.classList.add('day-mode');
+            localStorage.setItem('theme', 'day-mode');
+            console.log('Toggled to Day');
+        }
+    };
 
     return (
         <>
-            <div className="fixed inset-0" style={{ ...styles.container, background: gradient }}></div>
-            {showText && (
-                <div style={{ ...styles.textContainer, cursor: isSmallDevice ? 'pointer' : 'default' }}>
-                    <h2 className="opacity-20">{isSmallDevice ? '' : '[Press Spacebar]'}</h2>
-                </div>
-            )}
+            <div
+                className="fixed inset-0 transition-all duration-300 ease-in-out"
+                style={{ zIndex: -1 }}
+            ></div>
+            <div
+                className="absolute top-1 right-2 transition-all duration-300 ease-in-out"
+                style={{ zIndex: 1 }}
+            >
+                <button
+                    onClick={toggleDayNight}
+                    className="text-2xl bg-transparent border-none cursor-pointer"
+                >
+                    🌞/🌜  
+                </button>
+            </div>
         </>
     );
-};
-
-const getRandomGradient = () => {
-    const colors = [
-        'rgba(102, 77, 0, 0.7)',   // Earthy Brown
-        'rgba(110, 42, 12, 0.7)',  // Earthy Red-Brown
-        'rgba(105, 19, 18, 0.7)',  // Earthy Deep Red
-        // 'rgba(93, 9, 51, 0.7)',    // Earthy Purple
-        'rgba(41, 25, 56, 0.7)',   // Earthy Dark Purple
-        // 'rgba(4, 45, 58, 0.7)',    // Earthy Dark Blue
-        'rgba(18, 64, 60, 0.7)',    // Earthy Teal
-        // 'rgba(71, 82, 0, 0.7)'     // Earthy Olive Green
-    ];
-    const randomColor1 = colors[Math.floor(Math.random() * colors.length)];
-    const randomColor2 = colors[Math.floor(Math.random() * colors.length)];
-    return `linear-gradient(135deg, ${randomColor1}, ${randomColor2})`;
-};
-
-const styles = {
-    container: {
-        zIndex: -1,
-        transition: 'background 0.5s ease',
-        opacity: 0.7
-    },
-    textContainer: {
-        position: 'absolute',
-        top: '150%',
-        left: '150%',
-        transform: 'translate(-50%, -50%)',
-        textAlign: 'center',
-        whiteSpace: 'nowrap'
-    }
 };
 
 export default Background;
