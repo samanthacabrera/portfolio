@@ -15,12 +15,11 @@ function Home() {
             <div className="grid grid-cols-3 grid-rows-3 w-[300vw] h-[300vh]">
                 {/* Top Row */}
                 <section 
-                    id="intro" 
-                    className="w-screen h-screen flex items-center justify-around"
+                    id="hero" 
+                    className="w-screen h-screen flex flex-col items-center justify-center"
                     style={{ scrollSnapAlign: "start" }}
                 >
-                    <img src="/doodles/star1.png" className="size-32 absolute top-12 right-64 " />
-                    <Intro />
+                    <Hero />
                 </section>
                 <section 
                     className="w-screen h-screen flex items-center justify-center" 
@@ -46,11 +45,12 @@ function Home() {
                 
                 </section>
                 <section 
-                    id="hero" 
+                    id="intro" 
                     className="w-screen h-screen flex flex-col items-center justify-center"
                     style={{ scrollSnapAlign: "start" }}
                 >
-                    <Hero />
+                    <img src="/doodles/star1.png" className="size-20 relative top-44 left-64 " />
+                    <Intro />
                 </section>
                 <section 
                     className="w-screen h-screen flex flex-col items-center justify-center"
