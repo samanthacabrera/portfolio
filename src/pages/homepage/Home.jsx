@@ -29,11 +29,11 @@ function Home() {
                     <img src="/doodles/moon1.png" className="size-20"/>
                 </section>
                 <section 
-                    id="blog" 
-                    className="w-screen h-screen flex flex-col items-center justify-center"
+                    id="projects" 
+                    className="w-screen h-screen flex items-center justify-center"
                     style={{ scrollSnapAlign: "start" }}
                 >
-                    <Blog />
+                    <ProjectsList />
                 </section>
 
                 {/* Middle Row */}
@@ -46,12 +46,18 @@ function Home() {
                 
                 </section>
                 <section 
-                    id="intro" 
-                    className="w-screen h-screen flex flex-col items-center justify-center"
+                    className="w-screen h-screen flex flex-col items-center justify-center space-y-2"
                     style={{ scrollSnapAlign: "start" }}
                 >
-                    <img src="/doodles/star1.png" className="size-20 relative top-44 left-64 " />
-                    <Intro />
+                    <a 
+                        href="https://calendly.com/samantha-n-cabrera/30min" 
+                        target="_blank" 
+                        className="text-4xl hover:italic hover:underline hover:text-yellow-500"
+                    >
+                        let's work together!
+                    </a>
+                    <p className="text-sm">explore the different options for what I offer below</p>
+                    <Services/>
                 </section>
                 <section 
                     className="w-screen h-screen flex flex-col items-center justify-center"
@@ -62,30 +68,24 @@ function Home() {
 
                 {/* Bottom Row */}
                 <section 
-                    id="projects" 
-                    className="w-screen h-screen flex items-center justify-center"
+                    id="intro" 
+                    className="w-screen h-screen flex flex-col items-center justify-center"
                     style={{ scrollSnapAlign: "start" }}
                 >
-                    <ProjectsList />
+                    <Intro />
                 </section>
                 <section 
                     className="w-screen h-screen flex flex-col items-center justify-around"
                     style={{ scrollSnapAlign: "start" }}
                 >
-                    <Services/>
+                <img src="/doodles/star3.png" className="size-20 scale-y-[-1] rotate-90 mx-6" />
                 </section>
                 <section 
-                    className="w-screen h-screen flex items-center justify-center"
+                    id="blog" 
+                    className="w-screen h-screen flex flex-col items-center justify-center"
                     style={{ scrollSnapAlign: "start" }}
                 >
-                    <a 
-                        href="https://calendly.com/samantha-n-cabrera/30min" 
-                        target="_blank" 
-                        className="text-4xl hover:italic hover:underline hover:text-yellow-500"
-                    >
-                        let's get in touch! 
-                    </a>
-                    <img src="/doodles/star3.png" className="size-12 scale-y-[-1] rotate-90 mx-6" />
+                    <Blog />
                 </section>
             </div>
         </div>
