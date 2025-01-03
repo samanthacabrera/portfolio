@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "./Hero";
 import Intro from "./Intro";
 import ProjectsList from "./ProjectsList";
+import Services from "./Services";
 import Blog from "./Blog";
 
 function Home() {
@@ -32,7 +33,6 @@ function Home() {
                     className="w-screen h-screen flex flex-col items-center justify-center"
                     style={{ scrollSnapAlign: "start" }}
                 >
-                    <img src="/doodles/star2.png" className="self-end transform scale-x-[-1] translate-y-12 size-40" />
                     <Blog />
                 </section>
 
@@ -41,7 +41,8 @@ function Home() {
                     className="w-screen h-screen flex items-center justify-around" 
                     style={{ scrollSnapAlign: "start" }}
                 >
-                    <img src="/doodles/paper1.png" className="size-20" />
+                    <img src="/doodles/star4.png" className="size-20" />
+                  
                 
                 </section>
                 <section 
@@ -71,7 +72,7 @@ function Home() {
                     className="w-screen h-screen flex flex-col items-center justify-around"
                     style={{ scrollSnapAlign: "start" }}
                 >
-                    <img src="/doodles/star4.png" className="size-20" />
+                    <Services/>
                 </section>
                 <section 
                     className="w-screen h-screen flex items-center justify-center"

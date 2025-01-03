@@ -32,13 +32,13 @@ const Background = () => {
                 style={{ zIndex: -1 }}
             ></div>
             <div
-                className="absolute top-1 right-2 transition-all duration-300 ease-in-out"
+                className="fixed top-2 right-2 transition-all duration-300 ease-in-out"
                 style={{ zIndex: 1 }}
             >
                 <button
                     onClick={toggleDayNight}
                     className={`w-16 h-8 flex items-center relative rounded-full p-1 transition-colors duration-300 ${
-                        isDayMode ? 'bg-gray-300' : 'bg-gray-600'
+                        isDayMode ? 'bg-black' : 'bg-white'
                     }`}
                 >
                     {/* Sun Emoji */}
@@ -52,8 +52,8 @@ const Background = () => {
 
                     {/* Toggle Circle */}
                     <span
-                        className={`w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-300 ${
-                            isDayMode ? 'translate-x-0' : 'translate-x-7'
+                        className={`w-6 h-6 rounded-full shadow-lg transform transition-transform duration-300 ${
+                            isDayMode ? 'translate-x-0 bg-gray-50' : 'translate-x-8 bg-gray-300'
                         }`}
                     ></span>
 
