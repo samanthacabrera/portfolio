@@ -49,14 +49,6 @@ function Home() {
                     className="w-screen h-screen flex flex-col items-center justify-center space-y-2"
                     style={{ scrollSnapAlign: "start" }}
                 >
-                    <a 
-                        href="https://calendly.com/samantha-n-cabrera/30min" 
-                        target="_blank" 
-                        className="text-4xl hover:italic hover:underline hover:text-yellow-500"
-                    >
-                        let's work together!
-                    </a>
-                    <p className="text-sm">explore the different options for what I offer below</p>
                     <Services/>
                 </section>
                 <section 
