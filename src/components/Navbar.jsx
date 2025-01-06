@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useEffect } from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const history = useHistory();
 
@@ -29,11 +26,6 @@ const Navbar = () => {
         console.error(`Element with id ${hash} not found.`);
       }
     }
-    setIsMenuOpen(false);
-  };
-
-  const toggleMenu = () => {
-    setIsMenuOpen(prevState => !prevState);
   };
 
   useEffect(() => {
@@ -72,7 +64,7 @@ const Navbar = () => {
 
       link.onmouseout = () => {
         clearInterval(interval);
-        link.innerText = originalText; 
+        link.innerText = originalText;
       };
     });
 
@@ -84,82 +76,57 @@ const Navbar = () => {
   return (
     <>
       <nav className={`fixed top-2 r-2 w-full text-2xl z-50 transition-all duration-300 ease-in-out`}>
-        <div className={`absolute top-2 left-2 ${isMenuOpen ? 'hidden' : 'block'} md:hidden`}>
-          <button onClick={toggleMenu} className="text-xl">
-            <FontAwesomeIcon icon={faBars} size="1x" />
-          </button>
-        </div>
-        <div className={`absolute top-0 left-2 flex items-start space-x-6 ${isMenuOpen ? 'hidden' : 'block'} hidden md:flex`}>
+        {/* Desktop Navigation */}
+        <div className={`absolute top-0 left-2 flex items-start space-x-6 hidden md:flex`}>
           <button 
             onClick={() => handleNavigation('hero')} 
             className="hover-effect ease-in-out scramble-hover"
             data-value="+ Home"
           >
-           + Home
+            + Home
           </button>
           <button 
             onClick={() => handleNavigation('intro')} 
             className="hover-effect ease-in-out scramble-hover"
             data-value="+ About"
           >
-           + About
+            + About
           </button>
           <button 
             onClick={() => handleNavigation('projects')} 
             className="hover-effect ease-in-out scramble-hover"
             data-value="+ Work"
           >
-          + Work
+            + Work
+          </button>
+          <button 
+            onClick={() => handleNavigation('services')} 
+            className="hover-effect ease-in-out scramble-hover"
+            data-value="+ Services"
+          >
+            + Services
           </button>
           <button 
             onClick={() => handleNavigation('blog')} 
             className="hover-effect ease-in-out scramble-hover"
             data-value="+ Articles"
           >
-          + Articles
+            + Articles
           </button>
         </div>
-      </nav>
 
-      {isMenuOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-10 text-lg text-gray-600 flex flex-col justify-center items-center z-50 md:hidden">
-          <div className="relative text-gray-50 bg-[#0d113d] shadow-lg rounded-lg p-4 w-full max-w-sm space-y-6 text-center">
-            <button onClick={toggleMenu} className="absolute top-2 left-2">
-              <FontAwesomeIcon icon={faTimes} />
+        {/* Mobile Navigation */}
+        {isSpecialPage && (
+          <div className="absolute top-4 left-4 md:hidden">
+            <button 
+              onClick={() => handleNavigation('/')} 
+              className="text-xs pl-8"
+            >
+              &larr; go back home
             </button>
-            <div className="space-y-4">
-              <button 
-                onClick={() => handleNavigation('/')} 
-                className="block w-full py-3 border-b border-gray-300 text-left transition-transform transform hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
-                data-value="home"
-              >
-                home
-              </button>
-              <button 
-                onClick={() => handleNavigation('intro')} 
-                className="block w-full py-3 border-b border-gray-300 text-left transition-transform transform hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
-                data-value="about"
-              >
-                about
-              </button>
-              <button 
-                onClick={() => handleNavigation('projects')} 
-                className="block w-full py-3 border-b border-gray-300 text-left transition-transform transform hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
-                data-value="work"
-              >
-               work
-              </button>
-              <button 
-                onClick={() => handleNavigation('blog')} 
-                className="block w-full py-3 border-b border-gray-300 text-left transition-transform transform hover:-translate-y-1 duration-300 ease-in-out scramble-hover"
-                data-value="articles"
-              >
-                articles
-              </button>
-            </div>
           </div>
-        </div>
-      )}
+        )}
+      </nav>
     </>
   );
 };

@@ -94,13 +94,13 @@ function Home() {
                 <Intro />
             </section>
             <section className="w-full h-screen flex justify-center items-center px-12" style={{ scrollSnapAlign: "start" }}>
+                <Services />
+            </section>
+            <section className="w-full h-screen flex justify-center items-center px-12" style={{ scrollSnapAlign: "start" }}>
                 <ProjectsList />
             </section>
             <section className="w-full h-screen flex justify-center items-center px-12" style={{ scrollSnapAlign: "start" }}>
                 <Blog />
-            </section>
-            <section className="w-full h-screen flex justify-center items-center px-12" style={{ scrollSnapAlign: "start" }}>
-                <Services />
             </section>
         </div>
         </>

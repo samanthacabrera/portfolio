@@ -90,7 +90,7 @@ const Services = () => {
       <div className="text-center space-y-2 mb-4">
         <h1 className="text-4xl">My Services</h1>
         <p className="hidden md:block font-light">
-          Click to learn more about the different services I provide
+          Click to learn more about the range of services I offer.
         </p>
       </div>
       <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-3">
