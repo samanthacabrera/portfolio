@@ -43,3 +43,8 @@ body.night-mode {
     content: "Scrambled!";
   }
 }
+
+::selection {
+  background-color: #ff58d2;
+  color: #000000;
+}
