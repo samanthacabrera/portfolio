@@ -89,7 +89,7 @@ const Services = () => {
     <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
       <div className="text-center space-y-2 mb-4">
         <h1 className="text-4xl">My Services</h1>
-        <p className="font-light">
+        <p className="hidden md:block font-light">
           Click to learn more about the different services I provide
         </p>
       </div>

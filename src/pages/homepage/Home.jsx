@@ -46,6 +46,7 @@ function Home() {
                 
                 </section>
                 <section 
+                    id="services" 
                     className="w-screen h-screen flex flex-col items-center justify-center space-y-2"
                     style={{ scrollSnapAlign: "start" }}
                 >
@@ -99,9 +100,7 @@ function Home() {
                 <Blog />
             </section>
             <section className="w-full h-screen flex justify-center items-center px-12" style={{ scrollSnapAlign: "start" }}>
-                <a href="https://calendly.com/samantha-n-cabrera/30min" target="_blank" className="hover:italic hover:underline hover:text-yellow-500">
-                    let's get in touch! 
-                </a>
+                <Services />
             </section>
         </div>
         </>
