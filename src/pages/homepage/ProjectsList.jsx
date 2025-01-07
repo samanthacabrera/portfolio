@@ -7,9 +7,9 @@ import FadeInSection from "../../utils/FadeIn";
 const Projects = () => {
     return (
         <FadeInSection>
-        <div className="min-h-screen flex flex-col justify-center container space-y-4 text-left">
-            <h2 className="text-6xl lg:text-8xl font-mono">Check out my work...</h2>
-            <div className="grid grid-cols-1 gap-4">
+        <div className="min-h-screen flex flex-col justify-center space-y-4 text-left">
+            <h2 className="text-4xl lg:text-6xl font-mono">Check <br/> out my work...</h2>
+            <div className="grid grid-cols-1 gap-6">
                 {projects.map((project) => (
                     <Link key={project.id} to={`/projects/${project.id}`} >
                         <div className="relative">
@@ -19,7 +19,7 @@ const Projects = () => {
                                 description={project.description}
                                 thumbnail={project.thumbnail}
                                 tags={project.tags}
-                                currentlyWorkingOn={project.currentlyWorkingOn}
+                                wip={project.wip}
                                 hideImage="sm:hidden" 
                             />
                         </div>

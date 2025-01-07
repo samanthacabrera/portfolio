@@ -49,8 +49,8 @@ function Blog() {
 
     return (
         <FadeInSection>
-            <div className="min-h-screen max-w-3xl 2 flex flex-col justify-center space-y-4 text-left">
-                <h2 className="text-6xl lg:text-8xl font-mono pb-2">My two cents...</h2>
+            <div className="min-h-screen flex flex-col justify-center space-y-4 text-left">
+                <h2 className="text-4xl lg:text-6xl font-mono pb-2">My two cents...</h2>
                 {displayBlogs()}
             </div>
         </FadeInSection>

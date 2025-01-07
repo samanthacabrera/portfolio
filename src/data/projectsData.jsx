@@ -28,7 +28,7 @@ const projects = [
         title: 'Calcalooza',
         github: 'https://github.com/samanthacabrera/conversion-calculator',
         link: 'https://calcalooza.com', 
-        wip: true,
+        wip: false,
         deployed: true,
         description: 'A responsive website featuring a variety of math calculators, including unit conversion, area, volume, and more.',
         overview: {

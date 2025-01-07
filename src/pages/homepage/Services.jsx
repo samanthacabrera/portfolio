@@ -86,24 +86,24 @@ const Services = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <div className="space-y-2 pt-24 pb-4">
-        <h1 className="text-6xl lg:text-8xl font-mono">Let's work together...</h1>
-        <p className="text-xl p-1 font-light">
+    <div className="min-h-screen flex flex-col justify-center py-24">
+      <div className="space-y-2">
+        <h1 className="text-4xl lg:text-6xl font-mono pb-2">Let's work together...</h1>
+        <p className="text-xl pb-4 font-light">
           Click to learn more about the range of services I offer.
         </p>
       </div>
-      <div className="grid gap-2 lg:gap-8 sm:grid-cols-1 lg:grid-cols-3 text-gray-900">
+      <div className="grid gap-2 sm:grid-cols-1 text-gray-900">
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-white border shadow-lg rounded-lg p-6 hover:scale-105 transition-transform duration-300 cursor-pointer"
+            className="md:bg-white md:border md:shadow-lg md:rounded-lg py-2 md:p-4 hover:scale-105 transition-transform duration-300 cursor-pointer"
             onClick={() => setSelectedService(service)}
           >
             <h3 className="text-base lg:text-xl">
               {service.title}
             </h3>
-            <p className="hidden md:block">
+            <p className="hidden md:block font-light py-1">
               {service.description}
             </p>
             <p className="hidden md:block">{service.price}</p>

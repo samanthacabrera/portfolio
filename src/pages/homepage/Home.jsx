@@ -85,20 +85,20 @@ function Home() {
         <div className="flex flex-col w-screen justify-center items-center overflow-auto scroll-smooth"
             style={{ scrollSnapType: "y mandatory" }}
         >
-            <section id="hero" className=" h-screen flex justify-center items-center" style={{ scrollSnapAlign: "start" }}>
+            <section id="hero" className="max-w-4xl h-screen flex justify-center items-center" style={{ scrollSnapAlign: "start" }}>
                 <Hero />
             </section>
-            <section id="intro" className="w-full h-screen flex justify-center items-center px-12" style={{ scrollSnapAlign: "start" }}>
+            <section id="intro" className="max-w-sm md:max-w-xl h-screen flex justify-center items-center px-6" style={{ scrollSnapAlign: "start" }}>
                 <Intro />
             </section>
-            <section id="projects" className="w-full h-screen flex justify-center items-center px-12" style={{ scrollSnapAlign: "start" }}>
+            <section id="projects" className="max-w-sm md:max-w-xl h-screen flex justify-center items-center" style={{ scrollSnapAlign: "start" }}>
                 <ProjectsList />
             </section>
-            <section id="services" className="w-full h-screen flex justify-center items-center px-12" style={{ scrollSnapAlign: "start" }}>
-                <Services />
-            </section>
-            <section id="blog" className="w-full h-screen flex justify-center items-center px-12" style={{ scrollSnapAlign: "start" }}>
+            <section id="blog" className="max-w-sm md:max-w-xl h-screen flex justify-center items-center px-6" style={{ scrollSnapAlign: "start" }}>
                 <Blog />
+            </section>
+            <section id="services" className="max-w-sm md:max-w-xl h-screen flex justify-center items-center px-6" style={{ scrollSnapAlign: "start" }}>
+                <Services />
             </section>
         </div>
         </>
