@@ -93,18 +93,18 @@ const Navbar = () => {
             + About
           </button>
           <button 
-            onClick={() => handleNavigation('projects')} 
-            className="hover-effect ease-in-out scramble-hover"
-            data-value="+ Work"
-          >
-            + Work
-          </button>
-          <button 
             onClick={() => handleNavigation('services')} 
             className="hover-effect ease-in-out scramble-hover"
             data-value="+ Services"
           >
             + Services
+          </button>
+          <button 
+            onClick={() => handleNavigation('projects')} 
+            className="hover-effect ease-in-out scramble-hover"
+            data-value="+ Work"
+          >
+            + Work
           </button>
           <button 
             onClick={() => handleNavigation('blog')} 

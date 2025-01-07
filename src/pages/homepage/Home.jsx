@@ -9,12 +9,12 @@ function Home() {
     return (
         <>
         {/* Desktop Layout */}
-        <div 
+        {/* <div 
             className="hidden md:block relative w-screen h-screen overflow-auto scroll-smooth"
             style={{ scrollSnapType: "both mandatory" }}
         >
             <div className="grid grid-cols-3 grid-rows-3 w-[300vw] h-[300vh]">
-                {/* Top Row */}
+               
                 <section 
                     id="hero" 
                     className="w-screen h-screen flex flex-col items-center justify-center"
@@ -36,7 +36,6 @@ function Home() {
                     <ProjectsList />
                 </section>
 
-                {/* Middle Row */}
                 <section 
                     className="w-screen h-screen flex items-center justify-around" 
                     style={{ scrollSnapAlign: "start" }}
@@ -59,7 +58,6 @@ function Home() {
                     <img src="/doodles/paper3.png" className="size-20 scale-x-[-1]" />
                 </section>
 
-                {/* Bottom Row */}
                 <section 
                     id="intro" 
                     className="w-screen h-screen flex flex-col items-center justify-center"
@@ -81,25 +79,25 @@ function Home() {
                     <Blog />
                 </section>
             </div>
-        </div>
+        </div> */}
 
         {/* Mobile Layout */}
-        <div className="block md:hidden flex flex-col w-screen overflow-auto scroll-smooth"
+        <div className="flex flex-col w-screen overflow-auto scroll-smooth"
             style={{ scrollSnapType: "y mandatory" }}
         >
-            <section className="w-full h-screen flex justify-center items-center" style={{ scrollSnapAlign: "start" }}>
+            <section id="hero" className="w-full h-screen flex justify-center items-center" style={{ scrollSnapAlign: "start" }}>
                 <Hero />
             </section>
-            <section className="w-full h-screen flex justify-center items-center px-12" style={{ scrollSnapAlign: "start" }}>
+            <section id="intro" className="w-full h-screen flex justify-center items-center px-12" style={{ scrollSnapAlign: "start" }}>
                 <Intro />
             </section>
-            <section className="w-full h-screen flex justify-center items-center px-12" style={{ scrollSnapAlign: "start" }}>
+            <section id="services" className="w-full h-screen flex justify-center items-center px-12" style={{ scrollSnapAlign: "start" }}>
                 <Services />
             </section>
-            <section className="w-full h-screen flex justify-center items-center px-12" style={{ scrollSnapAlign: "start" }}>
+            <section id="projects" className="w-full h-screen flex justify-center items-center px-12" style={{ scrollSnapAlign: "start" }}>
                 <ProjectsList />
             </section>
-            <section className="w-full h-screen flex justify-center items-center px-12" style={{ scrollSnapAlign: "start" }}>
+            <section id="blog" className="w-full h-screen flex justify-center items-center px-12" style={{ scrollSnapAlign: "start" }}>
                 <Blog />
             </section>
         </div>
