@@ -117,7 +117,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isSpecialPage && (
-          <div className="absolute top-4 left-4 md:hidden">
+          <div className="absolute top-0 left-4 md:hidden">
             <button 
               onClick={() => handleNavigation('/')} 
               className="text-xs pl-8"

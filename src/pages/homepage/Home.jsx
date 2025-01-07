@@ -82,10 +82,10 @@ function Home() {
         </div> */}
 
         {/* Mobile Layout */}
-        <div className="flex flex-col w-screen overflow-auto scroll-smooth"
+        <div className="flex flex-col w-screen justify-center items-center overflow-auto scroll-smooth"
             style={{ scrollSnapType: "y mandatory" }}
         >
-            <section id="hero" className="w-full h-screen flex justify-center items-center" style={{ scrollSnapAlign: "start" }}>
+            <section id="hero" className=" h-screen flex justify-center items-center" style={{ scrollSnapAlign: "start" }}>
                 <Hero />
             </section>
             <section id="intro" className="w-full h-screen flex justify-center items-center px-12" style={{ scrollSnapAlign: "start" }}>

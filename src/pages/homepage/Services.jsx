@@ -86,27 +86,27 @@ const Services = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-      <div className="text-center space-y-2 mb-4">
-        <h1 className="text-4xl">My Services</h1>
-        <p className="hidden md:block font-light">
+    <div className="min-h-screen flex flex-col">
+      <div className="space-y-2 pt-24 pb-4">
+        <h1 className="text-6xl lg:text-8xl font-mono">Let's work together...</h1>
+        <p className="text-xl p-1 font-light">
           Click to learn more about the range of services I offer.
         </p>
       </div>
-      <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-3">
+      <div className="grid gap-2 lg:gap-8 sm:grid-cols-1 lg:grid-cols-3 text-gray-900">
         {services.map((service, index) => (
           <div
             key={index}
             className="bg-white border shadow-lg rounded-lg p-6 hover:scale-105 transition-transform duration-300 cursor-pointer"
             onClick={() => setSelectedService(service)}
           >
-            <h3 className="text-xl font-bold text-gray-800 mb-4">
+            <h3 className="text-base lg:text-xl">
               {service.title}
             </h3>
-            <p className="text-sm text-gray-600 leading-relaxed mb-6">
+            <p className="hidden md:block">
               {service.description}
             </p>
-            <p className="text-lg font-extrabold text-gray-800">{service.price}</p>
+            <p className="hidden md:block">{service.price}</p>
           </div>
         ))}
       </div>
@@ -117,7 +117,7 @@ const Services = () => {
           onClick={closeModal}
         >
           <div
-            className="bg-white p-8 rounded-lg max-w-3xl w-full max-h-screen overflow-y-auto relative"
+            className="bg-white p-8 rounded-lg max-w-3xl w-full mx-2 max-h-screen overflow-y-auto relative"
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -155,7 +155,7 @@ const Services = () => {
               <ul className="pl-2">
                 {selectedService.details.faqs.map((faq, index) => (
                   <li key={index} className="mb-2">
-                    <strong>{faq.question}</strong>
+                    {faq.question}
                     <br />
                     {faq.answer}
                   </li>

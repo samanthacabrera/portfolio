@@ -6,7 +6,7 @@ function Hero() {
     <div className="h-screen flex p-8">
   
       <div className="group flex flex-col justify-center space-y-4 text-left w-full p-8 relative">
-        <h1 className="text-7xl lg:text-9xl tracking-tighter mb-2 relative z-10">
+        <h1 className="text-7xl lg:text-8xl tracking-tighter mb-2 relative z-10">
           Hello world!<br />
           I'm <span className="group-hover:text-orange-500 transition duration-500">Sam</span> :)
         </h1>
