@@ -74,7 +74,7 @@ const Services = () => {
             question: "Can this application be expanded later?",
             answer:
               "Yes, it will be built with scalability in mind, making future expansion seamless.",
-          }
+          },
         ],
       },
       price: "$3,000+",
@@ -86,9 +86,25 @@ const Services = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col justify-center py-24">
-      <div className="space-y-2">
-        <h1 className="text-4xl lg:text-6xl pb-2">Let's work together...</h1>
+    <div className="flex flex-col justify-center py-24">
+
+      <div className="my-40 space-y-4">
+        <h2 className="text-4xl lg:text-5xl">Why Choose Me?</h2>
+        <p className="text-lg font-light">
+          As a solo freelancer, I offer personalized service and attention to
+          detail that you won't find at a larger agency. I'm dedicated to
+          delivering high-quality work that exceeds your expectations and helps
+          you achieve your goals.
+        </p>
+        <p className="text-lg font-light">
+          I work with you on your favorite CMS platform to help ease you into
+          updating content, media, and more effortlessly.
+        </p>
+      </div>
+
+
+      <div className="pt-12 pb-4 space-y-4">
+        <h1 className="text-4xl lg:text-6xl">Let's work together...</h1>
         <p className="text-xl pb-4 font-light">
           Click to learn more about the range of services I offer.
         </p>
@@ -100,13 +116,11 @@ const Services = () => {
             className="md:bg-white md:border md:shadow-lg md:rounded-lg py-2 md:p-4 hover:scale-105 transition-transform duration-300 cursor-pointer"
             onClick={() => setSelectedService(service)}
           >
-            <h3 className="text-base lg:text-xl">
-              {service.title}
-            </h3>
+            <h3 className="text-base lg:text-xl">{service.title}</h3>
             <p className="hidden md:block font-light py-1">
               {service.description}
             </p>
-            <p className="hidden md:block">{service.price}</p>
+            {/* <p className="hidden md:block">{service.price}</p> */}
           </div>
         ))}
       </div>
@@ -127,31 +141,29 @@ const Services = () => {
               &times;
             </button>
 
-            <h2 className="text-2xl">
-              {selectedService.title} 
-            </h2>
+            <h2 className="text-2xl">{selectedService.title}</h2>
 
             <div className="text-sm py-2 space-y-4 leading-tight">
-              <p className="">{selectedService.description}</p>
-         
-              <h3 className="">Timeline</h3>
+              <p>{selectedService.description}</p>
+
+              <h3>Timeline</h3>
               <p className="pl-2">{selectedService.details.timeline}</p>
-        
-              <h3 className="">Deliverables</h3>
+
+              <h3>Deliverables</h3>
               <ul className="pl-2">
                 {selectedService.details.deliverables.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
 
-              <h3 className="">Features</h3>
+              <h3>Features</h3>
               <ul className="pl-2">
                 {selectedService.details.features.map((feature, index) => (
                   <li key={index}>{feature}</li>
                 ))}
               </ul>
-     
-              <h3 className="">FAQs</h3>
+
+              <h3>FAQs</h3>
               <ul className="pl-2">
                 {selectedService.details.faqs.map((faq, index) => (
                   <li key={index} className="mb-2">
@@ -163,7 +175,7 @@ const Services = () => {
               </ul>
             </div>
 
-            <div className="">
+            <div>
               <a
                 href="https://calendly.com/samantha-n-cabrera/30min"
                 target="_blank"
