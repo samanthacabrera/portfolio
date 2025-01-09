@@ -75,30 +75,30 @@ const projects = [
             '/reciperoots/mission.png'
         ]
     },
-    // {
-    //     id: 4,
-    //     title: 'YogiAPI',
-    //     github: 'https://github.com/samanthacabrera/yogi_api',
-    //     link: 'https://www.youtube.com/embed/Inhkh8RiL1k',
-    //     wip: false,
-    //     deployed: false,
-    //     description: 'This API provides comprehensive access to a diverse collection of yoga poses.',
-    //     overview: {
-    //         techStack: ['React', 'Flask', 'SQLAlchemy', 'Tailwind CSS'],
-    //         features: [
-    //             'Use of standard HTTP methods: GET, POST, PUT, DELETE, and PATCH to handle CRUD operations.',
-    //             'Clear and concise documentation that outlines how to use each endpoint, expected outputs, and error codes.',
-    //             'User-friendly interface for browsing yoga poses.'
-    //         ]
-    //     },
-    //     insights: 'Developing YogiAPI was my first experience creating an API, which came with its share of mistakes and learning opportunities. I encountered several challenges, such as correctly structuring endpoints and managing data flows. Each mistake provided valuable lessons that deepened my understanding of API design and best practices. Through trial and error, I learned how to handle errors more gracefully and ensure data integrity, ultimately resulting in a more robust and user-friendly API. This experience was pivotal in shaping my skills for future projects.',
-    //     gallery: [
-    //         '/yogiapi/home.png',
-    //         '/yogiapi/intro.png',
-    //         '/yogiapi/howto.png',
-    //         '/yogiapi/endpoints.png'
-    //     ]
-    // },
+    {
+        id: 4,
+        title: 'YogiAPI',
+        github: 'https://github.com/samanthacabrera/yogi_api',
+        link: 'https://www.youtube.com/embed/Inhkh8RiL1k',
+        wip: false,
+        deployed: false,
+        description: 'This API provides comprehensive access to a diverse collection of yoga poses.',
+        overview: {
+            techStack: ['React', 'Flask', 'SQLAlchemy', 'Tailwind CSS'],
+            features: [
+                'Use of standard HTTP methods: GET, POST, PUT, DELETE, and PATCH to handle CRUD operations.',
+                'Clear and concise documentation that outlines how to use each endpoint, expected outputs, and error codes.',
+                'User-friendly interface for browsing yoga poses.'
+            ]
+        },
+        insights: 'Developing YogiAPI was my first experience creating an API, which came with its share of mistakes and learning opportunities. I encountered several challenges, such as correctly structuring endpoints and managing data flows. Each mistake provided valuable lessons that deepened my understanding of API design and best practices. Through trial and error, I learned how to handle errors more gracefully and ensure data integrity, ultimately resulting in a more robust and user-friendly API. This experience was pivotal in shaping my skills for future projects.',
+        gallery: [
+            '/yogiapi/home.png',
+            '/yogiapi/intro.png',
+            '/yogiapi/howto.png',
+            '/yogiapi/endpoints.png'
+        ]
+    },
     {
         id: 5,
         title: "RunTheCity",
