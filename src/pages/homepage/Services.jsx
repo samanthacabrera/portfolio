@@ -88,7 +88,7 @@ const Services = () => {
   return (
     <div className="min-h-screen flex flex-col justify-center py-24">
       <div className="space-y-2">
-        <h1 className="text-4xl lg:text-6xl font-mono pb-2">Let's work together...</h1>
+        <h1 className="text-4xl lg:text-6xl pb-2">Let's work together...</h1>
         <p className="text-xl pb-4 font-light">
           Click to learn more about the range of services I offer.
         </p>

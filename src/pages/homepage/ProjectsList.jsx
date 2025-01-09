@@ -8,7 +8,7 @@ const Projects = () => {
     return (
         <FadeInSection>
         <div className="min-h-screen flex flex-col justify-center space-y-4 text-left">
-            <h2 className="text-4xl lg:text-6xl font-mono">Check <br/> out my work...</h2>
+            <h2 className="text-4xl lg:text-6xl">Check <br/> out my work...</h2>
             <div className="grid grid-cols-1 gap-6">
                 {projects.map((project) => (
                     <Link key={project.id} to={`/projects/${project.id}`} >

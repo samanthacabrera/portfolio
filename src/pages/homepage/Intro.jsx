@@ -6,7 +6,7 @@ function Intro() {
     <FadeInSection>
         <div className="group flex flex-col justify-center text-left min-h-screen">
         
-          <h2 className="text-4xl lg:text-6xl font-mono">Long story short...</h2>
+          <h2 className="text-4xl lg:text-6xl">Long story short...</h2>
       
         <div className="pt-8 space-y-4 tracking-tight">
           <p>In February 2024, I started Flatiron School’s Software Engineering Bootcamp, an experience that shaped my professional journey. It honed my ability to learn <span className="group-hover:text-cyan-600 transition duration-500"> quickly</span> and solve problems <span className="group-hover:text-yellow-500 transition duration-500 delay-100">independently</span>.</p>
