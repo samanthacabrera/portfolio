@@ -88,7 +88,7 @@ const Services = () => {
   return (
     <div className="flex flex-col justify-center py-24">
 
-      <div className="my-40 space-y-4">
+      <div className="h-screen space-y-4">
         <h2 className="text-4xl lg:text-5xl">Why Choose Me?</h2>
         <p className="text-lg font-light">
           As a solo freelancer, I offer personalized service and attention to
@@ -102,27 +102,28 @@ const Services = () => {
         </p>
       </div>
 
-
-      <div className="pt-12 pb-4 space-y-4">
-        <h1 className="text-4xl lg:text-6xl">Let's work together...</h1>
-        <p className="text-xl pb-4 font-light">
-          Click to learn more about the range of services I offer.
-        </p>
-      </div>
-      <div className="grid gap-2 sm:grid-cols-1 text-gray-900">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className="md:bg-white md:border md:shadow-lg md:rounded-lg py-2 md:p-4 hover:scale-105 transition-transform duration-300 cursor-pointer"
-            onClick={() => setSelectedService(service)}
-          >
-            <h3 className="text-base lg:text-xl">{service.title}</h3>
-            <p className="hidden md:block font-light py-1">
-              {service.description}
-            </p>
-            {/* <p className="hidden md:block">{service.price}</p> */}
-          </div>
-        ))}
+      <div className="h-screen">
+        <div className="pb-4 space-y-4">
+          <h1 className="text-4xl lg:text-6xl">Let's work together...</h1>
+          <p className="text-xl pb-4 font-light">
+            Click to learn more about the range of services I offer.
+          </p>
+        </div>
+        <div className="grid gap-2 sm:grid-cols-1 text-gray-900">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="md:bg-white md:border md:shadow-lg md:rounded-lg py-2 md:p-4 hover:scale-105 transition-transform duration-300 cursor-pointer"
+              onClick={() => setSelectedService(service)}
+            >
+              <h3 className="text-base lg:text-xl">{service.title}</h3>
+              <p className="hidden md:block font-light py-1">
+                {service.description}
+              </p>
+              {/* <p className="hidden md:block">{service.price}</p> */}
+            </div>
+          ))}
+        </div>
       </div>
 
       {selectedService && (

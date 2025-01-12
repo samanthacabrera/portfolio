@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import projects from '../../data/projectsData';
-import FadeInSection from "../../utils/FadeIn";
 
 const Projects = () => {
     return (
-        <FadeInSection>
-            <div className="min-h-screen flex flex-col justify-center space-y-4 text-left">
+     
+            <div className="h-screen flex flex-col justify-center space-y-4 text-left">
                 <h2 className="text-4xl lg:text-6xl">Check out my work...</h2>
                 <div className="flex flex-col pt-4 space-y-1">
                     {projects.map((project) => {
@@ -28,7 +27,7 @@ const Projects = () => {
                     })}
                 </div>
             </div>
-        </FadeInSection>
+        
     );
 };
 

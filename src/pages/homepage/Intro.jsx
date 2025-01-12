@@ -4,7 +4,7 @@ import FadeInSection from "../../utils/FadeIn";
 function Intro() {  
   return (
     <FadeInSection>
-        <div className="group flex flex-col justify-center text-left min-h-screen">
+        <div className="group flex flex-col justify-center text-left h-screen">
         
           <h2 className="text-4xl lg:text-6xl">Long story short...</h2>
       

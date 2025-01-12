@@ -84,19 +84,19 @@ function Home() {
         {/* Mobile Layout */}
         <div className="flex flex-col w-screen justify-center items-center overflow-auto scroll-smooth"
         >
-            <section id="hero" className="max-w-4xl h-screen flex justify-center items-center" style={{ scrollSnapAlign: "start" }}>
+            <section id="hero" className="max-w-4xl flex justify-center items-center" style={{ scrollSnapAlign: "start" }}>
                 <Hero />
             </section>
-            <section id="intro" className="max-w-sm md:max-w-xl h-screen flex justify-center items-center" style={{ scrollSnapAlign: "start" }}>
+            <section id="intro" className="max-w-sm md:max-w-xl flex justify-center items-center" style={{ scrollSnapAlign: "start" }}>
                 <Intro />
             </section>
-            <section id="projects" className="max-w-sm md:max-w-xl h-screen flex justify-center items-center" style={{ scrollSnapAlign: "start" }}>
+            <section id="projects" className="max-w-sm md:max-w-xl flex justify-center items-center" style={{ scrollSnapAlign: "start" }}>
                 <ProjectsList />
             </section>
-            <section id="services" className="max-w-sm md:max-w-xl h-screen flex justify-center items-center" style={{ scrollSnapAlign: "start" }}>
+            <section id="services" className="max-w-sm md:max-w-xl flex justify-center items-center" style={{ scrollSnapAlign: "start" }}>
                 <Services />
             </section>
-            <section id="blog" className="max-w-sm md:max-w-xl mt-40 h-screen flex justify-center items-center" style={{ scrollSnapAlign: "start" }}>
+            <section id="blog" className="max-w-sm md:max-w-xl flex justify-center items-center" style={{ scrollSnapAlign: "start" }}>
                 <Blog />
             </section>
         </div>
