@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import ToText from "../../utils/ToText";
-import FadeInSection from "../../utils/FadeIn";
 
 function Articles() {
     const mediumURL = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@samantha.n.cabrera";
@@ -34,7 +33,7 @@ function Articles() {
     const displayBlogs = () => {
     if (blog.items) {
         return blog.items.map((post, index) => (
-            <div key={index} className='hover:text-lime-500 hover:scale-105 transition duration-500'>
+            <div key={index} className='text-left max-w-sm md:max-w-4xl hover:text-lime-500 hover:scale-105 transition duration-500'>
                 <a href={post.link} rel='noreferrer' target='_blank' className='block'>
                     <h6 className="mb-2">
                         {post.title}
@@ -48,12 +47,11 @@ function Articles() {
 };
 
     return (
-        <FadeInSection>
-            <div className="min-h-screen flex flex-col justify-center space-y-4 text-left">
-                <h2 className="text-4xl lg:text-6xl pb-2">My two cents...</h2>
+
+            <div className="flex flex-col justify-center items-center space-y-4 md:space-y-12 h-[90vh]">
+                <h2 className="text-4xl pb-4">My two cents...</h2>
                 {displayBlogs()}
             </div>
-        </FadeInSection>
     );
 }
 
