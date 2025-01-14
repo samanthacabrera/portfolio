@@ -5,6 +5,7 @@ import ProjectsList from "./ProjectsList";
 import Services from "./Services";
 import Blog from "./Blog";
 import About from "./About";
+import Room from "../../components/Room";
 
 function Home() {
     return (
@@ -88,6 +89,9 @@ function Home() {
             <section id="hero" className="max-w-4xl flex justify-center items-center" style={{ scrollSnapAlign: "start" }}>
                 <Hero />
             </section>
+            
+            {/* <Room />  */}
+                
             <section id="about" className="max-w-sm md:max-w-xl flex justify-center items-center" style={{ scrollSnapAlign: "start" }}>
                 <About />
             </section>
