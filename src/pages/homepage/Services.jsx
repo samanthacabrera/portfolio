@@ -86,29 +86,25 @@ const Services = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center py-24">
+    <div className="group flex flex-col justify-center items-center h-[90vh]">
 
-      <div className="h-screen space-y-4">
-        <h2 className="text-4xl lg:text-5xl">Why Choose Me?</h2>
-        <p className="text-lg font-light">
+ 
+      <h2 className="text-4xl pb-4 md:pb-12">Why Choose Me?</h2>
+      <div className="space-y-4 md:space-y-12 max-w-sm md:max-w-4xl">
+          <p className="">
           As a solo freelancer, I offer personalized service and attention to
           detail that you won't find at a larger agency. I'm dedicated to
           delivering high-quality work that exceeds your expectations and helps
           you achieve your goals.
         </p>
-        <p className="text-lg font-light">
+        <p className="">
           I work with you on your favorite CMS platform to help ease you into
           updating content, media, and more effortlessly.
         </p>
       </div>
-
-      <div className="h-screen">
-        <div className="pb-4 space-y-4">
-          <h1 className="text-4xl lg:text-6xl">Let's work together...</h1>
-          <p className="text-xl pb-4 font-light">
-            Click to learn more about the range of services I offer.
-          </p>
-        </div>
+      
+      <h1 className="text-4xl py-4 md:py-12">Let's work together...</h1>
+   
         <div className="grid gap-2 sm:grid-cols-1 text-gray-900">
           {services.map((service, index) => (
             <div
@@ -124,7 +120,7 @@ const Services = () => {
             </div>
           ))}
         </div>
-      </div>
+
 
       {selectedService && (
         <div
