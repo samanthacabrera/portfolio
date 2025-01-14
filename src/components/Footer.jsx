@@ -10,7 +10,7 @@ const Footer = () => {
         </div>
 
         <div className="fixed bottom-1 right-4">
-          <p>
+          <p className="hidden sm:inline">
             made with love by{' '}
             <a
               href="https://github.com/samanthacabrera"
@@ -18,7 +18,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Sam Cabrera <span className="hidden sm:inline">&#x2197;</span>
+              Sam Cabrera
             </a>
           </p>
         </div>
