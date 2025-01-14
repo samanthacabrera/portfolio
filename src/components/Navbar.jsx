@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react';
-import { useLocation, useHistory } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const location = useLocation();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const isSpecialPage = location.pathname !== '/';
 
   const handleNavigation = (hash) => {
     if (isSpecialPage) {
-      history.push('/');
+      navigate('/');
       setTimeout(() => {
         const element = document.getElementById(hash);
         if (element) {
