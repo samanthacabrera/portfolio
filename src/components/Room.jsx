@@ -22,7 +22,7 @@ const Room = () => {
     const navigate = useNavigate();
 
     return (
-        <Canvas style={{ height: "100vh", width: "100vw" }}>
+        <Canvas style={{ height: "80vh", width: "100vw" }}>
             <OrbitControls enableZoom enablePan enableRotate />
             <ambientLight intensity={0.5} />
             <directionalLight position={[5, 5, 5]} intensity={1} />
@@ -49,7 +49,7 @@ const Room = () => {
                 material={<meshStandardMaterial color="#FFFFE0" />}
             />
             <ClickableMesh
-                onClick={() => navigate("/projects")}
+                onClick={() => navigate("/work")}
                 position={[-0.3, -0.1, 0.05]}
                 geometry={<boxGeometry args={[0.8, 0.05, 0.5]} />}
                 material={<meshStandardMaterial color="#C0C0C0" />}
@@ -61,7 +61,7 @@ const Room = () => {
                 material={<meshStandardMaterial color="#FFDBBB" />}
             />
             <ClickableMesh
-                onClick={() => navigate("/blog")}
+                onClick={() => navigate("/articles")}
                 position={[1.3, 0, 0.25]}
                 geometry={<boxGeometry args={[0.4, 0.05, 0.6]} />}
                 material={<meshStandardMaterial color="#FFD700" />}

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ToText from "../../utils/ToText";
 import FadeInSection from "../../utils/FadeIn";
 
-function Blog() {
+function Articles() {
     const mediumURL = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@samantha.n.cabrera";
 
     const [blog, setBlog] = useState({
@@ -57,4 +57,4 @@ function Blog() {
     );
 }
 
-export default Blog;
+export default Articles;
