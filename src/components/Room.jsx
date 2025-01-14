@@ -1,6 +1,7 @@
 import React from "react";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
+import { TextureLoader } from "three";
 import { useNavigate } from "react-router-dom";
 
 const ClickableMesh = ({ onClick, geometries, position, rotation }) => {
@@ -21,6 +22,8 @@ const ClickableMesh = ({ onClick, geometries, position, rotation }) => {
 
 const Room = () => {
     const navigate = useNavigate();
+
+    const frameTexture = useLoader(TextureLoader, "/cat.png");
 
     return (
         <Canvas style={{ height: "80vh", width: "80vw" }}>
@@ -43,14 +46,21 @@ const Room = () => {
             </mesh>
 
             {/* Frame */}
-            <ClickableMesh
-                onClick={() => navigate("/about")}
+            <mesh
                 position={[-1.5, 0, -0.4]}
-                geometries={[
-                    <boxGeometry key="frame" args={[0.4, 1.3, 0.05]} />,
-                    <meshStandardMaterial key="frameMaterial" color="#FFFFE0" />,
-                ]}
-            />
+                onClick={() => navigate("/about")}
+            >
+                {/* Border */}
+                <boxGeometry args={[0.5, 1.3, 0.05]} />
+                <meshStandardMaterial color="#FFFFE0" />
+
+                {/* Image */}
+                <mesh position={[0, 0.33, 0.03]}>
+                    <boxGeometry args={[0.45, 0.6, 0.01]} />
+                    <meshStandardMaterial map={frameTexture} />
+                </mesh>
+            </mesh>
+
             {/* Laptop */}
             <ClickableMesh
                 onClick={() => navigate("/work")}
@@ -65,12 +75,9 @@ const Room = () => {
                 onClick={() => navigate("/services")}
                 position={[0.6, 0.15, -0.1]}
                 geometries={[
-                    // Mug body
                     <cylinderGeometry key="mug" args={[0.15, 0.15, 0.3, 32]} />,
                     <meshStandardMaterial key="mugMaterial" color="#FFDBBB" />,
-                    // Mug handle
-                    <mesh key="handle" position={[0.2, 0, 0]} 
-                    >
+                    <mesh key="handle" position={[0.2, 0, 0]}>
                         <torusGeometry args={[0.1, 0.02, 16, 100]} />
                         <meshStandardMaterial color="#FFDBBB" />
                     </mesh>,
