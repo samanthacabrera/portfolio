@@ -43,11 +43,27 @@ const Room = () => {
             <mesh position={[-1.5, -0.5, 0]}>
                 <boxGeometry args={[1, 1, 1.3]} />
                 <meshStandardMaterial color="#8B4513" />
+                <mesh position={[0, 0.25, 0.65]} rotation={[ Math.PI/2, 0, 0 ]}>
+                    <torusGeometry args={[0.09, 0.02, 32, 100]} />
+                    <meshStandardMaterial color="#333" />
+                </mesh>
+                <mesh position={[0, -0.25, 0.65]} rotation={[ Math.PI/2, 0, 0 ]}>
+                    <torusGeometry args={[0.09, 0.02, 32, 100]} />
+                    <meshStandardMaterial color="#333" />
+                </mesh>
             </mesh>
             {/* Desk Leg */}
             <mesh position={[1.5, -0.5, 0]}>
                 <boxGeometry args={[1, 1, 1.3]} />
                 <meshStandardMaterial color="#8B4513" />
+                <mesh position={[0, 0.25, 0.65]} rotation={[ Math.PI/2, 0, 0 ]}>
+                    <torusGeometry args={[0.09, 0.02, 32, 100]} />
+                    <meshStandardMaterial color="#333" />
+                </mesh>
+                <mesh position={[0, -0.25, 0.65]} rotation={[ Math.PI/2, 0, 0 ]}>
+                    <torusGeometry args={[0.09, 0.02, 32, 100]} />
+                    <meshStandardMaterial color="#333" />
+                </mesh>
             </mesh>
 
             {/* Frame */}
@@ -117,8 +133,8 @@ const Room = () => {
                 geometries={[
                     <cylinderGeometry key="mug" args={[0.15, 0.15, 0.3, 32]} />,
                     <meshStandardMaterial key="mugMaterial" color="#FFDBBB" />,
-                    <mesh key="handle" position={[0.2, 0, 0]}>
-                        <torusGeometry args={[0.1, 0.02, 16, 100]} />
+                    <mesh key="handle" position={[0.14, 0, 0]}>
+                        <torusGeometry args={[0.075, 0.02, 16, 100]} />
                         <meshStandardMaterial color="#FFDBBB" />
                     </mesh>,
                     <mesh key="coffee" position={[0, 0.16, 0]} rotation={[-Math.PI / 2, 0, 0]}>
