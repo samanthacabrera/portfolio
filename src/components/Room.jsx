@@ -26,20 +26,25 @@ const Room = () => {
     const frameTexture = useLoader(TextureLoader, "/cat.png");
 
     return (
-        <Canvas style={{ height: "80vh", width: "100vw" }}>
-            <OrbitControls enableZoom enablePan enableRotate />
+        <Canvas
+            style={{ height: "80vh", width: "100vw" }}
+            camera={{ position: [0, 1, 4], fov: 50, rotation: [0, Math.PI / 6, 0] }}
+        >
+            <OrbitControls enableZoom={false} enablePan enableRotate />
             <ambientLight intensity={0.5} />
             <directionalLight position={[5, 5, 5]} intensity={1} />
 
-            {/* Table */}
+            {/* Desk */}
             <mesh position={[0, 0, 0]}>
                 <boxGeometry args={[4, 0.05, 1.5]} />
                 <meshStandardMaterial color="#8B4513" />
             </mesh>
+            {/* Desk Leg */}
             <mesh position={[-1.5, -0.5, 0]}>
                 <boxGeometry args={[1, 1, 1.3]} />
                 <meshStandardMaterial color="#8B4513" />
             </mesh>
+            {/* Desk Leg */}
             <mesh position={[1.5, -0.5, 0]}>
                 <boxGeometry args={[1, 1, 1.3]} />
                 <meshStandardMaterial color="#8B4513" />
