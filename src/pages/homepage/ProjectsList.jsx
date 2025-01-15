@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import projects from '../../data/projectsData';
 
-const Projects = () => {
+const ProjectsList = () => {
     return (
      
-            <div className="flex flex-col justify-center md:items-center h-[90vh] px-4 md:px-0">
+            <div className="flex flex-col justify-center md:items-center px-4 md:px-0">
                 <h2 className="text-4xl pb-4 md:pb-12">Check out my work...</h2>
                 <div className="flex flex-col space-y-1 max-w-md md:max-w-4xl">
                     {projects.map((project) => {
@@ -32,4 +32,4 @@ const Projects = () => {
     );
 };
 
-export default Projects;
+export default ProjectsList;

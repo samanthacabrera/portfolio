@@ -32,10 +32,10 @@ const Navbar = () => {
     <>
       <nav>
         {isSpecialPage && (
-          <div className="absolute top-2 left-2">
+          <div className="fixed bottom-2 right-2">
             <button 
               onClick={() => handleNavigation('/')} 
-              className="text-xs"
+              className="hover:italic"
             >
             take me home!
             </button>

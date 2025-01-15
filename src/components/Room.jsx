@@ -1,8 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import { Canvas, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { TextureLoader } from "three";
-import { useNavigate } from "react-router-dom";
+import Modal from "./Modal";
+import About from "../pages/homepage/About";
+import ProjectsList from "../pages/homepage/ProjectsList";
+import Services from "../pages/homepage/Services";
+import Articles from "../pages/homepage/Articles";
 
 const ClickableMesh = ({ onClick, geometries, position, rotation }) => {
     return (
@@ -21,14 +25,26 @@ const ClickableMesh = ({ onClick, geometries, position, rotation }) => {
 };
 
 const Room = () => {
-    const navigate = useNavigate();
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [modalContent, setModalContent] = useState(null);
 
     const frameTexture = useLoader(TextureLoader, "/cat.png");
 
+    const handleModalOpen = (content) => {
+        setModalContent(content);
+        setIsModalOpen(true);
+    };
+
+    const handleModalClose = () => {
+        setIsModalOpen(false);
+        setModalContent(null);
+    };
+
     return (
+        <>
         <Canvas
             style={{ height: "80vh", width: "100vw" }}
-            camera={{ position: [0, 1, 4], fov: 50, rotation: [0, Math.PI / 6, 0] }}
+            camera={{ position: [0, 1, 4],  rotation: [0, Math.PI / 6, 0] }}
         >
             <OrbitControls enableZoom={false} enablePan enableRotate />
             <ambientLight intensity={0.5} />
@@ -69,7 +85,7 @@ const Room = () => {
             {/* Frame */}
             <mesh
                 position={[-1.5, 0, -0.4]}
-                onClick={() => navigate("/about")}
+                onClick={() => handleModalOpen(<About />)}
             >
                 {/* Border */}
                 <boxGeometry args={[0.5, 1.3, 0.05]} />
@@ -90,7 +106,7 @@ const Room = () => {
 
             {/* Laptop */}
             <ClickableMesh
-                onClick={() => navigate("/work")}
+                onClick={() => handleModalOpen(<ProjectsList />)}  
                 position={[-0.3, 0.05, 0]}
                 geometries={[
                     // Base
@@ -128,7 +144,7 @@ const Room = () => {
             />
             {/* Mug */}
             <ClickableMesh
-                onClick={() => navigate("/services")}
+                onClick={() => handleModalOpen(<Services/>)}  
                 position={[0.6, 0.15, -0.1]}
                 geometries={[
                     <cylinderGeometry key="mug" args={[0.15, 0.15, 0.3, 32]} />,
@@ -145,7 +161,7 @@ const Room = () => {
             />
             {/* Notebook */}
             <ClickableMesh
-                onClick={() => navigate("/articles")}
+                onClick={() => handleModalOpen(<Articles />)}  
                 position={[1.3, 0.05, 0]}
                 geometries={[
                     <boxGeometry key="notebook" args={[0.4, 0.05, 0.6]} />,
@@ -153,6 +169,8 @@ const Room = () => {
                 ]}
             />
         </Canvas>
+        <Modal isOpen={isModalOpen} onClose={handleModalClose} content={modalContent} />
+    </>
     );
 };
 
