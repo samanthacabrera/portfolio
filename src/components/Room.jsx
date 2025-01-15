@@ -26,7 +26,7 @@ const Room = () => {
     const frameTexture = useLoader(TextureLoader, "/cat.png");
 
     return (
-        <Canvas style={{ height: "80vh", width: "80vw" }}>
+        <Canvas style={{ height: "80vh", width: "100vw" }}>
             <OrbitControls enableZoom enablePan enableRotate />
             <ambientLight intensity={0.5} />
             <directionalLight position={[5, 5, 5]} intensity={1} />
@@ -68,6 +68,10 @@ const Room = () => {
                 geometries={[
                     <boxGeometry key="laptop" args={[0.8, 0.05, 0.5]} />,
                     <meshStandardMaterial key="laptopMaterial" color="#C0C0C0" />,
+                    <mesh key="screen" position={[0, 0.2, -0.35]} rotation={[Math.PI / 3, 0, 0]}>
+                        <boxGeometry args={[0.8, 0.02, 0.5]} />
+                        <meshStandardMaterial color="#C0C0C0" />
+                    </mesh>,
                 ]}
             />
             {/* Mug */}
@@ -80,6 +84,10 @@ const Room = () => {
                     <mesh key="handle" position={[0.2, 0, 0]}>
                         <torusGeometry args={[0.1, 0.02, 16, 100]} />
                         <meshStandardMaterial color="#FFDBBB" />
+                    </mesh>,
+                    <mesh key="coffee" position={[0, 0.16, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+                        <circleGeometry args={[0.13, 32]} rotation={[0, Math.PI, 0]}/>
+                        <meshStandardMaterial color="#6F4E37" />
                     </mesh>,
                 ]}
             />
