@@ -86,34 +86,34 @@ const Services = () => {
   };
 
   return (
-    <div className="group flex flex-col justify-center items-center h-[90vh]">
+    <div className="group flex flex-col items-center">
 
  
-      <h2 className="text-4xl pb-4 md:pb-12">Why Choose Me?</h2>
-      <div className="space-y-4 md:space-y-12 max-w-sm md:max-w-4xl">
-          <p className="">
+      <h2 className="text-2xl md:text-4xl pb-4">Why Choose Me?</h2>
+      <div className="space-y-4 mx-4 mb-12">
+          <p>
           As a solo freelancer, I offer personalized service and attention to
           detail that you won't find at a larger agency. I'm dedicated to
           delivering high-quality work that exceeds your expectations and helps
           you achieve your goals.
         </p>
-        <p className="">
+        <p>
           I work with you on your favorite CMS platform to help ease you into
           updating content, media, and more effortlessly.
         </p>
       </div>
       
-      <h1 className="text-4xl py-4 md:py-12">Let's work together...</h1>
+      <h1 className="text-2xl md:text-4xl pb-4">My Services</h1>
    
-        <div className="grid gap-2 sm:grid-cols-1 text-gray-900">
+        <div className="grid gap-2 sm:grid-cols-1 text-gray-900 mx-4">
           {services.map((service, index) => (
             <div
               key={index}
               className="md:bg-white md:border md:shadow-lg md:rounded-lg py-2 md:p-4 hover:scale-105 transition-transform duration-300 cursor-pointer"
               onClick={() => setSelectedService(service)}
             >
-              <h3 className="text-base lg:text-xl">{service.title}</h3>
-              <p className="hidden md:block font-light py-1">
+              <h3 className="">{service.title}</h3>
+              <p className="hidden md:block text-sm font-light py-1">
                 {service.description}
               </p>
               {/* <p className="hidden md:block">{service.price}</p> */}
@@ -128,7 +128,7 @@ const Services = () => {
           onClick={closeModal}
         >
           <div
-            className="bg-white p-8 rounded-lg max-w-3xl w-full mx-2 max-h-screen overflow-y-auto relative"
+            className="bg-white p-8 rounded-lg max-w-md md:max-w-lg h-[50vh] overflow-y-auto relative"
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -140,7 +140,7 @@ const Services = () => {
 
             <h2 className="text-2xl">{selectedService.title}</h2>
 
-            <div className="text-sm py-2 space-y-4 leading-tight">
+            <div className="text-sm py-2 space-y-2 leading-tight">
               <p>{selectedService.description}</p>
 
               <h3>Timeline</h3>

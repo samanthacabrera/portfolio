@@ -3,11 +3,11 @@ import React from "react";
 function About() {  
     return (
       
-        <div className="group flex flex-col justify-center items-center">
+        <div className="group flex flex-col items-center">
         
-          <h2 className="text-4xl pb-4 md:pb-12">A little about me...</h2>
+          <h2 className="text-2xl md:text-4xl pb-4">A little about me...</h2>
         
-          <div className="space-y-4 md:space-y-12 max-w-sm md:max-w-4xl">
+          <div className="space-y-4 mx-4">
             <p>
               I'm a full-stack software engineer based in Denver, specializing in 3D web development.
               I'm <span className="group-hover:text-lime-600 transition duration-500 delay-200">passionate</span> about creating digital solutions that combine creativity and functionality.

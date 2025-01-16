@@ -9,7 +9,7 @@ const Footer = () => {
           <Contact/>
         </div>
 
-        <div className="fixed bottom-1 right-4">
+        {/* <div className="fixed bottom-1 right-4">
           <p className="hidden sm:inline">
             made with love by{' '}
             <a
@@ -21,7 +21,7 @@ const Footer = () => {
               Sam Cabrera
             </a>
           </p>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
