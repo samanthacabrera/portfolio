@@ -35,11 +35,11 @@ function Articles() {
         return blog.items.map((post, index) => (
             <div key={index} className='text-left mx-4 hover:text-lime-500 hover:scale-105 transition duration-500'>
                 <a href={post.link} rel='noreferrer' target='_blank' className='block'>
-                    <h6 className="mb-2">
+                    <h6 className="mb-1">
                         {post.title}
                         <span className="italic"> ({calculateReadTime(ToText(post.description))} minute read)</span>
                     </h6>
-                    <p className='hidden md:block font-light'>{`${ToText(post.description.substring(0, 250))}...`}</p>
+                    <p className='hidden'>{`${ToText(post.description.substring(0, 86))}...`}</p>
                 </a>
             </div>
         ));
@@ -49,7 +49,7 @@ function Articles() {
     return (
 
             <div className="flex flex-col items-center space-y-4">
-                <h2 className="text-2xl md:text-4xl pb-4">My two cents...</h2>
+                <h2 className="text-2xl md:text-4xl py-4">My two cents...</h2>
                 {displayBlogs()}
             </div>
     );

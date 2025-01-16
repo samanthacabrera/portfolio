@@ -9,20 +9,22 @@ const Services = () => {
       description:
         "A clean, responsive website, ideal for personal portfolios or small businesses.",
       details: {
-        timeline: "2-3 weeks",
+        timeline: "2-4 weeks",
         deliverables: [
           "Responsive layout for mobile and desktop",
           "Basic on-page SEO setup",
+          "Integration with your preferred CMS (e.g., WordPress, Webflow)"
         ],
         features: [
           "Cross-browser compatibility",
-          "Basic training on how to update content",
+          "Basic training on how to manage and update your website",
         ],
         faqs: [
-          {
-            question: "Can I request more pages?",
-            answer: "Yes, additional pages can be added for $150 per page.",
-          },
+           {
+              question: "Do you offer hosting or domain setup?",
+              answer:
+                "I can guide you through setting up hosting and a domain, but these services are billed separately by hosting providers.",
+            },
         ],
       },
       price: "$1,000",
@@ -79,6 +81,55 @@ const Services = () => {
       },
       price: "$3,000+",
     },
+    {
+    title: "Custom 3D Object",
+    description:
+      "High-quality 3D models tailored to your specific needs, whether for product visualization, gaming, or design.",
+    details: {
+      timeline: "1-3 weeks",
+      deliverables: [
+        "Custom-designed 3D object",
+        "Textures and materials (if applicable)",
+      ],
+      features: [
+        "Optimized for your use case (e.g., rendering, games, AR/VR)",
+        "Editable source files included",
+      ],
+      faqs: [
+        {
+          question: "Can I request multiple revisions?",
+          answer:
+            "Yes, two revisions are included for free, with additional revisions available for $50 each.",
+        },
+      ],
+    },
+    price: "$800+",
+  },
+  {
+    title: "Series of 3D Icons",
+    description:
+      "A cohesive set of custom 3D icons for websites, apps, or branding purposes.",
+    details: {
+      timeline: "2-4 weeks",
+      deliverables: [
+        "Set of 3D icons (quantity based on request)",
+        "Consistent style across all icons",
+      ],
+      features: [
+        "Custom-designed icons tailored to your brand",
+        "Optimized for web and app use",
+        "Editable source files included",
+      ],
+      faqs: [
+        {
+          question: "How many icons can I request?",
+          answer:
+            "The base package includes 5 icons. Extra icons can be included for an additional fee, determined by their complexity.",
+        },
+      ],
+    },
+    price: "$1,200+",
+  },
   ];
 
   const closeModal = () => {
@@ -89,34 +140,30 @@ const Services = () => {
     <div className="group flex flex-col items-center">
 
  
-      <h2 className="text-2xl md:text-4xl pb-4">Why Choose Me?</h2>
-      <div className="space-y-4 mx-4 mb-12">
-          <p>
-          As a solo freelancer, I offer personalized service and attention to
-          detail that you won't find at a larger agency. I'm dedicated to
-          delivering high-quality work that exceeds your expectations and helps
-          you achieve your goals.
+      <h2 className="text-2xl md:text-4xl py-4">Why Choose Me?</h2>
+      <div className="space-y-4 mx-4 mb-8">
+        <p>
+          As a <span className="text-lime-600 md:text-inherit group-hover:text-lime-600 transition duration-500 delay-200">solo</span> freelancer, I offer <span className="text-yellow-500 md:text-inherit group-hover:text-yellow-500 transition duration-500 delay-300">personalized</span> service and attention to detail that you won't find at a larger agency. I'm <span className="text-cyan-600 md:text-inherit group-hover:text-cyan-600 transition duration-500 delay-400">dedicated</span> to delivering high-quality work that helps you <span className="text-orange-600 md:text-inherit group-hover:text-orange-600 transition duration-500 delay-500">achieve</span> your goals.
         </p>
         <p>
-          I work with you on your favorite CMS platform to help ease you into
-          updating content, media, and more effortlessly.
+          I also work with you on your <span className="text-pink-600 md:text-inherit group-hover:text-pink-600 transition duration-500 delay-500">favorite</span> CMS platform to make updating content and media <span className="text-lime-600 md:text-inherit group-hover:text-lime-600 transition duration-500 delay-500">effortlessly</span>.
         </p>
       </div>
       
-      <h1 className="text-2xl md:text-4xl pb-4">My Services</h1>
+      <h1 className="text-2xl md:text-4xl py-4">My Services</h1>
    
         <div className="grid gap-2 sm:grid-cols-1 text-gray-900 mx-4">
           {services.map((service, index) => (
             <div
               key={index}
-              className="md:bg-white md:border md:shadow-lg md:rounded-lg py-2 md:p-4 hover:scale-105 transition-transform duration-300 cursor-pointer"
+              className="md:bg-white md:border md:shadow-sm md:rounded py-2 hover:scale-105 md:p-4 transition-transform duration-300 cursor-pointer"
               onClick={() => setSelectedService(service)}
             >
               <h3 className="">{service.title}</h3>
               <p className="hidden md:block text-sm font-light py-1">
                 {service.description}
               </p>
-              {/* <p className="hidden md:block">{service.price}</p> */}
+              
             </div>
           ))}
         </div>
