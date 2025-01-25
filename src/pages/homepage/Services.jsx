@@ -156,7 +156,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="md:bg-white md:border md:shadow-sm md:rounded py-2 hover:scale-105 md:p-4 transition-transform duration-300 cursor-pointer"
+              className="bg-white border shadow-sm rounded py-2 hover:scale-105 p-4 transition-transform duration-300 cursor-pointer"
               onClick={() => setSelectedService(service)}
             >
               <h3 className="">{service.title}</h3>
