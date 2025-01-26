@@ -14,9 +14,9 @@ function Home() {
     };
 
     return (
-        <div className="flex flex-col w-screen h-screen justify-center items-center overflow-hidden">
+        <div className="flex flex-col w-screen min-h-screen justify-center items-center overflow-hidden">
             <div 
-                className="absolute top-2 left-2 flex items-center cursor-pointer"
+                className="fixed top-2 left-2 flex items-center cursor-pointer"
                 onClick={toggleView}
             >
                 <div 
@@ -35,7 +35,7 @@ function Home() {
                     <Room />
                 </>
                  :
-                <div className="flex flex-col py-40 space-y-20 overflow-y-scroll max-w-2xl mx-8">
+                <div className="flex flex-col py-40 space-y-20 max-w-2xl mx-8">
                     <About />
                     <ProjectsList />
                     <Services />
