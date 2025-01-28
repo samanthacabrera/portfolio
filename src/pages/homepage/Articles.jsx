@@ -48,8 +48,8 @@ function Articles() {
 
     return (
 
-            <div className="flex flex-col items-center space-y-4">
-                <h2 className="text-2xl md:text-4xl py-4">My two cents...</h2>
+            <div className="flex flex-col space-y-4">
+                <h2 className="text-center text-2xl md:text-4xl py-4">My two cents...</h2>
                 {displayBlogs()}
             </div>
     );
