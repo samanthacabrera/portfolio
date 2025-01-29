@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import projects from '../../data/projectsData';
 
 const ProjectPage = () => {
@@ -122,6 +122,14 @@ const ProjectPage = () => {
                         </div>
                     </section>
                 )}
+
+                <div className="my-6 hover:italic hover:underline">
+                    <Link
+                        to="/"
+                    >
+                        take me home! 
+                    </Link>
+                </div>
             </main>
 
             {selectedImage && (
