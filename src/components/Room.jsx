@@ -1,12 +1,14 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import * as THREE from "three";
 import { Canvas, useLoader } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, useGLTF} from "@react-three/drei";
 import { TextureLoader } from "three";
 import Modal from "./Modal";
 import About from "../pages/homepage/About";
 import ProjectsList from "../pages/homepage/ProjectsList";
 import Services from "../pages/homepage/Services";
 import Articles from "../pages/homepage/Articles";
+
 
 const ClickableMesh = ({ onClick, geometries, position, rotation }) => {
     return (
@@ -40,13 +42,42 @@ const Room = () => {
         setModalContent(null);
     };
 
+    const Lamp = (props) => {
+        const { scene } = useGLTF("/models/lamp.glb");
+
+        scene.traverse((child) => {
+            if (child.isMesh && child.name.toLowerCase().includes("shade")) {
+                child.material = new THREE.MeshStandardMaterial({
+                    color: "#FFC847", 
+                    emissive: "#FFC847", 
+                    emissiveIntensity: 3, 
+                    transparent: true,
+                    opacity: 0.97, 
+                });
+            }
+        });
+
+        return (
+            <group {...props}>
+                <primitive object={scene} />
+                <pointLight
+                    position={[0, 0.5, 0]} 
+                    intensity={3} 
+                    distance={3} 
+                    decay={2} 
+                    color={"#FFC847"} 
+                />
+            </group>
+        );
+    };
+
     return (
         <>
         <Canvas
             style={{ height: "80vh", width: "100vw" }}
             camera={{ position: [0, 1, 4],  rotation: [0, Math.PI / 6, 0] }}
         >
-            <OrbitControls enableZoom={false} enablePan enableRotate />
+            <OrbitControls enableZoom enablePan enableRotate />
             <ambientLight intensity={0.5} />
             <directionalLight position={[5, 5, 5]} intensity={1} />
 
@@ -162,12 +193,15 @@ const Room = () => {
             {/* Notebook */}
             <ClickableMesh
                 onClick={() => handleModalOpen(<Articles />)}  
-                position={[1.3, 0.05, 0]}
+                position={[1.2, 0.05, 0]}
                 geometries={[
                     <boxGeometry key="notebook" args={[0.4, 0.05, 0.6]} />,
                     <meshStandardMaterial key="notebookMaterial" color="#99ccff" />,
                 ]}
             />
+            
+            {/* Lamp  */}
+            <Lamp position={[1.7, 0.25, -0.4]} scale={[0.2, 0.2, 0.2]} />
         </Canvas>
         <Modal isOpen={isModalOpen} onClose={handleModalClose} content={modalContent} />
     </>
