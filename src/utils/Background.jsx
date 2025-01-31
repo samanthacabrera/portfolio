@@ -27,7 +27,7 @@ const Background = () => {
 
     return (
         <>
-            <div
+            {/* <div
                 className="fixed inset-0 transition-all duration-300 ease-in-out"
                 style={{ zIndex: -1 }}
             ></div>
@@ -41,7 +41,7 @@ const Background = () => {
                         isDayMode ? 'bg-black' : 'bg-white'
                     }`}
                 >
-                    {/* Sun Emoji */}
+                  
                     <span
                         className={`absolute left-2 text-lg transition-all duration-300 ${
                             isDayMode ? 'opacity-0' : 'opacity-100'
@@ -50,14 +50,14 @@ const Background = () => {
                         🌞
                     </span>
 
-                    {/* Toggle Circle */}
+                  
                     <span
                         className={`w-6 h-6 rounded-full shadow-lg transform transition-transform duration-300 ${
                             isDayMode ? 'translate-x-0 bg-gray-50' : 'translate-x-8 bg-gray-300'
                         }`}
                     ></span>
 
-                    {/* Moon Emoji */}
+                 
                     <span
                         className={`absolute right-2 text-lg transition-all duration-300 ${
                             isDayMode ? 'opacity-100' : 'opacity-0'
@@ -66,7 +66,7 @@ const Background = () => {
                         🌜
                     </span>
                 </button>
-            </div>
+            </div> */}
         </>
     );
 };
