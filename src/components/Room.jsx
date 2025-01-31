@@ -77,7 +77,7 @@ const Room = () => {
             style={{ height: "80vh", width: "100vw" , userSelect: "none" }}
             camera={{ position: [0, 1, 4],  rotation: [0, Math.PI / 6, 0] }}
         >
-            <OrbitControls enableZoom enablePan enableRotate />
+            <OrbitControls enableZoom={false} enablePan enableRotate />
             <ambientLight intensity={0.5} />
             <directionalLight position={[5, 5, 5]} intensity={1} />
 
