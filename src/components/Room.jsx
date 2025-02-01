@@ -41,34 +41,40 @@ const Room = () => {
         setModalContent(null);
     };
 
-    const Lamp = (props) => {
-        const { scene } = useGLTF("/models/lamp.glb");
+   const Lamp = (props) => {
+    const { scene } = useGLTF("/models/lamp.glb");
+    const [isOn, setIsOn] = useState(true);
 
-        scene.traverse((child) => {
-            if (child.isMesh && child.name.toLowerCase().includes("shade")) {
-                child.material = new THREE.MeshStandardMaterial({
-                    color: "#FFC847", 
-                    emissive: "#FFC847", 
-                    emissiveIntensity: 3, 
-                    transparent: true,
-                    opacity: 0.97, 
-                });
-            }
-        });
+    scene.traverse((child) => {
+        if (child.isMesh && child.name.toLowerCase().includes("shade")) {
+            child.material = new THREE.MeshStandardMaterial({
+                color: "#FFC847", 
+                emissive: isOn ? "#FFC847" : "#000000", 
+                emissiveIntensity: isOn ? 3 : 0, 
+                transparent: true,
+                opacity: 0.97, 
+            });
+        }
+    });
 
-        return (
-            <group {...props}>
-                <primitive object={scene} />
-                <pointLight
-                    position={[0, 0.5, 0]} 
-                    intensity={3} 
-                    distance={3} 
-                    decay={2} 
-                    color={"#FFC847"} 
-                />
-            </group>
-        );
+    const toggleLamp = () => {
+        const nightMode = document.body.classList.toggle("night-mode");
+        setIsOn(nightMode);
     };
+
+    return (
+        <group {...props} onClick={toggleLamp}>
+            <primitive object={scene} />
+            <pointLight
+                position={[0, 0.5, 0]} 
+                intensity={isOn ? 3 : 0} 
+                distance={3} 
+                decay={2} 
+                color={"#FFC847"} 
+            />
+        </group>
+    );
+};
 
     return (
         <>
