@@ -10,16 +10,13 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-body.day-mode {
-  background-color: white;
-  color: black;
-}
-
-body.night-mode {
   background-color: black;
   color: white;
+}
+
+body.light-mode {
+  background-color: white;
+  color: black;
 }
 
 .hover-effect {

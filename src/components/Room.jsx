@@ -8,7 +8,6 @@ import About from "../pages/homepage/About";
 import ProjectsList from "../pages/homepage/ProjectsList";
 import Services from "../pages/homepage/Services";
 import Articles from "../pages/homepage/Articles";
-import Background from "../utils/Background"
 
 
 const ClickableMesh = ({ onClick, geometries, position, rotation }) => {
@@ -57,9 +56,9 @@ const Room = () => {
         }
     });
 
-    const toggleLamp = () => {
-        const nightMode = document.body.classList.toggle("night-mode");
-        setIsOn(nightMode);
+       const toggleLamp = () => {
+         document.body.classList.toggle("light-mode");
+        setIsOn(prev => !prev);
     };
 
     return (
@@ -78,7 +77,6 @@ const Room = () => {
 
     return (
         <>
-        <Background />
         <Canvas
             style={{ height: "80vh", width: "100vw" , userSelect: "none" }}
             camera={{ position: [0, 1, 4],  rotation: [0, Math.PI / 6, 0] }}
@@ -208,7 +206,7 @@ const Room = () => {
             
             {/* Lamp  */}
             <Lamp 
-                onClick={() => document.body.classList.toggle('night-mode')} 
+                onClick={() => document.body.classList.toggle('light-mode')} 
                 position={[1.7, 0.25, -0.4]} 
                 scale={[0.2, 0.2, 0.2]} />
         </Canvas>
