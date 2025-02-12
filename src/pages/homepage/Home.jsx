@@ -15,18 +15,18 @@ function Home() {
 
     return (
         <div className="flex flex-col w-screen min-h-screen justify-center items-center overflow-hidden">
-            <div 
-                className="fixed top-2 left-2 flex items-center cursor-pointer"
+             <div 
+                className="fixed top-4 left-4 flex items-center gap-4 cursor-pointer select-none"
                 onClick={toggleView}
             >
-                <div 
-                    className="w-12 h-6 flex items-center rounded-full p-1 transition-colors bg-gray-300"
-                >
+                <div className="relative w-16 h-8 flex items-center justify-between px-1 bg-gray-900 border border-gray-700 rounded-full shadow-md">
                     <div 
-                        className={`w-4 h-4 bg-white rounded-full shadow-md transform transition-transform ${is3DView ? 'translate-x-6' : 'translate-x-0'}`}
+                        className={`w-6 h-6 bg-white rounded-full shadow-lg transition-transform duration-300 ${is3DView ? "translate-x-8" : "-translate-x-0.5"}`}
                     ></div>
                 </div>
-                <span className="ml-2 text-sm">{is3DView ? "3D View" : "Simple View"}</span>
+                <span className="text-lg font-semibold uppercase tracking-widest">
+                    {is3DView ? "3D View" : "2D View"}
+                </span>
             </div>
             
             {is3DView ?

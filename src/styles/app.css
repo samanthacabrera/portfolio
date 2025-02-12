@@ -12,11 +12,31 @@ html {
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
   color: white;
+  transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
 body.light-mode {
-  background-color: white;
+  background-color: rgb(252, 242, 227);
   color: black;
+}
+
+/* body.light-mode {
+  background: radial-gradient(
+      circle at 50% 5%,
+      rgba(233, 174, 95, 0.5) 10%,
+      rgba(186, 126, 68, 1) 50%
+    ),
+    linear-gradient(
+      to top,
+      rgba(186, 126, 68, 1) 80%,
+      rgba(233, 174, 95, 1) 100%
+    );
+  color: black;
+} */
+
+::selection {
+  background-color: #ff58d2;
+  color: #000000;
 }
 
 .hover-effect {
@@ -25,22 +45,4 @@ body.light-mode {
 
 .hover-effect:hover {
   color: #f97316;
-}
-
-.scramble:hover {
-  animation: scramble 0.3s steps(5) forwards;
-}
-
-@keyframes scramble {
-  0% {
-    content: attr(data-text);
-  }
-  100% {
-    content: "Scrambled!";
-  }
-}
-
-::selection {
-  background-color: #ff58d2;
-  color: #000000;
 }
