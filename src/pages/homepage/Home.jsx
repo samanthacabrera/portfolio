@@ -35,7 +35,7 @@ function Home() {
                     <Room />
                 </>
                  :
-                <div className="flex flex-col py-40 space-y-20 max-w-2xl mx-8">
+                <div className="flex flex-col py-40 space-y-40 max-w-2xl mx-8">
                     <About />
                     <ProjectsList />
                     <Services />

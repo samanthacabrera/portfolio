@@ -20,20 +20,6 @@ body.light-mode {
   color: black;
 }
 
-/* body.light-mode {
-  background: radial-gradient(
-      circle at 50% 5%,
-      rgba(233, 174, 95, 0.5) 10%,
-      rgba(186, 126, 68, 1) 50%
-    ),
-    linear-gradient(
-      to top,
-      rgba(186, 126, 68, 1) 80%,
-      rgba(233, 174, 95, 1) 100%
-    );
-  color: black;
-} */
-
 ::selection {
   background-color: #ff58d2;
   color: #000000;
