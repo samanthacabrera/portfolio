@@ -9,12 +9,12 @@ const Footer = () => {
           <Contact/>
         </div>
 
-        <div className="fixed bottom-1 right-4">
+        <div className="group fixed bottom-1 right-4">
           <p className="hidden sm:inline">
             made with love by{' '}
             <a
               href="https://github.com/samanthacabrera"
-              className="italic hover:text-cyan-600 transition duration-200"
+              className="italicg group-hover:text-cyan-600 transition duration-200"
               target="_blank"
               rel="noopener noreferrer"
             >
