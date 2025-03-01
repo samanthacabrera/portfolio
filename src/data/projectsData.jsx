@@ -121,6 +121,25 @@ const projects = [
             '/runthecity/map.png',
             '/runthecity/featured.png'
         ]
+    },
+    {
+        id: 6,
+        title: "Yarnsara",
+        github: "https://github.com/samanthacabrera/ecommerce-store",
+        link: "",
+        wip: true,
+        deployed: false,
+        description: "A full-stack eCommerce platform selling 100% upcycled and hand-crocheted yoga accessories.",
+        overview: {
+            techStack: ["React", "Express", "MongoDB", "Stripe"],
+            features: [
+                "Custom eCommerce storefront with seamless checkout.",
+                "Integration with Stripe for secure payments.",
+                "Product listings with detailed descriptions and images."
+            ]
+        },
+        insights: "One of the biggest challenges so far has been setting up secure payment processing with Stripe while ensuring a smooth user experience. Managing product data in MongoDB and handling state efficiently in React has been another major learning curve. This project is giving me hands-on experience in creating a fully functional online store while aligning with sustainability values.",
+        gallery: []
     }
 ];
 
