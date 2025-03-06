@@ -51,6 +51,16 @@ const YogaMat = () => {
                 <meshStandardMaterial color="#A8B89F"/>
             </mesh>
 
+            {/* Yoga Blocks */}
+            <mesh position={[-1.5, 0, 2]} rotation={[-Math.PI / 2, 0, 0]}>
+                <boxGeometry args={[0.6, 0.4, 0.3]} />
+                <meshStandardMaterial color="#C29F77" />
+            </mesh>
+            <mesh position={[1.5, 0, 2]} rotation={[-Math.PI / 2, 0, 0]}>
+                <boxGeometry args={[0.6, 0.4, 0.3]} />
+                <meshStandardMaterial color="#C29F77" />
+            </mesh>
+            
         </Canvas>
         <Modal isOpen={isModalOpen} onClose={handleModalClose} content={modalContent} />
         </>
