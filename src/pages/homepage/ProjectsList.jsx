@@ -4,9 +4,9 @@ import projects from '../../data/projectsData';
 
 const ProjectsList = () => {
     return (
-        <div className="flex flex-col">
-            <h2 className="text-2xl md:text-4xl py-4 self-center">Check out my work...</h2>
-            <div className="flex flex-col space-y-2 mx-4"> 
+        <div className="flex flex-col max-w-2xl mx-auto w-full">
+            <h2 className="text-2xl md:text-4xl py-4 text-center">Check out my work...</h2>
+            <div className="flex flex-col items-start space-y-2 p-4"> 
                 {projects.map((project) => {
                     const { id, title, description, wip } = project; 
                     return (
@@ -20,7 +20,7 @@ const ProjectsList = () => {
                                         </span>
                                     )}
                                 </h3>
-                                <div className="absolute top-2 right-0 p-2 bg-gray-100 text-black rounded opacity-0 group-hover:opacity-100 z-10 transition-opacity duration-300 max-w-[150px]">
+                                <div className="absolute top-6 translate-x-1/2 p-2 bg-gray-100 text-black rounded opacity-0 group-hover:opacity-100 z-10 transition-opacity duration-300 w-[200px]">
                                     {description}
                                 </div>
                             </div>

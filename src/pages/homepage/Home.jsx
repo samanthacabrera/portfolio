@@ -20,7 +20,7 @@ function Home() {
     };
 
     return (
-        <div className="flex flex-col w-screen h-screen justify-center items-center overflow-hidden">
+        <div className="">
             {/* View Toggle */}
             <div 
                 className="fixed top-4 left-4 flex items-center gap-2 cursor-pointer select-none"
@@ -37,7 +37,7 @@ function Home() {
             </div>
 
             {is3DView ? (
-                <>
+                <div className="flex flex-col justify-center items-center w-screen h-screen overflow-hidden">
                     {/* Scene Toggle */}
                     <div 
                         className="absolute bottom-4 flex items-center justify-center gap-4 cursor-pointer select-none z-10"
@@ -51,9 +51,9 @@ function Home() {
                     </div>
                     <Hero />
                     {isYogaMatScene ? <YogaMat /> : <Desk />}
-                </>
+                </div>
             ) : (
-                <div className="flex flex-col py-40 space-y-40 max-w-2xl mx-8">
+                <div className="flex flex-col justify-center items-center py-40 space-y-40 max-w-2xl mx-auto">
                     <About />
                     <ProjectsList />
                     <Services />

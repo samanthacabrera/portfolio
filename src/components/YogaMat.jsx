@@ -11,7 +11,7 @@ const YogaMat = () => {
 
     const blockOneContent = (
         <div className="p-4 space-y-4">
-            <h1 className="text-2xl text-center">Check out Learn Yoga Online</h1>
+            <h1 className="text-2xl text-center">Deepen Your Practice with Learn Yoga Online</h1>
             <p>
                 I’ve poured so much time, energy, and passion into developing this resource for all yoga practitioners. I’m so proud to share everything I’ve learned, and to offer this as a platform for those seeking to enhance their yoga journey. The content and resources you’ll find here are the result of hours of practice, reflection, and a true passion for helping others grow in their practice.
             </p>
