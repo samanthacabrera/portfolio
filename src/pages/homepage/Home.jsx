@@ -20,8 +20,8 @@ function Home() {
     };
 
     return (
-        <div className="flex flex-col w-screen min-h-screen justify-center items-center overflow-hidden">
-            {/* Toggle View */}
+        <div className="flex flex-col w-screen h-screen justify-center items-center overflow-hidden">
+            {/* View Toggle */}
             <div 
                 className="fixed top-4 left-4 flex items-center gap-2 cursor-pointer select-none"
                 onClick={toggleView}
@@ -40,19 +40,15 @@ function Home() {
                 <>
                     {/* Scene Toggle */}
                     <div 
-                        className="fixed top-4 right-4 flex items-center gap-2 cursor-pointer select-none"
+                        className="absolute bottom-40 flex items-center justify-center gap-4 cursor-pointer select-none z-10"
                         onClick={toggleScene}
                     >
-                        <div className="relative w-14 h-7 flex items-center bg-gray-900 border border-gray-700 rounded-full shadow-md">
-                            <div 
-                                className={`w-5 h-5 bg-white rounded-full shadow-lg transition-transform duration-300 ${isYogaMatScene ? "translate-x-7" : "translate-x-1"}`}
-                            ></div>
-                        </div>
-                        <span className="text-4xl">
-                            {isYogaMatScene ? "🧘‍♀️" : "👩‍💻"}
+                        <span 
+                            className="text-lg font-medium transition-all px-6 py-2 rounded-full border border-white"
+                        >
+                            {isYogaMatScene ? "explore my dev side 👩‍💻" : "explore my yogi side 🧘‍♀️"}
                         </span>
                     </div>
-
                     <Hero />
                     {isYogaMatScene ? <YogaMat /> : <Desk />}
                 </>
