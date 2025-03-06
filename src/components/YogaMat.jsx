@@ -52,15 +52,29 @@ const YogaMat = () => {
             </mesh>
 
             {/* Yoga Blocks */}
-            <mesh position={[-1.5, 0, 2]} rotation={[-Math.PI / 2, 0, 0]}>
+            <mesh position={[-1.5, 0, -2]} rotation={[-Math.PI / 2, 0, 0]}>
                 <boxGeometry args={[0.6, 0.4, 0.3]} />
-                <meshStandardMaterial color="#C29F77" />
+                <meshStandardMaterial color="#C19A6B" />
             </mesh>
-            <mesh position={[1.5, 0, 2]} rotation={[-Math.PI / 2, 0, 0]}>
+            <mesh position={[1.5, 0, -2]} rotation={[-Math.PI / 2, 0, 0]}>
                 <boxGeometry args={[0.6, 0.4, 0.3]} />
-                <meshStandardMaterial color="#C29F77" />
+                <meshStandardMaterial color="#C19A6B" />
             </mesh>
             
+            {/* Singing Bowl */}
+            <mesh
+                position={[0, 0.1, -3]}
+                rotation={[0, 0, 0]}
+            >
+                <cylinderGeometry args={[0.4, 0.2, 0.2, 32, 1]} />
+                <meshStandardMaterial color="#FFB800" />
+            </mesh>
+        
+            {/* Singing Bowl Stick */}
+            <mesh position={[0.5, 0.1, -3]} rotation={[0, 0, Math.PI / 6]}>
+                <cylinderGeometry args={[0.05, 0.04, 0.6, 16]} />
+                <meshStandardMaterial color="#7C482F" />
+            </mesh>
         </Canvas>
         <Modal isOpen={isModalOpen} onClose={handleModalClose} content={modalContent} />
         </>
