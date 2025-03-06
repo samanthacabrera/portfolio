@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import * as THREE from "three";
 import { Canvas, useLoader } from "@react-three/fiber";
 import { OrbitControls, useGLTF} from "@react-three/drei";
 import Modal from "./Modal";
+import Articles from "../pages/homepage/Articles";
 
 const YogaMat = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalContent, setModalContent] = useState(null);
-
+    const [showYogaOnly] = useState(true); 
 
     const blockOneContent = (
         <div className="p-4 space-y-4">
@@ -49,6 +49,11 @@ const YogaMat = () => {
         setModalContent(null);
     };
 
+    const handleSingingBowlClick = () => {
+        const content = <Articles showYogaOnly={showYogaOnly} />;
+        handleModalOpen(content);
+    };
+
     return (
         <>
         <Canvas
@@ -83,6 +88,10 @@ const YogaMat = () => {
             
             {/* Singing Bowl */}
             <mesh
+                onClick={() => {
+                    handleSingingBowlClick();
+                    handleModalOpen(<Articles showYogaOnly={showYogaOnly} />);
+                }}
                 position={[0, 0.1, -3]}
                 rotation={[0, 0, 0]}
             >

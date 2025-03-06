@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import ToText from "../../utils/ToText";
 
-function Articles() {
+function Articles({ showYogaOnly }) {
     const mediumURL = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@samantha.n.cabrera";
 
     const [blog, setBlog] = useState({
-        items: [],
+        yogaArticles: [],
+        devArticles: [],
         error: null
     });
 
@@ -13,9 +14,14 @@ function Articles() {
         fetch(mediumURL)
             .then(response => response.json())
             .then(data => {
-                const blogs = data.items;
+                // convert title to lower case and check if it includes "Beyond The Mat"
+                const yogaArticles = data.items.filter(post => post.title.toLowerCase().includes('beyond the mat'));
+                // filter non-yoga (dev) articles
+                const devArticles = data.items.filter(post => !post.title.toLowerCase().includes('beyond the mat'));
+
                 setBlog({
-                    items: blogs,
+                    yogaArticles,
+                    devArticles,
                 });
             })
             .catch(err => {
@@ -30,9 +36,8 @@ function Articles() {
         return readTimeMinutes;
     };
 
-    const displayBlogs = () => {
-    if (blog.items) {
-        return blog.items.map((post, index) => (
+    const displayArticles = (articles) => {
+        return articles.map((post, index) => (
             <div key={index} className='text-left mx-4 hover:text-lime-500 hover:scale-105 transition duration-500'>
                 <a href={post.link} rel='noreferrer' target='_blank' className='block'>
                     <h6 className="mb-1">
@@ -43,15 +48,17 @@ function Articles() {
                 </a>
             </div>
         ));
-    }
-};
+    };
+
+    const articlesToDisplay = showYogaOnly ? blog.yogaArticles : blog.devArticles;
 
     return (
-
-            <div className="flex flex-col space-y-4">
-                <h2 className="text-center text-2xl md:text-4xl py-4">My two cents...</h2>
-                {displayBlogs()}
-            </div>
+        <div className="flex flex-col space-y-4">
+            <h2 className="text-center text-2xl md:text-4xl py-4">
+                My Two Cents
+            </h2>
+            {articlesToDisplay.length > 0 ? displayArticles(articlesToDisplay) : <p>No articles found.</p>}
+        </div>
     );
 }
 
