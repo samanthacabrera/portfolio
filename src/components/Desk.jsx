@@ -24,7 +24,7 @@ const ClickableMesh = ({ onClick, geometries, position, rotation }) => {
     );
 };
 
-const Room = () => {
+const Desk = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalContent, setModalContent] = useState(null);
 
@@ -215,4 +215,4 @@ const Room = () => {
     );
 };
 
-export default Room;
+export default Desk;
