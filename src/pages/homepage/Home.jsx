@@ -40,11 +40,11 @@ function Home() {
                 <>
                     {/* Scene Toggle */}
                     <div 
-                        className="absolute bottom-40 flex items-center justify-center gap-4 cursor-pointer select-none z-10"
+                        className="absolute bottom-4 flex items-center justify-center gap-4 cursor-pointer select-none z-10"
                         onClick={toggleScene}
                     >
                         <span 
-                            className="text-lg font-medium transition-all px-6 py-2 rounded-full border border-white"
+                            className="px-4 py-2 rounded border border-white"
                         >
                             {isYogaMatScene ? "explore my dev side 👩‍💻" : "explore my yogi side 🧘‍♀️"}
                         </span>
