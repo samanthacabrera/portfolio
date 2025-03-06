@@ -23,12 +23,12 @@ function Home() {
         <div className="flex flex-col w-screen min-h-screen justify-center items-center overflow-hidden">
             {/* Toggle View */}
             <div 
-                className="fixed top-4 left-4 flex items-center gap-4 cursor-pointer select-none"
+                className="fixed top-4 left-4 flex items-center gap-2 cursor-pointer select-none"
                 onClick={toggleView}
             >
-                <div className="relative w-20 h-8 flex items-center justify-between px-1 bg-gray-900 border border-gray-700 rounded-full shadow-md">
+                <div className="relative w-14 h-7 flex items-center bg-gray-900 border border-gray-700 rounded-full shadow-md">
                     <div 
-                        className={`w-6 h-6 bg-white rounded-full shadow-lg transition-transform duration-300 ${is3DView ? "translate-x-10" : "-translate-x-0.5"}`}
+                        className={`w-5 h-5 bg-white rounded-full shadow-lg transition-transform duration-300 ${is3DView ? "translate-x-7" : "translate-x-1"}`}
                     ></div>
                 </div>
                 <span className="text-lg font-semibold uppercase tracking-widest">
