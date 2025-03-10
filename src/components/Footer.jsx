@@ -1,28 +1,35 @@
 import React from 'react';
-import Contact from '../pages/homepage/Contact';
+import { FaGithub, FaLinkedin, FaMedium } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="text-xs py-4">
-      <div className="flex justify-around items-center space-y-1 sm:space-y-0"> 
-        <div className="fixed bottom-1 left-4">
-          <Contact/>
-        </div>
-
-        <div className="group fixed bottom-1 right-4">
-          <p className="hidden sm:inline">
-            made with love by{' '}
-            <a
-              href="https://github.com/samanthacabrera"
-              className="italicg group-hover:text-cyan-600 transition duration-200"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Sam Cabrera
-            </a>
-          </p>
-        </div>
-      </div>
+        <footer className="flex flex-col justify-center items-center p-12">
+          <div className="flex space-x-6 text-xl">
+              <a
+                  href="https://linkedin.com/in/samcabreraa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover-effect"
+              >
+                  <FaLinkedin />
+              </a>
+              <a
+                  href="https://github.com/samanthacabrera"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover-effect"
+              >
+                  <FaGithub />
+              </a>
+              <a
+                  href="https://medium.com/@samantha.n.cabrera"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover-effect"
+              >
+                  <FaMedium />
+              </a>
+          </div>
     </footer>
   );
 };

@@ -17,6 +17,7 @@ html {
 
 body.light-mode {
   background-color: rgb(252, 242, 227);
+  background-color: whitesmoke;
   color: black;
 }
 

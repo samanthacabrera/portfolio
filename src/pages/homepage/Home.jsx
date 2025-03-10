@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Hero from "./Hero";
 import Desk from "../../components/Desk";
 import YogaMat from "../../components/YogaMat"; 
@@ -6,6 +6,7 @@ import About from "./About";
 import ProjectsList from "./ProjectsList";
 import Services from "./Services";
 import Articles from "./Articles";
+import Footer from "../../components/Footer";
 
 function Home() {
     const [is3DView, setIs3DView] = useState(true);
@@ -20,10 +21,10 @@ function Home() {
     };
 
     return (
-        <div className="">
+        <div >
             {/* View Toggle */}
-            <div 
-                className="fixed top-4 left-4 flex items-center gap-2 cursor-pointer select-none"
+            <div
+                className="h-12 w-screen z-10 backdrop-blur-sm fixed top-0 left-0 p-4 flex items-center gap-2 cursor-pointer select-none"
                 onClick={toggleView}
             >
                 <div className="relative w-14 h-7 flex items-center bg-gray-900 border border-gray-700 rounded-full shadow-md">
@@ -37,7 +38,7 @@ function Home() {
             </div>
 
             {is3DView ? (
-                <div className="flex flex-col justify-center items-center w-screen h-screen overflow-hidden">
+                <div className="flex flex-col justify-center items-center w-screen h-[90vh] overflow-hidden">
                     {/* Scene Toggle */}
                     <div 
                         className="absolute bottom-4 flex items-center justify-center gap-4 cursor-pointer select-none z-10"
@@ -60,6 +61,8 @@ function Home() {
                     <Articles />
                 </div>
             )}
+
+            {!is3DView && <Footer />}
         </div>
     );
 }
