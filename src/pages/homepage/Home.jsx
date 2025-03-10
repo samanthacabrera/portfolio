@@ -38,14 +38,14 @@ function Home() {
             </div>
 
             {is3DView ? (
-                <div className="flex flex-col justify-center items-center w-screen h-[90vh] overflow-hidden">
+                <div className="flex flex-col justify-center items-center w-screen h-screen">
                     {/* Scene Toggle */}
                     <div 
-                        className="absolute bottom-4 flex items-center justify-center gap-4 cursor-pointer select-none z-10"
+                        className="fixed bottom-4 flex items-center justify-center gap-4 cursor-pointer select-none z-10"
                         onClick={toggleScene}
                     >
                         <span 
-                            className="px-4 py-2 rounded border border-white"
+                            className="px-4 py-2 rounded border "
                         >
                             {isYogaMatScene ? "explore my dev side 👩‍💻" : "explore my yogi side 🧘‍♀️"}
                         </span>
