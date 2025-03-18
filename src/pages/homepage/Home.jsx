@@ -50,11 +50,12 @@ function Home() {
                             {isYogaMatScene ? "explore my dev side 👩‍💻" : "explore my yogi side 🧘‍♀️"}
                         </span>
                     </div>
-                    <Hero />
+                    <Hero is3DView={is3DView}/>
                     {isYogaMatScene ? <YogaMat /> : <Desk />}
                 </div>
             ) : (
                 <div className="flex flex-col justify-center items-center py-40 space-y-40 max-w-2xl mx-auto">
+                    <Hero is3DView={is3DView} />
                     <About />
                     <ProjectsList />
                     <Services />

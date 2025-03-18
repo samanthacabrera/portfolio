@@ -4,7 +4,7 @@ function About() {
   return (
     <div className="group flex flex-col items-center">
       <h2 className="text-2xl md:text-4xl py-4">A little about me...</h2>
-      <div className="space-y-4 mx-4">
+      <div className="space-y-4 mx-8">
         <p>
           I'm a full-stack software engineer based in Denver, specializing in 3D web development. 
           I'm <span className="text-lime-600 md:text-inherit group-hover:text-lime-600 transition duration-500 delay-200">passionate</span> about creating digital solutions that combine creativity and functionality. 
