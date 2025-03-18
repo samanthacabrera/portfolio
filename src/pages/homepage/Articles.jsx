@@ -54,7 +54,7 @@ function Articles({ showYogaOnly }) {
 
     return (
         <div className="flex flex-col space-y-4">
-            <h2 className="text-center text-2xl md:text-4xl py-4">
+            <h2 className="text-center text-lg md:text-2xl my-8">
                 My Two Cents
             </h2>
             {articlesToDisplay.length > 0 ? displayArticles(articlesToDisplay) : <p>No articles found.</p>}

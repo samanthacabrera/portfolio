@@ -10,8 +10,8 @@ const YogaMat = () => {
     const [showYogaOnly] = useState(true); 
 
     const blockOneContent = (
-        <div className="group p-4 space-y-4">
-            <h1 className="text-2xl text-center">Deepen Your Practice with Learn Yoga Online</h1>
+        <div className="group m-8 space-y-8">
+            <h1 className="text-center text-lg md:text-xl my-8">Deepen Your Practice with Learn Yoga Online</h1>
 
                 <p>
                     I’ve poured so much time, energy, and <span className="text-lime-600 md:text-inherit group-hover:text-lime-600 transition duration-500">passion</span> into developing this resource for all yoga practitioners. I’m so <span className="text-orange-600 md:text-inherit group-hover:text-orange-600 transition duration-500 delay-200">proud</span> to share everything I’ve learned, and to offer this as a platform for those seeking to <span className="text-pink-600 md:text-inherit group-hover:text-pink-600 transition duration-500 delay-300">enhance</span> their yoga journey. The content and resources you’ll find here are the result of hours of practice, reflection, and a true passion for <span className="text-yellow-500 md:text-inherit group-hover:text-yellow-500 transition duration-500 delay-400">helping</span> others grow in their practice.
@@ -27,8 +27,8 @@ const YogaMat = () => {
     );
 
     const blockTwoContent = (
-        <div className="group p-4 space-y-4">
-            <h1 className="text-2xl text-center">Shop Sustainably with Yarnsara</h1>
+        <div className="group m-8 space-y-8">
+            <h1 className="text-center text-lg md:text-xl my-8">Shop Sustainably with Yarnsara</h1>
             <p>
             Each item you’ll find on this platform is the result of hours of  <span className="text-lime-600 md:text-inherit group-hover:text-lime-600 transition duration-500">hard work</span>, attention to detail, and a deep  <span className="text-pink-600 md:text-inherit group-hover:text-pink-600 transition duration-500 delay-200">commitment</span> to the environment. I’m proud to offer these accessories, knowing that they are made with  <span className="text-yellow-500 md:text-inherit group-hover:text-yellow-500 transition duration-500 delay-300">upcycled</span> materials, care, and respect for the planet.
             </p>

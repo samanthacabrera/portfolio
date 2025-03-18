@@ -15,7 +15,7 @@ const Modal = ({ isOpen, onClose, content }) => {
         <div className="modal-content">{content}</div>
         <button
           onClick={onClose}
-          className="p-4 hover:underline"
+          className="mx-8 my-4 hover:underline"
         >
           Close
         </button>

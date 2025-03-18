@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Services = () => {
+const Services = ({is3DView}) => {
   const [selectedService, setSelectedService] = useState(null);
 
   const services = [
@@ -140,8 +140,8 @@ const Services = () => {
     <div className="group flex flex-col items-center">
 
  
-      <h2 className="text-2xl md:text-4xl py-4">Why Choose Me?</h2>
-      <div className="space-y-4 mx-4 mb-8">
+      <h2 className="text-lg md:text-2xl my-8">Why Choose Me?</h2>
+      <div className="space-y-4 mx-4 mb-40">
         <p>
           As a <span className="text-lime-600 md:text-inherit group-hover:text-lime-600 transition duration-500 delay-200">solo</span> freelancer, I offer <span className="text-yellow-500 md:text-inherit group-hover:text-yellow-500 transition duration-500 delay-300">personalized</span> service and attention to detail that you won't find at a larger agency. I'm <span className="text-cyan-600 md:text-inherit group-hover:text-cyan-600 transition duration-500 delay-400">dedicated</span> to delivering high-quality work that helps you <span className="text-orange-600 md:text-inherit group-hover:text-orange-600 transition duration-500 delay-500">achieve</span> your goals.
         </p>
@@ -150,7 +150,7 @@ const Services = () => {
         </p>
       </div>
       
-      <h1 className="text-2xl md:text-4xl py-4">My Services</h1>
+      <h1 className="text-lg md:text-2xl my-8">My Services</h1>
    
         <div className="grid gap-2 sm:grid-cols-1 text-gray-900 mx-4">
           {services.map((service, index) => (

@@ -5,8 +5,8 @@ import projects from '../../data/projectsData';
 const ProjectsList = () => {
     return (
         <div className="flex flex-col max-w-2xl mx-8 md:mx-auto w-full">
-            <h2 className="text-2xl md:text-4xl py-4 text-center">Check out my work...</h2>
-            <div className="flex flex-col items-start space-y-2 p-4"> 
+            <h2 className="text-lg md:text-2xl my-8 text-center">Check out my work...</h2>
+            <div className="flex flex-col items-start space-y-2 px-8"> 
                 {projects.map((project) => {
                     const { id, title, description, wip } = project; 
                     return (

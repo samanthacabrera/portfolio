@@ -3,7 +3,7 @@ import React from "react";
 function About() {
   return (
     <div className="group flex flex-col items-center">
-      <h2 className="text-2xl md:text-4xl py-4">A little about me...</h2>
+      <h2 className="text-lg md:text-2xl my-8">A little about me...</h2>
       <div className="space-y-4 mx-8">
         <p>
           I'm a full-stack software engineer based in Denver, specializing in 3D web development. 
