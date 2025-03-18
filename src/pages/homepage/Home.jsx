@@ -29,7 +29,7 @@ function Home() {
             >
                 <div className="relative w-14 h-7 flex items-center bg-gray-900 border border-gray-700 rounded-full shadow-md">
                     <div 
-                        className={`w-5 h-5 bg-white rounded-full shadow-lg transition-transform duration-300 ${is3DView ? "translate-x-7" : "translate-x-1"}`}
+                        className={`w-5 h-5 bg-white rounded-full shadow-lg transition-transform duration-300 ${is3DView ? "translate-x-1" : "translate-x-7"}`}
                     ></div>
                 </div>
                 <span className="text-lg font-semibold uppercase tracking-widest">
