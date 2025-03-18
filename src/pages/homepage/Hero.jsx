@@ -6,7 +6,7 @@ function Hero({ is3DView }) {
     <>
       <p className={`${is3DView ? "absolute top-20" : "relative"} text-justify tracking-wide text-sm md:text-lg md:max-w-2xl mx-8 md:mx-auto`}>
         <span className={`${is3DView ? "inline" : "block my-6"}`}>Hello world, my name is Sam. </span>
-        I am equal parts web developer and yogi. I spend my days maintaining and improving <span className="italic">Learn Yoga Online</span>, and my nights building <span className="italic">Yarnsara</span>.
+        I am equal parts web developer and yogi. I spend my days maintaining and improving <a href="https://learnyoga.online/" target="_blank" rel="noopener noreferrer" className="italic font-semibold opacity-90 hover:opacity-100 transition duration-200">Learn Yoga Online</a>, and my nights building <a href="https://yarnsara-samanthacabreras-projects.vercel.app/" target="_blank" rel="noopener noreferrer" className="italic font-semibold opacity-90 hover:opacity-100 transition duration-200">Yarnsara</a>.
         <span className={`${is3DView ? "visible" : "invisible"}`}> To learn more about what me & what I do interact with the scenes below.</span>
       </p>
 
