@@ -10,31 +10,32 @@ const YogaMat = () => {
     const [showYogaOnly] = useState(true); 
 
     const blockOneContent = (
-        <div className="p-4 space-y-4">
+        <div className="group p-4 space-y-4">
             <h1 className="text-2xl text-center">Deepen Your Practice with Learn Yoga Online</h1>
-            <p>
-                I’ve poured so much time, energy, and passion into developing this resource for all yoga practitioners. I’m so proud to share everything I’ve learned, and to offer this as a platform for those seeking to enhance their yoga journey. The content and resources you’ll find here are the result of hours of practice, reflection, and a true passion for helping others grow in their practice.
-            </p>
-            <p>
-                I encourage you to explore all the content available on this platform. From guided tutorials to yoga philosophy lessons, there’s so much to explore.
-            </p>
-            <p>
-                If you’re ready to take the next step and deepen your practice, visit{" "}
-                <a href="https://learnyoga.online" className="underline">learnyoga.online</a>
-            </p>
+
+                <p>
+                    I’ve poured so much time, energy, and <span className="text-lime-600 md:text-inherit group-hover:text-lime-600 transition duration-500">passion</span> into developing this resource for all yoga practitioners. I’m so <span className="text-orange-600 md:text-inherit group-hover:text-orange-600 transition duration-500 delay-200">proud</span> to share everything I’ve learned, and to offer this as a platform for those seeking to <span className="text-pink-600 md:text-inherit group-hover:text-pink-600 transition duration-500 delay-300">enhance</span> their yoga journey. The content and resources you’ll find here are the result of hours of practice, reflection, and a true passion for <span className="text-yellow-500 md:text-inherit group-hover:text-yellow-500 transition duration-500 delay-400">helping</span> others grow in their practice.
+                </p>
+                <p>
+                    I encourage you to <span className="text-cyan-600 md:text-inherit group-hover:text-cyan-600 transition duration-500 delay-500">explore</span> all the content available on this platform. From guided tutorials to yoga philosophy lessons, there’s so much to explore.
+                </p>
+                <p>
+                    If you’re ready to take the next step and <span className="text-pink-600 md:text-inherit group-hover:text-pink-600 transition duration-500 delay-700">deepen</span> your practice, visit{" "}
+                    <a href="https://learnyoga.online" className="underline text-lime-600 md:text-inherit group-hover:text-lime-600 transition duration-500 delay-700">learnyoga.online</a>
+                </p>
         </div>
     );
 
     const blockTwoContent = (
-        <div className="p-4 space-y-4">
+        <div className="group p-4 space-y-4">
             <h1 className="text-2xl text-center">Shop Sustainably with Yarnsara</h1>
             <p>
-                Creating sustainable, hand-crocheted yoga accessories has been a journey that I’ve put my heart and soul into. It’s not just about crafting beautiful products; it’s about supporting a vision of a more eco-conscious world. Each item you’ll find on this platform is the result of hours of hard work, attention to detail, and a deep commitment to the environment. I’m proud to offer these accessories, knowing that they are made with upcycled materials, care, and respect for the planet.
+            Each item you’ll find on this platform is the result of hours of  <span className="text-lime-600 md:text-inherit group-hover:text-lime-600 transition duration-500">hard work</span>, attention to detail, and a deep  <span className="text-pink-600 md:text-inherit group-hover:text-pink-600 transition duration-500 delay-200">commitment</span> to the environment. I’m proud to offer these accessories, knowing that they are made with  <span className="text-yellow-500 md:text-inherit group-hover:text-yellow-500 transition duration-500 delay-300">upcycled</span> materials, care, and respect for the planet.
             </p>
             <p>
                 I encourage you to explore our full collection at{" "}
-                <a href="https://yarnsara-samanthacabreras-projects.vercel.app/" className="underline">yarnsara.com</a>. 
-                By choosing to shop with Yarnsara, you’re making a mindful choice for both your yoga practice and the planet. 
+                <a href="https://yarnsara-samanthacabreras-projects.vercel.app/" className="underline text-cyan-600 md:text-inherit group-hover:text-cyan-600 transition duration-500 delay-500">yarnsara.com</a>. 
+                By choosing to shop with Yarnsara, you’re making a  <span className="text-orange-600 md:text-inherit group-hover:text-orange-600 transition duration-500 delay-700">mindful</span> choice for both your yoga practice and the  <span className="text-lime-600 md:text-inherit group-hover:text-lime-600 transition duration-500 delay-700">planet</span>. 
             </p>
         </div>
     );
