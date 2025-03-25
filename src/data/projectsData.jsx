@@ -16,12 +16,7 @@ const projects = [
                 "Responsive design optimized for mobile and desktop."
             ]
         },
-        insights: "The most challenging aspect of Learn Yoga Online was the extensive research required for each pose. On average, I spent 4 to 5 hours per pose to ensure the descriptions were accurate, detailed, and informative. This involved consulting multiple reliable sources to provide users with clear guidance on the pose's execution, benefits, and variations. This meticulous process deepened my understanding of yoga and reinforced the importance of accuracy in educational content.",
-        gallery: [
-            '/learnyogaonline/pose-list.png',
-            '/learnyogaonline/article-list.png',
-            '/learnyogaonline/article.png',
-        ]
+        insights: "The most challenging aspect of Learn Yoga Online was the extensive research required for each pose. On average, I spent 4 to 5 hours per pose to ensure the descriptions were accurate, detailed, and informative. This involved consulting multiple reliable sources to provide users with clear guidance on the pose's execution, benefits, and variations. This meticulous process deepened my understanding of yoga and reinforced the importance of accuracy in educational content."
     },
     {
         id: 2,
@@ -40,11 +35,7 @@ const projects = [
                 'Categories for various calculator types including unit conversion, area, and volume.'
             ]
         },
-        insights: 'The primary challenge was ensuring each calculator delivered accurate results across all operations. Structuring the UI to accommodate a wide range of tools while keeping navigation simple and efficient was a focus. I aimed on creating a seamless user experience by organizing the calculators into categories and optimizing for quick access. The project was built with an emphasis on scalability, allowing for additional calculators or categories without disrupting the user experience. This approach helped ensure a clean and intuitive interface with minimal user friction.',
-        gallery: [
-            '/calcalooza/home.png',
-            '/calcalooza/page.png',
-        ]
+        insights: 'The primary challenge was ensuring each calculator delivered accurate results across all operations. Structuring the UI to accommodate a wide range of tools while keeping navigation simple and efficient was a focus. I aimed on creating a seamless user experience by organizing the calculators into categories and optimizing for quick access. The project was built with an emphasis on scalability, allowing for additional calculators or categories without disrupting the user experience. This approach helped ensure a clean and intuitive interface with minimal user friction.'
     },
     {
         id: 3,
@@ -126,9 +117,9 @@ const projects = [
         id: 6,
         title: "Yarnsara",
         github: "https://github.com/samanthacabrera/ecommerce-store",
-        link: "",
+        link: "https://yarnsara-samanthacabreras-projects.vercel.app/",
         wip: true,
-        deployed: false,
+        deployed: true,
         description: "A full-stack eCommerce platform selling 100% upcycled and hand-crocheted yoga accessories.",
         overview: {
             techStack: ["React", "Express", "MongoDB", "Stripe"],
@@ -139,7 +130,24 @@ const projects = [
             ]
         },
         insights: "One of the biggest challenges so far has been setting up secure payment processing with Stripe while ensuring a smooth user experience. Managing product data in MongoDB and handling state efficiently in React has been another major learning curve. This project is giving me hands-on experience in creating a fully functional online store while aligning with sustainability values.",
-        gallery: []
+    },
+    {
+        id: 7,
+        title: "EatBySeason",
+        github: "https://github.com/samanthacabrera/eat_in_season",
+        link: "",
+        wip: false,
+        deployed: false,
+        description: "EatBySeason is a web app that helps users discover in-season produce based on their location, encouraging healthier and more sustainable food choices.",
+        overview: {
+            techStack: ["React", "Python", "Supabase"],
+            features: [
+                "Discover in-season produce based on your location.",
+                "Filter fruits and vegetables by type and season.",
+                "Personalized seasonal produce recommendations."
+            ]
+        },
+        insights: "One of the main challenges was integrating the backend with Supabase for real-time data and setting up location-based recommendations. Ensuring that the produce recommendations were accurate and relevant to the user’s location was key. The project also required careful attention to UI/UX to make the filtering system easy to use while still providing enough detail about the produce.",
     }
 ];
 

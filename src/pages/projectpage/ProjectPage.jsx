@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import projects from '../../data/projectsData';
 
@@ -6,11 +6,6 @@ const ProjectPage = () => {
     const { id } = useParams();
     const project = projects.find((proj) => proj.id === parseInt(id)) || {};
     const [selectedImage, setSelectedImage] = useState(null);
-
-    useEffect(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, []);
-
     const openImage = (image) => setSelectedImage(image);
     const closeImage = () => setSelectedImage(null);
 
@@ -64,7 +59,7 @@ const ProjectPage = () => {
 
             <main className="w-full max-w-4xl">
                 {/* Overview Section */}
-                <section className="space-y-4">
+                <section className="my-8 space-y-4">
                     <div className="">
                         <h3 className="text-xl mb-2">Description</h3>
                         <p className="font-normal">{project.description || "No description available"}</p>
@@ -84,15 +79,15 @@ const ProjectPage = () => {
                 </section>
 
                 {/* Insights Section */}
-                <section className="mb-8">
-                    <h3 className="text-xl font-semibold mb-2">Insights</h3>
+                <section className="my-8">
+                    <h3 className="text-xl mb-2">Insights</h3>
                     <p className="font-normal">{project.insights || "No insights available"}</p>
                 </section>
 
                 {/* Gallery Section */}
                 {project.gallery && (
-                    <section className="mb-8">
-                        <h3 className="text-xl font-semibold mb-2">Gallery</h3>
+                    <section className="my-8">
+                        <h3 className="text-xl mb-2">Gallery</h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                             {project.gallery.map((image, index) => (
                                 <img
@@ -107,7 +102,26 @@ const ProjectPage = () => {
                     </section>
                 )}
 
-                <div className="my-6 hover:italic hover:underline">
+                {/* Other Work */}
+                <section className="my-8">
+                    <h3 className="text-xl mb-2">See My Other Projects</h3>
+                    <div className="">
+                        <ul className="grid gap-2">
+                            {projects.map((proj) => (
+                                <li key={proj.id}>
+                                    <Link
+                                        to={`/projects/${proj.id}`}
+                                        className="hover:underline"
+                                    >
+                                        {proj.title}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </section>
+
+                <div className="my-4 p-2 w-fit rounded bg-white/70 hover:bg-white/80 text-black">
                     <Link
                         to="/"
                     >

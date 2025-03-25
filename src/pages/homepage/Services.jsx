@@ -160,7 +160,7 @@ const Services = ({is3DView}) => {
               onClick={() => setSelectedService(service)}
             >
               <h3 className="">{service.title}</h3>
-              <p className="hidden md:block text-sm font-light py-1">
+              <p className="hidden md:block text-sm  py-1">
                 {service.description}
               </p>
               
