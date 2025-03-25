@@ -5,7 +5,6 @@ import projects from '../../data/projectsData';
 const ProjectPage = () => {
     const { id } = useParams();
     const project = projects.find((proj) => proj.id === parseInt(id)) || {};
-    const [activeSection, setActiveSection] = useState('overview');
     const [selectedImage, setSelectedImage] = useState(null);
 
     useEffect(() => {
@@ -63,50 +62,35 @@ const ProjectPage = () => {
                 </div>
             </header>
 
-            <nav className="w-full max-w-4xl my-6 flex justify-start items-start space-x-4">
-                {['overview', 'insights', 'gallery'].map((section) => (
-                    <button
-                        key={section}
-                        onClick={() => setActiveSection(section)}
-                        className={`p-2 rounded ${
-                            activeSection === section ? 'border-2 border-current' : ''
-                        }`}
-                    >
-                        {section.charAt(0).toUpperCase() + section.slice(1)}
-                    </button>
-                ))}
-            </nav>
-
             <main className="w-full max-w-4xl">
-                {activeSection === 'overview' && (
-                    <section className="space-y-4">
-                        <div className="">
-                            <h3 className="text-xl mb-2">Description</h3>
-                            <p className="font-normal">{project.description || "No description available"}</p>
-                        </div>
-                        <div className="">
-                            <h3 className="text-xl mb-2">Tech Stack</h3>
-                            <p className="font-normal">{project.overview.techStack.join(", ") || "Not specified"}</p>
-                        </div>
-                        <div className="">
-                            <h3 className="text-xl mb-2">Features</h3>
-                            <ul className="font-normal">
-                                {project.overview.features.map((feature, index) => (
-                                    <li key={index}>{feature}</li>
-                                ))}
-                            </ul>
-                        </div>
-                    </section>
-                )}
+                {/* Overview Section */}
+                <section className="space-y-4">
+                    <div className="">
+                        <h3 className="text-xl mb-2">Description</h3>
+                        <p className="font-normal">{project.description || "No description available"}</p>
+                    </div>
+                    <div className="">
+                        <h3 className="text-xl mb-2">Tech Stack</h3>
+                        <p className="font-normal">{project.overview?.techStack?.join(", ") || "Not specified"}</p>
+                    </div>
+                    <div className="">
+                        <h3 className="text-xl mb-2">Features</h3>
+                        <ul className="font-normal">
+                            {project.overview?.features?.map((feature, index) => (
+                                <li key={index}>{feature}</li>
+                            ))}
+                        </ul>
+                    </div>
+                </section>
 
-                {activeSection === 'insights' && (
-                    <section className="mb-8">
-                        <h3 className="text-xl font-semibold mb-2">Insights</h3>
-                        <p className="font-normal">{project.insights || "No insights available"}</p>
-                    </section>
-                )}
+                {/* Insights Section */}
+                <section className="mb-8">
+                    <h3 className="text-xl font-semibold mb-2">Insights</h3>
+                    <p className="font-normal">{project.insights || "No insights available"}</p>
+                </section>
 
-                {activeSection === 'gallery' && project.gallery && (
+                {/* Gallery Section */}
+                {project.gallery && (
                     <section className="mb-8">
                         <h3 className="text-xl font-semibold mb-2">Gallery</h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
