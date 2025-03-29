@@ -41,7 +41,7 @@ function Home() {
                 <div className="flex flex-col justify-center items-center w-screen h-screen">
                     {/* Scene Toggle */}
                     <div 
-                        className="fixed bottom-4 flex items-center justify-center gap-4 cursor-pointer select-none z-10"
+                        className="fixed bottom-24 flex items-center justify-center gap-4 cursor-pointer select-none z-10"
                         onClick={toggleScene}
                     >
                         <span 
