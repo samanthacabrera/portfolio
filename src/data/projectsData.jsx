@@ -154,7 +154,7 @@ const projects = [
         title: "Swiftle",
         github: "https://github.com/samanthacabrera/swiftle",
         link: "",
-        wip: true,
+        wip: false,
         deployed: false,
         description: "A word game inspired by NYT's 'Connections,' where players categorize Taylor Swift lyrics into themed groups.",
         overview: {
