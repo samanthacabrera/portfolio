@@ -38,7 +38,7 @@ function Articles({ showYogaOnly }) {
 
     const displayArticles = (articles) => {
         return articles.map((post, index) => (
-            <div key={index} className='text-left mx-4 hover:text-lime-500 hover:scale-105 transition duration-500'>
+            <div key={index} className='text-left mx-4 lg:mx-0 hover:text-lime-500 hover:scale-105 transition duration-500'>
                 <a href={post.link} rel='noreferrer' target='_blank' className='block'>
                     <h6 className="mb-1">
                         {post.title}

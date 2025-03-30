@@ -4,14 +4,14 @@ import projects from '../../data/projectsData';
 
 const ProjectsList = () => {
     return (
-        <div className="flex flex-col max-w-2xl mx-8 md:mx-auto w-full">
+        <div className="flex flex-col max-w-2xl mx-8 lg:mx-0 w-full">
             <h2 className="text-lg md:text-2xl my-8 text-center">Check out my work...</h2>
-            <div className="flex flex-col items-start space-y-2 px-8"> 
+            <div className="flex flex-col items-start space-y-2"> 
                 {projects.map((project) => {
                     const { id, title, description, wip } = project; 
                     return (
                         <Link key={id} to={`/projects/${id}`}>
-                            <div className="relative group flex items-center mx-8 md:mx-auto"> 
+                            <div className="relative group flex items-center mx-8 lg:mx-0"> 
                                 <h3 className="text-lg hover:text-cyan-600 transition duration-300">
                                     {title}
                                     {wip && (

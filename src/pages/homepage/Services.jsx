@@ -152,7 +152,7 @@ const Services = ({is3DView}) => {
       
       <h1 className="text-lg md:text-2xl my-8">My Services</h1>
    
-        <div className="grid gap-2 sm:grid-cols-1 text-gray-900 mx-4">
+        <div className="grid gap-2 sm:grid-cols-1 text-gray-900 mx-4 lg:mx-0">
           {services.map((service, index) => (
             <div
               key={index}
