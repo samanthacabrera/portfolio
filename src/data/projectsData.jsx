@@ -148,6 +148,24 @@ const projects = [
             ]
         },
         insights: "One of the main challenges was integrating the backend with Supabase for real-time data and setting up location-based recommendations. Ensuring that the produce recommendations were accurate and relevant to the user’s location was key. The project also required careful attention to UI/UX to make the filtering system easy to use while still providing enough detail about the produce.",
+    },
+    {
+        id: 8,
+        title: "Swiftle",
+        github: "https://github.com/samanthacabrera/swiftle",
+        link: "",
+        wip: true,
+        deployed: false,
+        description: "A word game inspired by NYT's 'Connections,' where players categorize Taylor Swift lyrics into themed groups.",
+        overview: {
+            techStack: ["React", "Vite", "Tailwind CSS"],
+            features: [
+                "Mini game with Taylor Swift lyrics grouped into hidden categories.",
+                "Hints system to guide players towards correct groupings.",
+                "Mobile-friendly design for easy play on any device."
+            ]
+        },
+        insights: "One of the biggest challenges in developing Swiftle has been designing an intuitive UI that makes grouping lyrics fun and engaging. Finding the right balance between challenge and accessibility has been a major focus. Additionally, structuring the backend logic to ensure lyrics are categorized correctly has required careful planning. This project is an exciting mix of game design, UI/UX development, and Taylor Swift appreciation!"
     }
 ];
 
