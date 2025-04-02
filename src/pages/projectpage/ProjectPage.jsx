@@ -20,7 +20,7 @@ const ProjectPage = () => {
     return (
         <div className="flex flex-col items-center min-h-screen p-12 sm:text-left">
 
-            <header className="w-full max-w-4xl mt-8 space-y-8">
+            <header className="w-full max-w-lg mt-8 space-y-8">
                 <h1 className="text-5xl lg:text-7xl">{project.title || "Untitled Project"}</h1>
                 <div className="flex space-x-4 text-lg">
                     {project.github && (
@@ -57,7 +57,7 @@ const ProjectPage = () => {
                 </div>
             </header>
 
-            <main className="w-full max-w-4xl">
+            <main className="w-full max-w-lg">
                 {/* Overview Section */}
                 <section className="my-8 space-y-4">
                     <div className="">
@@ -107,7 +107,9 @@ const ProjectPage = () => {
                     <h3 className="text-xl mb-2">See My Other Projects</h3>
                     <div className="">
                         <ul className="grid gap-2">
-                            {projects.map((proj) => (
+                            {projects
+                                .filter((proj) => proj.id !== project.id)
+                                .map((proj) => (
                                 <li key={proj.id}>
                                     <Link
                                         to={`/projects/${proj.id}`}
