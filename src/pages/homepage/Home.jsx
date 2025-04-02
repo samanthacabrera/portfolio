@@ -5,7 +5,6 @@ import About from "./About";
 import ProjectsList from "./ProjectsList";
 import Services from "./Services";
 import Articles from "./Articles";
-import Footer from "../../components/Footer";
 
 function Home() {
     const [is3DView, setIs3DView] = useState(true);
@@ -45,8 +44,6 @@ function Home() {
                     <Articles />
                 </div>
             )}
-
-            <Footer />
         </div>
     );
 }

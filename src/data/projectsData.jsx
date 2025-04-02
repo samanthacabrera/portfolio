@@ -8,126 +8,97 @@ const projects = [
         deployed: true,
         contribution: "Sole Developer",
         description: "A yoga pose glossary designed to help users learn and explore yoga poses with ease.",
-        overview: {
-            tags: ["Web App"],
-            projectType: "Yoga Pose Library Web App",
-            techStack: ["React", "Vite", "Tailwind CSS"],
-            features: [
-                "Comprehensive glossary featuring the top 100 common yoga poses.",
-                "Search functionality for quickly finding specific poses.",
-                "Detailed pose descriptions and benefits.",
-                "Responsive design optimized for mobile and desktop."
-            ]
-        },
-        insights: "The most challenging aspect of Learn Yoga Online was the extensive research required for each pose. On average, I spent 4 to 5 hours per pose to ensure the descriptions were accurate, detailed, and informative. This involved consulting multiple reliable sources to provide users with clear guidance on the pose's execution, benefits, and variations. This meticulous process deepened my understanding of yoga and reinforced the importance of accuracy in educational content."
+        tags: ["Web App"],
+        projectType: "Yoga Pose Library Web App",
+        techStack: ["React", "Vite", "Tailwind CSS"],
+        features: [
+            "Comprehensive glossary featuring the top 100 common yoga poses.",
+            "Search functionality for quickly finding specific poses.",
+            "Detailed pose descriptions and benefits.",
+            "Responsive design optimized for mobile and desktop."
+        ],
+        insights: "The most challenging aspect of Learn Yoga Online was structuring and organizing a content-heavy application efficiently while maintaining performance and usability. I had to carefully design the data structure for yoga poses and optimize the search functionality to handle large datasets smoothly. Additionally, ensuring a visually appealing yet accessible UI required iterating on multiple design choices and testing responsiveness across devices.",
+        reason: "To gain experience structuring a content-heavy web application with an intuitive UI, while improving my ability to handle large datasets efficiently."
     },
     {
         id: 2,
-        title: 'Calcalooza',
-        github: 'https://github.com/samanthacabrera/conversion-calculator',
-        link: 'https://calcalooza.com', 
+        title: "Calcalooza",
+        github: "https://github.com/samanthacabrera/conversion-calculator",
+        link: "https://calcalooza.com",
         wip: false,
         deployed: true,
         contribution: "Sole Developer",
-        description: 'A responsive website featuring a variety of math calculators, including unit conversion, area, volume, and more.',
-        overview: {
-            tags: [],
-            projectType: "Web App",
-            techStack: ['React', 'Vite', 'Tailwind CSS'],
-            features: [
-                'Provides calculators for different mathematical operations.',
-                'User-friendly interface for easy navigation.',
-                'Responsive design for accessibility across devices.',
-                'Categories for various calculator types including unit conversion, area, and volume.'
-            ]
-        },
-        insights: 'The primary challenge was ensuring each calculator delivered accurate results across all operations. Structuring the UI to accommodate a wide range of tools while keeping navigation simple and efficient was a focus. I aimed on creating a seamless user experience by organizing the calculators into categories and optimizing for quick access. The project was built with an emphasis on scalability, allowing for additional calculators or categories without disrupting the user experience. This approach helped ensure a clean and intuitive interface with minimal user friction.'
-    },
+        description: "A responsive website featuring a variety of math calculators, including unit conversion, area, volume, and more.",
+        tags: ["Web App"],
+        projectType: "Math Calculator Web App",
+        techStack: ["React", "Vite", "Tailwind CSS"],
+        features: [
+            "Provides calculators for different mathematical operations.",
+            "User-friendly interface for easy navigation.",
+            "Responsive design for accessibility across devices.",
+            "Categories for various calculator types including unit conversion, area, and volume."
+        ],
+        insights: "The primary challenge was ensuring each calculator delivered accurate results across a range of mathematical operations, which required rigorous testing and debugging. Implementing unit conversions introduced additional complexity, as I had to account for edge cases and floating-point precision issues. Additionally, I focused on creating a modular and reusable component system to maintain scalability as I expanded the calculator collection.",
+        reason: "To improve logic-based programming and precision in mathematical computations while practicing modular component design."    },
     {
         id: 3,
-        title: 'Recipe Roots',
-        github: 'https://github.com/samanthacabrera/recipe-roots',
-        link: 'https://www.youtube.com/embed/Qso3oxAXWDc',
+        title: "Recipe Roots",
+        github: "https://github.com/samanthacabrera/recipe-roots",
+        link: "",
         wip: false,
         deployed: false,
         contribution: "Sole Developer",
-        description: 'A web application for sharing family recipes to a global audience.',
-        overview: {
-            tags: [],
-            projectType: "Full-Stack Web App",
-            techStack: ['React', 'Flask', 'SQLAlchemy', 'Tailwind CSS'],
-            features: [
-                'Discover family recipes from various cultures around the world.',
-                'Explore recipes from a randomly featured country.',
-                'Share your own family recipes with the community.',
-                'Users can save their favorite recipes for quick access.',
-                'Interactive UI for guiding users through recipe creation.'
-            ]
-        },
-        insights: 'Connecting the front end to the back end was a challenging aspect of developing Recipe Roots. It took three weeks of intensive work to bridge these two components effectively, and this experience significantly enhanced my understanding of full-stack development. The challenges of integrating the user interface with the database taught me valuable lessons about state management and API consumption. As a result, I gained the skills essential for building a full-stack application that provides a seamless user experience, which I consider a significant achievement.',
-        gallery: [
-            '/reciperoots/home.png',
-            '/reciperoots/featured.png',
-            '/reciperoots/search.png',
-            '/reciperoots/recipelist.png',
-            '/reciperoots/recipepage.png',
-            '/reciperoots/cta.png',
-            '/reciperoots/mission.png'
-        ]
-    },
+        description: "A web application for sharing family recipes to a global audience.",
+        tags: ["Full-Stack Web App"],
+        projectType: "Recipe Sharing Platform",
+        techStack: ["React", "Flask", "SQLAlchemy", "Tailwind CSS"],
+        features: [
+            "Discover family recipes from various cultures around the world.",
+            "Explore recipes from a randomly featured country.",
+            "Share your own family recipes with the community.",
+            "Users can save their favorite recipes for quick access.",
+            "Interactive UI for guiding users through recipe creation."
+        ],
+        insights: "Connecting the front end to the back end presented challenges in handling user authentication, database queries, and ensuring a seamless user experience. I had to structure the API endpoints efficiently to allow for quick retrieval of recipes and user-generated content. Handling media uploads (such as images of dishes) required learning about cloud storage solutions and optimizing file handling within the backend.",
+        reason: "To practice full-stack development, improve database structuring, and handle user-generated content effectively."    },
     {
         id: 4,
-        title: 'YogiAPI',
-        github: 'https://github.com/samanthacabrera/yogi_api',
-        link: 'https://www.youtube.com/embed/Inhkh8RiL1k',
+        title: "YogiAPI",
+        github: "https://github.com/samanthacabrera/yogi_api",
+        link: "",
         wip: false,
         deployed: false,
         contribution: "Sole Developer",
-        description: 'This API provides comprehensive access to a diverse collection of yoga poses.',
-        overview: {
-            tags: [],
-            projectType: "Web App",
-            techStack: ['React', 'Flask', 'SQLAlchemy', 'Tailwind CSS'],
-            features: [
-                'Use of standard HTTP methods: GET, POST, PUT, DELETE, and PATCH to handle CRUD operations.',
-                'Clear and concise documentation that outlines how to use each endpoint, expected outputs, and error codes.',
-                'User-friendly interface for browsing yoga poses.'
-            ]
-        },
-        insights: 'Developing YogiAPI was my first experience creating an API, which came with its share of mistakes and learning opportunities. I encountered several challenges, such as correctly structuring endpoints and managing data flows. Each mistake provided valuable lessons that deepened my understanding of API design and best practices. Through trial and error, I learned how to handle errors more gracefully and ensure data integrity, ultimately resulting in a more robust and user-friendly API. This experience was pivotal in shaping my skills for future projects.',
-        gallery: [
-            '/yogiapi/home.png',
-            '/yogiapi/intro.png',
-            '/yogiapi/howto.png',
-            '/yogiapi/endpoints.png'
-        ]
-    },
+        description: "This API provides comprehensive access to a diverse collection of yoga poses.",
+        tags: ["Web API"],
+        projectType: "Yoga Pose API",
+        techStack: ["React", "Flask", "SQLAlchemy", "Tailwind CSS"],
+        features: [
+            "Use of standard HTTP methods for CRUD operations.",
+            "Clear and concise documentation for all API endpoints.",
+            "User-friendly interface for browsing yoga poses."
+        ],
+        insights: "Developing YogiAPI was my first experience creating an API, and I had to learn how to structure RESTful endpoints, implement authentication, and optimize database queries for performance. Writing clear and concise documentation also helped me understand the importance of making APIs developer-friendly. Debugging issues with CORS and ensuring secure data handling taught me valuable lessons in API security.",
+        reason: "To gain hands-on experience in building and documenting a RESTful API while improving backend security and performance optimization."    },
     {
         id: 5,
         title: "RunTheCity",
-        github: 'https://github.com/samanthacabrera/learn2build',
-        link: 'https://www.youtube.com/embed/z9GeI03I_Yo?si=Iu83t3Mc7AHGYb-_',
+        github: "https://github.com/samanthacabrera/learn2build",
+        link: "",
         wip: false,
         deployed: false,
         contribution: "Sole Developer",
-        description: 'A fitness application to help users explore their city by providing personalized running routes.',
-        overview: {
-            tags: [],
-            projectType: "Web App",
-            techStack: ['React', 'Tailwind CSS', 'Mapbox', 'Vite'],
-            features: [
-                'Create and follow custom running routes.',
-                'Discover featured routes in your city based on landmarks.',
-                'Users can pause and resume their runs seamlessly.'
-            ]
-        },
-        insights: 'Integrating Mapbox to provide real-time running routes presented technical challenges around event handling and dynamic map updates. The project required effective map state management to ensure smooth user interaction, especially on mobile devices. Additionally, optimizing the app for mobile users while keeping real-time data updates accurate was a significant consideration throughout development. This project gave me invaluable experience using geoLocation API that I plan to leverage in future projects.',
-        gallery: [
-            '/runthecity/hero.png',
-            '/runthecity/map.png',
-            '/runthecity/featured.png'
-        ]
-    },
+        description: "A fitness application to help users explore their city by providing personalized running routes.",
+        tags: ["Web App"],
+        projectType: "Fitness & Navigation App",
+        techStack: ["React", "Tailwind CSS", "Mapbox", "Vite"],
+        features: [
+            "Create and follow custom running routes.",
+            "Discover featured routes in your city based on landmarks.",
+            "Users can pause and resume their runs seamlessly."
+        ],
+        insights: "Integrating Mapbox to provide real-time running routes required understanding geolocation APIs, handling live data updates efficiently, and ensuring smooth map interactions. Optimizing the rendering of route paths dynamically was a challenge, especially when adjusting for different map zoom levels. Additionally, implementing user input for custom routes forced me to improve state management and work with complex event handlers.",
+        reason: "To explore working with interactive maps, geolocation-based services, and improve state management in a dynamic UI."    },
     {
         id: 6,
         title: "Yarnsara",
@@ -137,18 +108,16 @@ const projects = [
         deployed: true,
         contribution: "Sole Developer",
         description: "A full-stack eCommerce platform selling 100% upcycled and hand-crocheted yoga accessories.",
-        overview: {
-            tags: [],
-            projectType: "Web App",
-            techStack: ["React", "Express", "MongoDB", "Stripe"],
-            features: [
-                "Custom eCommerce storefront with seamless checkout.",
-                "Integration with Stripe for secure payments.",
-                "Product listings with detailed descriptions and images."
-            ]
-        },
-        insights: "One of the biggest challenges so far has been setting up secure payment processing with Stripe while ensuring a smooth user experience. Managing product data in MongoDB and handling state efficiently in React has been another major learning curve. This project is giving me hands-on experience in creating a fully functional online store while aligning with sustainability values.",
-    },
+        tags: ["Full-Stack Web App", "eCommerce"],
+        projectType: "Sustainable eCommerce Platform",
+        techStack: ["React", "Express", "MongoDB", "Stripe"],
+        features: [
+            "Custom eCommerce storefront with seamless checkout.",
+            "Integration with Stripe for secure payments.",
+            "Product listings with detailed descriptions and images."
+        ],
+        insights: "One of the biggest challenges was implementing secure payment processing with Stripe, as it required learning about PCI compliance, tokenization, and handling errors gracefully. Setting up a robust product catalog with efficient database queries also presented challenges, especially when integrating filtering and search functionality. Additionally, ensuring a smooth user experience throughout the checkout process required refining UI interactions and debugging edge cases.",
+        reason: "To learn about payment integration, secure transactions, and optimizing database queries for an eCommerce platform."    },
     {
         id: 7,
         title: "EatBySeason",
@@ -158,17 +127,16 @@ const projects = [
         deployed: false,
         contribution: "Sole Developer",
         description: "EatBySeason is a web app that helps users discover in-season produce based on their location, encouraging healthier and more sustainable food choices.",
-        overview: {
-            tags: [],
-            projectType: "Web App",
-            techStack: ["React", "Python", "Supabase"],
-            features: [
-                "Discover in-season produce based on your location.",
-                "Filter fruits and vegetables by type and season.",
-                "Personalized seasonal produce recommendations."
-            ]
-        },
-        insights: "One of the main challenges was integrating the backend with Supabase for real-time data and setting up location-based recommendations. Ensuring that the produce recommendations were accurate and relevant to the user’s location was key. The project also required careful attention to UI/UX to make the filtering system easy to use while still providing enough detail about the produce.",
+        tags: ["Web App"],
+        projectType: "Seasonal Produce Guide",
+        techStack: ["React", "Python", "Supabase"],
+        features: [
+            "Discover in-season produce based on your location.",
+            "Filter fruits and vegetables by type and season.",
+            "Personalized seasonal produce recommendations."
+        ],
+        insights: "Integrating Supabase for real-time data storage and retrieval was a new experience, and I had to learn how to handle authentication, role-based access control, and efficient querying. Making the app location-aware also introduced challenges with retrieving external APIs for regional produce data. Additionally, ensuring a seamless user experience with dynamic UI updates required improving my front-end state management skills.",
+        reason: "To experiment with Supabase as a backend alternative, learn about real-time data handling, and improve API integration techniques."
     },
     {
         id: 8,
@@ -179,17 +147,16 @@ const projects = [
         deployed: false,
         contribution: "Sole Developer",
         description: "A word game inspired by NYT's 'Connections,' where players categorize Taylor Swift lyrics into themed groups.",
-        overview: {
-            tags: [],
-            projectType: "Web App",
-            techStack: ["React", "Vite", "Tailwind CSS"],
-            features: [
-                "Mini game with Taylor Swift lyrics grouped into hidden categories.",
-                "Hints system to guide players towards correct groupings.",
-                "Mobile-friendly design for easy play on any device."
-            ]
-        },
-        insights: "One of the biggest challenges in developing Swiftle has been designing an intuitive UI that makes grouping lyrics fun and engaging. Finding the right balance between challenge and accessibility has been a major focus. Additionally, structuring the backend logic to ensure lyrics are categorized correctly has required careful planning. This project is an exciting mix of game design, UI/UX development, and Taylor Swift appreciation!"
+        tags: ["Game", "Web App"],
+        projectType: "Lyric-Based Word Game",
+        techStack: ["React", "Vite", "Tailwind CSS"],
+        features: [
+            "Mini game with Taylor Swift lyrics grouped into hidden categories.",
+            "Hints system to guide players towards correct groupings.",
+            "Mobile-friendly design for easy play on any device."
+        ],
+        insights: "Designing an intuitive UI that makes categorizing lyrics both fun and challenging required multiple iterations and user testing. Handling state updates dynamically while ensuring smooth animations and transitions was a key focus area. Additionally, implementing a hint system that provides useful yet non-obvious clues forced me to refine my game logic and balance difficulty levels.",
+        reason: "To develop better front-end game logic, improve UI/UX design for interactive applications, and refine state management techniques."
     }
 ];
 

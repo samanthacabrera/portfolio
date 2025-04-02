@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaMedium } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-        <footer className="flex flex-col justify-center items-center p-12">
+        <footer className="flex flex-col justify-center items-center p-6">
           <div className="flex space-x-6 text-xl">
               <a
                   href="https://linkedin.com/in/samcabreraa"
