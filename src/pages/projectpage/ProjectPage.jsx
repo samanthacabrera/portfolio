@@ -15,7 +15,7 @@ const ProjectPage = () => {
     }
 
     return (
-        <div className="flex flex-col items-center space-y-12 py-24 max-w-4xl mx-auto min-h-[90vh]">
+        <div className="flex flex-col items-center space-y-12 py-24 max-w-4xl mx-4 lg:mx-auto min-h-[90vh]">
             <div className="flex justify-between w-full">
                 <div>
                     <h2 className="uppercase font-semibold opacity-70 mb-2">{project.projectType}</h2>
@@ -32,26 +32,32 @@ const ProjectPage = () => {
                     </Link>
                 </div>
             </div>
-            <div className="flex space-x-12 text-center text-sm bg-white/10 w-full p-4">
-                <ul>
-                    <span>features:</span>
-                    {project.features.map((feature, index) => (
-                        <li key={index} className="px-2 py-1 my-1 border rounded-full">{feature}</li>
-                    ))}
-                </ul>
-                <ul>
-                    <span>tech stack:</span>
-                    {project.techStack.map((tech, index) => (
-                        <li key={index} className="px-2 my-1 border rounded-full">{tech}</li>
-                    ))}
-                </ul>
-                <ul>
-                    <span>tags:</span>
-                    {project.tags.map((tag, index) => (
-                        <li key={index} className="px-2 my-1 border rounded-full">{tag}</li>
-                    ))}
-                </ul>
-            </div>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-sm w-full p-6 bg-white/5">
+    <ul className="flex flex-col items-center">
+        <span className="block text-xs font-bold uppercase tracking-wide pb-1 w-full text-left">Features</span>
+        <div className="grid gap-2 w-full mt-2">
+            {project.features.map((feature, index) => (
+                <li key={index} className="px-3 py-1 border border-white/50 text-xs font-medium">{feature}</li>
+            ))}
+        </div>
+    </ul>
+    <ul className="flex flex-col items-center">
+        <span className="block text-xs font-bold uppercase tracking-wide pb-1 w-full text-left">Tech Stack</span>
+        <div className="grid gap-2 w-full mt-2">
+            {project.techStack.map((tech, index) => (
+                <li key={index} className="px-3 py-1 border border-white/50 text-xs font-medium">{tech}</li>
+            ))}
+        </div>
+    </ul>
+    <ul className="flex flex-col items-center">
+        <span className="block text-xs font-bold uppercase tracking-wide pb-1 w-full text-left">Tags</span>
+        <div className="grid gap-2 w-full mt-2">
+            {project.tags.map((tag, index) => (
+                <li key={index} className="px-3 py-1 border border-white/50 text-xs font-medium">{tag}</li>
+            ))}
+        </div>
+    </ul>
+</div>
 
             <div className="flex flex-col space-y-4 w-full">
                 <h3 className="font-medium">this project is a...</h3>
