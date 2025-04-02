@@ -2,8 +2,8 @@ import React from "react";
 
 function Hero({ is3DView }) {
   return (
-    <>
-      <p className={`${is3DView ? "absolute top-32" : "group relative"} text-sm md:text-lg md:max-w-2xl mx-8 md:mx-auto`}>
+    <div className="">
+      <p className={`${is3DView ? "relative justify-center items-center translate-y-[20vh] max-w-4xl" : "group relative"} text-md md:text-xl`}>
         <span className={`${is3DView ? "inline" : "block my-6"}`}>
           Hello world, my name is 
           <span className="text-lime-600 md:text-inherit group-hover:text-lime-600 transition duration-500 delay-100"> Sam</span>. 
@@ -28,7 +28,7 @@ function Hero({ is3DView }) {
         {is3DView && (
           <>
           <span className="px-1">
-             To learn more about me & what I do, interact with the scenes below. 
+             To learn more about me & what I do, interact with the scene below. 
           </span> 
           <span className="opacity-60">
             To interact with the 3D scene, you can click on the objects or hold and rotate to explore.
@@ -36,7 +36,7 @@ function Hero({ is3DView }) {
           </>
         )}
       </p>
-    </>
+    </div>
   );
 }
 

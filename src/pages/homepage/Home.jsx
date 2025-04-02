@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Hero from "./Hero";
 import Desk from "../../components/Desk";
-import YogaMat from "../../components/YogaMat"; 
 import About from "./About";
 import ProjectsList from "./ProjectsList";
 import Services from "./Services";
@@ -10,15 +9,10 @@ import Footer from "../../components/Footer";
 
 function Home() {
     const [is3DView, setIs3DView] = useState(true);
-    const [isYogaMatScene, setIsYogaMatScene] = useState(false);
 
     const toggleView = () => {
         setIs3DView(!is3DView);
-    };
-
-    const toggleScene = () => {
-        setIsYogaMatScene(!isYogaMatScene);
-    };
+    };;
 
     return (
         <div >
@@ -38,20 +32,9 @@ function Home() {
             </div>
 
             {is3DView ? (
-                <div className="flex flex-col justify-center items-center w-screen h-screen">
-                    {/* Scene Toggle */}
-                    <div 
-                        className="fixed bottom-24 flex items-center justify-center gap-4 cursor-pointer select-none z-10"
-                        onClick={toggleScene}
-                    >
-                        <span 
-                            className="px-4 py-2 rounded border "
-                        >
-                            {isYogaMatScene ? "explore my dev side 👩‍💻" : "explore my yogi side 🧘‍♀️"}
-                        </span>
-                    </div>
+                <div className="flex flex-col justify-between items-center w-screen h-[90vh]">
                     <Hero is3DView={is3DView}/>
-                    {isYogaMatScene ? <YogaMat /> : <Desk />}
+                    <Desk />
                 </div>
             ) : (
                 <div className="flex flex-col justify-center items-center py-40 space-y-40 max-w-2xl mx-auto">
@@ -63,7 +46,7 @@ function Home() {
                 </div>
             )}
 
-            {!is3DView && <Footer />}
+            <Footer />
         </div>
     );
 }
