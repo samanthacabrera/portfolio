@@ -60,6 +60,14 @@ const ProjectPage = () => {
             <main className="w-full max-w-lg">
                 {/* Overview Section */}
                 <section className="my-8 space-y-4">
+                    <div>
+                        <h3 className="text-xl mb-2">Overview</h3>
+                        <p className="font-normal">{project.overview?.projectType || "Not specified"}</p>
+                    </div>
+                    <div>
+                        <h3 className="text-xl mb-2">Tags</h3>
+                        <p className="font-normal">{project.overview?.tags?.join(", ") || "No tags available"}</p>
+                    </div>
                     <div className="">
                         <h3 className="text-xl mb-2">Description</h3>
                         <p className="font-normal">{project.description || "No description available"}</p>
@@ -75,6 +83,10 @@ const ProjectPage = () => {
                                 <li key={index}>{feature}</li>
                             ))}
                         </ul>
+                    </div>
+                    <div>
+                        <h3 className="text-xl mb-2">Contribution</h3>
+                        <p className="font-normal">{project.contribution || "Not specified"}</p>
                     </div>
                 </section>
 

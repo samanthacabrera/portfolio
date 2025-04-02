@@ -6,8 +6,11 @@ const projects = [
         link: "https://learnyoga.online/",
         wip: true,
         deployed: true,
+        contribution: "Sole Developer",
         description: "A yoga pose glossary designed to help users learn and explore yoga poses with ease.",
         overview: {
+            tags: ["Web App"],
+            projectType: "Yoga Pose Library Web App",
             techStack: ["React", "Vite", "Tailwind CSS"],
             features: [
                 "Comprehensive glossary featuring the top 100 common yoga poses.",
@@ -25,8 +28,11 @@ const projects = [
         link: 'https://calcalooza.com', 
         wip: false,
         deployed: true,
+        contribution: "Sole Developer",
         description: 'A responsive website featuring a variety of math calculators, including unit conversion, area, volume, and more.',
         overview: {
+            tags: [],
+            projectType: "Web App",
             techStack: ['React', 'Vite', 'Tailwind CSS'],
             features: [
                 'Provides calculators for different mathematical operations.',
@@ -44,8 +50,11 @@ const projects = [
         link: 'https://www.youtube.com/embed/Qso3oxAXWDc',
         wip: false,
         deployed: false,
+        contribution: "Sole Developer",
         description: 'A web application for sharing family recipes to a global audience.',
         overview: {
+            tags: [],
+            projectType: "Full-Stack Web App",
             techStack: ['React', 'Flask', 'SQLAlchemy', 'Tailwind CSS'],
             features: [
                 'Discover family recipes from various cultures around the world.',
@@ -73,8 +82,11 @@ const projects = [
         link: 'https://www.youtube.com/embed/Inhkh8RiL1k',
         wip: false,
         deployed: false,
+        contribution: "Sole Developer",
         description: 'This API provides comprehensive access to a diverse collection of yoga poses.',
         overview: {
+            tags: [],
+            projectType: "Web App",
             techStack: ['React', 'Flask', 'SQLAlchemy', 'Tailwind CSS'],
             features: [
                 'Use of standard HTTP methods: GET, POST, PUT, DELETE, and PATCH to handle CRUD operations.',
@@ -97,8 +109,11 @@ const projects = [
         link: 'https://www.youtube.com/embed/z9GeI03I_Yo?si=Iu83t3Mc7AHGYb-_',
         wip: false,
         deployed: false,
+        contribution: "Sole Developer",
         description: 'A fitness application to help users explore their city by providing personalized running routes.',
         overview: {
+            tags: [],
+            projectType: "Web App",
             techStack: ['React', 'Tailwind CSS', 'Mapbox', 'Vite'],
             features: [
                 'Create and follow custom running routes.',
@@ -120,8 +135,11 @@ const projects = [
         link: "https://yarnsara-samanthacabreras-projects.vercel.app/",
         wip: true,
         deployed: true,
+        contribution: "Sole Developer",
         description: "A full-stack eCommerce platform selling 100% upcycled and hand-crocheted yoga accessories.",
         overview: {
+            tags: [],
+            projectType: "Web App",
             techStack: ["React", "Express", "MongoDB", "Stripe"],
             features: [
                 "Custom eCommerce storefront with seamless checkout.",
@@ -138,8 +156,11 @@ const projects = [
         link: "",
         wip: false,
         deployed: false,
+        contribution: "Sole Developer",
         description: "EatBySeason is a web app that helps users discover in-season produce based on their location, encouraging healthier and more sustainable food choices.",
         overview: {
+            tags: [],
+            projectType: "Web App",
             techStack: ["React", "Python", "Supabase"],
             features: [
                 "Discover in-season produce based on your location.",
@@ -156,8 +177,11 @@ const projects = [
         link: "",
         wip: false,
         deployed: false,
+        contribution: "Sole Developer",
         description: "A word game inspired by NYT's 'Connections,' where players categorize Taylor Swift lyrics into themed groups.",
         overview: {
+            tags: [],
+            projectType: "Web App",
             techStack: ["React", "Vite", "Tailwind CSS"],
             features: [
                 "Mini game with Taylor Swift lyrics grouped into hidden categories.",
