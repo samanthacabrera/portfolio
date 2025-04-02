@@ -38,7 +38,7 @@ function Articles({ showYogaOnly }) {
 
     const displayArticles = (articles) => {
         return articles.map((post, index) => (
-            <div key={index} className='text-left mx-4 lg:mx-0 hover:text-lime-500 hover:scale-105 transition duration-500'>
+            <div key={index} className='text-left hover:text-lime-500 hover:scale-105 transition duration-500'>
                 <a href={post.link} rel='noreferrer' target='_blank' className='block'>
                     <h6 className="mb-1">
                         {post.title}
@@ -53,7 +53,7 @@ function Articles({ showYogaOnly }) {
     const articlesToDisplay = showYogaOnly ? blog.yogaArticles : blog.devArticles;
 
     return (
-        <div className="flex flex-col space-y-4">
+        <div className="flex flex-col w-full space-y-4">
             <h2 className="text-center text-lg md:text-2xl my-8">
                 My Two Cents
             </h2>

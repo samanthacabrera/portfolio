@@ -11,7 +11,7 @@ const ProjectsList = () => {
                     const { id, title, description, wip } = project; 
                     return (
                         <Link key={id} to={`/projects/${id}`}>
-                            <div className="relative group flex items-center mx-8 lg:mx-0"> 
+                            <div className="relative group flex items-center lg:mx-0"> 
                                 <h3 className="text-lg hover:text-cyan-600 transition duration-300">
                                     {title}
                                     {wip && (

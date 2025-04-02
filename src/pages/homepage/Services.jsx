@@ -152,11 +152,11 @@ const Services = ({is3DView}) => {
       
       <h1 className="text-lg md:text-2xl my-8">My Services</h1>
    
-        <div className="grid gap-2 sm:grid-cols-1 text-gray-900 mx-4 lg:mx-0">
+        <div className="grid gap-2 sm:grid-cols-1 text-gray-900">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white border shadow-sm rounded py-2 hover:scale-105 p-4 transition-transform duration-300 cursor-pointer"
+              className="bg-white border shadow-sm rounded py-2 hover:scale-[102%] p-4 transition-transform duration-500 cursor-pointer"
               onClick={() => setSelectedService(service)}
             >
               <h3 className="">{service.title}</h3>
