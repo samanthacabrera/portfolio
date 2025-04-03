@@ -7,18 +7,18 @@ const projects = [
         wip: true,
         deployed: true,
         contribution: "Sole Developer",
-        description: "A yoga pose glossary designed to help users learn and explore yoga poses with ease.",
-        tags: ["Web App"],
+        description: "A structured yoga resource designed to provide beginners with a holistic foundation in yoga. In addition to a categorized library of poses with clear instructions, the platform includes lessons on foundational topics such as breathwork, alignment, and yoga philosophy. With a user-friendly search function and an emphasis on accessibility, it serves as a comprehensive starting point for those new to yoga.",
+        tags: ["UX/UI", "Frontend", "SEO" ],
         projectType: "Yoga Pose Library Web App",
         techStack: ["React", "Vite", "Tailwind CSS"],
         features: [
-            "Comprehensive glossary featuring the top 100 common yoga poses.",
-            "Search functionality for quickly finding specific poses.",
-            "Detailed pose descriptions and benefits.",
-            "Responsive design optimized for mobile and desktop."
+            "Dynamic yoga pose library with structured JSON data for 50+ essential yoga poses",
+            "Interactive quiz component using React state to track user responses and validate answers.",
+            "SEO-optimized metadata and structured data for better search engine visibility.",
+            "Fast API integration for potential backend expansion with Node.js and MongoDB.",
         ],
-        insights: "The most challenging aspect of Learn Yoga Online was structuring and organizing a content-heavy application efficiently while maintaining performance and usability. I had to carefully design the data structure for yoga poses and optimize the search functionality to handle large datasets smoothly. Additionally, ensuring a visually appealing yet accessible UI required iterating on multiple design choices and testing responsiveness across devices.",
-        reason: "To gain experience structuring a content-heavy web application with an intuitive UI, while improving my ability to handle large datasets efficiently."
+        insights: "The most challenging aspect of Learn Yoga Online was structuring and organizing a content-heavy application efficiently while maintaining performance and usability. I had to carefully design the data structure for yoga poses and optimize the search functionality to handle large datasets smoothly. Additionally, ensuring a visually appealing yet accessible UI required iterating on multiple design choices and testing responsiveness across devices. Managing state efficiently in React, especially when dealing with dynamic filtering and search, was another learning curve that improved my frontend development skills.",
+        reason: "I created this project to gain experience structuring a content-heavy web application with an intuitive UI while improving my ability to handle large datasets efficiently. Additionally, as someone passionate about yoga, I wanted to build a practical resource that could help beginners and experienced practitioners alike easily navigate and learn about yoga poses."
     },
     {
         id: 2,

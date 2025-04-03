@@ -45,8 +45,8 @@ const ProjectPage = () => {
             </div>
             
             {/* Overview */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full border-t border-b border-white/10 py-8">
-                <div className="flex flex-col">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 w-full border-t border-b border-white/10 py-8">
+                <div className="flex flex-col col-span-2 ">
                     <span className="text-xs uppercase tracking-wider text-white/60 mb-4">Features</span>
                     <ul className="space-y-2">
                         {project.features.map((feature, index) => (
