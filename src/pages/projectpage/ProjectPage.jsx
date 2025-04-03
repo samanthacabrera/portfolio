@@ -87,6 +87,11 @@ const ProjectPage = () => {
                         <span className="text-xs uppercase tracking-wider text-white/60 mb-4">Learnings</span>
                         <p className="text-sm text-white/80">{project.insights}</p>
                     </div>
+
+                     <div className="flex flex-col">
+                        <span className="text-xs uppercase tracking-wider text-white/60 mb-4">Role</span>
+                        <p className="text-sm text-white/80">{project.contribution}</p>
+                    </div>
                 </div>
             </div>
 
