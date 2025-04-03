@@ -8,7 +8,7 @@ const projects = [
         deployed: true,
         contribution: "Sole Developer",
         description: "A structured yoga resource designed to provide beginners with a holistic foundation in yoga. In addition to a categorized library of poses with clear instructions, the platform includes lessons on foundational topics such as breathwork, alignment, and yoga philosophy. With a user-friendly search function and an emphasis on accessibility, it serves as a comprehensive starting point for those new to yoga.",
-        tags: ["UX/UI", "Frontend", "SEO" ],
+        tags: ["UX/UI", "Frontend", "Web App", "SEO" ],
         projectType: "Yoga Pose Library Web App",
         techStack: ["React", "Vite", "Tailwind CSS"],
         features: [
@@ -29,7 +29,7 @@ const projects = [
         deployed: true,
         contribution: "Sole Developer",
         description: "An open-source platform designed to assist students with early math calculations. Featuring a range of calculators for unit conversions, area, volume, and more. With a focus on accessibility, the app is optimized for a smooth user experience across all devices.",
-        tags: ["UX/UI", "Frontend", "Open Source"],
+        tags: ["UX/UI", "Frontend", "Web App", "Open Source"],
         projectType: "Math Calculator Web App",
         techStack: ["React", "Vite", "Tailwind CSS"],
         features: [
@@ -49,19 +49,19 @@ const projects = [
         wip: false,
         deployed: false,
         contribution: "Sole Developer",
-        description: "A web application for sharing family recipes to a global audience.",
-        tags: ["Full-Stack Web App"],
+        description: "A platform for sharing family recipes globally, allowing users to explore diverse culinary traditions. The app provides an easy-to-use interface for discovering, saving, and sharing recipes, making it a hub for food enthusiasts to connect over shared traditions.",
+        tags: ["Full-Stack", "Web App", "CRUD", "Database Management"],
         projectType: "Recipe Sharing Platform",
-        techStack: ["React", "Flask", "SQLAlchemy", "Tailwind CSS"],
+        techStack: ["React", "Flask", "SQLAlchemy", "Tailwind CSS", "Clerk"],
         features: [
-            "Discover family recipes from various cultures around the world.",
-            "Explore recipes from a randomly featured country.",
-            "Share your own family recipes with the community.",
-            "Users can save their favorite recipes for quick access.",
-            "Interactive UI for guiding users through recipe creation."
+            "User-driven recipe submission process, allowing users to contribute and share their family dishes.",
+            "Search functionality to explore recipes by ingredients, cuisine, or author",
+            "Personalized features like saving favorite recipes and creating custom recipe collections.",
+            "Responsive design ensuring a smooth experience on both mobile and desktop devices."
         ],
-        insights: "Connecting the front end to the back end presented challenges in handling user authentication, database queries, and ensuring a seamless user experience. I had to structure the API endpoints efficiently to allow for quick retrieval of recipes and user-generated content. Handling media uploads (such as images of dishes) required learning about cloud storage solutions and optimizing file handling within the backend.",
-        reason: "To practice full-stack development, improve database structuring, and handle user-generated content effectively."    },
+         insights: "Developing Recipe Roots helped me improve my skills in connecting front-end and back-end technologies, especially in handling dynamic content like recipes and user-generated data. I faced challenges with structuring the API to efficiently serve large amounts of recipe data while maintaining a smooth user experience. Additionally, integrating file uploads for recipe images taught me about cloud storage solutions and optimizing the backend for media handling.",
+    reason: "I built Recipe Roots as a way to enhance my full-stack development skills, with a focus on building a scalable platform that could handle both structured data and user interactions. It was also an opportunity to work with both front-end and back-end technologies in a real-world project, and to practice managing database relationships effectively."
+    },
     {
         id: 4,
         title: "YogiAPI",
