@@ -110,17 +110,18 @@ const projects = [
         wip: false,
         deployed: true,
         contribution: "Sole Developer",
-        description: "A full-stack eCommerce platform selling 100% upcycled and hand-crocheted yoga accessories.",
-        tags: ["Full-Stack Web App", "eCommerce"],
+        description: "Yarnsara is an eCommerce platform dedicated to selling 100% upcycled and hand-crocheted yoga accessories. The platform provides a user-friendly shopping experience, with a custom-built storefront, detailed product listings, and secure payment options. With a focus on sustainability, Yarnsara showcases eco-conscious products while offering seamless checkout and transaction processes.",
+        tags: ["Full-Stack", "Web App", "eCommerce", "Sustainability"],
         projectType: "Sustainable eCommerce Platform",
-        techStack: ["React", "Express", "MongoDB", "Stripe"],
+        techStack: ["React", "Express", "Node.js", "MongoDB", "Stripe"],
         features: [
-            "Custom eCommerce storefront with seamless checkout.",
-            "Integration with Stripe for secure payments.",
-            "Product listings with detailed descriptions and images."
+            "Custom eCommerce storefront with seamless checkout and payment integration.",
+            "Integration with Stripe for secure payments and transaction handling.",
+            "Detailed product listings with high-quality images and comprehensive descriptions."
         ],
-        insights: "One of the biggest challenges was implementing secure payment processing with Stripe, as it required learning about PCI compliance, tokenization, and handling errors gracefully. Setting up a robust product catalog with efficient database queries also presented challenges, especially when integrating filtering and search functionality. Additionally, ensuring a smooth user experience throughout the checkout process required refining UI interactions and debugging edge cases.",
-        reason: "To learn about payment integration, secure transactions, and optimizing database queries for an eCommerce platform."    },
+        insights: "Building Yarnsara provided valuable insights into the complexities of eCommerce platforms, particularly in handling secure payment processing and optimizing product catalogs. The biggest challenge was implementing Stripe for secure payment transactions while ensuring PCI compliance. I also learned how to set up efficient database queries to manage large product catalogs, integrate filtering, and implement a smooth checkout process.",
+        reason: "I created Yarnsara to gain hands-on experience with full-stack eCommerce development while focusing on sustainability. I wanted to challenge myself with payment integration and database optimization, while also working on a project that aligns with my passion for both yoga and environmentally-conscious production practices."
+    },
     {
         id: 7,
         title: "EatBySeason",
@@ -129,17 +130,17 @@ const projects = [
         wip: false,
         deployed: false,
         contribution: "Sole Developer",
-        description: "EatBySeason is a web app that helps users discover in-season produce based on their location, encouraging healthier and more sustainable food choices.",
-        tags: ["Web App"],
+        description: "EatBySeason is a web application designed to help users discover locally available, in-season produce based on their location. The platform encourages healthier and more sustainable eating habits by providing users with personalized recommendations for seasonal fruits and vegetables.",
+        tags: ["Web App", "Geolocation", "Serverless"],
         projectType: "Seasonal Produce Guide",
         techStack: ["React", "Python", "Supabase"],
         features: [
-            "Discover in-season produce based on your location.",
-            "Filter fruits and vegetables by type and season.",
-            "Personalized seasonal produce recommendations."
+            "Location-based discovery of in-season fruits and vegetables to promote seasonal eating.",
+            "Filters for browsing produce by type and season, enhancing the user experience.",
+            "Personalized produce recommendations tailored to regional availability and seasons."
         ],
-        insights: "Integrating Supabase for real-time data storage and retrieval was a new experience, and I had to learn how to handle authentication, role-based access control, and efficient querying. Making the app location-aware also introduced challenges with retrieving external APIs for regional produce data. Additionally, ensuring a seamless user experience with dynamic UI updates required improving my front-end state management skills.",
-        reason: "To experiment with Supabase as a backend alternative, learn about real-time data handling, and improve API integration techniques."
+        insights: "Developing EatBySeason gave me the opportunity to explore real-time data handling and API integrations with Supabase. One of the biggest challenges was ensuring accurate regional produce data through external APIs, as well as making the app location-aware. Additionally, refining my state management skills was essential for providing a seamless user experience with dynamic, real-time updates.",
+        reason: "I created EatBySeason to deepen my knowledge of location-based services and real-time data handling, while promoting sustainable eating habits. The project allowed me to experiment with Supabase and build a helpful resource for users looking to make more eco-conscious food choices."
     },
     {
         id: 8,
@@ -149,17 +150,18 @@ const projects = [
         wip: false,
         deployed: false,
         contribution: "Sole Developer",
-        description: "A word game inspired by NYT's 'Connections,' where players categorize Taylor Swift lyrics into themed groups.",
-        tags: ["Game", "Web App"],
+        description: "Swiftle is a lyric-based word game where players categorize Taylor Swift song lyrics into hidden thematic groups. Drawing inspiration from the NYT's 'Connections' game, Swiftle challenges users to recognize patterns in lyrics while providing an engaging and fun experience. The app offers a mobile-first design for seamless play on any device, making it accessible and easy to enjoy on the go.",
+        tags: ["Game", "Web App", "UX/UI"],
         projectType: "Lyric-Based Word Game",
         techStack: ["React", "Vite", "Tailwind CSS"],
         features: [
-            "Mini game with Taylor Swift lyrics grouped into hidden categories.",
-            "Hints system to guide players towards correct groupings.",
-            "Mobile-friendly design for easy play on any device."
+            "Lyric-based game with Taylor Swift lyrics grouped into hidden categories for players to identify.",
+            "Responsive and mobile-first design ensuring optimal play on any device, whether on a phone, tablet, or desktop.",
+            "Real-time feedback to enhance user engagement and maintain the flow of the game.",
+            "Timer feature to challenge players to categorize lyrics within a specific time limit."
         ],
-        insights: "Designing an intuitive UI that makes categorizing lyrics both fun and challenging required multiple iterations and user testing. Handling state updates dynamically while ensuring smooth animations and transitions was a key focus area. Additionally, implementing a hint system that provides useful yet non-obvious clues forced me to refine my game logic and balance difficulty levels.",
-        reason: "To develop better front-end game logic, improve UI/UX design for interactive applications, and refine state management techniques."
+        insights: "Swiftle challenged me to refine my front-end development skills, particularly in game logic and UI/UX design. I focused on creating dynamic state updates and smooth transitions to make the gameplay intuitive. The hint system required balancing helpful guidance with maintaining the game's challenge, which pushed me to improve my logic for interactive applications.",
+         reason: "I created Swiftle because I wanted to improve my front-end game logic and UI/UX design skills for interactive applications. As a Swiftie, I also wanted to create a fun and personalized experience centered around Taylor Swift's music. The project allowed me to refine my state management techniques while building something I genuinely enjoyed."
     }
 ];
 
