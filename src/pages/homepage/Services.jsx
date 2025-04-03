@@ -168,69 +168,92 @@ const Services = ({is3DView}) => {
           ))}
         </div>
 
-
-      {selectedService && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 flex items-center text-gray-900 justify-center z-50"
-          onClick={closeModal}
-        >
+      
+        {selectedService && (
           <div
-            className="bg-white p-8 rounded-lg max-w-md md:max-w-lg h-[50vh] overflow-y-auto relative"
-            onClick={(e) => e.stopPropagation()}
+            className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 backdrop-blur-sm"
+            onClick={closeModal}
           >
-            <button
-              onClick={closeModal}
-              className="absolute top-4 right-4 text-gray-600 hover:text-black"
+            <div
+              className="bg-white p-6 md:p-8 rounded-lg max-w-md md:max-w-lg w-11/12 h-auto max-h-[80vh] overflow-y-auto relative shadow-xl"
+              onClick={(e) => e.stopPropagation()}
             >
-              &times;
-            </button>
-
-            <h2 className="text-2xl">{selectedService.title}</h2>
-
-            <div className="text-sm py-2 space-y-2 leading-tight">
-              <p>{selectedService.description}</p>
-
-              <h3>Timeline</h3>
-              <p className="pl-2">{selectedService.details.timeline}</p>
-
-              <h3>Deliverables</h3>
-              <ul className="pl-2">
-                {selectedService.details.deliverables.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
-
-              <h3>Features</h3>
-              <ul className="pl-2">
-                {selectedService.details.features.map((feature, index) => (
-                  <li key={index}>{feature}</li>
-                ))}
-              </ul>
-
-              <h3>FAQs</h3>
-              <ul className="pl-2">
-                {selectedService.details.faqs.map((faq, index) => (
-                  <li key={index} className="mb-2">
-                    {faq.question}
-                    <br />
-                    {faq.answer}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <a
-                href="https://calendly.com/samantha-n-cabrera/30min"
-                target="_blank"
-                className="text-xs border rounded p-2 hover:bg-gray-100 transition duration-200"
+              <button
+                onClick={closeModal}
+                className="absolute top-4 right-4 text-gray-400 hover:text-black transition-colors"
+                aria-label="Close"
               >
-                Book Consult
-              </a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+
+              <h2 className="text-xl md:text-2xl font-medium mb-4 pr-6">{selectedService.title}</h2>
+              
+              <div className="text-sm space-y-5 leading-relaxed text-gray-700">
+                <p className="mb-4">{selectedService.description}</p>
+                
+                <div className="flex items-center mb-3">
+                  <div className="w-0.5 h-4 bg-gray-800 mr-2"></div>
+                  <h3 className="text-sm font-medium text-gray-900">Timeline</h3>
+                </div>
+                <p className="pl-3 mb-4">{selectedService.details.timeline}</p>
+
+                <div className="flex items-center mb-3">
+                  <div className="w-0.5 h-4 bg-gray-800 mr-2"></div>
+                  <h3 className="text-sm font-medium text-gray-900">Deliverables</h3>
+                </div>
+                <ul className="pl-3 mb-4 space-y-2">
+                  {selectedService.details.deliverables.map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="inline-block w-1 h-1 bg-gray-500 rounded-full mt-2 mr-2"></span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="flex items-center mb-3">
+                  <div className="w-0.5 h-4 bg-gray-800 mr-2"></div>
+                  <h3 className="text-sm font-medium text-gray-900">Features</h3>
+                </div>
+                <ul className="pl-3 mb-4 space-y-2">
+                  {selectedService.details.features.map((feature, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="inline-block w-1 h-1 bg-gray-500 rounded-full mt-2 mr-2"></span>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="flex items-center mb-3">
+                  <div className="w-0.5 h-4 bg-gray-800 mr-2"></div>
+                  <h3 className="text-sm font-medium text-gray-900">FAQs</h3>
+                </div>
+                <div className="pl-3 space-y-4">
+                  {selectedService.details.faqs.map((faq, index) => (
+                    <div key={index} className="mb-2">
+                      <p className="text-gray-800">{faq.question}</p>
+                      <p className="text-gray-600 mt-1">{faq.answer}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="">
+                {/* <p className="text-lg font-medium mb-4">{selectedService.price}</p> */}
+                <a
+                  href="https://calendly.com/samantha-n-cabrera/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-black text-xs p-2"
+                >
+                  Book Consultation
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
     </div>
   );
 };

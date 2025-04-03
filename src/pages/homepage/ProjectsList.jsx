@@ -20,7 +20,7 @@ const ProjectsList = () => {
                                         </span>
                                     )}
                                 </h3>
-                                <div className="absolute top-4 translate-x-full p-2 bg-gray-100 text-charcoal opacity-0 group-hover:opacity-100 z-10 transition-opacity duration-300 w-[200px]">
+                                <div className="absolute top-4 translate-x-full p-2 bg-gray-100 text-black opacity-0 group-hover:opacity-100 z-10 transition-opacity duration-300 w-[200px]">
                                     {projectType}
                                 </div>
                             </div>
