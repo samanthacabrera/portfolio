@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import ToText from "../../utils/ToText";
 
-function Articles({ showYogaOnly }) {
+function Articles() {
     const mediumURL = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@samantha.n.cabrera";
 
     const [blog, setBlog] = useState({
-        yogaArticles: [],
-        devArticles: [],
+        articles: [],
         error: null
     });
 
@@ -14,15 +13,11 @@ function Articles({ showYogaOnly }) {
         fetch(mediumURL)
             .then(response => response.json())
             .then(data => {
-                // convert title to lower case and check if it includes "Beyond The Mat"
-                const yogaArticles = data.items.filter(post => post.title.toLowerCase().includes('beyond the mat'));
-                // filter non-yoga (dev) articles
-                const devArticles = data.items.filter(post => !post.title.toLowerCase().includes('beyond the mat'));
-
-                setBlog({
-                    yogaArticles,
-                    devArticles,
-                });
+                if (data.items) {
+                    setBlog({ articles: data.items });
+                } else {
+                    setBlog({ error: "No articles found" });
+                }
             })
             .catch(err => {
                 setBlog({ error: err.message });
@@ -32,8 +27,7 @@ function Articles({ showYogaOnly }) {
     const calculateReadTime = (text) => {
         const wordsPerMinute = 250;
         const words = text.split(' ').length;
-        const readTimeMinutes = Math.ceil(words / wordsPerMinute);
-        return readTimeMinutes;
+        return Math.ceil(words / wordsPerMinute);
     };
 
     const displayArticles = (articles) => {
@@ -50,14 +44,10 @@ function Articles({ showYogaOnly }) {
         ));
     };
 
-    const articlesToDisplay = showYogaOnly ? blog.yogaArticles : blog.devArticles;
-
     return (
         <div className="flex flex-col w-full space-y-4">
-            <h2 className="text-center text-lg md:text-2xl my-8">
-                My Two Cents
-            </h2>
-            {articlesToDisplay.length > 0 ? displayArticles(articlesToDisplay) : <p>No articles found.</p>}
+            <h2 className="text-center text-lg md:text-2xl my-8">My Two Cents</h2>
+            {blog.error ? <p>{blog.error}</p> : blog.articles.length > 0 ? displayArticles(blog.articles) : <p>No articles found.</p>}
         </div>
     );
 }
