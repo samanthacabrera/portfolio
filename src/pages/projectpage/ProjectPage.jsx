@@ -43,47 +43,56 @@ const ProjectPage = () => {
                     }
                 </div>
             </div>
-
-            {/* Project Takeaways */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-sm w-full p-6 bg-white/5">
-                <ul className="flex flex-col items-center">
-                    <span className="block text-xs font-bold uppercase tracking-wide pb-1 w-full text-left">Features</span>
-                    <div className="grid gap-2 w-full mt-2">
+            
+            {/* Overview */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full border-t border-b border-white/10 py-8">
+                <div className="flex flex-col">
+                    <span className="text-xs uppercase tracking-wider text-white/60 mb-4">Features</span>
+                    <ul className="space-y-2">
                         {project.features.map((feature, index) => (
-                            <li key={index} className="px-3 py-1 border border-white/50 text-xs font-medium">{feature}</li>
+                            <li key={index} className="text-sm text-white/80">{feature}</li>
                         ))}
-                    </div>
-                </ul>
-                <ul className="flex flex-col items-center">
-                    <span className="block text-xs font-bold uppercase tracking-wide pb-1 w-full text-left">Tech Stack</span>
-                    <div className="grid gap-2 w-full mt-2">
+                    </ul>
+                </div>
+                <div className="flex flex-col">
+                    <span className="text-xs uppercase tracking-wider text-white/60 mb-4">Tech Stack</span>
+                    <ul className="space-y-2">
                         {project.techStack.map((tech, index) => (
-                            <li key={index} className="px-3 py-1 border border-white/50 text-xs font-medium">{tech}</li>
+                            <li key={index} className="text-sm text-white/80">{tech}</li>
                         ))}
-                    </div>
-                </ul>
-                <ul className="flex flex-col items-center">
-                    <span className="block text-xs font-bold uppercase tracking-wide pb-1 w-full text-left">Tags</span>
-                    <div className="grid gap-2 w-full mt-2">
+                    </ul>
+                </div>
+                <div className="flex flex-col">
+                    <span className="text-xs uppercase tracking-wider text-white/60 mb-4">Tags</span>
+                    <ul className="space-y-2">
                         {project.tags.map((tag, index) => (
-                            <li key={index} className="px-3 py-1 border border-white/50 text-xs font-medium">{tag}</li>
+                            <li key={index} className="text-sm text-white/80">{tag}</li>
                         ))}
-                    </div>
-                </ul>
+                    </ul>
+                </div>
             </div>
 
-            <div className="flex flex-col space-y-4 w-full">
-                <h3 className="font-medium">this project is a...</h3>
-                <p>{project.description}</p>
-                <h3 className="font-medium">this project taught me...</h3>
-                <p>{project.insights}</p>
-                <h3 className="font-medium">I made this project...</h3>
-                <p>{project.reason}</p>
+            {/* Project Takeaways */}
+            <div className="flex flex-col w-full border-b border-white/10 pb-8">
+                <div className="grid grid-cols-1 gap-8 w-full">
+                    <div className="flex flex-col">
+                        <span className="text-xs uppercase tracking-wider text-white/60 mb-4">Summary</span>
+                        <p className="text-sm text-white/80">{project.description}</p>
+                    </div>
+                    <div className="flex flex-col">
+                        <span className="text-xs uppercase tracking-wider text-white/60 mb-4">Motivation</span>
+                        <p className="text-sm text-white/80">{project.reason}</p>
+                    </div>
+                    <div className="flex flex-col">
+                        <span className="text-xs uppercase tracking-wider text-white/60 mb-4">Learnings</span>
+                        <p className="text-sm text-white/80">{project.insights}</p>
+                    </div>
+                </div>
             </div>
 
             {/* Other Work */}
             <div className="w-full">
-                <h3 className=" mb-4">See my other projects</h3>
+                <h3 className="text-xs uppercase tracking-wider text-white/60 mb-4">See my other projects</h3>
                 <ul className="grid grid-cols-4 gap-4">
                     {projects
                         .filter((proj) => proj.id !== project.id) 
