@@ -50,7 +50,7 @@ const projects = [
         deployed: false,
         contribution: "Sole Developer",
         description: "A platform for sharing family recipes globally, allowing users to explore diverse culinary traditions. The app provides an easy-to-use interface for discovering, saving, and sharing recipes, making it a hub for food enthusiasts to connect over shared traditions.",
-        tags: ["Full-Stack", "Web App", "CRUD", "Database Management"],
+        tags: ["Full-Stack", "Web App", "CRUD", "Database"],
         projectType: "Recipe Sharing Platform",
         techStack: ["React", "Flask", "SQLAlchemy", "Tailwind CSS", "Clerk"],
         features: [
@@ -70,17 +70,18 @@ const projects = [
         wip: false,
         deployed: false,
         contribution: "Sole Developer",
-        description: "This API provides comprehensive access to a diverse collection of yoga poses.",
-        tags: ["Web API"],
+        description: "YogiAPI is a RESTful API designed to provide comprehensive access to a diverse collection of yoga poses. It offers a simple yet efficient way to interact with pose data through clear and structured endpoints, making it an ideal resource for developers and applications that need yoga pose information.",
+        tags: ["Web API", "Backend", "RESTful"],
         projectType: "Yoga Pose API",
-        techStack: ["React", "Flask", "SQLAlchemy", "Tailwind CSS"],
+        techStack: ["Flask", "SQLAlchemy", "Tailwind CSS"],
         features: [
-            "Use of standard HTTP methods for CRUD operations.",
-            "Clear and concise documentation for all API endpoints.",
-            "User-friendly interface for browsing yoga poses."
+            "CRUD operations for yoga poses using standard HTTP methods.",
+            "Comprehensive and easy-to-navigate API documentation for seamless integration.",
+            "User-friendly endpoints to browse and search for yoga poses."
         ],
-        insights: "Developing YogiAPI was my first experience creating an API, and I had to learn how to structure RESTful endpoints, implement authentication, and optimize database queries for performance. Writing clear and concise documentation also helped me understand the importance of making APIs developer-friendly. Debugging issues with CORS and ensuring secure data handling taught me valuable lessons in API security.",
-        reason: "To gain hands-on experience in building and documenting a RESTful API while improving backend security and performance optimization."    },
+        insights: "Building YogiAPI was a great introduction to creating backend services and understanding how to structure RESTful APIs. I learned how to handle CRUD operations, implement user authentication, and optimize SQL queries for better performance. Debugging CORS issues and ensuring secure data handling were crucial skills I developed during this project, which are essential when building scalable APIs.",
+        reason: "I created YogiAPI to expand my backend development skills and gain hands-on experience with building RESTful APIs. It was an opportunity to understand API documentation, improve security practices, and learn how to manage databases effectively for better performance and scalability."
+    },
     {
         id: 5,
         title: "RunTheCity",
@@ -89,17 +90,18 @@ const projects = [
         wip: false,
         deployed: false,
         contribution: "Sole Developer",
-        description: "A fitness application to help users explore their city by providing personalized running routes.",
-        tags: ["Web App"],
+        description: "RunTheCity is a fitness application designed to help users discover personalized running routes throughout their city. By integrating dynamic maps and real-time geolocation data, the app provides a seamless running experience, allowing users to explore new routes, set custom paths, and track their runs with ease.",
+        tags: ["Geolocation", "Mobile-First","Web App"],
         projectType: "Fitness & Navigation App",
         techStack: ["React", "Tailwind CSS", "Mapbox", "Vite"],
         features: [
-            "Create and follow custom running routes.",
-            "Discover featured routes in your city based on landmarks.",
-            "Users can pause and resume their runs seamlessly."
+            "Create and follow personalized running routes tailored to the user's preferences.",
+            "Discover featured routes based on landmarks and popular running locations.",
+            "Pause and resume runs seamlessly, ensuring smooth tracking and navigation."
         ],
-        insights: "Integrating Mapbox to provide real-time running routes required understanding geolocation APIs, handling live data updates efficiently, and ensuring smooth map interactions. Optimizing the rendering of route paths dynamically was a challenge, especially when adjusting for different map zoom levels. Additionally, implementing user input for custom routes forced me to improve state management and work with complex event handlers.",
-        reason: "To explore working with interactive maps, geolocation-based services, and improve state management in a dynamic UI."    },
+        insights: "Integrating Mapbox to provide real-time running routes was a valuable learning experience in working with geolocation APIs and handling live data updates efficiently. I faced challenges in rendering dynamic route paths while maintaining optimal performance, especially at varying zoom levels. Additionally, managing user inputs for custom routes and ensuring smooth map interactions pushed me to improve my state management and event handling skills.",
+        reason: "I created RunTheCity to explore the integration of interactive maps and geolocation-based services, while improving my skills in state management and dynamic UI design. This project allowed me to work with real-time data and focused on building a smooth user experience for people looking to explore new cities through personalized running routes, helping them discover local landmarks while staying active."
+    },
     {
         id: 6,
         title: "Yarnsara",
