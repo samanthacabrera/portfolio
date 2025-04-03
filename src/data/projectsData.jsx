@@ -28,18 +28,19 @@ const projects = [
         wip: false,
         deployed: true,
         contribution: "Sole Developer",
-        description: "A responsive website featuring a variety of math calculators, including unit conversion, area, volume, and more.",
-        tags: ["Web App"],
+        description: "An open-source platform designed to assist students with early math calculations. Featuring a range of calculators for unit conversions, area, volume, and more. With a focus on accessibility, the app is optimized for a smooth user experience across all devices.",
+        tags: ["UX/UI", "Frontend", "Open Source"],
         projectType: "Math Calculator Web App",
         techStack: ["React", "Vite", "Tailwind CSS"],
         features: [
-            "Provides calculators for different mathematical operations.",
-            "User-friendly interface for easy navigation.",
-            "Responsive design for accessibility across devices.",
-            "Categories for various calculator types including unit conversion, area, and volume."
+            "Comprehensive collection of calculators, including unit conversions, area, and volume calculators.",
+            "Responsive design optimized for mobile and desktop devices, ensuring usability on any screen size.",
+            "Reusable React components for each calculator type, promoting scalability and easy maintenance.",
+            "Built-in error handling and validation for accurate calculations, even with complex operations."
         ],
-        insights: "The primary challenge was ensuring each calculator delivered accurate results across a range of mathematical operations, which required rigorous testing and debugging. Implementing unit conversions introduced additional complexity, as I had to account for edge cases and floating-point precision issues. Additionally, I focused on creating a modular and reusable component system to maintain scalability as I expanded the calculator collection.",
-        reason: "To improve logic-based programming and precision in mathematical computations while practicing modular component design."    },
+        insights: "Throughout the development of Calcalooza, I gained valuable experience in working with mathematical algorithms, ensuring accuracy in complex calculations, and handling edge cases. I also honed my ability to build reusable and maintainable components, which made it easier to scale the project and add new features as needed.",
+        reason: "I created Calcalooza as an opportunity to refine my skills in logic-based programming and mathematical computations. By building a set of reliable calculators, I aimed to challenge myself in tackling real-world problems, focusing on precision and handling the complexities of unit conversions and diverse mathematical operations."
+    },
     {
         id: 3,
         title: "Recipe Roots",
