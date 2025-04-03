@@ -30,9 +30,9 @@ function Hero({ is3DView }) {
             and 
             <span className="text-cyan-600 md:text-inherit group-hover:text-cyan-600 transition duration-500 delay-500"> yogi</span>.  
              I spend my days improving 
-            <a href="https://learnyoga.online/" target="_blank" rel="noopener noreferrer" className="italic opacity-90 hover:opacity-100 text-orange-500 md:text-inherit group-hover:text-orange-500 transition duration-500 delay-700"> Learn Yoga Online</a>, 
-            and my nights building 
-            <a href="https://yarnsara.etsy.com/" target="_blank" rel="noopener noreferrer" className="italic opacity-90 hover:opacity-100 text-pink-600 md:text-inherit group-hover:text-pink-600 transition duration-500 delay-700"> Yarnsara</a>.
+            <a href="https://learnyoga.online/" target="_blank" rel="noopener noreferrer" className="italic opacity-90 hover:opacity-100 text-orange-500 md:text-inherit group-hover:text-orange-500 border-b border-orange-500 md:border-inherit group-hover:border-orange-500 transition-all duration-500 delay-700 mx-1">Learn Yoga Online</a>
+            and my nights building
+            <a href="https://yarnsara.etsy.com/" target="_blank" rel="noopener noreferrer" className="italic opacity-90 hover:opacity-100 text-pink-600 md:text-inherit group-hover:text-pink-600 border-b border-pink-600 md:border-inherit group-hover:border-pink-600 transition-all duration-500 delay-700 ml-1">Yarnsara</a>.
           </span>
         )}
       </p>

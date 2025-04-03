@@ -8,7 +8,7 @@ const ProjectsList = () => {
             <h2 className="text-lg md:text-2xl my-8 text-center">Check out my work...</h2>
             <div className="flex flex-col items-start space-y-2"> 
                 {projects.map((project) => {
-                    const { id, title, description, wip } = project; 
+                    const { id, title, projectType, wip } = project; 
                     return (
                         <Link key={id} to={`/projects/${id}`}>
                             <div className="relative group flex items-center lg:mx-0"> 
@@ -20,8 +20,8 @@ const ProjectsList = () => {
                                         </span>
                                     )}
                                 </h3>
-                                <div className="absolute top-6 translate-x-1/2 p-2 bg-gray-100 text-black rounded opacity-0 group-hover:opacity-100 z-10 transition-opacity duration-300 w-[200px]">
-                                    {description}
+                                <div className="absolute top-4 translate-x-full p-2 bg-gray-100 text-charcoal opacity-0 group-hover:opacity-100 z-10 transition-opacity duration-300 w-[200px]">
+                                    {projectType}
                                 </div>
                             </div>
                         </Link>
