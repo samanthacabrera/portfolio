@@ -104,7 +104,7 @@ const projects = [
         title: "Yarnsara",
         github: "https://github.com/samanthacabrera/ecommerce-store",
         link: "https://yarnsara-samanthacabreras-projects.vercel.app/",
-        wip: true,
+        wip: false,
         deployed: true,
         contribution: "Sole Developer",
         description: "A full-stack eCommerce platform selling 100% upcycled and hand-crocheted yoga accessories.",
