@@ -40,7 +40,7 @@ function Home() {
                     <Hero is3DView={is3DView} />
                     <About />
                     <ProjectsList />
-                    <Services />
+                    {/* <Services /> */}
                     <Articles />
                 </div>
             )}
