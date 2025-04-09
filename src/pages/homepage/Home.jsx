@@ -36,7 +36,7 @@ function Home() {
                     <Desk />
                 </div>
             ) : (
-                <div className="flex flex-col justify-center items-center py-40 space-y-40 max-w-2xl mx-auto">
+                <div className="flex flex-col justify-center items-center py-40 space-y-40 max-w-2xl mx-4 md:mx-auto">
                     <Hero is3DView={is3DView} />
                     <About />
                     <ProjectsList />
