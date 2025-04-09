@@ -9,8 +9,9 @@ function Hero({ is3DView }) {
           <span className="text-lime-600 md:text-inherit group-hover:text-lime-600 transition duration-500 delay-100"> Sam</span>. 
         </span>
 
-          <span className="px-1">I am equal parts <span className="text-cyan-600 md:text-inherit group-hover:text-cyan-600 transition duration-500 delay-100"> web developer</span> and <span className="text-orange-600 md:text-inherit group-hover:text-orange-600 transition duration-500 delay-100"> yogi</span>.
-          </span>
+        <span className="px-1">I am equal parts <span className="text-cyan-600 md:text-inherit group-hover:text-cyan-600 transition duration-500 delay-100"> web developer</span> and <span className="text-orange-600 md:text-inherit group-hover:text-orange-600 transition duration-500 delay-100"> yogi</span>.
+          
+        </span>
 
         {is3DView && (
           <>
