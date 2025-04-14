@@ -162,6 +162,27 @@ const projects = [
         ],
         insights: "Swiftle challenged me to refine my front-end development skills, particularly in game logic and UI/UX design. I focused on creating dynamic state updates and smooth transitions to make the gameplay intuitive. The hint system required balancing helpful guidance with maintaining the game's challenge, which pushed me to improve my logic for interactive applications.",
          reason: "I created Swiftle because I wanted to improve my front-end game logic and UI/UX design skills for interactive applications. As a Swiftie, I also wanted to create a fun and personalized experience centered around Taylor Swift's music. The project allowed me to refine my state management techniques while building something I genuinely enjoyed."
+    },
+     {
+        id: 9,
+        title: "Hand Motion Tracker",
+        github: "https://github.com/samanthacabrera/mediapipe-hand-tracker",
+        link: "",
+        wip: false,
+        deployed: false,
+        contribution: "Sole Developer",
+        description: "A real-time hand tracking visualizer that utilizes Google's Mediapipe library to capture and display hand gestures in 3D space, allowing for intuitive interaction with the application through hand movement.",
+        tags: [ "Computer Vision", "Machine Learning", "Web App"],
+        projectType: "Hand Tracking Visualization",
+        techStack: [ "Mediapipe", "JavaScript"],
+        features: [
+            "Real-time hand gesture detection and visualization using Mediapipe.",
+            "Integration with web camera feeds for seamless hand tracking directly in the browser.",
+            "Multiple hand tracking capability to detect and track both hands simultaneously."
+            
+        ],
+        insights: "Developing the Mediapipe hand tracking visualizer introduced me to the world of computer vision and real-time processing. I learned how to integrate third-party libraries into my web applications, optimize performance for real-time interaction, and work with 3D visualization tools.",
+        reason: "I created this project to explore the intersection of computer vision and web development. I wanted to learn how to work with real-time data to create an engaging and interactive experience, as well as improve my skills in handling 3D visualizations and integrating simple machine learning models into a frontend application."
     }
 ];
 
