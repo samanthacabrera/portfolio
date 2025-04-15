@@ -1,7 +1,6 @@
-# My Portfolio Website
+# Sam Cabrera's Portfolio  
 
-Welcome! This site showcases my work and experiences as a full-stack software engineer.
+This site highlights my work and experiences as a full-stack software engineer :)
 
-Feel free to reach out for collaborations or inquiries! :)
+[![Portfolio](https://img.shields.io/badge/visit-samoontha.com-white?style=flat&labelColor=fff)](https://samoontha.com/)
 
-[visit portfolio](https://samoontha.com/)
