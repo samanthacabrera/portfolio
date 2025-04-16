@@ -46,7 +46,7 @@ function Articles() {
 
     return (
         <div className="flex flex-col w-full space-y-4">
-            <h2 className="text-center text-lg md:text-2xl my-8">My Two Cents</h2>
+            <h2 className="text-center text-lg md:text-2xl tracking-wider my-8">My Two Cents ...</h2>
             {blog.error ? <p>{blog.error}</p> : blog.articles.length > 0 ? displayArticles(blog.articles) : <p>No articles found.</p>}
         </div>
     );

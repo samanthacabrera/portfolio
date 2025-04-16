@@ -38,15 +38,15 @@ function Home() {
             ) : (
                 <>
                 {/* Simple View - Mobile */}
-                <div className="flex flex-col justify-center items-center py-40 space-y-40 max-w-2xl mx-4 md:hidden">
+                <div className="flex flex-col justify-center items-center py-40 space-y-40 max-w-2xl mx-4 lg:hidden">
                     <Hero is3DView={is3DView} />
                     <About />
-                    <ProjectsList />
                     <Services />
+                    <ProjectsList />
                     <Articles />
                 </div>
                 {/* Simple View - Desktop */}
-                <div className="hidden md:grid grid-cols-3 gap-8 p-12">
+                <div className="hidden lg:grid grid-cols-3 gap-8 p-12">
                     <div className="bg-white/5 hover:bg-white/10 hover:scale-[102%] transition-all duration-500 p-6 rounded-xl shadow-md col-span-1">
                         <Hero is3DView={is3DView} />
                     </div>
@@ -54,10 +54,10 @@ function Home() {
                         <About />
                     </div>
                     <div className="bg-white/5 hover:bg-white/10 hover:scale-[102%] transition-all duration-500 p-6 rounded-xl shadow-md col-span-1">
-                        <ProjectsList />
+                        <Services />
                     </div>
                     <div className="bg-white/5 hover:bg-white/10 hover:scale-[102%] transition-all duration-500 p-6 rounded-xl shadow-md col-span-1">
-                        <Services />
+                        <ProjectsList />
                     </div>
                     <div className="bg-white/5 hover:bg-white/10 hover:scale-[102%] transition-all duration-500 p-6 rounded-xl shadow-md col-span-1">
                         <Articles />
