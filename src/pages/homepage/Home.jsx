@@ -36,13 +36,34 @@ function Home() {
                     <Desk />
                 </div>
             ) : (
-                <div className="flex flex-col justify-center items-center py-40 space-y-40 max-w-2xl mx-4 md:mx-auto">
+                <>
+                {/* Simple View - Mobile */}
+                <div className="flex flex-col justify-center items-center py-40 space-y-40 max-w-2xl mx-4 md:hidden">
                     <Hero is3DView={is3DView} />
                     <About />
                     <ProjectsList />
                     <Services />
                     <Articles />
                 </div>
+                {/* Simple View - Desktop */}
+                <div className="hidden md:grid grid-cols-3 gap-8 p-12">
+                    <div className="bg-white/5 hover:bg-white/10 hover:scale-[102%] transition-all duration-500 p-6 rounded-xl shadow-md col-span-1">
+                        <Hero is3DView={is3DView} />
+                    </div>
+                    <div className="bg-white/5 hover:bg-white/10 hover:scale-[102%] transition-all duration-500 p-6 rounded-xl shadow-md col-span-2">
+                        <About />
+                    </div>
+                    <div className="bg-white/5 hover:bg-white/10 hover:scale-[102%] transition-all duration-500 p-6 rounded-xl shadow-md col-span-1">
+                        <ProjectsList />
+                    </div>
+                    <div className="bg-white/5 hover:bg-white/10 hover:scale-[102%] transition-all duration-500 p-6 rounded-xl shadow-md col-span-1">
+                        <Services />
+                    </div>
+                    <div className="bg-white/5 hover:bg-white/10 hover:scale-[102%] transition-all duration-500 p-6 rounded-xl shadow-md col-span-1">
+                        <Articles />
+                    </div>
+                </div>
+                </>
             )}
         </div>
     );
