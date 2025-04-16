@@ -5,14 +5,22 @@ import projects from '../../data/projectsData';
 const ProjectsList = () => {
     return (
         <div className="flex flex-col max-w-2xl w-full">
-            <h2 className="text-lg md:text-2xl tracking-wider my-8 text-center">My work...</h2>
+            <h2 className="text-lg md:text-2xl tracking-wider my-8 text-center">My Work...</h2>
             <div className="flex flex-col items-start space-y-2"> 
-                {projects.map((project) => {
+                {projects.map((project, index)=> {
                     const { id, title, projectType, wip } = project; 
+                    const hoverClasses = [
+                        "hover:text-lime-600", 
+                        "hover:text-pink-600", 
+                        "hover:text-yellow-500", 
+                        "hover:text-cyan-600", 
+                        "hover:text-orange-600"
+                    ];
+
                     return (
                         <Link key={id} to={`/projects/${id}`}>
                             <div className="relative group flex items-center lg:mx-0"> 
-                                <h3 className="text-lg hover:text-cyan-600 transition duration-300">
+                                <h3 className={`text-lg ${hoverClasses[index % hoverClasses.length]} transition duration-300`}>
                                     {title}
                                     {wip && (
                                         <span className="px-2">

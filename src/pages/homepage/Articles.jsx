@@ -31,8 +31,15 @@ function Articles() {
     };
 
     const displayArticles = (articles) => {
+        const hoverClasses = [
+            "hover:text-lime-600", 
+            "hover:text-pink-600", 
+            "hover:text-yellow-500", 
+            "hover:text-cyan-600", 
+            "hover:text-orange-600"
+        ];
         return articles.map((post, index) => (
-            <div key={index} className='text-left hover:text-lime-500 hover:scale-105 transition duration-500'>
+            <div key={index} className={`text-lg ${hoverClasses[index % hoverClasses.length]} transition duration-300`}>
                 <a href={post.link} rel='noreferrer' target='_blank' className='block'>
                     <h6 className="mb-1">
                         {post.title}
