@@ -5,9 +5,9 @@ import { OrbitControls, useGLTF} from "@react-three/drei";
 import { TextureLoader } from "three";
 import Modal from "./Modal";
 import About from "../pages/homepage/About";
-import ProjectsList from "../pages/homepage/ProjectsList";
+import ProjectList from "../pages/homepage/ProjectList";
 import Services from "../pages/homepage/Services";
-import Articles from "../pages/homepage/Articles";
+import ArticleList from "../pages/homepage/ArticleList";
 
 
 const ClickableMesh = ({ onClick, geometries, position, rotation }) => {
@@ -141,7 +141,7 @@ const Desk = () => {
 
             {/* Laptop */}
             <ClickableMesh
-                onClick={() => handleModalOpen(<ProjectsList />)}  
+                onClick={() => handleModalOpen(<ProjectList />)}  
                 position={[-0.3, 0.05, 0]}
                 geometries={[
                     // Base
@@ -196,7 +196,7 @@ const Desk = () => {
             />
             {/* Notebook */}
             <ClickableMesh
-                onClick={() => handleModalOpen(<Articles />)}  
+                onClick={() => handleModalOpen(<ArticleList />)}  
                 position={[1.2, 0.05, 0]}
                 geometries={[
                     <boxGeometry key="notebook" args={[0.4, 0.05, 0.6]} />,

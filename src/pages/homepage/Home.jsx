@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import Hero from "./Hero";
 import Desk from "../../components/Desk";
 import About from "./About";
-import ProjectsList from "./ProjectsList";
 import Services from "./Services";
-import Articles from "./Articles";
+import ProjectList from "./ProjectList";
+import ArticleList from "./ArticleList";
 
 function Home() {
     const [is3DView, setIs3DView] = useState(true);
@@ -42,8 +42,8 @@ function Home() {
                     <Hero is3DView={is3DView} />
                     <About />
                     <Services />
-                    <ProjectsList />
-                    <Articles />
+                    <ProjectList />
+                    <ArticleList />
                 </div>
                 {/* Simple View - Desktop */}
                 <div className="hidden lg:grid grid-cols-3 gap-8 p-12">
@@ -57,10 +57,10 @@ function Home() {
                         <Services />
                     </div>
                     <div className="bg-white/5 hover:bg-white/10 hover:scale-[102%] transition-all duration-500 p-6 rounded-xl shadow-md col-span-1">
-                        <ProjectsList />
+                        <ProjectList />
                     </div>
                     <div className="bg-white/5 hover:bg-white/10 hover:scale-[102%] transition-all duration-500 p-6 rounded-xl shadow-md col-span-1">
-                        <Articles />
+                        <ArticleList />
                     </div>
                 </div>
                 </>

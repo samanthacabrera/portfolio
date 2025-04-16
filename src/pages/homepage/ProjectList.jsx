@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import projects from '../../data/projectsData';
 
-const ProjectsList = () => {
+const ProjectList = () => {
     return (
         <div className="flex flex-col max-w-2xl w-full">
             <h2 className="text-lg md:text-2xl tracking-wider my-8 text-center">My Work...</h2>
@@ -40,4 +40,4 @@ const ProjectsList = () => {
     );
 };
 
-export default ProjectsList;
+export default ProjectList;

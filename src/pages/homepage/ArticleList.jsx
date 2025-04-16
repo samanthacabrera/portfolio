@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ToText from "../../utils/ToText";
 
-function Articles() {
+function ArticleList() {
     const mediumURL = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@samantha.n.cabrera";
 
     const [blog, setBlog] = useState({
@@ -59,4 +59,4 @@ function Articles() {
     );
 }
 
-export default Articles;
+export default ArticleList;
