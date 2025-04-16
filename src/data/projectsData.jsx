@@ -91,7 +91,7 @@ const projects = [
         deployed: false,
         contribution: "Sole Developer",
         description: "RunTheCity is a fitness application designed to help users discover personalized running routes throughout their city. By integrating dynamic maps and real-time geolocation data, the app provides a seamless running experience, allowing users to explore new routes, set custom paths, and track their runs with ease.",
-        tags: ["Geolocation", "Mobile-First","Web App"],
+        tags: ["Geolocation", "Mobile-First","Hackathon"],
         projectType: "Fitness & Navigation App",
         techStack: ["React", "Tailwind CSS", "Mapbox", "Vite"],
         features: [
@@ -174,7 +174,7 @@ const projects = [
         description: "A real-time hand tracking visualizer that utilizes Google's Mediapipe library to capture and display hand gestures in 3D space, allowing for intuitive interaction with the application through hand movement.",
         tags: [ "Computer Vision", "Machine Learning", "Web App"],
         projectType: "Hand Tracking Visualization",
-        techStack: [ "Mediapipe", "JavaScript"],
+        techStack: [ "Mediapipe", "TensorFlow", "JavaScript"],
         features: [
             "Real-time hand gesture detection and visualization using Mediapipe.",
             "Integration with web camera feeds for seamless hand tracking directly in the browser.",
@@ -183,6 +183,27 @@ const projects = [
         ],
         insights: "Developing the Mediapipe hand tracking visualizer introduced me to the world of computer vision and real-time processing. I learned how to integrate third-party libraries into my web applications, optimize performance for real-time interaction, and work with 3D visualization tools.",
         reason: "I created this project to explore the intersection of computer vision and web development. I wanted to learn how to work with real-time data to create an engaging and interactive experience, as well as improve my skills in handling 3D visualizations and integrating simple machine learning models into a frontend application."
+    },
+    {
+        id: 10,
+        title: "Algorithm Visualizer",
+        github: "https://github.com/samanthacabrera/sorting-visualizer",
+        link: "",
+        wip: true,
+        deployed: false,
+        contribution: "Sole Developer",
+        description: "This web app lets you see how different sorting algorithms work through interactive visualizations. It supports a variety of sorting algorithms, including Bubble Sort, Merge Sort, Quick Sort, Insertion Sort, and Selection Sort.",
+        tags: ["Data Structures", "Animation", "Open Source"],
+        projectType: "Sorting Algorithm Visualizer",
+        techStack: ["React", "Vite", "Tailwind CSS"],
+        features: [
+            "Interactive visualizations for five popular sorting algorithms: Bubble Sort, Merge Sort, Quick Sort, Insertion Sort, and Selection Sort.",
+            "Clear, concise explanations for each algorithm to aid understanding during the animation.",
+            "Adjustable visualization speed (feature currently in development)."
+
+        ],
+        insights: "Building this project gave me a deeper understanding of how sorting algorithms work and how to present them visually. It also allowed me to practice state management in React and improve my understanding of algorithmic performance, especially in terms of time and space complexity.",
+        reason: "I built this project to deepen my understanding of sorting algorithms by seeing how they work step by step. It started as a personal learning project to explore algorithm behavior more intuitively, but I also hope it can help others who are learning these concepts too."
     }
 ];
 
