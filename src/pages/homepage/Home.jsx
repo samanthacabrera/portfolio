@@ -46,7 +46,7 @@ function Home() {
                 </div>
             ) : (
                 // Simple View
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 sm:p-8 md:p-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
                     {componentCards.map((card, index) => (
                         <div
                             key={index}
