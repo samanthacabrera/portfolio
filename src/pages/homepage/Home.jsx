@@ -13,6 +13,14 @@ function Home() {
         setIs3DView(!is3DView);
     };;
 
+    const componentCards = [
+        { component: <Hero is3DView={is3DView} />, className: "col-span-1 sm:col-span-2 md:col-span-1 lg:col-span-1" },
+        { component: <About />, className: "col-span-1 sm:col-span-2 md:col-span-2 lg:col-span-3" },
+        { component: <Services />, className: "col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-1" },
+        { component: <ProjectList />, className: "col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-1" },
+        { component: <ArticleList />, className: "col-span-1 sm:col-span-2 md:col-span-1 lg:col-span-2" },
+    ];
+
     return (
         <div >
             {/* View Toggle */}
@@ -31,39 +39,23 @@ function Home() {
             </div>
 
             {is3DView ? (
+                // 3D View
                 <div className="flex flex-col justify-between items-center w-screen h-[90vh]">
                     <Hero is3DView={is3DView}/>
                     <Desk />
                 </div>
             ) : (
-                <>
-                {/* Simple View - Mobile */}
-                <div className="flex flex-col justify-center items-center py-40 space-y-40 max-w-2xl mx-4 lg:hidden">
-                    <Hero is3DView={is3DView} />
-                    <About />
-                    <Services />
-                    <ProjectList />
-                    <ArticleList />
+                // Simple View
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 sm:p-8 md:p-12">
+                    {componentCards.map((card, index) => (
+                        <div
+                            key={index}
+                            className={`bg-white/5 hover:bg-white/10 hover:scale-[102%] transition-all duration-500 p-6 rounded-xl shadow-md ${card.className}`}
+                        >
+                            {card.component}
+                        </div>
+                    ))}
                 </div>
-                {/* Simple View - Desktop */}
-                <div className="hidden lg:grid grid-cols-3 gap-8 p-12">
-                    <div className="bg-white/5 hover:bg-white/10 hover:scale-[102%] transition-all duration-500 p-6 rounded-xl shadow-md col-span-1">
-                        <Hero is3DView={is3DView} />
-                    </div>
-                    <div className="bg-white/5 hover:bg-white/10 hover:scale-[102%] transition-all duration-500 p-6 rounded-xl shadow-md col-span-2">
-                        <About />
-                    </div>
-                    <div className="bg-white/5 hover:bg-white/10 hover:scale-[102%] transition-all duration-500 p-6 rounded-xl shadow-md col-span-1">
-                        <Services />
-                    </div>
-                    <div className="bg-white/5 hover:bg-white/10 hover:scale-[102%] transition-all duration-500 p-6 rounded-xl shadow-md col-span-1">
-                        <ProjectList />
-                    </div>
-                    <div className="bg-white/5 hover:bg-white/10 hover:scale-[102%] transition-all duration-500 p-6 rounded-xl shadow-md col-span-1">
-                        <ArticleList />
-                    </div>
-                </div>
-                </>
             )}
         </div>
     );
