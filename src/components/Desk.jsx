@@ -56,8 +56,7 @@ const Desk = () => {
         }
     });
 
-       const toggleLamp = () => {
-         document.body.classList.toggle("light-mode");
+    const toggleLamp = () => {
         setIsOn(prev => !prev);
     };
 
@@ -206,7 +205,6 @@ const Desk = () => {
             
             {/* Lamp  */}
             <Lamp 
-                onClick={() => document.body.classList.toggle('light-mode')} 
                 position={[1.7, 0.25, -0.4]} 
                 scale={[0.2, 0.2, 0.2]} />
         </Canvas>

@@ -10,13 +10,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
   color: white;
-  transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
-}
-
-body.light-mode {
-  background-color: rgb(252, 242, 227);
-  background-color: whitesmoke;
-  color: black;
 }
 
 ::selection {
