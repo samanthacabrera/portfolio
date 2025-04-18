@@ -189,17 +189,18 @@ const projects = [
         title: "Algorithm Visualizer",
         github: "https://github.com/samanthacabrera/sorting-visualizer",
         link: "",
-        wip: true,
+        wip: false,
         deployed: false,
         contribution: "Sole Developer",
         description: "This web app lets you see how different sorting algorithms work through interactive visualizations. It supports a variety of sorting algorithms, including Bubble Sort, Merge Sort, Quick Sort, Insertion Sort, and Selection Sort.",
-        tags: ["Data Structures", "Animation", "Open Source"],
+        tags: ["Data Structures", "Animation", "Interactive Learning"],
         projectType: "Sorting Algorithm Visualizer",
         techStack: ["React", "Vite", "Tailwind CSS"],
         features: [
             "Interactive visualizations for five popular sorting algorithms: Bubble Sort, Merge Sort, Quick Sort, Insertion Sort, and Selection Sort.",
+            "Step-by-step animation highlighting the comparisons and swaps made by the algorithm.",
             "Clear, concise explanations for each algorithm to aid understanding during the animation.",
-            "Adjustable visualization speed (feature currently in development)."
+            "Adjustable animation speed to observe algorithm behavior at different rates."
 
         ],
         insights: "Building this project gave me a deeper understanding of how sorting algorithms work and how to present them visually. It also allowed me to practice state management in React and improve my understanding of algorithmic performance, especially in terms of time and space complexity.",

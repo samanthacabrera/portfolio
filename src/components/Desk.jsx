@@ -78,7 +78,7 @@ const Desk = () => {
         <>
         <Canvas
             style={{ height: "60vh", width: "100vw" , userSelect: "none" }}
-            camera={{ position: [0, 0.7, 1.6],  rotation: [0, Math.PI / 6, 0] }}
+            camera={{ position: [0, 0.8, 2],  rotation: [0, Math.PI / 6, 0] }}
         >
             <OrbitControls enableZoom={false} enablePan enableRotate />
             <ambientLight intensity={0.5} />
