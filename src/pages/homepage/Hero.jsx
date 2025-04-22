@@ -18,7 +18,7 @@ function Hero({ is3DView }) {
           <span className="px-1">
              To learn more about me & what I do, <span className="text-pink-600 md:text-inherit group-hover:text-pink-600 transition duration-500 delay-100"> interact</span> with the scene below. 
           </span> 
-          <span className="">
+          <span>
             To interact with the 3D scene, you can click on the objects or hold and rotate to explore.
           </span>
           </>
