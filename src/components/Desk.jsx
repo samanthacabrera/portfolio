@@ -8,6 +8,7 @@ import About from "../pages/homepage/About";
 import ProjectList from "../pages/homepage/ProjectList";
 import Services from "../pages/homepage/Services";
 import ArticleList from "../pages/homepage/ArticleList";
+import Frame from "./Frame";
 
 
 const ClickableMesh = ({ onClick, geometries, position, rotation }) => {
@@ -117,26 +118,7 @@ const Desk = () => {
             </mesh>
 
             {/* Frame */}
-            <mesh
-                position={[-1.5, 0, -0.4]}
-                onClick={() => handleModalOpen(<About />)}
-            >
-                {/* Border */}
-                <boxGeometry args={[0.5, 1.3, 0.05]} />
-                <meshStandardMaterial color="#FFFFE0" />
-
-                {/* Image */}
-                <mesh position={[0, 0.33, 0.03]}>
-                    <boxGeometry args={[0.45, 0.6, 0.01]} />
-                    <meshStandardMaterial map={frameTexture} />
-                </mesh>
-
-                {/* Stand */}
-                <mesh position={[0, 0.25, -0.1]} rotation={[Math.PI / 8, 0, 0]}>
-                    <boxGeometry args={[0.1, 0.5, 0.02]} />
-                    <meshStandardMaterial color="#FFFFE0" />
-                </mesh>
-            </mesh>
+            <Frame onClick={() => handleModalOpen(<About />)} />
 
             {/* Laptop */}
             <ClickableMesh
