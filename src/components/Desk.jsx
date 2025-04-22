@@ -13,12 +13,12 @@ import Mug from "./Mug";
 import Notebook from "./Notebook";
 import Lamp from "./Lamp";
 
-const Hoverable = ({ children, position, onClick }) => {
+const Hoverable = ({ children, onClick, shouldScale = true }) => {
   const [hovered, setHovered] = useState(false);
   const meshRef = React.useRef();
 
   useFrame(() => {
-    if (meshRef.current) {
+    if (meshRef.current && shouldScale) {
       meshRef.current.scale.lerp(hovered ? new THREE.Vector3(1.05, 1.05, 1.05) : new THREE.Vector3(1, 1, 1), 0.1);
     }
   });
@@ -53,7 +53,7 @@ const Desk = () => {
 
     // data for each desk item
     const items = [
-        { component: <Frame onClick={() => handleModalOpen(<About />)} />, position: [-1.3, 0.5, -0.3], label: "A little about me...", color: "#65a30d" },    // lime-600
+        { component: <Frame onClick={() => handleModalOpen(<About />)} />, position: [-1.3, 0.5, -0.3], label: "About", color: "#65a30d" },    // lime-600
         { component: <Laptop onClick={() => handleModalOpen(<ProjectList />)} />, position: [-0.3, 0.28, -0.45], label: "Work", color: "#0891b2" }, // cyan-600
         { component: <Mug onClick={() => handleModalOpen(<Services />)} />, position: [0.6, 0, -0.1], label: "Services", color: "#ea580c" },    // orange-600
         { component: <Notebook onClick={() => handleModalOpen(<ArticleList />)} />, position: [1.2, -0.2, -0.2], label: "Articles", color: "#eab308" }, // yellow-500
@@ -112,7 +112,7 @@ const Desk = () => {
         {items.map((item, index) => (
           <React.Fragment key={index}>
 
-            <Hoverable position={item.position} onClick={item.onClick}>
+             <Hoverable position={item.position} onClick={item.onClick} shouldScale={item.component.type !== Lamp}>
               {item.component}
             </Hoverable>
 
