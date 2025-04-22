@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import * as THREE from "three";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Text, Line } from "@react-three/drei"; 
 import Modal from "../utils/Modal";
 import About from "../pages/homepage/About";
@@ -12,6 +12,29 @@ import Laptop from "./Laptop";
 import Mug from "./Mug";
 import Notebook from "./Notebook";
 import Lamp from "./Lamp";
+
+const Hoverable = ({ children, position, onClick }) => {
+  const [hovered, setHovered] = useState(false);
+  const meshRef = React.useRef();
+
+  useFrame(() => {
+    if (meshRef.current) {
+      meshRef.current.scale.lerp(hovered ? new THREE.Vector3(1.05, 1.05, 1.05) : new THREE.Vector3(1, 1, 1), 0.1);
+    }
+  });
+
+  return (
+    <group
+      onPointerOver={() => setHovered(true)}
+      onPointerOut={() => setHovered(false)}
+      onClick={onClick}
+    >
+      <mesh ref={meshRef} scale={[1, 1, 1]}>
+        {children}
+      </mesh>
+    </group>
+  );
+};
 
 const Desk = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -28,9 +51,9 @@ const Desk = () => {
         setModalContent(null);
     };
 
-    // Position data for each item
+    // data for each desk item
     const items = [
-        { component: <Frame onClick={() => handleModalOpen(<About />)} />, position: [-1.3, 0.5, -0.3], label: "About", color: "#65a30d" },    // lime-600
+        { component: <Frame onClick={() => handleModalOpen(<About />)} />, position: [-1.3, 0.5, -0.3], label: "A little about me...", color: "#65a30d" },    // lime-600
         { component: <Laptop onClick={() => handleModalOpen(<ProjectList />)} />, position: [-0.3, 0.28, -0.45], label: "Work", color: "#0891b2" }, // cyan-600
         { component: <Mug onClick={() => handleModalOpen(<Services />)} />, position: [0.6, 0, -0.1], label: "Services", color: "#ea580c" },    // orange-600
         { component: <Notebook onClick={() => handleModalOpen(<ArticleList />)} />, position: [1.2, -0.2, -0.2], label: "Articles", color: "#eab308" }, // yellow-500
@@ -88,7 +111,10 @@ const Desk = () => {
         {/* Clickable Desk Items */}
         {items.map((item, index) => (
           <React.Fragment key={index}>
-            {item.component}
+
+            <Hoverable position={item.position} onClick={item.onClick}>
+              {item.component}
+            </Hoverable>
 
             <Line
               points={[
@@ -101,7 +127,7 @@ const Desk = () => {
 
             {/* Label */}
             <Text
-              position={[item.position[0], item.position[1] + 0.6, item.position[2]]} // Position above the object
+              position={[item.position[0], item.position[1] + 0.6, item.position[2]]} 
               fontSize={0.1}
               color={item.color}
               anchorX="center"
