@@ -1,35 +1,20 @@
 import React, { useState } from "react";
 import * as THREE from "three";
-import { Canvas, useLoader } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF} from "@react-three/drei";
-import { TextureLoader } from "three";
 import Modal from "./Modal";
 import About from "../pages/homepage/About";
 import ProjectList from "../pages/homepage/ProjectList";
 import Services from "../pages/homepage/Services";
 import ArticleList from "../pages/homepage/ArticleList";
 import Frame from "./Frame";
-
-
-const ClickableMesh = ({ onClick, geometries, position, rotation }) => {
-    return (
-        <mesh
-            position={position}
-            rotation={rotation}
-            onClick={onClick}
-        >
-            {geometries.map((geometry, index) => (
-                <React.Fragment key={index}>{geometry}</React.Fragment>
-            ))}
-        </mesh>
-    );
-};
+import Laptop from "./Laptop";
+import Mug from "./Mug";
+import Notebook from "./Notebook";
 
 const Desk = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalContent, setModalContent] = useState(null);
-
-    const frameTexture = useLoader(TextureLoader, "/cat.png");
 
     const handleModalOpen = (content) => {
         setModalContent(content);
@@ -117,78 +102,13 @@ const Desk = () => {
                 </mesh>
             </mesh>
 
-            {/* Frame */}
+            {/* Clickable Desk Items */}
             <Frame onClick={() => handleModalOpen(<About />)} />
-
-            {/* Laptop */}
-            <ClickableMesh
-                onClick={() => handleModalOpen(<ProjectList />)}  
-                position={[-0.3, 0.05, 0]}
-                geometries={[
-                    // Base
-                    <boxGeometry key="base" args={[0.8, 0.05, 0.5]} />,
-                    <meshStandardMaterial key="baseMaterial" color="#C0C0C0" />,
-                    // Top 
-                    <mesh key="top" position={[0, 0.2, -0.35]} rotation={[Math.PI / 3, 0, 0]}>
-                        <boxGeometry args={[0.8, 0.02, 0.5]} />
-                        <meshStandardMaterial color="#C0C0C0" />
-                    </mesh>,
-                    // Screen
-                    <mesh key="screen" position={[0, 0.2, -0.34]} rotation={[Math.PI / 3, 0, 0]}>
-                        <boxGeometry args={[0.75, 0.02, 0.45]} />
-                        <meshStandardMaterial color="#000" />
-                    </mesh>,
-                    // Keybord
-                    ...Array.from({ length: 4 }, (_, row) =>
-                        Array.from({ length: 10 }, (_, col) => (
-                            <mesh
-                                key={`key-${row}-${col}`}
-                                position={[-0.31 + col * 0.07, 0.03, -0.15 + row * 0.07]}
-                            >
-                                <boxGeometry args={[0.06, 0.02, 0.06]} />
-                                <meshStandardMaterial color="#333" />
-                            </mesh>
-                        ))
-                    ),
-                    // Mouse
-                    <mesh key="mouse" position={[0, 0.03, 0.175]}>
-                        <boxGeometry args={[0.3, 0.01, 0.12]} />
-                        <meshStandardMaterial color="#333" />
-                    </mesh>,
-
-                ]}
-            />
-            {/* Mug */}
-            <ClickableMesh
-                onClick={() => handleModalOpen(<Services/>)}  
-                position={[0.6, 0.15, -0.1]}
-                geometries={[
-                    <cylinderGeometry key="mug" args={[0.15, 0.15, 0.3, 32]} />,
-                    <meshStandardMaterial key="mugMaterial" color="#FFDBBB" />,
-                    <mesh key="handle" position={[0.14, 0, 0]}>
-                        <torusGeometry args={[0.075, 0.02, 16, 100]} />
-                        <meshStandardMaterial color="#FFDBBB" />
-                    </mesh>,
-                    <mesh key="coffee" position={[0, 0.16, 0]} rotation={[-Math.PI / 2, 0, 0]}>
-                        <circleGeometry args={[0.13, 32]} rotation={[0, Math.PI, 0]}/>
-                        <meshStandardMaterial color="#6F4E37" />
-                    </mesh>,
-                ]}
-            />
-            {/* Notebook */}
-            <ClickableMesh
-                onClick={() => handleModalOpen(<ArticleList />)}  
-                position={[1.2, 0.05, 0]}
-                geometries={[
-                    <boxGeometry key="notebook" args={[0.4, 0.05, 0.6]} />,
-                    <meshStandardMaterial key="notebookMaterial" color="#99ccff" />,
-                ]}
-            />
+            <Laptop onClick={() => handleModalOpen(<ProjectList />)} />
+            <Mug onClick={()=> handleModalOpen(<Services/>)} />
+            <Notebook onClick={() => handleModalOpen(<ArticleList />)} />
+            <Lamp position={[1.7, 0.25, -0.4]} scale={[0.2, 0.2, 0.2]} />
             
-            {/* Lamp  */}
-            <Lamp 
-                position={[1.7, 0.25, -0.4]} 
-                scale={[0.2, 0.2, 0.2]} />
         </Canvas>
         <Modal isOpen={isModalOpen} onClose={handleModalClose} content={modalContent} />
     </>

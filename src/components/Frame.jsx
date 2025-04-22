@@ -2,7 +2,6 @@ import React from "react";
 import { useLoader } from "@react-three/fiber";
 import * as THREE from "three";
 import { TextureLoader } from "three";
-import About from "../pages/homepage/About";
 
 const Frame = ({ onClick }) => {
     const frameTexture = useLoader(TextureLoader, "/cat.png");
