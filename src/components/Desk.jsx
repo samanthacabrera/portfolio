@@ -5,12 +5,8 @@ import { OrbitControls, Text, Line } from "@react-three/drei";
 import Modal from "../utils/Modal";
 import About from "../pages/homepage/About";
 import ProjectList from "../pages/homepage/ProjectList";
-import Services from "../pages/homepage/Services";
-import ArticleList from "../pages/homepage/ArticleList";
 import Frame from "./Frame";
 import Laptop from "./Laptop";
-import Mug from "./Mug";
-import Notebook from "./Notebook";
 import Lamp from "./Lamp";
 
 const Hoverable = ({ children, onClick, shouldScale = true }) => {
@@ -55,8 +51,6 @@ const Desk = () => {
     const items = [
         { component: <Frame onClick={() => handleModalOpen(<About />)} />, position: [-1.3, 0.5, -0.3], label: "About", color: "#65a30d" },    // lime-600
         { component: <Laptop onClick={() => handleModalOpen(<ProjectList />)} />, position: [-0.3, 0.28, -0.45], label: "Work", color: "#0891b2" }, // cyan-600
-        { component: <Mug onClick={() => handleModalOpen(<Services />)} />, position: [0.6, 0, -0.1], label: "Services", color: "#ea580c" },    // orange-600
-        { component: <Notebook onClick={() => handleModalOpen(<ArticleList />)} />, position: [1.2, -0.2, -0.2], label: "Articles", color: "#eab308" }, // yellow-500
         { component: <Lamp setAmbientIntensity={setAmbientIntensity} />, position: [1.7, 0.5, -0.4], label: "Click me", color: "#db2777" },   // pink-600
     ];
 

@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import Hero from "./Hero";
 import Desk from "../../components/Desk";
 import About from "./About";
-import Services from "./Services";
 import ProjectList from "./ProjectList";
-import ArticleList from "./ArticleList";
 
 function Home() {
     const [is3DView, setIs3DView] = useState(true);
@@ -16,9 +14,7 @@ function Home() {
     const componentCards = [
         { component: <Hero is3DView={is3DView} />, className: "col-span-1 sm:col-span-2 md:col-span-1 lg:col-span-1" },
         { component: <About />, className: "col-span-1 sm:col-span-2 md:col-span-2 lg:col-span-3" },
-        { component: <Services />, className: "col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-1" },
         { component: <ProjectList />, className: "col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-1" },
-        { component: <ArticleList />, className: "col-span-1 sm:col-span-2 md:col-span-1 lg:col-span-2" },
     ];
 
     return (
