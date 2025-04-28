@@ -6,7 +6,7 @@ const Laptop = ({ onClick }) => {
     const frameTexture = useLoader(TextureLoader, "/cat.png");
 
     return (
-        <mesh position={[-0.3, 0.05, 0]} onClick={onClick}>
+        <mesh position={[0, 0.05, 0]} onClick={onClick}>
             {/* Base */}
             <boxGeometry args={[0.8, 0.05, 0.5]} />
             <meshStandardMaterial color="#C0C0C0" />

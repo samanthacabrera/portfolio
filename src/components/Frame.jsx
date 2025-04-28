@@ -7,14 +7,14 @@ const Frame = ({ onClick }) => {
     const frameTexture = useLoader(TextureLoader, "/cat.png");
 
     return (
-        <mesh position={[-1.3, 0.4, -0.2]} rotation={[-Math.PI / 12, 0, 0]} onClick={onClick}>
+        <mesh position={[-0.9, 0.3, -0.2]} rotation={[-Math.PI / 20, 0, 0]} onClick={onClick}>
             {/* Border */}
-            <boxGeometry args={[0.5, 0.7, 0.05]} />
+            <boxGeometry args={[0.4, 0.6, 0.05]} />
             <meshStandardMaterial color="#FFFFE0" />
 
             {/* Image */}
             <mesh position={[0, 0, 0.03]}>
-                <boxGeometry args={[0.45, 0.6, 0.01]} />
+                <boxGeometry args={[0.35, 0.55, 0.01]} />
                 <meshStandardMaterial map={frameTexture} />
             </mesh>
 

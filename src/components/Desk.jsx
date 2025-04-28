@@ -49,9 +49,9 @@ const Desk = () => {
 
     // data for each desk item
     const items = [
-        { component: <Frame onClick={() => handleModalOpen(<About />)} />, position: [-1.3, 0.5, -0.3], label: "About", color: "#65a30d" },    // lime-600
-        { component: <Laptop onClick={() => handleModalOpen(<ProjectList />)} />, position: [-0.3, 0.28, -0.45], label: "Work", color: "#0891b2" }, // cyan-600
-        { component: <Lamp setAmbientIntensity={setAmbientIntensity} />, position: [1.7, 0.5, -0.4], label: "Click me", color: "#db2777" },   // pink-600
+        { component: <Frame onClick={() => handleModalOpen(<About />)} />, position: [-0.9, 0.4, -0.25], label: "About", color: "#65a30d" },    // lime-600
+        { component: <Laptop onClick={() => handleModalOpen(<ProjectList />)} />, position: [0, 0.28, -0.45], label: "Work", color: "#0891b2" }, // cyan-600
+        { component: <Lamp setAmbientIntensity={setAmbientIntensity} />, position: [0.9, 0.4, 0], label: "Click me", color: "#db2777" },   // pink-600
     ];
 
     return (
@@ -70,34 +70,34 @@ const Desk = () => {
 
         {/* Desk */}
         <mesh position={[0, 0, 0]}>
-          <boxGeometry args={[4, 0.05, 1.5]} />
+          <boxGeometry args={[2.5, 0.05, 1.3]} />
           <meshStandardMaterial color="#8B4513" />
         </mesh>
 
         {/* Desk Legs */}
-        <mesh position={[-1.5, -0.5, 0]}>
-          <boxGeometry args={[1, 1, 1.3]} />
+        <mesh position={[-1, -0.5, 0]}>
+          <boxGeometry args={[0.5, 1, 1.3]} />
           <meshStandardMaterial color="#8B4513" />
         </mesh>
-        <mesh position={[1.5, -0.5, 0]}>
-          <boxGeometry args={[1, 1, 1.3]} />
+        <mesh position={[1, -0.5, 0]}>
+          <boxGeometry args={[0.5, 1, 1.3]} />
           <meshStandardMaterial color="#8B4513" />
         </mesh>
         
         {/* Desk Handles */}
-        <mesh position={[-1.5, -0.25, 0.7]}>
+        <mesh position={[-1, -0.25, 0.7]}>
           <boxGeometry args={[0.3, 0.05, 0.05]} />
           <meshStandardMaterial color="#4b3621" />
         </mesh>
-        <mesh position={[-1.5, -0.65, 0.7]}>
+        <mesh position={[-1, -0.65, 0.7]}>
           <boxGeometry args={[0.3, 0.05, 0.05]} />
           <meshStandardMaterial color="#4b3621" />
         </mesh>
-        <mesh position={[1.5, -0.25, 0.7]}>
+        <mesh position={[1, -0.25, 0.7]}>
           <boxGeometry args={[0.3, 0.05, 0.05]} />
           <meshStandardMaterial color="#4b3621" />
         </mesh>
-        <mesh position={[1.5, -0.65, 0.7]}>
+        <mesh position={[1, -0.65, 0.7]}>
           <boxGeometry args={[0.3, 0.05, 0.05]} />
           <meshStandardMaterial color="#4b3621" />
         </mesh>
