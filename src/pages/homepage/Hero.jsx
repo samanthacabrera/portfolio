@@ -5,7 +5,7 @@ function Hero({ is3DView }) {
     <div className="w-full">
 
         {is3DView && (
-          <p className="text-center translate-y-[20vh]">
+          <p className="translate-y-[10vh]">
           Hello world, my name is Sam. Interact with the scene below to learn more about me & what I do.
           </p>
         )}

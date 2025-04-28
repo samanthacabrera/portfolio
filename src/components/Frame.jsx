@@ -20,7 +20,7 @@ const Frame = ({ onClick }) => {
 
             {/* Stand */}
             <mesh position={[0, -0.15, -0.1]} rotation={[Math.PI / 8, 0, 0]}>
-                <boxGeometry args={[0.1, 0.5, 0.02]} />
+                <boxGeometry args={[0.1, 0.45, 0.02]} />
                 <meshStandardMaterial color="#FFFFE0" />
             </mesh>
         </mesh>

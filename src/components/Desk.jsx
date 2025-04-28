@@ -58,15 +58,15 @@ const Desk = () => {
     <>
       <Canvas
         style={{
-            height: "60vh",
+            height: "80vh",
             width: "100vw",
             userSelect: "none",
         }}
-        camera={{ position: [0, 0.8, 2] }}
+        camera={{ position: [0, 0.6, 1.1] }}
       >
         <OrbitControls enableZoom={false} enablePan enableRotate />
         <ambientLight intensity={ambientIntensity} />
-        <directionalLight position={[5, 5, 5]} intensity={1} />
+        <directionalLight position={[5, 5, 5]} intensity={1.5} />
 
         {/* Desk */}
         <mesh position={[0, 0, 0]}>
@@ -110,18 +110,9 @@ const Desk = () => {
               {item.component}
             </Hoverable>
 
-            <Line
-              points={[
-                new THREE.Vector3(item.position[0], item.position[1] + 0.2, item.position[2]), // Start point (object position)
-                new THREE.Vector3(item.position[0], item.position[1] + 0.6, item.position[2]), // End point (label position)
-              ]}
-              color={item.color} 
-              lineWidth={1}
-            />
-
             {/* Label */}
             <Text
-              position={[item.position[0], item.position[1] + 0.6, item.position[2]]} 
+              position={[item.position[0], 0.6, item.position[2] ]}
               fontSize={0.1}
               color={item.color}
               anchorX="center"
