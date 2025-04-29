@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import projects from '../../data/projectsData';
+import projects from '../data/projectsData';
 
 const ProjectList = () => {
     return (

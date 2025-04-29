@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import projects from '../../data/projectsData';
+import projects from '../data/projectsData';
 
 const ProjectPage = () => {
     const { id } = useParams();

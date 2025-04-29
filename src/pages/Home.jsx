@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Hero from "./Hero";
-import Desk from "../../components/Desk";
+import Desk from "../components/Desk";
 import About from "./About";
 import ProjectList from "./ProjectList";
 

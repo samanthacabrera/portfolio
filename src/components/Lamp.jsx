@@ -37,7 +37,7 @@ const Lamp = ({ setAmbientIntensity, ...props }) => {
   });
 
   return (
-    <group {...props} onClick={toggleLamp} position={[0.9, 0.15, 0]} scale={[0.12, 0.12, 0.12]}>
+    <group {...props} onClick={toggleLamp} position={[0.9, -0.15, 0]} scale={[0.12, 0.12, 0.12]}>
       <primitive object={scene} />
       <pointLight
         position={[0, 0.5, 0]}
