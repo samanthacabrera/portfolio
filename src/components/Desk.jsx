@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as THREE from "three";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, Text, Line } from "@react-three/drei"; 
+import { OrbitControls, Text } from "@react-three/drei"; 
 import Modal from "../utils/Modal";
 import About from "../pages/homepage/About";
 import ProjectList from "../pages/homepage/ProjectList";
@@ -58,11 +58,11 @@ const Desk = () => {
     <>
       <Canvas
         style={{
-            height: "80vh",
+            height: "70vh",
             width: "100vw",
             userSelect: "none",
         }}
-        camera={{ position: [0, 0.6, 1.1] }}
+        camera={{ position: [0, 0.6, 1.3] }}
       >
         <OrbitControls enableZoom={false} enablePan enableRotate />
         <ambientLight intensity={ambientIntensity} />
