@@ -116,8 +116,8 @@ const Desk = () => {
 
             {/* Label */}
             <Text
-              position={[item.position[0], 0.6, item.position[2] ]}
-              fontSize={0.1}
+              position={[item.position[0], 0.5, item.position[2] ]}
+              fontSize={0.05}
               color={item.color}
               anchorX="center"
               anchorY="bottom"
