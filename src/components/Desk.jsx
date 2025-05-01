@@ -1,71 +1,63 @@
-import React, { useState } from "react";
+import React, { useState, useRef  } from "react";
 import * as THREE from "three";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Text } from "@react-three/drei"; 
-import Modal from "../utils/Modal";
-import About from "../pages/About";
-import ProjectList from "../pages/ProjectList";
-import Frame from "./Frame";
 import Laptop from "./Laptop";
 import Lamp from "./Lamp";
+import LaptopScreen from "./LaptopScreen";
 
 const Hoverable = ({ children, onClick, shouldScale = true }) => {
   const [hovered, setHovered] = useState(false);
-  const meshRef = React.useRef();
+  const groupRef = useRef();
 
   useFrame(() => {
-    if (meshRef.current && shouldScale) {
-      meshRef.current.scale.lerp(hovered ? new THREE.Vector3(1.05, 1.05, 1.05) : new THREE.Vector3(1, 1, 1), 0.1);
+    if (groupRef.current && shouldScale) {
+      groupRef.current.scale.lerp(
+        hovered ? new THREE.Vector3(1.05, 1.05, 1.05)
+                : new THREE.Vector3(1,    1,    1),
+        0.1
+      );
     }
   });
 
   return (
     <group
-      onPointerOver={() => setHovered(true)}
-      onPointerOut={() => setHovered(false)}
-      onClick={onClick}
+      ref={groupRef}
+      onPointerOver={e => { e.stopPropagation(); setHovered(true); }}
+      onPointerOut={e => { e.stopPropagation(); setHovered(false); }}
+      onPointerDown={e => { e.stopPropagation(); onClick(); }}
     >
-      <mesh ref={meshRef} scale={[1, 1, 1]}>
-        {children}
-      </mesh>
+      {children}
     </group>
   );
 };
 
 const Desk = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [modalContent, setModalContent] = useState(null);
-    const [ambientIntensity, setAmbientIntensity] = useState(0);
-
-    const handleModalOpen = (content) => {
-        setModalContent(content);
-        setIsModalOpen(true);
-    };
-
-    const handleModalClose = () => {
-        setIsModalOpen(false);
-        setModalContent(null);
-    };
+    const [screenOpen, setScreenOpen] = useState(false);
 
     // data for each desk item
     const items = [
-        // { component: <Frame onClick={() => handleModalOpen(<About />)} />, position: [-0.9, 0.4, -0.25], label: "About", color: "#65a30d" },    // lime-600
-        { component: <Laptop onClick={() => handleModalOpen(<ProjectList />)} />, position: [0, 0.28, -0.25], label: "Work", color: "#0891b2" }, // cyan-600
-        // { component: <Lamp setAmbientIntensity={setAmbientIntensity} />, position: [0.9, 0.4, -0.25], label: "Click me", color: "#db2777" },   // pink-600
+      {
+        component: <Laptop />,
+        position: [0, 0.28, -0.25],
+        label: "Work",
+        color: "#0891b2",
+        onClick: () => setScreenOpen(true),
+      },
     ];
 
     return (
     <>
       <Canvas
         style={{
-            height: "100vh",
+            height: "80vh",
             width: "100vw",
             userSelect: "none",
         }}
         camera={{ position: [0, 0.6, 1.3] }}
       >
         <OrbitControls enableZoom={false} enablePan enableRotate />
-        <ambientLight intensity={ambientIntensity} />
+        <ambientLight intensity={0.5} />
         <directionalLight position={[5, 5, 5]} intensity={1.5} />
 
         {/* Desk */}
@@ -110,9 +102,9 @@ const Desk = () => {
         {items.map((item, index) => (
           <React.Fragment key={index}>
 
-             <Hoverable position={item.position} onClick={item.onClick} shouldScale={item.component.type !== Lamp}>
-              {item.component}
-            </Hoverable>
+          <Hoverable position={item.position} onClick={item.onClick} shouldScale={item.component.type !== Lamp}>
+            {item.component}
+          </Hoverable>
 
             {/* Label */}
             <Text
@@ -127,8 +119,7 @@ const Desk = () => {
           </React.Fragment>
         ))}
       </Canvas>
-
-      <Modal isOpen={isModalOpen} onClose={handleModalClose} content={modalContent} />
+      {screenOpen && <LaptopScreen onClose={() => setScreenOpen(false)} />}
     </>
   );
 };

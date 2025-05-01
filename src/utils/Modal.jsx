@@ -1,28 +1,33 @@
 import React from "react";
+import ProjectList from "../pages/ProjectList"; 
 
-const Modal = ({ isOpen, onClose, content }) => {
+const Modal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
     <div
-      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm z-50 transition-opacity duration-300"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
       onClick={onClose}
     >
       <div
-        className="relative bg-white text-gray-800 w-full max-w-md md:max-w-lg h-[50vh] overflow-y-auto rounded-xl shadow-xl transform transition-all duration-300 ease-in-out"
+        className="relative bg-gray-100 w-full max-w-4xl h-[75vh] rounded-lg shadow-2xl overflow-hidden border border-gray-300"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="p-6 modal-content">{content}</div>
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200 ease-in-out"
-          aria-label="Close modal"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
+        {/* Modal top bar */}
+        <div className="flex items-center justify-between px-4 py-2 bg-gray-200 border-b border-gray-300">
+          <div className="flex items-center gap-2">
+            <span className="w-3 h-3 bg-red-500 rounded-full cursor-pointer" onClick={onClose} />
+            <span className="w-3 h-3 bg-yellow-500 rounded-full" />
+            <span className="w-3 h-3 bg-green-500 rounded-full" />
+          </div>
+          
+          <div className="w-12" />
+        </div>
+
+        {/* Content */}
+        <div className="p-6 h-full overflow-y-auto text-black">
+          <ProjectList />
+        </div>
       </div>
     </div>
   );

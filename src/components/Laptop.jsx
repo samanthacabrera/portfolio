@@ -1,12 +1,10 @@
 import React from "react";
-import { useLoader } from "@react-three/fiber";
-import { TextureLoader } from "three";
 
-const Laptop = ({ onClick }) => {
-    const frameTexture = useLoader(TextureLoader, "/cat.png");
+const Laptop = () => {
+
 
     return (
-        <mesh position={[0, -0.25, 0]} onClick={onClick}>
+        <mesh position={[0, -0.25, 0]} >
             {/* Base */}
             <boxGeometry args={[0.8, 0.05, 0.5]} />
             <meshStandardMaterial color="#C0C0C0" />
