@@ -32,7 +32,7 @@ const Hoverable = ({ children, onClick, shouldScale = true }) => {
   );
 };
 
-const Desk = () => {
+const Desk = ({is3DView}) => {
     const [screenOpen, setScreenOpen] = useState(false);
 
     // data for each desk item
@@ -119,7 +119,7 @@ const Desk = () => {
           </React.Fragment>
         ))}
       </Canvas>
-      {screenOpen && <LaptopScreen onClose={() => setScreenOpen(false)} />}
+      {screenOpen && <LaptopScreen onClose={() => setScreenOpen(false)} is3DView={is3DView} />}
     </>
   );
 };

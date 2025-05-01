@@ -1,7 +1,9 @@
 import React from "react";
+import About from "../pages/About";
 import ProjectList from "../pages/ProjectList"; 
+import Contact from "../pages/Contact";
 
-const Modal = ({ isOpen, onClose }) => {
+const Modal = ({ isOpen, onClose, content }) => {
   if (!isOpen) return null;
 
   return (
@@ -26,7 +28,9 @@ const Modal = ({ isOpen, onClose }) => {
 
         {/* Content */}
         <div className="p-6 h-full overflow-y-auto text-black">
-          <ProjectList />
+          {content === "Work" && <ProjectList />}
+          {content === "About" && <About />}
+          {content === "Contact" && <Contact />}
         </div>
       </div>
     </div>

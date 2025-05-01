@@ -1,22 +1,24 @@
 import React, { useState } from "react";
 import Modal from "../utils/Modal";
+import ProjectList from "../pages/ProjectList";
 
+// Define folders with content
 const folders = [
-  { name: "Projects", content: "Here are some projects." },
+  { name: "Projects", content: "Work" },
+  { name: "About", content: "About" },
+  { name: "Contact", content: "Contact" },
 ];
 
-const LaptopScreen = ({ onClose }) => {
+const LaptopScreen = ( {is3DView, onClose }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState(null);
 
   const handleFolderClick = (folder) => {
-    if (folder.name === "Projects") {
-      setModalContent(folder.content);
-      setIsModalOpen(true);
-    }
+    setModalContent(folder.content); 
+    setIsModalOpen(true);
   };
 
-  const handleProjectModalClose = () => {
+  const handleModalClose = () => {
     setIsModalOpen(false);
     setModalContent(null);
   };
@@ -24,7 +26,6 @@ const LaptopScreen = ({ onClose }) => {
   return (
     <>
       <div className="fixed inset-0 bg-[#1a1a1a]/95 max-w-2xl mx-auto max-h-[500px] z-50 text-white flex flex-col items-center justify-center translate-y-[20vh]">
-        {/* Close Button */}
         <button
           onClick={onClose}
           className="absolute top-4 right-4 bg-red-600 hover:bg-red-700 px-3 py-1 rounded shadow-md"
@@ -49,8 +50,9 @@ const LaptopScreen = ({ onClose }) => {
 
       <Modal
         isOpen={isModalOpen}
-        onClose={handleProjectModalClose}
+        onClose={handleModalClose}
         content={modalContent}
+        is3DView={is3DView}
       />
     </>
   );

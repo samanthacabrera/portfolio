@@ -100,7 +100,7 @@ function Home() {
                 (is3DView ? (
                     <div className="flex flex-col justify-between items-center w-screen">
                         <Hero is3DView={is3DView} />
-                        <Desk />
+                        <Desk is3DView={is3DView} />
                     </div>
                 ) : (
                     <div className="flex flex-col items-center w-screen space-y-6">
