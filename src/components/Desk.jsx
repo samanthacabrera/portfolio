@@ -49,9 +49,9 @@ const Desk = () => {
 
     // data for each desk item
     const items = [
-        { component: <Frame onClick={() => handleModalOpen(<About />)} />, position: [-0.9, 0.4, -0.25], label: "About", color: "#65a30d" },    // lime-600
+        // { component: <Frame onClick={() => handleModalOpen(<About />)} />, position: [-0.9, 0.4, -0.25], label: "About", color: "#65a30d" },    // lime-600
         { component: <Laptop onClick={() => handleModalOpen(<ProjectList />)} />, position: [0, 0.28, -0.25], label: "Work", color: "#0891b2" }, // cyan-600
-        { component: <Lamp setAmbientIntensity={setAmbientIntensity} />, position: [0.9, 0.4, -0.25], label: "Click me", color: "#db2777" },   // pink-600
+        // { component: <Lamp setAmbientIntensity={setAmbientIntensity} />, position: [0.9, 0.4, -0.25], label: "Click me", color: "#db2777" },   // pink-600
     ];
 
     return (

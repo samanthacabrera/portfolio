@@ -2,16 +2,16 @@ import React from "react";
 
 function Hero({ is3DView }) {
   return (
-    <div className="w-full">
+    <div className="w-full pt-4">
 
         {is3DView && (
-          <p className="text-center translate-y-[10vh]">
+          <p className="text-center">
           Hello world, my name is Sam. Interact with the scene below to learn more about me & what I do.
           </p>
         )}
 
         {!is3DView && (
-          <p className="group relative pt-[5vh]">
+          <p className="group relative pt-20">
             Hello world, my name is 
           <span className="text-lime-600 md:text-inherit group-hover:text-lime-600 transition duration-500 delay-100"> Sam</span>. 
             I am equal parts 
