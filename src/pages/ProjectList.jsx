@@ -23,9 +23,9 @@ const ProjectList = ({ is3DView } ) => {
           <Link
             key={id}
             to={`/projects/${id}`}
-            className="flex flex-col items-center cursor-pointer"
+            className="flex flex-col text-center items-center cursor-pointer"
           >
-            <div className={`${ is3DView ? "hidden" : "text-6xl"}`}>📄</div>
+            <div className={`${ is3DView ? "hidden" : "text-4xl"}`}>📄</div>
             <h3
               className={`mt-2 text-sm ${hoverClasses[index % hoverClasses.length]} transition`}
             >

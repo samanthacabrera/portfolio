@@ -8,11 +8,11 @@ const Modal = ({ isOpen, onClose, content }) => {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
+      className="fixed inset-0 top-60 left-40 z-50 "
       onClick={onClose}
     >
       <div
-        className="relative bg-gray-100 w-full max-w-4xl h-[75vh] rounded-lg shadow-2xl overflow-hidden border border-gray-300"
+        className="relative bg-gray-100 w-full max-w-lg h-[40vh] rounded-lg shadow-2xl overflow-hidden border border-gray-300"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Modal top bar */}
