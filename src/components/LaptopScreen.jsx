@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Modal from "../utils/Modal";
 import ProjectList from "../pages/ProjectList";
 
-// Define folders with content
 const folders = [
   { name: "Projects", content: "Work" },
   { name: "About", content: "About" },

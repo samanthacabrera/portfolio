@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import projects from "../data/projectsData";
 
@@ -14,7 +14,7 @@ const ProjectList = ({ is3DView } ) => {
   return (
     <div
       className={`${
-        is3DView ? "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6" : "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6"
+        is3DView ? "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6" : "grid grid-cols-1 gap-2"
       }`}
     >
       {projects.map((project, index) => {
@@ -23,9 +23,9 @@ const ProjectList = ({ is3DView } ) => {
           <Link
             key={id}
             to={`/projects/${id}`}
-            className="flex flex-col text-center items-center cursor-pointer"
+            className={`flex flex-col ${ is3DView ? "text-center" : "text-lg"}`}
           >
-            <div className={`${ is3DView ? "hidden" : "text-4xl"}`}>📄</div>
+            <div className={`${ is3DView ? "text-4xl" : "hidden"}`}>📄</div>
             <h3
               className={`mt-2 text-sm ${hoverClasses[index % hoverClasses.length]} transition`}
             >

@@ -3,7 +3,7 @@ import About from "../pages/About";
 import ProjectList from "../pages/ProjectList"; 
 import Contact from "../pages/Contact";
 
-const Modal = ({ isOpen, onClose, content }) => {
+const Modal = ({is3DView, isOpen, onClose, content }) => {
   if (!isOpen) return null;
 
   return (
@@ -28,7 +28,7 @@ const Modal = ({ isOpen, onClose, content }) => {
 
         {/* Content */}
         <div className="p-6 h-full overflow-y-auto text-black">
-          {content === "Work" && <ProjectList />}
+          {content === "Work" && <ProjectList is3DView={is3DView} />}
           {content === "About" && <About />}
           {content === "Contact" && <Contact />}
         </div>
