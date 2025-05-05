@@ -27,11 +27,12 @@ const ProjectList = ({ is3DView } ) => {
           >
             <div className={`${ is3DView ? "text-4xl" : "hidden"}`}>📄</div>
             <h3
-              className={`mt-2 text-sm ${hoverClasses[index % hoverClasses.length]} transition`}
+              className={`mb-1 ${ is3DView ? "text-sm" : "text-4xl"} ${hoverClasses[index % hoverClasses.length]} transition`}
             >
-              {title} {wip && <span className="text-xs">(wip)</span>}
+              {title} {wip && <span>(wip)</span>}
             </h3>
-            <p className="text-xs text-gray-600">{projectType}</p>
+            <p className="text-xs"
+            >{projectType}</p>
           </Link>
         );
       })}
