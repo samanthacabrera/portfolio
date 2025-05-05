@@ -11,7 +11,7 @@ function Hero({ is3DView }) {
         )}
 
         {!is3DView && (
-          <p className="group relative pt-20">
+          <p className="group relative pt-4">
             Hello world, my name is 
           <span className="text-lime-600 md:text-inherit group-hover:text-lime-600 transition duration-500 delay-100"> Sam</span>. 
             I am equal parts 

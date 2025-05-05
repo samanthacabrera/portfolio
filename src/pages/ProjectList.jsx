@@ -27,7 +27,7 @@ const ProjectList = ({ is3DView } ) => {
           >
             <div className={`${ is3DView ? "text-4xl" : "hidden"}`}>📄</div>
             <h3
-              className={`mb-1 ${ is3DView ? "text-sm" : "text-4xl"} ${hoverClasses[index % hoverClasses.length]} transition`}
+              className={`mb-1 ${ is3DView ? "text-sm" : "text-4xl hover:scale-[103%] transition duration-300"} ${hoverClasses[index % hoverClasses.length]} transition`}
             >
               {title} {wip && <span>(wip)</span>}
             </h3>

@@ -40,8 +40,6 @@ const Desk = ({is3DView}) => {
       {
         component: <Laptop />,
         position: [0, 0.28, -0.25],
-        label: "Work",
-        color: "#0891b2",
         onClick: () => setScreenOpen(true),
       },
     ];
@@ -106,16 +104,6 @@ const Desk = ({is3DView}) => {
             {item.component}
           </Hoverable>
 
-            {/* Label */}
-            <Text
-              position={[item.position[0], 0.5, item.position[2] ]}
-              fontSize={0.05}
-              color={item.color}
-              anchorX="center"
-              anchorY="bottom"
-            >
-              {item.label}
-            </Text>
           </React.Fragment>
         ))}
       </Canvas>
