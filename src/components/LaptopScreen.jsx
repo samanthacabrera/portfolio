@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import Modal from "../utils/Modal";
-import ProjectList from "../pages/ProjectList";
 
 const folders = [
   { name: "Projects", content: "Work" },
   { name: "About", content: "About" },
   { name: "Contact", content: "Contact" },
+  { name: "Photos", content: "Photos" },
+  { name: "Trash", content: "Trash" },
 ];
 
 const LaptopScreen = ( {is3DView, onClose }) => {
@@ -33,14 +34,16 @@ const LaptopScreen = ( {is3DView, onClose }) => {
         </button>
 
         {/* Folder Icons */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
+        <div className="grid grid-cols-5 gap-8">
           {folders.map((folder) => (
             <div
               key={folder.name}
               onClick={() => handleFolderClick(folder)}
               className="flex flex-col items-center cursor-pointer hover:scale-105 transition-transform"
             >
-              <div className="text-6xl">📁</div>
+               <div className="text-6xl">
+                {folder.name === "Trash" ? "🗑️" : "📁"}
+              </div>
               <span className="mt-2 text-sm">{folder.name}</span>
             </div>
           ))}
