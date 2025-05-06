@@ -2,6 +2,7 @@ import React from "react";
 import About from "../pages/About";
 import ProjectList from "../pages/ProjectList"; 
 import Contact from "../pages/Contact";
+import Trash from "../pages/Trash";
 
 const Modal = ({is3DView, isOpen, onClose, content }) => {
   if (!isOpen) return null;
@@ -31,6 +32,7 @@ const Modal = ({is3DView, isOpen, onClose, content }) => {
           {content === "Work" && <ProjectList is3DView={is3DView} />}
           {content === "About" && <About />}
           {content === "Contact" && <Contact />}
+          {content === "Trash" && <Trash />}
         </div>
       </div>
     </div>
