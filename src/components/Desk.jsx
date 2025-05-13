@@ -7,12 +7,12 @@ import Lamp from "./Lamp";
 import Frame from "./Frame";
 import LaptopScreen from "./LaptopScreen";
 
-const Hoverable = ({ children, onClick, shouldScale = true }) => {
+const Hoverable = ({ children, onClick }) => {
   const [hovered, setHovered] = useState(false);
   const groupRef = useRef();
 
   useFrame(() => {
-    if (groupRef.current && shouldScale) {
+    if (groupRef.current) {
       groupRef.current.scale.lerp(
         hovered ? new THREE.Vector3(1.05, 1.05, 1.05)
                 : new THREE.Vector3(1,    1,    1),
@@ -65,7 +65,7 @@ const Desk = ({is3DView}) => {
             width: "100vw",
             userSelect: "none",
         }}
-        camera={{ position: [0, 0.6, 1.3] }}
+        camera={{ position: [0, 0.45, 1.5] }}
       >
         <OrbitControls enableZoom={false} enablePan enableRotate />
         <ambientLight intensity={0.5} />
@@ -73,13 +73,11 @@ const Desk = ({is3DView}) => {
 
         {/* Desk */}
         <group position={[0, -0.3, 0]}>
-          {/* Desk Surface */}
           <mesh position={[0, 0, 0]}>
             <boxGeometry args={[2.5, 0.05, 1.3]} />
             <meshStandardMaterial color="#8B4513" />
           </mesh>
 
-          {/* Desk Legs */}
           <mesh position={[-1, -0.5, 0]}>
             <boxGeometry args={[0.5, 1, 1.3]} />
             <meshStandardMaterial color="#8B4513" />
@@ -89,7 +87,6 @@ const Desk = ({is3DView}) => {
             <meshStandardMaterial color="#8B4513" />
           </mesh>
 
-          {/* Desk Handles */}
           <mesh position={[-1, -0.25, 0.7]}>
             <boxGeometry args={[0.3, 0.05, 0.05]} />
             <meshStandardMaterial color="#4b3621" />
@@ -109,11 +106,11 @@ const Desk = ({is3DView}) => {
         </group>
 
 
-        {/* Clickable Desk Items */}
+        {/* Desk Items */}
         {items.map((item, index) => (
           <React.Fragment key={index}>
 
-          <Hoverable position={item.position} onClick={item.onClick} shouldScale={item.component.type !== Lamp}>
+          <Hoverable position={item.position} onClick={item.onClick} >
             {item.component}
           </Hoverable>
 

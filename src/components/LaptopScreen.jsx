@@ -4,7 +4,6 @@ import Modal from "../utils/Modal";
 const folders = [
   { name: "Projects", content: "Work", icon: "📁" },
   { name: "About", content: "About", icon: "📁" },
-  { name: "Contact", content: "Contact", icon: "📁" },
   { name: "Notes", content: "Notes", icon: "📁" },
   { name: "Photos", content: "Photos", icon: "📁" },
   { name: "Trash", content: "Trash", icon: "🗑️" },
@@ -38,19 +37,19 @@ const LaptopScreen = ({ is3DView, onClose }) => {
 
   return (
     <>
-      <div className="fixed inset-0 bg-gradient-to-br from-gray-900 to-gray-800 max-w-2xl mx-auto max-h-[500px] z-50 text-white flex flex-col items-center justify-between translate-y-[10vh] pb-6">
+      <div className="fixed inset-0 bg-red-200 rounded max-w-2xl mx-auto max-h-[500px] z-50 text-white flex flex-col items-center justify-between translate-y-[10vh] pb-6">
 
-        <div className="w-full flex justify-between items-center px-4 py-1 bg-black/30 backdrop-blur-md">
+        <div className="w-full flex justify-between items-center rounded-t px-4 py-1 bg-black/30 backdrop-blur-md">
           <div className="flex items-center space-x-2">
             <div className="flex space-x-1">
               <button 
                 onClick={onClose} 
-                className="w-3 h-3 rounded-full bg-red-500 hover:bg-red-600"
+                className="w-3 h-3 rounded-full text-xs text-white bg-red-500 hover:bg-red-600"
               />
-              <div className="w-3 h-3 rounded-full bg-yellow-500" />
-              <div className="w-3 h-3 rounded-full bg-green-500" />
+              <div className="w-3 h-3 rounded-full text-xs text-white bg-yellow-500"></div>
+              <div className="w-3 h-3 rounded-full text-xs text-white bg-green-500"></div>
             </div>
-            <span className="ml-4 text-xs font-semibold">Finder</span>
+            <span className="ml-4 text-xs font-semibold">Sam's Desktop</span>
           </div>
           
           <div className="flex items-center space-x-3 text-xs">
@@ -60,18 +59,18 @@ const LaptopScreen = ({ is3DView, onClose }) => {
         </div>
         
         {/* Desktop area */}
-        <div className="flex-1 w-full flex flex-col items-center justify-center">
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-6 mt-8">
+        <div className="flex self-end">
+          <div className="grid grid-cols-2 gap-4">
             {folders.map((folder) => (
               <div
                 key={folder.name}
                 onClick={() => handleFolderClick(folder)}
                 className="flex flex-col items-center cursor-pointer hover:scale-105 transition-transform"
               >
-                <div className="text-3xl opacity-90">
+                <div className="text-4xl">
                   <span>{folder.icon}</span>
                 </div>
-                <span className="mt-2 text-xs font-light text-white/80">{folder.name}</span>
+                <span className="mt-2 text-xs font-medium text-white/80">{folder.name}</span>
               </div>
             ))}
           </div>

@@ -1,7 +1,6 @@
 import React from "react";
 import About from "../pages/About";
 import ProjectList from "../pages/ProjectList"; 
-import Contact from "../pages/Contact";
 import Photos from "../pages/Photos";
 import Trash from "../pages/Trash";
 
@@ -32,7 +31,6 @@ const Modal = ({is3DView, isOpen, onClose, content }) => {
         <div className="p-6 h-full overflow-y-auto text-black">
           {content === "Work" && <ProjectList is3DView={is3DView} />}
           {content === "About" && <About />}
-          {content === "Contact" && <Contact />}
           {/* {content === "Notes" && <Notes />} */}
           {content === "Photos" && <Photos />}
           {content === "Trash" && <Trash />}

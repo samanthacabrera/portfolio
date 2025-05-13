@@ -3,7 +3,7 @@ import React from "react";
 function About() {
   return (
     <div className="group flex flex-col items-center">
-      <div className="space-y-4 pb-12">
+      <div className="space-y-4 pb-4">
         <p>
           I'm a full-stack <span className="text-lime-600 md:text-inherit group-hover:text-lime-600 transition duration-500 delay-200">software engineer</span>, specializing in <span className="text-pink-600 md:text-inherit group-hover:text-pink-600 transition duration-500 delay-300">3D</span> web development. 
           I am equal parts 
