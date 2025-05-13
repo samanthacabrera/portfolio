@@ -4,6 +4,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Text } from "@react-three/drei"; 
 import Laptop from "./Laptop";
 import Lamp from "./Lamp";
+import Frame from "./Frame";
 import LaptopScreen from "./LaptopScreen";
 
 const Hoverable = ({ children, onClick, shouldScale = true }) => {
@@ -34,6 +35,7 @@ const Hoverable = ({ children, onClick, shouldScale = true }) => {
 
 const Desk = ({is3DView}) => {
     const [screenOpen, setScreenOpen] = useState(false);
+    const [ambientIntensity, setAmbientIntensity] = useState(0.5);
 
     // data for each desk item
     const items = [
@@ -42,6 +44,17 @@ const Desk = ({is3DView}) => {
         position: [0, 0.28, -0.25],
         onClick: () => setScreenOpen(true),
       },
+      {
+        component: <Lamp setAmbientIntensity={setAmbientIntensity} />,
+        position: [0.9, -0.15, 0],
+        onClick: () => {}, 
+        shouldScale: false,
+      },
+      {
+        component: <Frame />,
+        position: [-0.9, 0.05, -0.2],
+        onClick: () => {}, 
+      }
     ];
 
     return (
