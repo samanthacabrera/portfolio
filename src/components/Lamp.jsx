@@ -5,7 +5,7 @@ import { useFrame } from "@react-three/fiber";
 
 const Lamp = ({ setAmbientIntensity, ...props }) => {
   const { scene } = useGLTF("/models/lamp.glb");
-  const [isOn, setIsOn] = useState(false);
+  const [isOn, setIsOn] = useState(true);
   const [lampIntensity, setLampIntensity] = useState(0);
 
   scene.traverse((child) => {

@@ -45,19 +45,21 @@ const ViewPrompt = ({ onSelect }) => {
 };
 
 function Home() {
+    const [isMobile, setIsMobile] = useState(false);
     const [is3DView, setIs3DView] = useState(true);
     const [showPrompt, setShowPrompt] = useState(true);
 
     useEffect(() => {
         const savedChoice = sessionStorage.getItem("userViewChoice");
     
-        // detect mobile devices using user agent or screen width
-        const isMobile =
+        const mobile =
             /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
                 navigator.userAgent
             ) || window.innerWidth < 768;
     
-        if (isMobile) {
+        setIsMobile(mobile); 
+    
+        if (mobile) {
             setIs3DView(false);      
             setShowPrompt(false);    
         } else if (savedChoice !== null) {
@@ -66,11 +68,10 @@ function Home() {
         }
     }, []);
     
-
     const handleInitialChoice = (choice) => {
         setIs3DView(choice);
         setShowPrompt(false);
-        sessionStorage.setItem("userViewChoice", choice ? "3D" : "Simple");
+        // sessionStorage.setItem("userViewChoice", choice ? "3D" : "Simple");
     };
 
     const toggleView = () => {
@@ -88,6 +89,7 @@ function Home() {
             {showPrompt && <ViewPrompt onSelect={handleInitialChoice} />}
 
             {/* View Toggle */}
+            {!isMobile && (
             <div
                 className="h-12 w-screen z-10 fixed top-0 left-0 p-4 flex items-center gap-2 cursor-pointer select-none"
                
@@ -105,6 +107,7 @@ function Home() {
                     {is3DView ? "3D View" : "Simple View"}
                 </span>
             </div>
+            )}
 
             {/* Main Content */}
             {!showPrompt &&
@@ -116,7 +119,7 @@ function Home() {
                 ) : (
                     <div className="flex flex-col items-center w-screen space-y-6">
                         {componentCards.map(({ component, key }) => (
-                            <div key={key} className="w-full max-w-4xl">
+                            <div key={key} className="w-full max-w-4xl px-4">
                                 {component}
                             </div>
                         ))}
