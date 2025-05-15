@@ -50,16 +50,27 @@ function Home() {
 
     useEffect(() => {
         const savedChoice = sessionStorage.getItem("userViewChoice");
-        if (savedChoice !== null) {
+    
+        // detect mobile devices using user agent or screen width
+        const isMobile =
+            /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+                navigator.userAgent
+            ) || window.innerWidth < 768;
+    
+        if (isMobile) {
+            setIs3DView(false);      
+            setShowPrompt(false);    
+        } else if (savedChoice !== null) {
             setIs3DView(savedChoice === "3D");
-            setShowPrompt(true);
+            setShowPrompt(false);
         }
     }, []);
+    
 
     const handleInitialChoice = (choice) => {
         setIs3DView(choice);
         setShowPrompt(false);
-        // sessionStorage.setItem("userViewChoice", choice ? "3D" : "Simple");
+        sessionStorage.setItem("userViewChoice", choice ? "3D" : "Simple");
     };
 
     const toggleView = () => {
