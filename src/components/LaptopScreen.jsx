@@ -6,7 +6,15 @@ const folders = [
   { name: "About", content: "About", icon: "📁" },
   { name: "Notes", content: "Notes", icon: "📁" },
   { name: "Photos", content: "Photos", icon: "📁" },
-  { name: "Trash", content: "Trash", icon: "🗑️" },
+];
+
+const dockItems = [
+  { name: "Safari", icon: "🌐" },
+  { name: "Mail", icon: "✉️" },
+  { name: "Calendar", icon: "📅" },
+  { name: "Music", icon: "🎵" },
+  { name: "Settings", icon: "⚙️" },
+  { name: "Trash", icon: "🗑️" },
 ];
 
 const LaptopScreen = ({ is3DView, onClose }) => {
@@ -71,6 +79,21 @@ const LaptopScreen = ({ is3DView, onClose }) => {
                   <span>{folder.icon}</span>
                 </div>
                 <span className="mt-2 text-xs font-medium text-white/80">{folder.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        {/* Dock */}
+        <div className="flex justify-center mt-4">
+          <div className="flex bg-black/40 backdrop-blur-md px-4 py-2 rounded-2xl space-x-4 shadow-lg">
+            {dockItems.map((item) => (
+              <div
+                key={item.name}
+                className="flex flex-col items-center text-white text-sm cursor-pointer transform transition-transform hover:scale-105"
+              >
+                <div className="text-2xl">{item.icon}</div>
+                <span className="text-[10px] mt-1">{item.name}</span>
               </div>
             ))}
           </div>
