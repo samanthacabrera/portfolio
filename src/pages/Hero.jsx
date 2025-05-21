@@ -5,9 +5,14 @@ function Hero({ is3DView }) {
     <div className="group w-full pt-8">
 
         {is3DView && (
-          <p className="text-center">
-          Hello world, my name is Sam. Interact with the scene below to learn more about me & what I do.
+          <>
+          <h1 className="text-center text-2xl font-semibold tracking-wide mb-2">
+            Hello world, my name is Sam. 
+          </h1>
+          <p className="text-center text-gray-400">
+          Interact with the desk by dragging, and select objects to learn more about me & what I do.
           </p>
+        </>
         )}
 
         {!is3DView && (
