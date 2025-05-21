@@ -8,7 +8,7 @@ const Modal = ({is3DView, isOpen, onClose, content }) => {
 
   return (
     <div
-      className="fixed inset-0 top-60 left-40 z-50 "
+      className="fixed inset-0 top-40 left-96 z-50"
       onClick={onClose}
     >
       <div
