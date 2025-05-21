@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import Desk from "../components/Desk";
 import About from "./About";
 import ProjectList from "./ProjectList";
+import Footer from "../utils/Footer";
 
 const ViewPrompt = ({ onSelect }) => {
     const handleSelect = (choice) => {
@@ -123,6 +124,7 @@ function Home() {
                                 {component}
                             </div>
                         ))}
+                        <Footer/>
                     </div>
                 ))}
         </div>

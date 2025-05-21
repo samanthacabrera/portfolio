@@ -33,6 +33,45 @@ const Hoverable = ({ children, onClick }) => {
   );
 };
 
+const Chair = () => {
+  return (
+    <group position={[0, -0.75, 0.75]} rotation={[0, Math.PI, 0]}>
+      {/* Seat */}
+      <mesh position={[0, 0.15, 0]}>
+        <boxGeometry args={[0.6, 0.1, 0.6]} />
+        <meshStandardMaterial color="#654321" />
+      </mesh>
+      {/* Backrest */}
+      <mesh position={[0, 0.45, -0.25]}>
+        <boxGeometry args={[0.6, 0.6, 0.1]} />
+        <meshStandardMaterial color="#654321" />
+      </mesh>
+      {/* Legs */}
+      {/* Front left */}
+      <mesh position={[-0.25, -0.15, 0.25]}>
+        <boxGeometry args={[0.1, 0.5, 0.1]} />
+        <meshStandardMaterial color="#4b3621" />
+      </mesh>
+      {/* Front right */}
+      <mesh position={[0.25, -0.15, 0.25]}>
+        <boxGeometry args={[0.1, 0.5, 0.1]} />
+        <meshStandardMaterial color="#4b3621" />
+      </mesh>
+      {/* Back left */}
+      <mesh position={[-0.25, -0.15, -0.25]}>
+        <boxGeometry args={[0.1, 0.5, 0.1]} />
+        <meshStandardMaterial color="#4b3621" />
+      </mesh>
+      {/* Back right */}
+      <mesh position={[0.25, -0.15, -0.25]}>
+        <boxGeometry args={[0.1, 0.5, 0.1]} />
+        <meshStandardMaterial color="#4b3621" />
+      </mesh>
+    </group>
+  );
+};
+
+
 const Desk = ({is3DView}) => {
     const [screenOpen, setScreenOpen] = useState(false);
     const [ambientIntensity, setAmbientIntensity] = useState(0.5);
@@ -61,7 +100,7 @@ const Desk = ({is3DView}) => {
     <>
       <Canvas
         style={{
-            height: "80vh",
+            height: "100vh",
             width: "100vw",
             userSelect: "none",
         }}
@@ -105,7 +144,6 @@ const Desk = ({is3DView}) => {
           </mesh>
         </group>
 
-
         {/* Desk Items */}
         {items.map((item, index) => (
           <React.Fragment key={index}>
@@ -116,6 +154,8 @@ const Desk = ({is3DView}) => {
 
           </React.Fragment>
         ))}
+          
+        <Chair/> 
       </Canvas>
       {screenOpen && <LaptopScreen onClose={() => setScreenOpen(false)} is3DView={is3DView} />}
     </>
