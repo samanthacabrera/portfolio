@@ -65,31 +65,11 @@ const projects = [
     },
     {
         id: 4,
-        title: "Yarnsara",
-        github: "https://github.com/samanthacabrera/ecommerce-store",
-        link: "https://yarnsara-samanthacabreras-projects.vercel.app/",
-        wip: false,
-        deployed: true,
-        contribution: "Sole Developer",
-        description: "Yarnsara is an eCommerce platform dedicated to selling 100% upcycled and hand-crocheted yoga accessories. The platform provides a user-friendly shopping experience, with a custom-built storefront, detailed product listings, and secure payment options. With a focus on sustainability, Yarnsara showcases eco-conscious products while offering seamless checkout and transaction processes.",
-        tags: ["Full-Stack", "Web App", "eCommerce", "Sustainability"],
-        projectType: "Sustainable eCommerce Platform",
-        techStack: ["React", "Express", "Node.js", "MongoDB", "Stripe"],
-        features: [
-            "Custom eCommerce storefront with seamless checkout and payment integration.",
-            "Integration with Stripe for secure payments and transaction handling.",
-            "Detailed product listings with high-quality images and comprehensive descriptions."
-        ],
-        insights: "Building Yarnsara provided valuable insights into the complexities of eCommerce platforms, particularly in handling secure payment processing and optimizing product catalogs. The biggest challenge was implementing Stripe for secure payment transactions while ensuring PCI compliance. I also learned how to set up efficient database queries to manage large product catalogs, integrate filtering, and implement a smooth checkout process.",
-        reason: "I created Yarnsara to gain hands-on experience with full-stack eCommerce development while focusing on sustainability. I wanted to challenge myself with payment integration and database optimization, while also working on a project that aligns with my passion for both yoga and environmentally-conscious production practices."
-    },
-    {
-        id: 5,
         title: "Swiftle",
         github: "https://github.com/samanthacabrera/swiftle",
-        link: "",
+        link: "https://samanthacabrera.github.io/swiftle/",
         wip: false,
-        deployed: false,
+        deployed: true,
         contribution: "Sole Developer",
         description: "Swiftle is a lyric-based word game where players categorize Taylor Swift song lyrics into hidden thematic groups. Drawing inspiration from the NYT's 'Connections' game, Swiftle challenges users to recognize patterns in lyrics while providing an engaging and fun experience. The app offers a mobile-first design for seamless play on any device, making it accessible and easy to enjoy on the go.",
         tags: ["Game", "Web App", "UX/UI"],
@@ -103,6 +83,26 @@ const projects = [
         ],
         insights: "Swiftle challenged me to refine my front-end development skills, particularly in game logic and UI/UX design. I focused on creating dynamic state updates and smooth transitions to make the gameplay intuitive. The hint system required balancing helpful guidance with maintaining the game's challenge, which pushed me to improve my logic for interactive applications.",
          reason: "I created Swiftle because I wanted to improve my front-end game logic and UI/UX design skills for interactive applications. As a Swiftie, I also wanted to create a fun and personalized experience centered around Taylor Swift's music. The project allowed me to refine my state management techniques while building something I genuinely enjoyed."
+    },
+    {
+        id: 5,
+        title: "Yarnsara",
+        github: "https://github.com/samanthacabrera/ecommerce-store",
+        link: "https://yarnsara-samanthacabreras-projects.vercel.app/",
+        wip: false,
+        deployed: false,
+        contribution: "Sole Developer",
+        description: "Yarnsara is an eCommerce platform dedicated to selling 100% upcycled and hand-crocheted yoga accessories. The platform provides a user-friendly shopping experience, with a custom-built storefront, detailed product listings, and secure payment options. With a focus on sustainability, Yarnsara showcases eco-conscious products while offering seamless checkout and transaction processes.",
+        tags: ["Full-Stack", "Web App", "eCommerce", "Sustainability"],
+        projectType: "Sustainable eCommerce Platform",
+        techStack: ["React", "Express", "Node.js", "MongoDB", "Stripe"],
+        features: [
+            "Custom eCommerce storefront with seamless checkout and payment integration.",
+            "Integration with Stripe for secure payments and transaction handling.",
+            "Detailed product listings with high-quality images and comprehensive descriptions."
+        ],
+        insights: "Building Yarnsara provided valuable insights into the complexities of eCommerce platforms, particularly in handling secure payment processing and optimizing product catalogs. The biggest challenge was implementing Stripe for secure payment transactions while ensuring PCI compliance. I also learned how to set up efficient database queries to manage large product catalogs, integrate filtering, and implement a smooth checkout process.",
+        reason: "I created Yarnsara to gain hands-on experience with full-stack eCommerce development while focusing on sustainability. I wanted to challenge myself with payment integration and database optimization, while also working on a project that aligns with my passion for both yoga and environmentally-conscious production practices."
     },
     {
         id: 6,
