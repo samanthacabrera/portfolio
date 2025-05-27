@@ -1,13 +1,15 @@
 import React, { useState, useRef  } from "react";
 import * as THREE from "three";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, Text } from "@react-three/drei"; 
+import { OrbitControls } from "@react-three/drei"; 
 import Laptop from "./Laptop";
+import LaptopScreen from "./LaptopScreen";
 import Lamp from "./Lamp";
 import Frame from "./Frame";
-import LaptopScreen from "./LaptopScreen";
+import MemoPad from "./MemoPad";
 
-const Hoverable = ({ children, onClick }) => {
+
+const Hoverable = ({ children, onClick , position = [0, 0, 0] }) => {
   const [hovered, setHovered] = useState(false);
   const groupRef = useRef();
 
@@ -24,6 +26,7 @@ const Hoverable = ({ children, onClick }) => {
   return (
     <group
       ref={groupRef}
+      position={position}
       onPointerOver={e => { e.stopPropagation(); setHovered(true); }}
       onPointerOut={e => { e.stopPropagation(); setHovered(false); }}
       onPointerDown={e => { e.stopPropagation(); onClick(); }}
@@ -47,22 +50,18 @@ const Chair = () => {
         <meshStandardMaterial color="#654321" />
       </mesh>
       {/* Legs */}
-      {/* Front left */}
       <mesh position={[-0.25, -0.15, 0.25]}>
         <boxGeometry args={[0.1, 0.5, 0.1]} />
         <meshStandardMaterial color="#4b3621" />
       </mesh>
-      {/* Front right */}
       <mesh position={[0.25, -0.15, 0.25]}>
         <boxGeometry args={[0.1, 0.5, 0.1]} />
         <meshStandardMaterial color="#4b3621" />
       </mesh>
-      {/* Back left */}
       <mesh position={[-0.25, -0.15, -0.25]}>
         <boxGeometry args={[0.1, 0.5, 0.1]} />
         <meshStandardMaterial color="#4b3621" />
       </mesh>
-      {/* Back right */}
       <mesh position={[0.25, -0.15, -0.25]}>
         <boxGeometry args={[0.1, 0.5, 0.1]} />
         <meshStandardMaterial color="#4b3621" />
@@ -79,20 +78,25 @@ const Desk = ({is3DView}) => {
     // data for each desk item
     const items = [
       {
-        component: <Laptop />,
-        position: [0, 0.28, -0.25],
-        onClick: () => setScreenOpen(true),
-      },
-      {
         component: <Lamp setAmbientIntensity={setAmbientIntensity} />,
-        position: [0.9, -0.15, 0],
+        position: [-1.8, 0, -0.2],
         onClick: () => {}, 
         shouldScale: false,
       },
       {
+        component: <Laptop />,
+        position: [0, 0, 0],
+        onClick: () => setScreenOpen(true),
+      },
+      {
         component: <Frame />,
-        position: [-0.9, 0.05, -0.2],
+        position: [1.8, 0, -0.2],
         onClick: () => {}, 
+      },
+      {
+        component: <MemoPad />,
+        position: [0.7, -0.25, 0.15],  
+        onClick: () => {},
       }
     ];
 
