@@ -1,4 +1,3 @@
-import React from "react";
 import About from "../pages/About";
 import ProjectList from "../pages/ProjectList"; 
 import Photos from "../pages/Photos";
@@ -16,9 +15,9 @@ const Modal = ({is3DView, isOpen, onClose, content }) => {
         onClick={(e) => e.stopPropagation()}
       >
         {/* Modal top bar */}
-        <div className="flex items-center justify-between px-4 py-2 bg-gray-200 border-b border-gray-300">
+        <div className="flex items-center justify-between px-2 py-2 bg-gray-200 border-b border-gray-300">
           <div className="flex items-center gap-2">
-            <span className="w-3 h-3 bg-red-500 rounded-full cursor-pointer" onClick={onClose} />
+            <span className="w-3 h-3 bg-red-500 rounded-full cursor-pointer hover:bg-red-600 transition" onClick={onClose} />
             <span className="w-3 h-3 bg-yellow-500 rounded-full" />
             <span className="w-3 h-3 bg-green-500 rounded-full" />
           </div>

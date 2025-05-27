@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Modal from "../utils/Modal";
 
 const folders = [
@@ -18,13 +18,31 @@ const dockItems = [
 ];
 
 const LaptopScreen = ({ is3DView, onClose }) => {
+  const screenRef = useRef();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState(null);
   const [currentTime, setCurrentTime] = useState(
     new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
   );
 
-  React.useEffect(() => {
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (screenRef.current && !screenRef.current.contains(event.target)) {
+        onClose();
+      }
+    }
+  
+    const timer = setTimeout(() => {
+      document.addEventListener("mousedown", handleClickOutside);
+    }, 0);
+  
+    return () => {
+      clearTimeout(timer);
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [onClose]);  
+  
+  useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTime(
         new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
@@ -45,19 +63,13 @@ const LaptopScreen = ({ is3DView, onClose }) => {
 
   return (
     <>
-      <div className="fixed inset-0 bg-red-200 rounded max-w-2xl mx-auto max-h-[500px] z-50 text-white flex flex-col items-center justify-between translate-y-[10vh] pb-6">
+      <div
+        ref={screenRef}
+        className="fixed inset-0 bg-red-200 rounded max-w-2xl mx-auto max-h-[500px] z-50 text-white flex flex-col items-center justify-between translate-y-[10vh] pb-6">
 
         <div className="w-full flex justify-between items-center rounded-t px-4 py-1 bg-black/30 backdrop-blur-md">
           <div className="flex items-center space-x-2">
-            <div className="flex space-x-1">
-              <button 
-                onClick={onClose} 
-                className="w-3 h-3 rounded-full text-xs text-white bg-red-500 hover:bg-red-600"
-              />
-              <div className="w-3 h-3 rounded-full text-xs text-white bg-yellow-500"></div>
-              <div className="w-3 h-3 rounded-full text-xs text-white bg-green-500"></div>
-            </div>
-            <span className="ml-4 text-xs font-semibold">Sam's Desktop</span>
+            <span className="text-xs font-semibold">Sam's Desktop</span>
           </div>
           
           <div className="flex items-center space-x-3 text-xs">
