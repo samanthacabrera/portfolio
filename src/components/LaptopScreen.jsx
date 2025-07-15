@@ -4,17 +4,7 @@ import Modal from "../utils/Modal";
 const folders = [
   { name: "Projects", content: "Work", icon: "📁" },
   { name: "About", content: "About", icon: "📁" },
-  { name: "Notes", content: "Notes", icon: "📁" },
   { name: "Photos", content: "Photos", icon: "📁" },
-];
-
-const dockItems = [
-  { name: "Safari", icon: "🌐" },
-  { name: "Mail", icon: "✉️" },
-  { name: "Calendar", icon: "📅" },
-  { name: "Music", icon: "🎵" },
-  { name: "Settings", icon: "⚙️" },
-  { name: "Trash", icon: "🗑️" },
 ];
 
 const LaptopScreen = ({ is3DView, onClose }) => {
@@ -78,38 +68,24 @@ const LaptopScreen = ({ is3DView, onClose }) => {
           </div>
         </div>
         
-        {/* Desktop area */}
-        <div className="flex self-end">
-          <div className="grid grid-cols-2 gap-4">
-            {folders.map((folder) => (
-              <div
-                key={folder.name}
-                onClick={() => handleFolderClick(folder)}
-                className="flex flex-col items-center cursor-pointer hover:scale-105 transition-transform"
-              >
-                <div className="text-4xl">
-                  <span>{folder.icon}</span>
-                </div>
-                <span className="mt-2 text-xs font-medium text-white/80">{folder.name}</span>
+      {/* Desktop area */}
+      <div className="w-1/4 flex-1 self-end pt-8">
+        <div className="grid grid-cols-2 gap-2 justify-start items-start">
+          {folders.map((folder) => (
+            <div
+              key={folder.name}
+              onClick={() => handleFolderClick(folder)}
+              className="flex flex-col items-center cursor-pointer hover:scale-105 transition-transform"
+            >
+              <div className="text-4xl">
+                <span>{folder.icon}</span>
               </div>
-            ))}
-          </div>
+              <span className="mt-2 text-xs font-medium text-white/80">{folder.name}</span>
+            </div>
+          ))}
         </div>
-        
-        {/* Dock */}
-        <div className="flex justify-center mt-4">
-          <div className="flex bg-black/40 backdrop-blur-md px-4 py-2 rounded-2xl space-x-4 shadow-lg">
-            {dockItems.map((item) => (
-              <div
-                key={item.name}
-                className="flex flex-col items-center text-white text-sm cursor-pointer transform transition-transform hover:scale-105"
-              >
-                <div className="text-2xl">{item.icon}</div>
-                <span className="text-[10px] mt-1">{item.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
+      </div>
+
       </div>
 
       <Modal
