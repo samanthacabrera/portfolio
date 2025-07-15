@@ -5,15 +5,16 @@ function About() {
     <div className="group flex flex-col items-center">
       <div className="space-y-4 pb-4">
         <p>
+          Hello <span className="text-pink-600 md:text-inherit group-hover:text-pink-600 transition duration-500">world</span>,
+          my name is 
+          <span className="text-orange-600 md:text-inherit group-hover:text-orange-600 transition duration-500"> Sam</span>. 
+        </p>
+        <p>
           I'm a full-stack <span className="text-lime-600 md:text-inherit group-hover:text-lime-600 transition duration-500 delay-200">software engineer</span>, specializing in <span className="text-pink-600 md:text-inherit group-hover:text-pink-600 transition duration-500 delay-300">3D</span> web development. 
           I am equal parts 
             <span className="text-yellow-500 md:text-inherit group-hover:text-yellow-500 transition duration-500 delay-300"> web developer </span> 
             and 
             <span className="text-cyan-600 md:text-inherit group-hover:text-cyan-600 transition duration-500 delay-500"> yogi</span>.  
-             I spend my days improving 
-            <a href="https://learnyoga.online/" target="_blank" rel="noopener noreferrer" className="italic opacity-90 hover:opacity-100 text-orange-500 md:text-inherit group-hover:text-orange-500 border-b border-orange-500 md:border-inherit group-hover:border-orange-500 transition-all duration-500 delay-700 mx-1">Learn Yoga Online</a>
-            and my nights building
-            <a href="https://yarnsara.etsy.com/" target="_blank" rel="noopener noreferrer" className="italic opacity-90 hover:opacity-100 text-pink-600 md:text-inherit group-hover:text-pink-600 border-b border-pink-600 md:border-inherit group-hover:border-pink-600 transition-all duration-500 delay-700 ml-1">Yarnsara</a>.
             I'm <span className="text-lime-600 md:text-inherit group-hover:text-lime-600 transition duration-500 delay-200">passionate</span> about creating digital solutions that combine <span className="text-yellow-500 md:text-inherit group-hover:text-yellow-500 transition duration-500 delay-300">creativity</span> and <span className="text-cyan-600 md:text-inherit group-hover:text-cyan-600 transition duration-500 delay-400">functionality</span>. 
             Through this fusion, I find <span className="text-yellow-500 md:text-inherit group-hover:text-yellow-500 transition duration-500 delay-300">fulfillment</span> and <span className="text-cyan-600 md:text-inherit group-hover:text-cyan-600 transition duration-500 delay-400">purpose</span> in my work.
         </p>

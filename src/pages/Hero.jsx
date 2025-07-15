@@ -16,11 +16,9 @@ function Hero({ is3DView }) {
         )}
 
         {!is3DView && (
-          <p className="relative pt-4">
-            Hello <span className="text-pink-600 md:text-inherit group-hover:text-pink-600 transition duration-500">world</span>,
-            my name is 
-          <span className="text-lime-600 md:text-inherit group-hover:text-lime-600 transition duration-500"> Sam</span>. 
-          </p>
+          <>
+          <p className="text-4xl py-8">Welcome to <span className="italic uppercase">Samoontha.com</span></p>
+          </>
         )}
 
     </div>
