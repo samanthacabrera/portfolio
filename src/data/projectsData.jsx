@@ -94,7 +94,7 @@ const projects = [
         contribution: "Sole Developer",
         description: "Yarnsara is an eCommerce platform dedicated to selling 100% upcycled and hand-crocheted yoga accessories. The platform provides a user-friendly shopping experience, with a custom-built storefront, detailed product listings, and secure payment options. With a focus on sustainability, Yarnsara showcases eco-conscious products while offering seamless checkout and transaction processes.",
         tags: ["Full-Stack", "Web App", "eCommerce", "Sustainability"],
-        projectType: "Sustainable eCommerce Platform",
+        projectType: "eCommerce Platform",
         techStack: ["React", "Express", "Node.js", "MongoDB", "Stripe"],
         features: [
             "Custom eCommerce storefront with seamless checkout and payment integration.",

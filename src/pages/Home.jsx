@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Hero from "./Hero";
 import Desk from "../components/Desk";
 import About from "./About";
 import ProjectList from "./ProjectList";
@@ -72,7 +71,6 @@ function Home() {
     // };
 
     const componentCards = [
-        { component: <Hero is3DView={false} />, key: "hero" },
         { component: <About />, key: "about" },
         { component: <ProjectList is3DView={false} />, key: "projects" },
     ];
