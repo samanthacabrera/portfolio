@@ -20,6 +20,13 @@ const ProjectPage = () => {
 
     return (
         <div className="flex flex-col items-center space-y-12 py-24 max-w-4xl mx-4 lg:mx-auto min-h-[90vh]">
+            <Link
+                to="/"
+                className="px-3 py-1.5 text-sm self-start border border-white/20 rounded-sm text-white/90 hover:bg-white/5 transition-all duration-300"
+            >
+                Take me home!
+            </Link>
+            
             {/* Header */}
             <div className="flex justify-between w-full">
                 <div>
@@ -110,12 +117,6 @@ const ProjectPage = () => {
                         ))}
                 </ul>
             </div>
-            <Link
-                to="/"
-                className="px-3 py-1.5 text-sm self-start border border-white/20 rounded-sm text-white/90 hover:bg-white/5 transition-all duration-300"
-            >
-                Take me home!
-            </Link>
         </div>
     );
 };
