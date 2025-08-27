@@ -2,7 +2,7 @@ const projects = [
     {
         id: 1,
         title: "Learn Yoga Online",
-        github: "https://github.com/samanthacabrera/yoga-library",
+        github: "https://github.com/samanthacabrera/yoga-library#readme",
         link: "https://learnyoga.online/",
         wip: true,
         deployed: true,
