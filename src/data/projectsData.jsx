@@ -206,6 +206,25 @@ const projects = [
         insights: "Developing Recipe Roots helped me improve my skills in connecting front-end and back-end technologies, especially in handling dynamic content like recipes and user-generated data. I faced challenges with structuring the API to efficiently serve large amounts of recipe data while maintaining a smooth user experience. Additionally, integrating file uploads for recipe images taught me about cloud storage solutions and optimizing the backend for media handling.",
         reason: "I built Recipe Roots as a way to enhance my full-stack development skills, with a focus on building a scalable platform that could handle both structured data and user interactions. It was also an opportunity to work with both front-end and back-end technologies in a real-world project, and to practice managing database relationships effectively."
     },
+    {
+        id: 11,
+        title: "Custom Pattern Builder",
+        github: "https://github.com/samanthacabrera/filet-crochet-pattern-builder",
+        link: "",
+        wip: false,
+        deployed: false,
+        contribution: "Sole Developer",
+        description: "My Filet Crochet Custom Pattern Builder is a web application that enables users to design personalized filet crochet patterns directly in the browser.",
+        tags: ["UX/UI", "Frontend", "Creative Tools"],
+        projectType: "Custom Crochet Tool",
+        techStack: ["React", "Vite", "Tailwind CSS"],
+        features: [
+            "Interactive grid editor for creating custom filet crochet designs.",
+            "Real-time preview of the crochet pattern as users build their designs."
+        ],
+        insights: "This project challenged me in designing an interface that feels intuitive for creative users. I also gained valuable experience in providing export functionality and ensuring the output was accurate for practical crochet use.",
+        reason: "I created this project to combine my interest in crochet with my development skills, aiming to build a practical tool for the crafting community and myself."
+    }
 ]
 
 export default projects;
