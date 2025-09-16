@@ -5,8 +5,8 @@ import Footer from "../utils/Footer";
 function Home() {
 
     const componentCards = [
-        { component: <About />, key: "about" },
-        { component: <ProjectList is3DView={false} />, key: "projects" },
+        { component: <About/>, key: "about" },
+        { component: <ProjectList/>, key: "projects" },
     ];
 
     return (
