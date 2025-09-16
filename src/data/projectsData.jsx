@@ -12,13 +12,8 @@ const projects = [
         projectType: "Yoga Pose Library Web App",
         techStack: ["React", "Vite", "Tailwind CSS"],
         features: [
-            "Dynamic yoga pose library with structured JSON data for 50+ essential yoga poses",
-            "Interactive quiz component using React state to track user responses and validate answers.",
-            "SEO-optimized metadata and structured data for better search engine visibility.",
-            "Fast API integration for potential backend expansion with Node.js and MongoDB.",
         ],
         insights: "The most challenging aspect of Learn Yoga Online was structuring and organizing a content-heavy application efficiently while maintaining performance and usability. I had to carefully design the data structure for yoga poses and optimize the search functionality to handle large datasets smoothly. Additionally, ensuring a visually appealing yet accessible UI required iterating on multiple design choices and testing responsiveness across devices. Managing state efficiently in React, especially when dealing with dynamic filtering and search, was another learning curve that improved my frontend development skills.",
-        reason: "I created this project to gain experience structuring a content-heavy web application with an intuitive UI while improving my ability to handle large datasets efficiently. Additionally, as someone passionate about yoga, I wanted to build a practical resource that could help beginners and experienced practitioners alike easily navigate and learn about yoga poses."
     },
     {
         id: 2,
@@ -39,7 +34,6 @@ const projects = [
             
         ],
         insights: "Developing the Mediapipe hand tracking visualizer introduced me to the world of computer vision and real-time processing. I learned how to integrate third-party libraries into my web applications, optimize performance for real-time interaction, and work with 3D visualization tools.",
-        reason: "I created this project to explore the intersection of computer vision and web development. I wanted to learn how to work with real-time data to create an engaging and interactive experience, as well as improve my skills in handling 3D visualizations and integrating simple machine learning models into a frontend application."
     },
     {
         id: 3,
@@ -61,7 +55,6 @@ const projects = [
 
         ],
         insights: "Building this project gave me a deeper understanding of how sorting algorithms work and how to present them visually. It also allowed me to practice state management in React and improve my understanding of algorithmic performance, especially in terms of time and space complexity.",
-        reason: "I built this project to deepen my understanding of sorting algorithms by seeing how they work step by step. It started as a personal learning project to explore algorithm behavior more intuitively, but I also hope it can help others who are learning these concepts too."
     },
     {
         id: 4,
@@ -82,7 +75,6 @@ const projects = [
             "Timer feature to challenge players to categorize lyrics within a specific time limit."
         ],
         insights: "Swiftle challenged me to refine my front-end development skills, particularly in game logic and UI/UX design. I focused on creating dynamic state updates and smooth transitions to make the gameplay intuitive. The hint system required balancing helpful guidance with maintaining the game's challenge, which pushed me to improve my logic for interactive applications.",
-         reason: "I created Swiftle because I wanted to improve my front-end game logic and UI/UX design skills for interactive applications. As a Swiftie, I also wanted to create a fun and personalized experience centered around Taylor Swift's music. The project allowed me to refine my state management techniques while building something I genuinely enjoyed."
     },
     {
         id: 5,
@@ -102,7 +94,6 @@ const projects = [
             "Detailed product listings with high-quality images and comprehensive descriptions."
         ],
         insights: "Building Yarnsara provided valuable insights into the complexities of eCommerce platforms, particularly in handling secure payment processing and optimizing product catalogs. The biggest challenge was implementing Stripe for secure payment transactions while ensuring PCI compliance. I also learned how to set up efficient database queries to manage large product catalogs, integrate filtering, and implement a smooth checkout process.",
-        reason: "I created Yarnsara to gain hands-on experience with full-stack eCommerce development while focusing on sustainability. I wanted to challenge myself with payment integration and database optimization, while also working on a project that aligns with my passion for both yoga and environmentally-conscious production practices."
     },
     {
         id: 6,
@@ -122,7 +113,6 @@ const projects = [
             "User-friendly endpoints to browse and search for yoga poses."
         ],
         insights: "Building YogiAPI was a great introduction to creating backend services and understanding how to structure RESTful APIs. I learned how to handle CRUD operations, implement user authentication, and optimize SQL queries for better performance. Debugging CORS issues and ensuring secure data handling were crucial skills I developed during this project, which are essential when building scalable APIs.",
-        reason: "I created YogiAPI to expand my backend development skills and gain hands-on experience with building RESTful APIs. It was an opportunity to understand API documentation, improve security practices, and learn how to manage databases effectively for better performance and scalability."
     },
     {
         id: 7,
@@ -142,7 +132,6 @@ const projects = [
             "Pause and resume runs seamlessly, ensuring smooth tracking and navigation."
         ],
         insights: "Integrating Mapbox to provide real-time running routes was a valuable learning experience in working with geolocation APIs and handling live data updates efficiently. I faced challenges in rendering dynamic route paths while maintaining optimal performance, especially at varying zoom levels. Additionally, managing user inputs for custom routes and ensuring smooth map interactions pushed me to improve my state management and event handling skills.",
-        reason: "I created RunTheCity to explore the integration of interactive maps and geolocation-based services, while improving my skills in state management and dynamic UI design. This project allowed me to work with real-time data and focused on building a smooth user experience for people looking to explore new cities through personalized running routes, helping them discover local landmarks while staying active."
     },
     {
         id: 8,
@@ -162,7 +151,6 @@ const projects = [
             "Personalized produce recommendations tailored to regional availability and seasons."
         ],
         insights: "Developing EatBySeason gave me the opportunity to explore real-time data handling and API integrations with Supabase. One of the biggest challenges was ensuring accurate regional produce data through external APIs, as well as making the app location-aware. Additionally, refining my state management skills was essential for providing a seamless user experience with dynamic, real-time updates.",
-        reason: "I created EatBySeason to deepen my knowledge of location-based services and real-time data handling, while promoting sustainable eating habits. The project allowed me to experiment with Supabase and build a helpful resource for users looking to make more eco-conscious food choices."
     },
     {
         id: 9,
@@ -183,7 +171,6 @@ const projects = [
             "Built-in error handling and validation for accurate calculations, even with complex operations."
         ],
         insights: "Throughout the development of Calcalooza, I gained valuable experience in working with mathematical algorithms, ensuring accuracy in complex calculations, and handling edge cases. I also honed my ability to build reusable and maintainable components, which made it easier to scale the project and add new features as needed.",
-        reason: "I created Calcalooza as an opportunity to refine my skills in logic-based programming and mathematical computations. By building a set of reliable calculators, I aimed to challenge myself in tackling real-world problems, focusing on precision and handling the complexities of unit conversions and diverse mathematical operations."
     },
     {
         id: 10,
@@ -204,7 +191,6 @@ const projects = [
             "Responsive design ensuring a smooth experience on both mobile and desktop devices."
         ],
         insights: "Developing Recipe Roots helped me improve my skills in connecting front-end and back-end technologies, especially in handling dynamic content like recipes and user-generated data. I faced challenges with structuring the API to efficiently serve large amounts of recipe data while maintaining a smooth user experience. Additionally, integrating file uploads for recipe images taught me about cloud storage solutions and optimizing the backend for media handling.",
-        reason: "I built Recipe Roots as a way to enhance my full-stack development skills, with a focus on building a scalable platform that could handle both structured data and user interactions. It was also an opportunity to work with both front-end and back-end technologies in a real-world project, and to practice managing database relationships effectively."
     },
     {
         id: 11,
@@ -222,9 +208,7 @@ const projects = [
             "Interactive grid editor for creating custom filet crochet designs.",
             "Real-time preview of the crochet pattern as users build their designs."
         ],
-        insights: "This project challenged me in designing an interface that feels intuitive for creative users. I also gained valuable experience in providing export functionality and ensuring the output was accurate for practical crochet use.",
-        reason: "I created this project to combine my interest in crochet with my development skills, aiming to build a practical tool for the crafting community and myself."
-    }
+        insights: "This project challenged me in designing an interface that feels intuitive for creative users. I also gained valuable experience in providing export functionality and ensuring the output was accurate for practical crochet use.",    }
 ]
 
 export default projects;
