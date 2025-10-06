@@ -11,8 +11,3 @@ html {
   background-color: rgb(180, 234, 250);
   color: rgb(11, 5, 91);
 }
-
-::selection {
-  background-color: #ff58d2;
-  color: #000000;
-}
