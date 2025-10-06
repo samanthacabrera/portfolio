@@ -3,14 +3,6 @@ import { Link } from "react-router-dom";
 import projects from "../data/projectsData";
 
 const ProjectList = ({ is3DView } ) => {
-  const hoverClasses = [
-    "hover:text-lime-600",
-    "hover:text-pink-600",
-    "hover:text-yellow-500",
-    "hover:text-cyan-600",
-    "hover:text-orange-600",
-  ];
-
   return (
     <div
       className={`${
@@ -27,7 +19,7 @@ const ProjectList = ({ is3DView } ) => {
           >
             <div className={`${ is3DView ? "text-4xl" : "hidden"}`}>📄</div>
             <h3
-              className={`mb-1 ${ is3DView ? "text-sm" : "text-4xl hover:scale-[103%] transition duration-300"} ${hoverClasses[index % hoverClasses.length]} transition`}
+              className={`mb-1 ${ is3DView ? "text-sm" : "text-4xl hover:scale-[103%] transition duration-300"} transition`}
             >
               {title} {wip && <span>(wip)</span>}
             </h3>

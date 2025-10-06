@@ -24,7 +24,7 @@ const ProjectPage = () => {
     <div className="min-h-screen px-6 py-20 max-w-6xl mx-auto space-y-10">
       <Link
         to="/"
-        className="inline-block px-4 py-2 text-xs font-bold uppercase tracking-wider border rounded-full hover:transition-all duration-200 mb-8"
+        className="inline-block px-4 py-2 text-xs font-bold uppercase tracking-wider hover:transition-all duration-200 mb-8"
       >
         ← Back
       </Link>
@@ -42,7 +42,7 @@ const ProjectPage = () => {
         <div className="flex space-x-4">
           <a
             href={project.github}
-            className="px-4 py-2 text-xs font-semibold uppercase border rounded-full hover:transition duration-200"
+            className="px-4 py-2 text-xs font-semibold uppercase hover:transition duration-200"
           >
             GitHub
           </a>
