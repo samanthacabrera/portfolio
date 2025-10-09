@@ -18,7 +18,7 @@ const ProjectList = ({ is3DView } ) => {
             className="flex flex-col px-6 text-lg"
           >
             <h3
-              className="text-4xl font-medium hover:scale-[103%] transition duration-300 transition mb-1"
+              className="text-4xl font-medium hover:scale-[103%] transition-all duration-300 transition mb-1"
             >
               {title} {wip && <span>(wip)</span>}
             </h3>

@@ -30,13 +30,16 @@ function About() {
         <div className="max-w-4xl w-full space-y-16 relative">
           <div className="animate-fade-in-up">
             <h1 className="text-4xl md:text-6xl uppercase text-left tracking-wider font-semibold p-6">
-              Welcome to <span className="underline decoration-wavy decoration-indigo-400">samoontha.com</span>
+              Welcome to{" "}
+              <span className="underline decoration-wavy decoration-indigo-400 transition-all duration-300 ease-in-out hover:-rotate-1 hover:scale-[103%] inline-block">
+                samoontha.com
+              </span>
             </h1>
           </div>
 
           <div className="space-y-12 px-4">
             <div className="animate-fade-in-up group">
-              <div className="bg-white/15 backdrop-blur-md border-4 border-indigo-300 rounded-3xl shadow-[6px_6px_0_0_rgba(11,5,91,0.8)] p-8 hover:shadow-[10px_10px_0_0_rgba(11,5,91,0.8)] hover:scale-102 active:translate-y-0.5 transition-all duration-300 cursor-pointer border-dashed">
+              <div className="bg-white/15 backdrop-blur-md border-dashed border-4 border-indigo-300 rounded-3xl shadow-[6px_6px_0_0_rgba(11,5,91,0.8)] p-8 hover:shadow-[10px_10px_0_0_rgba(11,5,91,0.8)] hover:scale-102 active:translate-y-0.5 transition-all duration-300">
                 <div className="space-y-8 text-lg leading-relaxed font-semibold tracking-tight">
                   <p className="text-balance">
                     Hello world, my name is Sam.

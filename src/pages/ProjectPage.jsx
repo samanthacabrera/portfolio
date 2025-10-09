@@ -22,7 +22,7 @@ const ProjectPage = () => {
 
   return (
     <div className="min-h-screen px-4 py-10 flex flex-col items-center">
-      <div className="w-full max-w-md bg-white/10 border-4 border-indigo-300 rounded-3xl shadow-[6px_6px_0_0_rgba(11,5,91,0.8)] p-6 space-y-8">
+      <div className="w-full max-w-md bg-white/10 border-dashed border-4 border-indigo-300 rounded-3xl shadow-[6px_6px_0_0_rgba(11,5,91,0.8)] p-6 space-y-8 hover:shadow-[10px_10px_0_0_rgba(11,5,91,0.8)] hover:scale-102 active:translate-y-0.5 transition-all duration-300">
 
         <Link
           to="/"
@@ -124,36 +124,6 @@ const ProjectPage = () => {
           </div>
         </div>
       </div>
-
-      {/* Other Projects 
-      <div className="w-full max-w-md mt-10">
-        <h3 className="text-sm uppercase font-extrabold tracking-widest mb-4">
-          Other Projects
-        </h3>
-
-        <ul className="grid grid-cols-2 gap-4">
-          {projects
-            .filter((proj) => proj.id !== project.id)
-            .map((proj, index) => (
-              <li
-                key={proj.id}
-                className={
-                  "relative p-4 text-center rounded-2xl bg-white/50 border-4 border-indigo-300 border-dashed " +
-                  "shadow-[6px_6px_0_0_rgba(11,5,91,0.8)] " +
-                  "transform transition-all duration-300 " +
-                  "hover:rotate-0 hover:scale-105 hover:bg-white/70 active:translate-y-0.5"
-                }
-              >
-                <Link
-                  to={`/projects/${proj.id}`}
-                  className="text-sm font-extrabold inline-block w-full"
-                >
-                  {proj.title}
-                </Link>
-              </li>
-            ))}
-        </ul>
-      </div> */}
     </div>
   );
 };
