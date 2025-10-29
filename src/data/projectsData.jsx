@@ -4,7 +4,7 @@ const projects = [
         title: "Knotty & Nice",
         github: "https://github.com/samanthacabrera/crochet-club",
         link: "https://samanthacabrera.github.io/crochet-club/",
-        wip: true,
+        wip: false,
         deployed: true,
         year: "2025",
         contribution: "Sole Developer",
@@ -83,6 +83,24 @@ const projects = [
     },
     {
         id: 5,
+        title: "Pomodoro Timer",
+        github: "https://github.com/samanthacabrera/pomodoro",
+        link: "",
+        wip: false,
+        deployed: true,
+        year: "2025",
+        contribution: "Sole Developer",
+        tags: ["Productivity", "Web App", "UX/UI"],
+        projectType: "Time Management Tool",
+        techStack: ["React", "Vite", "Tailwind CSS"],
+        features: [
+             "Start, pause, and reset controls with clear timer display.",
+             "Responsive design for use on desktop and mobile devices."
+        ],
+        insights: "Building the Pomodoro Timer helped me practice precise state management in React, particularly in handling timers and intervals. I also focused on creating a minimal and distraction-free UI to enhance user productivity.",
+    },
+    {
+        id: 6,
         title: "Recipe Roots",
         github: "https://github.com/samanthacabrera/recipe-roots",
         link: "",
