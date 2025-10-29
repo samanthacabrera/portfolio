@@ -68,7 +68,7 @@ const projects = [
         github: "https://github.com/samanthacabrera/swiftle",
         link: "https://samanthacabrera.github.io/swiftle/",
         wip: false,
-        deployed: true,
+        deployed: false,
         year: "2025",
         contribution: "Sole Developer",
         tags: ["Game", "Web App", "UX/UI"],
