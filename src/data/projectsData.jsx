@@ -85,7 +85,7 @@ const projects = [
         id: 5,
         title: "Pomodoro Timer",
         github: "https://github.com/samanthacabrera/pomodoro",
-        link: "",
+        link: "https://samanthacabrera.github.io/pomodoro/",
         wip: false,
         deployed: true,
         year: "2025",
