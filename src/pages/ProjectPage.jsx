@@ -26,7 +26,7 @@ const ProjectPage = () => {
 
         <Link
           to="/"
-          className="inline-block text-xs font-extrabold uppercase tracking-wider hover:underline transition-all duration-200"
+          className="inline-block text-xs font-extrabold uppercase tracking-wider hover:scale-105 hover:translate-x-1 transition-all duration-200"
         >
           ← Back
         </Link>
@@ -45,7 +45,7 @@ const ProjectPage = () => {
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2 text-xs font-extrabold uppercase rounded-full border-4 border-indigo-300 bg-pink-100 hover:bg-pink-200 active:translate-y-0.5 transition-all duration-200 shadow-[3px_3px_0_0_rgba(11,5,91,0.8)]"
+            className="px-5 py-2 text-xs font-extrabold uppercase rounded-full border-4 border-indigo-300 bg-pink-200 active:translate-y-0.5 transition-all duration-200 hover:shadow-[3px_3px_0_0_rgba(11,5,91,0.8)]"
           >
             GitHub
           </a>
@@ -54,7 +54,7 @@ const ProjectPage = () => {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2 text-xs font-extrabold uppercase rounded-full border-4 border-indigo-300 bg-orange-100 hover:bg-orange-200 active:translate-y-0.5 transition-all duration-200 shadow-[3px_3px_0_0_rgba(11,5,91,0.8)]"
+              className="px-5 py-2 text-xs font-extrabold uppercase rounded-full border-4 border-indigo-300 bg-orange-200 active:translate-y-0.5 transition-all duration-200 hover:shadow-[3px_3px_0_0_rgba(11,5,91,0.8)]"
             >
               Live Site
             </a>

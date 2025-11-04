@@ -1,24 +1,24 @@
 const projects = [
-    {
-        id: 1,
-        title: "Knotty & Nice",
-        github: "https://github.com/samanthacabrera/crochet-club",
-        link: "https://samanthacabrera.github.io/crochet-club/",
-        wip: false,
-        deployed: true,
-        year: "2025",
-        contribution: "Sole Developer",
-        description: "A social crafting club web app for crafting enthusiasts. Users can view upcoming meetings, learn about the club, and easily get directions to events.",
-        tags: ["UX/UI", "Frontend", "SEO" ],
-        projectType: "Crafting Club Web App",
-        techStack: ["React", "Vite", "Tailwind CSS"],
-        features: [
-            "Fully bilingual interface with seamless switching for English and Dutch speakers.",
-            "Responsive and visually appealing design for both desktop and mobile.",
-            "Social sharing integration for major social networks and direct link copying."
-        ],
-        insights: "This project was a fun challenge in creating a minimal yet colorful design that still feels engaging. I also learned how to implement seamless English-to-Dutch translations, which I’m happy about since most visitors to the site will speak Dutch. Balancing simplicity and functionality was a rewarding part of this project.",
-    },
+    // {
+    //     id: 1,
+    //     title: "Knotty & Nice",
+    //     github: "https://github.com/samanthacabrera/crochet-club",
+    //     link: "https://samanthacabrera.github.io/crochet-club/",
+    //     wip: false,
+    //     deployed: true,
+    //     year: "2025",
+    //     contribution: "Sole Developer",
+    //     description: "A social crafting club web app for crafting enthusiasts. Users can view upcoming meetings, learn about the club, and easily get directions to events.",
+    //     tags: ["UX/UI", "Frontend", "SEO" ],
+    //     projectType: "Crafting Club Web App",
+    //     techStack: ["React", "Vite", "Tailwind CSS"],
+    //     features: [
+    //         "Fully bilingual interface with seamless switching for English and Dutch speakers.",
+    //         "Responsive and visually appealing design for both desktop and mobile.",
+    //         "Social sharing integration for major social networks and direct link copying."
+    //     ],
+    //     insights: "This project was a fun challenge in creating a minimal yet colorful design that still feels engaging. I also learned how to implement seamless English-to-Dutch translations, which I’m happy about since most visitors to the site will speak Dutch. Balancing simplicity and functionality was a rewarding part of this project.",
+    // },
     {
         id: 2,
         title: "Hand Motion Tracker",
@@ -72,7 +72,7 @@ const projects = [
         year: "2025",
         contribution: "Sole Developer",
         tags: ["Game", "Web App", "UX/UI"],
-        projectType: "Music-Based Word Game",
+        projectType: "Song Matching Game",
         techStack: ["React", "Vite", "Tailwind CSS"],
         features: [
             "Simple game inspired by NYT's Wordle with Taylor Swift songs grouped into hidden categories for players to identify.",
