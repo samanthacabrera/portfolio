@@ -58,7 +58,7 @@ function About() {
                     When the weather permits, I love to go on picnics and hike. I am in constant pursuit of new experiences, embracing the richness that life has to offer.
                   </p>
 
-                  <p className="text-balance">Feel free to check out my recent work below.</p>
+                  <p className="text-balance">Feel free to check out my projects below.</p>
                 </div>
               </div>
             </div>
