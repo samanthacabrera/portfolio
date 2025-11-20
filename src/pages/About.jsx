@@ -39,15 +39,15 @@ function About() {
 
           <div className="space-y-12 px-4">
             <div className="animate-fade-in-up group">
-              <div className="bg-white/15 backdrop-blur-md border-dashed border-4 border-indigo-300 rounded-3xl shadow-[6px_6px_0_0_rgba(11,5,91,0.8)] p-8 hover:shadow-[10px_10px_0_0_rgba(11,5,91,0.8)] hover:scale-102 active:translate-y-0.5 transition-all duration-300">
+              <div className="bg-white/15 backdrop-blur-md border-dashed border-4 border-indigo-300 rounded-3xl p-8 hover:shadow-[6px_6px_0_0_rgba(11,5,91,0.8)] hover:scale-102 active:translate-y-0.5 transition-all duration-300">
                 <div className="space-y-8 text-lg leading-relaxed font-semibold tracking-tight">
                   <p className="text-balance">
                     Hello world, my name is Sam.
                   </p>
 
                   <p className="text-balance">
-                    I'm a full-stack software engineer, specializing in 3D web development. 
-                    I’m self-taught and I code simply because I enjoy it. Programming has always been a space where I get to create without limits.
+                    I’m a self-taught, hobbyist software developer who codes simply for the joy of it.
+                    Programming has always been a space where I get to create without limits.
                     I'm passionate about creating digital solutions that combine creativity and functionality. 
                     Through this fusion, I find fulfillment and purpose in my work.
                   </p>
