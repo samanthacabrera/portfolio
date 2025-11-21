@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Patrick+Hand&display=swap");
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
@@ -8,6 +9,15 @@ html {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(180, 234, 250);
+  font-family: "Patrick Hand", sans-serif;
+  letter-spacing: 1px;
   color: rgb(11, 5, 91);
+  background-color: rgb(180, 234, 250);
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.1) 1px,
+    transparent 12px,
+    transparent 12px
+  );
 }
