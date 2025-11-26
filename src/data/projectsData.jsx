@@ -14,7 +14,7 @@ const projects = [
              "Start, pause, and reset controls with clear timer display.",
              "Responsive design for use on desktop and mobile devices."
         ],
-        insights: "Building the Pomodoro Timer helped me practice precise state management in React, particularly in handling timers and intervals. I also focused on creating a minimal and distraction-free UI to enhance user productivity.",
+        insights: "Building the this tool helped me practice precise state management in React, particularly in handling timers and intervals. I also focused on creating a minimal and distraction-free UI to enhance user productivity.",
     },
     {
         id: 2,
@@ -72,7 +72,7 @@ const projects = [
             "Adjustable animation speed to observe algorithm behavior at different rates."
 
         ],
-        insights: "Building this project gave me a deeper understanding of how sorting algorithms work and how to present them visually. It also allowed me to practice state management in React and improve my understanding of algorithmic performance, especially in terms of time and space complexity.",
+        insights: "Working on this project deepened my appreciation for how sorting algorithms operate and how to make abstract concepts tangible through visualization. It also helped me grow more confident in managing state in React and structuring interactive applications.",
     },
     {
         id: 5,
@@ -90,7 +90,7 @@ const projects = [
             "Search functionality to explore recipes by ingredients, cuisine, or author",
             "Personalized features like saving favorite recipes and creating custom recipe collections."
         ],
-        insights: "Developing Recipe Roots helped me improve my skills in connecting front-end and back-end technologies, especially in handling dynamic content like recipes and user-generated data. Additionally, integrating file uploads for recipe images taught me about cloud storage solutions and optimizing the backend for media handling.",
+        insights: "This project helped me improve my skills in connecting front-end and back-end technologies, especially in handling dynamic content like recipes and user-generated data. Additionally, integrating file uploads for recipe images taught me about cloud storage solutions and optimizing the backend for media handling.",
     },
 ]
 

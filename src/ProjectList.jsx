@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ProjectCard from "./ProjectCard";
-import projects from "../data/projectsData";
+import projects from "./data/projectsData";
 
 const ProjectList = () => {
   const [openProject, setOpenProject] = useState(null);

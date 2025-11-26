@@ -1,6 +1,5 @@
 import About from "./About";
 import ProjectList from "./ProjectList";
-import Footer from "../utils/Footer";
 
 function Home() {
 
@@ -17,7 +16,11 @@ function Home() {
                         {component}
                     </div>
                 ))}
-                <Footer />
+                <p>Made with love by 
+                    <a href="https://github.com/samanthacabrera" target="_blank" rel="noopener noreferrer" className="px-1 hover:italic transition">
+                    Sam Cabrera
+                    </a>
+                </p>
             </div>
         </div>
     );

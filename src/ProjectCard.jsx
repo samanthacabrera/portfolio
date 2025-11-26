@@ -2,7 +2,7 @@ const ProjectCard = ({ project }) => {
   if (!project) return null;
 
   return (
-    <div className="w-full bg-white/50 border-dashed border-4 border-indigo-300 rounded-3xl p-6 space-y-4 transition-all duration-300">
+    <div className="w-full bg-white/50 rounded-3xl p-6 space-y-4 transition-all duration-300">
       <div>
         <h3 className="text-sm uppercase font-extrabold tracking-widest mb-2 underline decoration-wavy decoration-indigo-400">
           Tech Stack
@@ -39,7 +39,7 @@ const ProjectCard = ({ project }) => {
           href={project.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center py-1 px-8 text-xs font-bold uppercase rounded-full border-2 border-indigo-300 bg-pink-200/80 hover:bg-pink-200 transition-all duration-200"
+          className="flex items-center justify-center py-1 px-8 text-xs font-bold uppercase rounded-full border border-[#0b055b] bg-pink-200/80 hover:scale-105 transition-all duration-200"
         >
           GitHub
         </a>
@@ -49,7 +49,7 @@ const ProjectCard = ({ project }) => {
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center py-1 px-8 text-xs font-bold uppercase rounded-full border-2 border-indigo-300 bg-orange-200/80 hover:bg-orange-200 transition-all duration-200"
+            className="flex items-center justify-center py-1 px-8 text-xs font-bold uppercase rounded-full border border-[#0b055b] bg-orange-200/80 hover:scale-105 transition-all duration-200"
           >
             Live Site
           </a>
