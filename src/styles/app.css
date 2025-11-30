@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Patrick+Hand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gaegu&display=swap");
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
@@ -9,8 +10,9 @@ html {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Patrick Hand", sans-serif;
-  letter-spacing: 1px;
+  cursor: url("/cursor.png") 0 0, auto;
+  /* font-family: "Patrick Hand", sans-serif; */
+  font-family: "Gaegu", sans-serif;
   color: #0b055b;
   background-color: rgb(180, 234, 250);
   background-image: repeating-linear-gradient(
@@ -20,4 +22,12 @@ html {
     transparent 12px,
     transparent 12px
   );
+}
+
+button,
+a,
+[role="button"],
+input[type="button"],
+input[type="submit"] {
+  cursor: url("/cursor.png") 0 0, pointer;
 }

@@ -34,7 +34,7 @@ const projects = [
             "Multiple hand tracking capability to detect and track both hands simultaneously."
             
         ],
-        insights: "Developing the Mediapipe hand tracking visualizer introduced me to the world of computer vision and real-time processing. I learned how to integrate third-party libraries into my web applications, optimize performance for real-time interaction, and work with 3D visualization tools.",
+        insights: "This project taught me how to integrate third-party libraries into my web applications, optimize performance for real-time interaction, and work with 3D visualization tools.",
     },
     {
         id: 3,
@@ -56,7 +56,7 @@ const projects = [
     {
         id: 4,
         title: "Algorithm Visualizer",
-        github: "https://github.com/samanthacabrera/sorting-visualizer",
+        github: "https://github.com/samanthacabrera/array-sorting-visualizer",
         link: "https://samanthacabrera.github.io/array-sorting-visualizer/",
         wip: false,
         deployed: true,

@@ -12,11 +12,11 @@ function Home() {
         <div>
             <div className="flex flex-col items-center w-screen space-y-6">
                 {componentCards.map(({ component, key }) => (
-                    <div key={key} className="w-full max-w-4xl px-4">
+                    <div key={key} className="w-full max-w-xl">
                         {component}
                     </div>
                 ))}
-                <p>Made with love by 
+                <p className="py-2">Made with love by 
                     <a href="https://github.com/samanthacabrera" target="_blank" rel="noopener noreferrer" className="px-1 hover:italic transition">
                     Sam Cabrera
                     </a>

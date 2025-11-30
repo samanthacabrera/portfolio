@@ -19,14 +19,14 @@ const ProjectList = () => {
   const sortedYears = Object.keys(projectsByYear).sort((a, b) => b - a);
 
   return (
-    <div className="grid grid-cols-1 gap-4 px-4">
+    <div className="grid grid-cols-1 gap-4 pl-8">
       {sortedYears.map((year) => (
-        <div key={year} className="mb-8">
+        <div key={year} className="mb-2">
           <h2 className="text-2xl font-bold mb-4">{year}</h2>
           {projectsByYear[year].map((project) => {
             const isOpen = openProject === project.id;
             return (
-              <div key={project.id} className="mb-3">
+              <div key={project.id}>
                 <button
                   onClick={() => toggleProject(project.id)}
                   className="w-full text-left flex justify-between items-center"
@@ -35,7 +35,7 @@ const ProjectList = () => {
                     {project.title} {project.wip && <span>(wip)</span>}
                   </h3>
                 </button>
-                <p className="text-xs">{project.projectType}</p>
+                <p className="text-xs pb-1">{project.projectType}</p>
                 <div
                   className={`transition-all duration-300 overflow-hidden ${
                     isOpen ? "max-h-[2000px] opacity-100 mt-4" : "max-h-0 opacity-0"
