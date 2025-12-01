@@ -6,11 +6,11 @@ function About() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center py-6">
+    <div className="flex flex-col items-center justify-center pb-8">
       <div className="max-w-2xl mx-auto w-full space-y-2 md:space-y-6 relative">
 
-        <div className="relative text-center py-12">
-          <p className="text-xl md:text-4xl mb-2 md:mb-6">
+        <div className="title relative text-center pb-12">
+          <p className="text-xl md:text-4xl mb-2">
             Welcome to
           </p>
           <h1 className="text-4xl md:text-6xl tracking-wide">

@@ -1,5 +1,6 @@
 import About from "./About";
 import ProjectList from "./ProjectList";
+import Controls from "./Controls";
 
 function Home() {
 
@@ -10,18 +11,19 @@ function Home() {
 
     return (
         <div>
-            <div className="flex flex-col items-center w-screen space-y-6">
+            <Controls/>
+            <div className="flex flex-grow flex-col items-center justify-center w-screen space-y-6 p-6">
                 {componentCards.map(({ component, key }) => (
                     <div key={key} className="w-full max-w-xl">
                         {component}
                     </div>
                 ))}
-                <p className="py-2">Made with love by 
-                    <a href="https://github.com/samanthacabrera" target="_blank" rel="noopener noreferrer" className="px-1 hover:italic transition">
-                    Sam Cabrera
-                    </a>
-                </p>
             </div>
+            <p className="text-center">Made with love by 
+                <a href="https://github.com/samanthacabrera" target="_blank" rel="noopener noreferrer" className="pl-2 hover:italic transition">
+                Sam Cabrera
+                </a>
+            </p>
         </div>
     );
 }

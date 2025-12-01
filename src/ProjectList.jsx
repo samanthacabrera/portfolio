@@ -19,7 +19,7 @@ const ProjectList = () => {
   const sortedYears = Object.keys(projectsByYear).sort((a, b) => b - a);
 
   return (
-    <div className="grid grid-cols-1 gap-4 pl-8">
+    <div className="grid grid-cols-1 gap-4 px-8">
       {sortedYears.map((year) => (
         <div key={year} className="mb-2">
           <h2 className="text-2xl font-bold mb-4">{year}</h2>
@@ -29,7 +29,7 @@ const ProjectList = () => {
               <div key={project.id}>
                 <button
                   onClick={() => toggleProject(project.id)}
-                  className="w-full text-left flex justify-between items-center"
+                  className="w-full flex justify-between items-center"
                 >
                   <h3 className="text-4xl font-medium hover:scale-[103%] transition-all duration-300">
                     {project.title} {project.wip && <span>(wip)</span>}
