@@ -21,11 +21,3 @@ html {
     transparent 12px
   );
 }
-
-button,
-a,
-[role="button"],
-input[type="button"],
-input[type="submit"] {
-  cursor: url("/cursor-pointer.png") 0 0, pointer;
-}
