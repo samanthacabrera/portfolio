@@ -29,13 +29,13 @@ const ProjectList = () => {
               <div key={project.id}>
                 <button
                   onClick={() => toggleProject(project.id)}
-                  className="w-full flex justify-between items-center"
+                  className="w-full flex justify-between items-center text-left"
                 >
-                  <h3 className="text-4xl font-medium hover:scale-[103%] transition-all duration-300">
+                  <h3 className="text-2xl md:text-4xl font-medium hover:scale-[103%] transition-all duration-300">
                     {project.title} {project.wip && <span>(wip)</span>}
                   </h3>
                 </button>
-                <p className="text-xs pb-1">{project.projectType}</p>
+                <p className="text-sm md:text-xs pb-1">{project.projectType}</p>
                 <div
                   className={`transition-all duration-300 overflow-hidden ${
                     isOpen ? "max-h-[2000px] opacity-100 mt-4" : "max-h-0 opacity-0"

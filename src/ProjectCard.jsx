@@ -39,7 +39,7 @@ const ProjectCard = ({ project }) => {
           href={project.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center py-1 px-8 text-xs font-bold uppercase rounded-full border border-[#0b055b] bg-pink-200/80 hover:scale-105 transition-all duration-200"
+          className="flex items-center justify-center py-1 px-4 md:px-8 text-xs font-bold uppercase rounded-full border border-[#0b055b] bg-pink-200/80 hover:scale-105 transition-all duration-200"
         >
           GitHub
         </a>
@@ -49,7 +49,7 @@ const ProjectCard = ({ project }) => {
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center py-1 px-8 text-xs font-bold uppercase rounded-full border border-[#0b055b] bg-orange-200/80 hover:scale-105 transition-all duration-200"
+            className="flex items-center justify-center py-1 px-4 md:px-8 text-xs font-bold uppercase rounded-full border border-[#0b055b] bg-orange-200/80 hover:scale-105 transition-all duration-200"
           >
             Live Site
           </a>
