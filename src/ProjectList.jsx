@@ -23,26 +23,19 @@ const ProjectList = () => {
       <div className="flex flex-row items-center justify-center relative">
         <button
           onClick={goPrev}
-          className="absolute right-full top-1/2 translate-y-1/2 pr-12 text-4xl z-10 hover:scale-110 transition"
+          className="absolute right-full top-1/2 -translate-y-1/2 pr-12 text-4xl z-10 hover:scale-110 transition"
           aria-label="Previous project"
         >
           ˂
         </button>
 
         <div className="w-full max-w-xl text-center transition-all duration-500">
-          <h3 className="text-3xl font-medium mb-1">
-            {currentProject.title}{" "}
-            {currentProject.wip && <span>(wip)</span>}
-          </h3>
-          <p className="mb-4">
-            {currentProject.projectType}
-          </p>
           <ProjectCard project={currentProject} />
         </div>
 
         <button
           onClick={goNext}
-          className="absolute left-full top-1/2 translate-y-1/2 pl-12 text-4xl z-10 hover:scale-110 transition"
+          className="absolute left-full top-1/2 -translate-y-1/2 pl-12 text-4xl z-10 hover:scale-110 transition"
           aria-label="Next project"
         >
            ˃
@@ -57,8 +50,8 @@ const ProjectList = () => {
             className={`w-2.5 h-2.5 rounded-full transition-all duration-300
               ${
                 index === currentIndex
-                  ? "bg-sky-400 scale-125"
-                  : "bg-sky-400/40 hover:bg-white/70"
+                  ? "bg-white scale-125"
+                  : "bg-white/40"
               }`}
           />
         ))}

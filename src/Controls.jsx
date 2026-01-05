@@ -4,7 +4,7 @@ const cursors = [
   "default",
   "flying cat",
   "seedling",
-  "happy",
+  "wink",
   "shroom",
   "sparkles",
 ];
@@ -32,8 +32,8 @@ export default function Controls() {
       case "seedling":
         document.body.style.cursor = `url("/cursor-seedling.png") 16 16, auto`;
         break;
-      case "happy":
-        document.body.style.cursor = `url("/cursor-happy.png") 16 16, auto`;
+      case "wink":
+        document.body.style.cursor = `url("/cursor-wink.png") 16 16, auto`;
         break;
       case "shroom":
         document.body.style.cursor = `url("/cursor-shroom.png") 16 16, auto`;
@@ -49,7 +49,7 @@ export default function Controls() {
   }, [selectedCursor]);
 
   return (
-    <div className="relative inline-block">
+    <div className="absolute top-0 left-0">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="m-2 px-2 py-1 rounded bg-white/70 hover:bg-white/90 transition"

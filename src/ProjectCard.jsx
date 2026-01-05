@@ -3,6 +3,9 @@ const ProjectCard = ({ project }) => {
 
   return (
     <div className="w-full bg-white/70 rounded-3xl p-6 space-y-4 transition-all duration-300">
+      <h3 className="text-3xl font-medium mb-6">
+        {project.title} {project.wip && <span>(wip)</span>}
+      </h3>
       <div>
         <h3 className="text-sm uppercase font-extrabold tracking-widest mb-2 underline decoration-wavy decoration-indigo-400">
           Tech Stack

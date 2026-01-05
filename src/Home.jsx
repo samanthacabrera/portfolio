@@ -25,26 +25,34 @@ function Home() {
     }
 
     return (
-        <div>
-            <Controls />
-            <div className="absolute top-4 left-1/2 -translate-x-1/2">
-                <h1 className="text-xl md:text-2xl mb-2">
-                    Welcome to Samoontha.com 
-                </h1>
-            </div>
-            <div className="flex flex-col flex-grow justify-center mt-24">
-                {componentCards.map(({ component, key }) => (
-                    <div key={key}>
-                        {component}
-                    </div>
-                ))}
-            </div>
-            <p className="relative bottom-2 left-1/2 -translate-x-1/2 text-center">Made with love by 
-                <a href="https://github.com/samanthacabrera" target="_blank" rel="noopener noreferrer" className="pl-2 hover:italic transition">
-                Sam Cabrera
-                </a>
-            </p>
-        </div>
+<>
+  <div className="h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
+    
+    <Controls />
+
+    {componentCards.map(({ component, key }) => (
+      <section
+        key={key}
+        className="snap-start h-screen w-screen flex justify-center items-center"
+      >
+        {component}
+      </section>
+    ))}
+
+      <p className="text-sm text-center -translate-y-full mb-1">
+        Made with love by
+        <a
+          href="https://github.com/samanthacabrera"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="pl-2 hover:italic transition"
+        >
+          Sam Cabrera
+        </a>
+      </p>
+  </div>
+</>
+
     );
 }
 
