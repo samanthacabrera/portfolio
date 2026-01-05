@@ -1,13 +1,28 @@
+import { useEffect, useState } from "react";
+import Loading from "./Loading";
+import Controls from "./Controls";
 import About from "./About";
 import ProjectList from "./ProjectList";
-import Controls from "./Controls";
 
 function Home() {
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+        setIsLoading(false);
+        }, 7000); 
+
+        return () => clearTimeout(timer);
+    }, []);
 
     const componentCards = [
         { component: <About/>, key: "about" },
         { component: <ProjectList/>, key: "projects" },
     ];
+
+    if (isLoading) {
+        return <Loading />;
+    }
 
     return (
         <div>
