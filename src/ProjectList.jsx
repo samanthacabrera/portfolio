@@ -20,10 +20,10 @@ const ProjectList = () => {
 
   return (
     <div className="w-screen h-screen flex flex-col items-center justify-center relative">
-      <div className="flex flex-row items-center justify-center">
+      <div className="flex flex-row items-center justify-center relative">
         <button
           onClick={goPrev}
-          className="text-4xl pr-8 z-10 hover:scale-110 transition"
+          className="absolute right-full top-1/2 translate-y-1/2 pr-12 text-4xl z-10 hover:scale-110 transition"
           aria-label="Previous project"
         >
           ˂
@@ -42,7 +42,7 @@ const ProjectList = () => {
 
         <button
           onClick={goNext}
-          className="text-4xl pl-8 z-10 hover:scale-110 transition"
+          className="absolute left-full top-1/2 translate-y-1/2 pl-12 text-4xl z-10 hover:scale-110 transition"
           aria-label="Next project"
         >
            ˃

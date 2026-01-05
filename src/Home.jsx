@@ -27,15 +27,12 @@ function Home() {
     return (
         <div>
             <Controls />
-            <div className="title relative text-center pb-12">
-                <p className="text-xl md:text-2xl mb-2">
-                    Welcome to
-                </p>
-                <h1 className="text-4xl md:text-4xl tracking-wide">
-                    SAMOONTHA.COM
+            <div className="absolute top-4 left-1/2 -translate-x-1/2">
+                <h1 className="text-xl md:text-2xl mb-2">
+                    Welcome to Samoontha.com 
                 </h1>
             </div>
-            <div className="flex flex-col flex-grow justify-center">
+            <div className="flex flex-col flex-grow justify-center mt-24">
                 {componentCards.map(({ component, key }) => (
                     <div key={key}>
                         {component}

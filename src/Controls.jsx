@@ -3,6 +3,10 @@ import { useState, useRef, useEffect } from "react";
 const cursors = [
   "default",
   "flying cat",
+  "seedling",
+  "happy",
+  "shroom",
+  "sparkles",
 ];
 
 export default function Controls() {
@@ -24,6 +28,18 @@ export default function Controls() {
     switch (selectedCursor) {
       case "flying cat":
         document.body.style.cursor = `url("/cursor-cat.png") 16 16, auto`;
+        break;
+      case "seedling":
+        document.body.style.cursor = `url("/cursor-seedling.png") 16 16, auto`;
+        break;
+      case "happy":
+        document.body.style.cursor = `url("/cursor-happy.png") 16 16, auto`;
+        break;
+      case "shroom":
+        document.body.style.cursor = `url("/cursor-shroom.png") 16 16, auto`;
+        break;
+      case "sparkles":
+        document.body.style.cursor = `url("/cursor-sparkles.png") 16 16, auto`;
         break;
       case "default":
       default:

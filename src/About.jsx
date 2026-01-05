@@ -12,7 +12,7 @@ function About() {
         <div className="absolute w-[80px] h-[30px] bg-yellow-200 shadow-[2px_2px_0_rgba(0,0,0,0.1)] rotate-[5deg] -top-3.5 -right-4"></div>
 
         <div className="space-y-2 md:space-y-4 text-[#444] text-sm md:text-base leading-7">
-          <p>Hello world, my name is Sam.</p>
+          <p>Hello world, my name is <span className="relative inline-block pl-0.5">Sam.<span className="absolute left-0 -bottom-0 w-full h-[3px] bg-sky-300/50 rounded-full" /></span></p>
           <p>
             I’m a self-taught, hobbyist software developer who codes simply for the joy of it.
             Programming has always been a space where I get to create without limits.
@@ -20,7 +20,7 @@ function About() {
             Through this fusion, I find fulfillment and purpose in my work.
           </p>
           <p>
-            I was born and raised in Southern California. I currently live in Utrecht with my husband Justin and our cat Ares.
+            I was born and raised in Southern California. I currently live in Utrecht with my husband and our sweet cat, Ares.
             In my free time, you can find me practicing yoga, solving puzzles, or watching movies.
             When the weather permits, I love to go on picnics and hike. I am in constant pursuit of new experiences, embracing the richness that life has to offer.
           </p>
