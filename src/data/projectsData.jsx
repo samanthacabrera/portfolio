@@ -88,24 +88,7 @@ const projects = [
 
         ],
         insights: "Working on this project deepened my appreciation for how sorting algorithms operate and how to make abstract concepts tangible through visualization. It also helped me grow more confident in managing state in React and structuring interactive applications.",
-    },
-    {
-        id: 6,
-        title: "Recipe Roots",
-        github: "https://github.com/samanthacabrera/recipe-roots",
-        link: "",
-        wip: false,
-        deployed: false,
-        year: "2024",
-        tags: ["Full-Stack", "Web App", "CRUD"],
-        projectType: "Recipe Sharing Platform",
-        techStack: ["Flask", "SQLAlchemy", "Clerk"],
-        features: [
-            "Search functionality to explore recipes by ingredients, cuisine, or author",
-            "Personalized features like saving favorite recipes and creating custom recipe collections."
-        ],
-        insights: "This project helped me improve my skills in connecting front-end and back-end technologies, especially in handling dynamic content like recipes and user-generated data. Additionally, integrating file uploads for recipe images taught me about cloud storage solutions and optimizing the backend for media handling.",
-    },
+    }
 ]
 
 export default projects;

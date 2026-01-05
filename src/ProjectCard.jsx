@@ -7,7 +7,7 @@ const ProjectCard = ({ project }) => {
         <h3 className="text-sm uppercase font-extrabold tracking-widest mb-2 underline decoration-wavy decoration-indigo-400">
           Tech Stack
         </h3>
-        <ul className="flex flex-wrap gap-2 text-sm">
+        <ul className="flex flex-wrap justify-center gap-2 text-sm">
           {project.techStack.map((tech, i) => (
             <li key={i} className="font-semibold tracking-wide">
               {tech}
@@ -20,7 +20,7 @@ const ProjectCard = ({ project }) => {
         <h3 className="text-sm uppercase font-extrabold tracking-widest mb-2 underline decoration-wavy decoration-indigo-400">
           Features
         </h3>
-        <ul className="list-disc list-inside space-y-1 text-sm font-medium">
+        <ul className="space-y-1 text-sm font-medium">
           {project.features.map((feature, i) => (
             <li key={i}>{feature}</li>
           ))}
@@ -34,12 +34,12 @@ const ProjectCard = ({ project }) => {
         <p className="text-sm leading-relaxed font-medium">{project.insights}</p>
       </div>
 
-      <div className="flex space-x-3">
+      <div className="flex justify-center space-x-3">
         <a
           href={project.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center py-1 px-4 md:px-8 text-xs font-bold uppercase rounded-full border border-[#0b055b] bg-pink-200/80 hover:scale-105 transition-all duration-200"
+          className="flex items-center justify-center  py-1 px-4 md:px-8 text-xs font-bold uppercase rounded-full border border-[#0b055b] bg-pink-200/80 hover:scale-105 transition-all duration-200"
         >
           GitHub
         </a>

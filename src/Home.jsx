@@ -11,15 +11,23 @@ function Home() {
 
     return (
         <div>
-            <Controls/>
-            <div className="flex flex-grow flex-col items-center justify-center w-screen space-y-6 p-6">
+            <Controls />
+            <div className="title relative text-center pb-12">
+                <p className="text-xl md:text-2xl mb-2">
+                    Welcome to
+                </p>
+                <h1 className="text-4xl md:text-4xl tracking-wide">
+                    SAMOONTHA.COM
+                </h1>
+            </div>
+            <div className="flex flex-col flex-grow justify-center">
                 {componentCards.map(({ component, key }) => (
-                    <div key={key} className="w-full max-w-xl">
+                    <div key={key}>
                         {component}
                     </div>
                 ))}
             </div>
-            <p className="text-center">Made with love by 
+            <p className="relative bottom-2 left-1/2 -translate-x-1/2 text-center">Made with love by 
                 <a href="https://github.com/samanthacabrera" target="_blank" rel="noopener noreferrer" className="pl-2 hover:italic transition">
                 Sam Cabrera
                 </a>
