@@ -2,7 +2,7 @@ function About() {
   return (
     <div className="relative flex flex-col items-center w-full max-w-2xl mx-auto">
 
-      <section className="relative w-full space-y-4 md:space-y-6">
+      <section className="relative w-full space-y-4 md:space-y-6 px-4">
         <h2 className="text-4xl md:text-6xl">
           Hello world, I'm Sam
         </h2>

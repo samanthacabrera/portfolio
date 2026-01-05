@@ -1,39 +1,36 @@
 const projects = [
-    {
+        {
         id: 1,
+        title: "Photofolio",
+        github: "https://github.com/samanthacabrera/photofolio",
+        link: "https://samanthacabrera.github.io/photofolio/",
+        wip: true,
+        deployed: true,
+        year: "2026",
+        desc: "Photography Portfolio",
+        techStack: ["React", "Vite", "Tailwind CSS"],
+        features: [
+            "Lightbox modal for viewing images in full size.",
+            "Smooth transitions and hover effects for a modern look."
+
+        ],
+        insights: "I built this project to showcase my husband's photography in a way that feels clean and minimal. I focused on responsive layouts and smooth transitions to ensure the photos load beautifully across devices.",
+    },
+    {
+        id: 2,
         title: "Tomate",
         github: "https://github.com/samanthacabrera/pomodoro",
         link: "https://samanthacabrera.github.io/pomodoro/",
-        wip: true,
+        wip: false,
         deployed: true,
         year: "2025",
-        tags: ["Productivity", "Web App", "UX/UI"],
-        projectType: "Time Management Tool",
+        desc: "Time Management Tool",
         techStack: ["React", "Vite", "Tailwind CSS"],
         features: [
              "Start, pause, and reset controls with clear timer display.",
              "Responsive design for use on desktop and mobile devices."
         ],
         insights: "Building the this tool helped me practice precise state management in React, particularly in handling timers and intervals. I also focused on creating a minimal and distraction-free UI to enhance user productivity.",
-    },
-    {
-        id: 2,
-        title: "Hand Motion Tracker",
-        github: "https://github.com/samanthacabrera/mediapipe-hand-tracker",
-        link: "",
-        wip: false,
-        deployed: false,
-        year: "2025",
-        tags: [ "Computer Vision", "Machine Learning", "Web App"],
-        projectType: "Hand Tracking Visualization",
-        techStack: [ "Mediapipe", "TensorFlow", "JavaScript"],
-        features: [
-            "Real-time hand gesture detection and visualization using Mediapipe.",
-            "Integration with web camera feeds for seamless hand tracking directly in the browser.",
-            "Multiple hand tracking capability to detect and track both hands simultaneously."
-            
-        ],
-        insights: "This project taught me how to integrate third-party libraries into my web applications, optimize performance for real-time interaction, and work with 3D visualization tools.",
     },
     {
         id: 3,
@@ -43,8 +40,7 @@ const projects = [
         wip: false,
         deployed: true,
         year: "2025",
-        tags: ["Game", "Web App", "UX/UI"],
-        projectType: "Song Matching Game",
+        desc: "Song Matching Game",
         techStack: ["React", "Vite", "Tailwind CSS"],
         features: [
             "Responsive and mobile-first design ensuring optimal play on any device.",
@@ -54,20 +50,21 @@ const projects = [
     },
     {
         id: 4,
-        title: "Typing Test",
-        github: "https://github.com/samanthacabrera/typing-test",
-        link: "https://samanthacabrera.github.io/typing-test/",
+        title: "Hand Motion Tracker",
+        github: "https://github.com/samanthacabrera/mediapipe-hand-tracker",
+        link: "",
         wip: false,
-        deployed: true,
+        deployed: false,
         year: "2025",
-        tags: ["Productivity", "Web App", "UX/UI"],
-        projectType: "Typing Practice Tool",
-        techStack: ["React", "Vite", "Tailwind CSS"],
+        desc: "Real-time Motion Tracker",
+        techStack: [ "Mediapipe", "TensorFlow", "JavaScript"],
         features: [
-            "Real-time typing speed (WPM) and accuracy tracking.",
-            "Randomized text passages to practice typing in different contexts.",
+            "Hand gesture detection and visualization using Mediapipe.",
+            "Integration with web camera feeds for hand tracking directly in the browser.",
+            "Capability to detect and track both hands simultaneously."
+            
         ],
-        insights: "This project was just for fun, but it taught me how to handle real-time metrics and update the UI dynamically as users type."
+        insights: "This project taught me how to integrate third-party libraries into my web applications, optimize performance for real-time interaction, and work with 3D visualization tools.",
     },
     {
         id: 5,
@@ -77,8 +74,7 @@ const projects = [
         wip: false,
         deployed: true,
         year: "2025",
-        tags: ["Data Structures", "Animation", "Interactive Learning"],
-        projectType: "Sorting Algorithm Visualizer",
+        desc: "Sorting Algorithm Visualizer",
         techStack: ["React", "Vite", "Tailwind CSS"],
         features: [
             "Interactive visualizations for five popular sorting algorithms.",
@@ -88,6 +84,22 @@ const projects = [
 
         ],
         insights: "Working on this project deepened my appreciation for how sorting algorithms operate and how to make abstract concepts tangible through visualization. It also helped me grow more confident in managing state in React and structuring interactive applications.",
+    },
+    {
+        id: 6,
+        title: "Typing Test",
+        github: "https://github.com/samanthacabrera/typing-test",
+        link: "https://samanthacabrera.github.io/typing-test/",
+        wip: false,
+        deployed: true,
+        year: "2025",
+        desc: "Typing Practice Tool",
+        techStack: ["React", "Vite", "Tailwind CSS"],
+        features: [
+            "Real-time typing speed (WPM) and accuracy tracking.",
+            "Randomized text passages to practice typing in different contexts.",
+        ],
+        insights: "This project was just for fun, but it taught me how to handle real-time metrics and update the UI dynamically as users type."
     }
 ]
 
