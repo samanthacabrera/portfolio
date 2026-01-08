@@ -8,7 +8,7 @@ const projects = [
         deployed: true,
         year: "2026",
         desc: "Photography Portfolio",
-        techStack: ["React", "Vite", "Tailwind CSS"],
+        techStack: ["Framer Motion", "React Router DOM"],
         features: [
             "Lightbox modal for viewing images in full size.",
             "Smooth transitions and hover effects for a modern look."
@@ -25,7 +25,7 @@ const projects = [
         deployed: true,
         year: "2025",
         desc: "Time Management Tool",
-        techStack: ["React", "Vite", "Tailwind CSS"],
+        techStack: ["Vite", "Tailwind CSS"],
         features: [
              "Start, pause, and reset controls with clear timer display.",
              "Responsive design for use on desktop and mobile devices."
@@ -41,7 +41,7 @@ const projects = [
         deployed: true,
         year: "2025",
         desc: "Song Matching Game",
-        techStack: ["React", "Vite", "Tailwind CSS"],
+        techStack: ["Vite", "Tailwind CSS"],
         features: [
             "Responsive and mobile-first design ensuring optimal play on any device.",
             "Real-time feedback to enhance user experience and maintain the flow of the game.",
@@ -57,7 +57,7 @@ const projects = [
         deployed: false,
         year: "2025",
         desc: "Real-time Motion Tracker",
-        techStack: [ "Mediapipe", "TensorFlow", "JavaScript"],
+        techStack: [ "Mediapipe", "TensorFlow" ],
         features: [
             "Hand gesture detection and visualization using Mediapipe.",
             "Integration with web camera feeds for hand tracking directly in the browser.",
@@ -75,7 +75,7 @@ const projects = [
         deployed: true,
         year: "2025",
         desc: "Sorting Algorithm Visualizer",
-        techStack: ["React", "Vite", "Tailwind CSS"],
+        techStack: ["Vite", "Tailwind CSS"],
         features: [
             "Interactive visualizations for five popular sorting algorithms.",
             "Step-by-step animation highlighting the comparisons made by the algorithm.",
@@ -85,22 +85,22 @@ const projects = [
         ],
         insights: "Working on this project deepened my appreciation for how sorting algorithms operate and how to make abstract concepts tangible through visualization. It also helped me grow more confident in managing state in React and structuring interactive applications.",
     },
-    {
-        id: 6,
-        title: "Typing Test",
-        github: "https://github.com/samanthacabrera/typing-test",
-        link: "https://samanthacabrera.github.io/typing-test/",
-        wip: false,
-        deployed: true,
-        year: "2025",
-        desc: "Typing Practice Tool",
-        techStack: ["React", "Vite", "Tailwind CSS"],
-        features: [
-            "Real-time typing speed (WPM) and accuracy tracking.",
-            "Randomized text passages to practice typing in different contexts.",
-        ],
-        insights: "This project was just for fun, but it taught me how to handle real-time metrics and update the UI dynamically as users type."
-    }
+    // {
+    //     id: 6,
+    //     title: "Typing Test",
+    //     github: "https://github.com/samanthacabrera/typing-test",
+    //     link: "https://samanthacabrera.github.io/typing-test/",
+    //     wip: false,
+    //     deployed: true,
+    //     year: "2025",
+    //     desc: "Typing Practice Tool",
+    //     techStack: ["React", "Vite", "Tailwind CSS"],
+    //     features: [
+    //         "Real-time typing speed (WPM) and accuracy tracking.",
+    //         "Randomized text passages to practice typing in different contexts.",
+    //     ],
+    //     insights: "This project was just for fun, but it taught me how to handle real-time metrics and update the UI dynamically as users type."
+    // }
 ]
 
 export default projects;

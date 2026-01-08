@@ -49,7 +49,7 @@ export default function Controls() {
   }, [selectedCursor]);
 
   return (
-    <div className="absolute top-0 left-0">
+    <div className="hidden md:block absolute top-0 left-0">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="m-2 px-2 py-1 rounded bg-white/70 hover:bg-white/90 transition"
