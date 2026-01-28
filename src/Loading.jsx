@@ -1,10 +1,10 @@
 const Loading = () => {
   return (
     <div className="w-screen h-screen flex items-center justify-center">
-      <div className="flex flex-col items-center gap-6">
+      <div className="flex flex-col items-center gap-12">
         
-        <h1 className="text-3xl md:text-4xl font-medium tracking-wide">
-          welcome to samoontha.com
+        <h1 className="text-3xl md:text-4xl font-medium text-center tracking-wide">
+          welcome to <span className="block md:inline">samoontha.com</span>
         </h1>
 
         <div className="flex gap-2">
