@@ -1,71 +1,66 @@
+import { useState } from "react";
+
 const ProjectCard = ({ project }) => {
+  const [open, setOpen] = useState(false);
+
   if (!project) return null;
 
   return (
-    <div className="w-full bg-white/70 rounded-3xl p-6 space-y-5 text-center transition-all duration-300">
-      <div className="font-medium tracking-wide space-y-1">
-        <h3 className="text-4xl font-medium">
+    <article>
+      <button
+        onClick={() => setOpen(!open)}
+        className="text-left w-full"
+      >
+        <h3 className="text-lg md:text-xl font-medium tracking-tight">
           {project.title}
+          <span className="ml-2">{project.year}</span>
           {project.wip && (
-            <span className="ml-1">(wip)</span>
+            <span className="ml-2 text-xs opacity-80">(wip)</span>
           )}
         </h3>
-        <p>{project.desc} · {project.year}</p>
-      </div>
+      </button>
 
-      <div>
-        <h3 className="text-sm uppercase font-extrabold tracking-widest mb-2 underline decoration-wavy decoration-indigo-400">
-          Tech Stack
-        </h3>
-        <ul className="flex flex-wrap justify-center gap-2 text-sm">
-          {project.techStack.map((tech, i) => (
-            <li key={i}>{tech}</li>
-          ))}
-        </ul>
-      </div>
+      <div
+        className={`grid transition-all duration-300 ease-out ${
+          open ? "grid-rows-[1fr] opacity-100 mt-2" : "grid-rows-[0fr] opacity-0"
+        }`}
+      >
+        <div className="overflow-hidden opacity-80">
+          <p>{project.insights}</p>
 
-      <div>
-        <h3 className="text-sm uppercase font-extrabold tracking-widest mb-2 underline decoration-wavy decoration-indigo-400">
-          Features
-        </h3>
-        <ul className="space-y-1 text-sm">
-          {project.features.map((feature, i) => (
-            <li key={i}>{feature}</li>
-          ))}
-        </ul>
-      </div>
+          <div className="space-y-2 text-sm">
+            <ul className="space-y-1">
+              {project.features.slice(0, 3).map((feature, i) => (
+                <li key={i}>— {feature}</li>
+              ))}
+            </ul>
+            
+            <div className="flex gap-4 text-xs uppercase tracking-[0.2em] pt-1">
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-60 transition p-1"
+              >
+                Github
+              </a>
 
-      <div>
-        <h3 className="text-sm uppercase font-extrabold tracking-widest mb-2 underline decoration-wavy decoration-indigo-400">
-          What I Learned
-        </h3>
-        <p className="text-sm leading-relaxed font-medium">
-          {project.insights}
-        </p>
-      </div>
+              {project.deployed && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-60 transition p-1"
+                >
+                  Live
+                </a>
+              )}
+            </div>
 
-      <div className="flex justify-center space-x-3">
-        <a
-          href={project.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center py-1 px-4 md:px-8 text-xs font-bold uppercase rounded-full border border-[#0b055b] bg-pink-200 hover:scale-105 transition-all duration-200"
-        >
-          GitHub
-        </a>
-
-        {project.deployed && (
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center py-1 px-4 md:px-8 text-xs font-bold uppercase rounded-full border border-[#0b055b] bg-orange-200 hover:scale-105 transition-all duration-200"
-          >
-            Live Site
-          </a>
-        )}
+          </div>
+        </div>
       </div>
-    </div>
+    </article>
   );
 };
 
