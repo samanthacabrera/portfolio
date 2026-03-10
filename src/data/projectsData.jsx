@@ -30,7 +30,7 @@ const projects = [
              "Start, pause, and reset controls with clear timer display.",
              "Responsive design for use on desktop and mobile devices."
         ],
-        insights: "Building the this tool helped me practice precise state management in React, particularly in handling timers and intervals. I also focused on creating a minimal and distraction-free UI to enhance user productivity.",
+        insights: "Building the this tool helped me practice handling timers and intervals in React. I also focused on creating a minimal and distraction-free UI to enhance user productivity.",
     },
     {
         id: 3,
@@ -46,7 +46,7 @@ const projects = [
             "Responsive and mobile-first design ensuring optimal play on any device.",
             "Real-time feedback to enhance user experience and maintain the flow of the game.",
         ],
-        insights: "Swiftle challenged me to refine my front-end development skills, particularly in game logic and UI/UX design. I focused on creating dynamic state updates and smooth transitions to make the gameplay intuitive.",
+        insights: "Swiftle challenged me to refine skills in game logic and design. I focused on creating dynamic state updates to make the gameplay intuitive to users.",
     },
     // {
     //     id: 4,
@@ -83,7 +83,7 @@ const projects = [
             "Adjustable animation speed to observe algorithm behavior at different rates."
 
         ],
-        insights: "Working on this project deepened my appreciation for how sorting algorithms operate and how to make abstract concepts tangible through visualization. It also helped me grow more confident in managing state in React and structuring interactive applications.",
+        insights: "Working on this project deepened my appreciation for how sorting algorithms operate and how to make abstract concepts tangible through visualization.",
     },
     {
         id: 6,

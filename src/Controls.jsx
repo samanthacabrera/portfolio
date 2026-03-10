@@ -12,12 +12,16 @@ const cursors = [
 export default function Controls() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedCursor, setSelectedCursor] = useState("default");
-  const modalRef = useRef();
+  const [hoverCursor, setHoverCursor] = useState(null);
+  const buttonRef = useRef();
   const trailRef = useRef([]);
 
   useEffect(() => {
     function handleClickOutside(event) {
-      if (modalRef.current && !modalRef.current.contains(event.target)) {
+      if (
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target)
+      ) {
         setIsOpen(false);
       }
     }
@@ -26,33 +30,25 @@ export default function Controls() {
   }, []);
 
   useEffect(() => {
-    switch (selectedCursor) {
-      case "flying cat":
-        document.body.style.cursor = `url("/cursor-cat.png") 16 16, auto`;
-        break;
-      case "seedling":
-        document.body.style.cursor = `url("/cursor-seedling.png") 16 16, auto`;
-        break;
-      case "wink":
-        document.body.style.cursor = `url("/cursor-wink.png") 16 16, auto`;
-        break;
-      case "shroom":
-        document.body.style.cursor = `url("/cursor-shroom.png") 16 16, auto`;
-        break;
-      case "sparkles":
-        document.body.style.cursor = `url("/cursor-sparkles.png") 16 16, auto`;
-        break;
-      default:
-        document.body.style.cursor = `url("/cursor-default.png") 16 16, auto`;
-        break;
-    }
-  }, [selectedCursor]);
+    const cursorName = hoverCursor || selectedCursor;
+    const cursorsMap = {
+      "flying cat": "/cursor-cat.png",
+      seedling: "/cursor-seedling.png",
+      wink: "/cursor-wink.png",
+      shroom: "/cursor-shroom.png",
+      sparkles: "/cursor-sparkles.png",
+      default: "/cursor-default.png",
+    };
+    document.body.style.cursor = `url("${cursorsMap[cursorName]}") 16 16, auto`;
+  }, [selectedCursor, hoverCursor]);
 
   useEffect(() => {
-    const currentCursor = cursors.find((c) => c.name === selectedCursor);
-    if (!currentCursor || currentCursor.name === "default") return;
-
     const handleMouseMove = (e) => {
+      const currentCursor = cursors.find(
+        (c) => c.name === (hoverCursor || selectedCursor)
+      );
+      if (!currentCursor || currentCursor.name === "default") return;
+
       const trail = document.createElement("div");
       trail.innerText = currentCursor.emoji;
       trail.style.position = "fixed";
@@ -79,20 +75,20 @@ export default function Controls() {
 
     document.addEventListener("mousemove", handleMouseMove);
     return () => document.removeEventListener("mousemove", handleMouseMove);
-  }, [selectedCursor]);
+  }, [selectedCursor, hoverCursor]);
 
   return (
     <div className="hidden md:block absolute top-0 left-0">
-      <button
+      <div
+        ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
-        className="m-2 px-2 py-1 rounded bg-white/70 hover:bg-white/90 transition"
+        className={`m-2 bg-white/70 hover:bg-white/90 transition-all duration-300 ease-out cursor-pointer
+          ${isOpen ? "w-40 p-6 rounded-lg shadow-lg" : "px-2 py-1 rounded"}
+        `}
       >
-        Choose Cursor
-      </button>
-
-      {isOpen && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-30">
-          <div ref={modalRef} className="bg-white p-6 rounded shadow-lg w-80">
+        {!isOpen && "Choose Cursor"}
+        {isOpen && (
+          <div>
             <h2 className="text-lg text-center font-semibold mb-4">
               Choose Cursor
             </h2>
@@ -100,18 +96,26 @@ export default function Controls() {
               {cursors.map((cursor) => (
                 <button
                   key={cursor.name}
-                  onClick={() => setSelectedCursor(cursor.name)}
-                  className={`px-3 py-1 border rounded hover:bg-gray-200 transition ${
-                    selectedCursor === cursor.name ? "bg-gray-300 font-bold" : ""
-                  }`}
+                  onMouseEnter={() => setHoverCursor(cursor.name)}
+                  onMouseLeave={() => setHoverCursor(null)}
+                  onClick={() => {
+                    setSelectedCursor(cursor.name);
+                    setIsOpen(false);
+                  }}
+                  className={`px-3 py-1 border rounded transition 
+                    ${
+                      (selectedCursor === cursor.name || hoverCursor === cursor.name)
+                        ? "bg-gray-300 font-bold"
+                        : "hover:bg-gray-200"
+                    }`}
                 >
                   {cursor.name}
                 </button>
               ))}
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }

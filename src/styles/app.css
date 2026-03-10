@@ -9,7 +9,6 @@ html {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor: url("/cursor-cat.png") 0 0, auto;
   font-family: "Gaegu", sans-serif;
   color: #0b055b;
   background-color: rgb(180, 234, 250);
