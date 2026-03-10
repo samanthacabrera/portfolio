@@ -1,28 +1,19 @@
-import { useState } from "react";
-
-const ProjectCard = ({ project }) => {
-  const [open, setOpen] = useState(false);
-
+const ProjectCard = ({ project, isOpen, onToggle }) => {
   if (!project) return null;
 
   return (
     <article>
-      <button
-        onClick={() => setOpen(!open)}
-        className="text-left w-full"
-      >
+      <button onClick={onToggle} className="text-left w-full">
         <h3 className="text-lg md:text-xl font-medium tracking-tight">
           {project.title}
           <span className="ml-2">{project.year}</span>
-          {project.wip && (
-            <span className="ml-2 text-xs opacity-80">(wip)</span>
-          )}
+          {project.wip && <span className="ml-2 text-xs opacity-80">(wip)</span>}
         </h3>
       </button>
 
       <div
         className={`grid transition-all duration-300 ease-out ${
-          open ? "grid-rows-[1fr] opacity-100 mt-2" : "grid-rows-[0fr] opacity-0"
+          isOpen ? "grid-rows-[1fr] opacity-100 mt-2" : "grid-rows-[0fr] opacity-0"
         }`}
       >
         <div className="overflow-hidden opacity-80">
@@ -34,7 +25,7 @@ const ProjectCard = ({ project }) => {
                 <li key={i}>— {feature}</li>
               ))}
             </ul>
-            
+
             <div className="flex gap-4 text-xs uppercase tracking-[0.2em] pt-1">
               <a
                 href={project.github}
@@ -56,7 +47,6 @@ const ProjectCard = ({ project }) => {
                 </a>
               )}
             </div>
-
           </div>
         </div>
       </div>
