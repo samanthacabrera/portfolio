@@ -48,24 +48,24 @@ const projects = [
         ],
         insights: "Swiftle challenged me to refine my front-end development skills, particularly in game logic and UI/UX design. I focused on creating dynamic state updates and smooth transitions to make the gameplay intuitive.",
     },
-    {
-        id: 4,
-        title: "Hand Motion Tracker",
-        github: "https://github.com/samanthacabrera/mediapipe-hand-tracker",
-        link: "",
-        wip: false,
-        deployed: false,
-        year: "2025",
-        desc: "Real-time Motion Tracker",
-        techStack: [ "Mediapipe", "TensorFlow" ],
-        features: [
-            "Hand gesture detection and visualization using Mediapipe.",
-            "Integration with web camera feeds for hand tracking directly in the browser.",
-            "Capability to detect and track both hands simultaneously."
+    // {
+    //     id: 4,
+    //     title: "Hand Motion Tracker",
+    //     github: "https://github.com/samanthacabrera/mediapipe-hand-tracker",
+    //     link: "",
+    //     wip: false,
+    //     deployed: false,
+    //     year: "2025",
+    //     desc: "Real-time Motion Tracker",
+    //     techStack: [ "Mediapipe", "TensorFlow" ],
+    //     features: [
+    //         "Hand gesture detection and visualization using Mediapipe.",
+    //         "Integration with web camera feeds for hand tracking directly in the browser.",
+    //         "Capability to detect and track both hands simultaneously."
             
-        ],
-        insights: "This project taught me how to integrate third-party libraries into my web applications, optimize performance for real-time interaction, and work with 3D visualization tools.",
-    },
+    //     ],
+    //     insights: "This project taught me how to integrate third-party libraries into my web applications, optimize performance for real-time interaction, and work with 3D visualization tools.",
+    // },
     {
         id: 5,
         title: "Algorithm Visualizer",
