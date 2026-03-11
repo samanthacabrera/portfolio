@@ -2,46 +2,59 @@ import { useState, useRef, useEffect } from "react";
 
 const cursors = [
   { name: "default", emoji: "" },
-  { name: "cat", emoji: "🐱" },
-  { name: "seedling", emoji: "🌱" },
-  { name: "shroom", emoji: "🍄" },
   { name: "sparkles", emoji: "✨" },
+  { name: "shroom", emoji: "🍄" },
+  { name: "seedling", emoji: "🌱" },
+  { name: "berries", emoji: "🫐" },
+  { name: "kitty", emoji: "😿" },
+  { name: "heart", emoji: "💖" },
+  { name: "bumble bee", emoji: "🐝" }
 ];
 
 export default function Controls() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedCursor, setSelectedCursor] = useState("default");
   const [hoverCursor, setHoverCursor] = useState(null);
+
   const buttonRef = useRef();
   const trailRef = useRef([]);
+  const cursorRef = useRef(null);
 
   useEffect(() => {
     function handleClickOutside(event) {
-      if (
-        buttonRef.current &&
-        !buttonRef.current.contains(event.target)
-      ) {
+      if (buttonRef.current && !buttonRef.current.contains(event.target)) {
         setIsOpen(false);
       }
     }
+
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   useEffect(() => {
+    const cursorEl = document.createElement("div");
+    cursorEl.style.position = "fixed";
+    cursorEl.style.pointerEvents = "none";
+    cursorEl.style.transform = "translate(-50%, -50%)";
+    cursorEl.style.fontSize = "24px";
+    cursorEl.style.zIndex = "9999";
+    cursorEl.style.filter = "drop-shadow(0 0 2px rgba(0,0,0,0.3))";
+
+    document.body.appendChild(cursorEl);
+    cursorRef.current = cursorEl;
+
+    return () => {
+      document.body.removeChild(cursorEl);
+    };
+  }, []);
+
+  useEffect(() => {
     const cursorName = hoverCursor || selectedCursor;
 
-    const cursorsMap = {
-      cat: "/cursor-cat.png",
-      seedling: "/cursor-seedling.png",
-      shroom: "/cursor-shroom.png",
-      sparkles: "/cursor-sparkles.png",
-    };
-
     if (cursorName === "default") {
-      document.body.style.cursor = "auto"; 
+      document.body.style.cursor = "auto";
     } else {
-      document.body.style.cursor = `url("${cursorsMap[cursorName]}") 16 16, auto`;
+      document.body.style.cursor = "none";
     }
   }, [selectedCursor, hoverCursor]);
 
@@ -50,7 +63,17 @@ export default function Controls() {
       const currentCursor = cursors.find(
         (c) => c.name === (hoverCursor || selectedCursor)
       );
-      if (!currentCursor || currentCursor.name === "default") return;
+
+      if (!currentCursor) return;
+
+      if (cursorRef.current) {
+        cursorRef.current.style.left = `${e.clientX}px`;
+        cursorRef.current.style.top = `${e.clientY}px`;
+        cursorRef.current.innerText =
+          currentCursor.name === "default" ? "" : currentCursor.emoji;
+      }
+
+      if (currentCursor.name === "default") return;
 
       const trail = document.createElement("div");
       trail.innerText = currentCursor.emoji;
@@ -69,6 +92,7 @@ export default function Controls() {
       setTimeout(() => {
         trail.style.opacity = "0";
         trail.style.transform = "translate(-50%, -50%) scale(0.5)";
+
         setTimeout(() => {
           document.body.removeChild(trail);
           trailRef.current.shift();
@@ -90,11 +114,13 @@ export default function Controls() {
         `}
       >
         {!isOpen && "Choose Cursor"}
+
         {isOpen && (
           <div>
             <h2 className="text-lg text-center font-semibold mb-4">
               Choose Cursor
             </h2>
+
             <div className="flex flex-wrap gap-2">
               {cursors.map((cursor) => (
                 <button
@@ -107,7 +133,8 @@ export default function Controls() {
                   }}
                   className={`px-3 py-1 border rounded transition 
                     ${
-                      (selectedCursor === cursor.name || hoverCursor === cursor.name)
+                      selectedCursor === cursor.name ||
+                      hoverCursor === cursor.name
                         ? "bg-gray-300 font-bold"
                         : "hover:bg-gray-200"
                     }`}
