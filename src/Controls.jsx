@@ -2,9 +2,8 @@ import { useState, useRef, useEffect } from "react";
 
 const cursors = [
   { name: "default", emoji: "" },
-  { name: "flying cat", emoji: "💛" },
+  { name: "cat", emoji: "🐱" },
   { name: "seedling", emoji: "🌱" },
-  { name: "wink", emoji: "😉" },
   { name: "shroom", emoji: "🍄" },
   { name: "sparkles", emoji: "✨" },
 ];
@@ -31,15 +30,19 @@ export default function Controls() {
 
   useEffect(() => {
     const cursorName = hoverCursor || selectedCursor;
+
     const cursorsMap = {
-      "flying cat": "/cursor-cat.png",
+      cat: "/cursor-cat.png",
       seedling: "/cursor-seedling.png",
-      wink: "/cursor-wink.png",
       shroom: "/cursor-shroom.png",
       sparkles: "/cursor-sparkles.png",
-      default: "/cursor-default.png",
     };
-    document.body.style.cursor = `url("${cursorsMap[cursorName]}") 16 16, auto`;
+
+    if (cursorName === "default") {
+      document.body.style.cursor = "auto"; 
+    } else {
+      document.body.style.cursor = `url("${cursorsMap[cursorName]}") 16 16, auto`;
+    }
   }, [selectedCursor, hoverCursor]);
 
   useEffect(() => {
