@@ -5,43 +5,52 @@ import About from "./About";
 import ProjectList from "./ProjectList";
 
 function Home() {
-    const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
+  const [showContent, setShowContent] = useState(false);
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-        setIsLoading(false);
-        }, 4000); 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);  
+      setShowContent(true); 
+    }, 4000); 
 
-        return () => clearTimeout(timer);
-    }, []);
+    return () => clearTimeout(timer);
+  }, []);
 
-    const componentCards = [
-        { component: <About/>, key: "about" },
-        { component: <ProjectList/>, key: "projects" },
-    ];
+  const componentCards = [
+    { component: <About />, key: "about" },
+    { component: <ProjectList />, key: "projects" },
+  ];
 
-    if (isLoading) {
-        return <Loading />;
-    }
-
-    return (
-<>
-  <div className="h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
-    
-    <Controls />
-
-    {componentCards.map(({ component, key }) => (
-      <section
-        key={key}
-        className="snap-start min-h-screen w-screen flex justify-center items-center"
+  return (
+    <div className="relative w-screen h-screen overflow-hidden">
+      
+      <div
+        className={`absolute inset-0 z-50 transition-opacity duration-1000 ${
+          isLoading ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
       >
-        {component}
-      </section>
-    ))}
-  </div>
-</>
+        <Loading />
+      </div>
 
-    );
+      <div
+        className={`h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth transition-opacity duration-1000 ${
+          showContent ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <Controls />
+
+        {componentCards.map(({ component, key }) => (
+          <section
+            key={key}
+            className="snap-start min-h-screen w-screen flex justify-center items-center"
+          >
+            {component}
+          </section>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default Home;

@@ -6,8 +6,8 @@ const cursors = [
   { name: "shroom", emoji: "🍄" },
   { name: "seedling", emoji: "🌱" },
   { name: "berries", emoji: "🫐" },
-  { name: "kitty", emoji: "😿" },
   { name: "heart", emoji: "💖" },
+  { name: "sad kitty", emoji: "😿" },
   { name: "bumble bee", emoji: "🐝" }
 ];
 
