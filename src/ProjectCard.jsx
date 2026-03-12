@@ -3,13 +3,13 @@ const ProjectCard = ({ project, isOpen, onToggle }) => {
 
   return (
     <article>
-      <button onClick={onToggle} className="text-left w-full">
+      <div onClick={onToggle} className="text-left w-full">
         <h3 className="text-lg md:text-xl font-medium tracking-tight">
           {project.title}
           <span className="ml-2">{project.year}</span>
           {project.wip && <span className="ml-2 text-xs opacity-80">(wip)</span>}
         </h3>
-      </button>
+      </div>
 
       <div
         className={`grid transition-all duration-300 ease-out ${

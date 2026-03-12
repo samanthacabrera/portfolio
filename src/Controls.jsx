@@ -112,7 +112,7 @@ export default function Controls() {
       <div
         ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
-        className={`m-2 bg-white/70 hover:bg-white/90 transition-all duration-300 ease-out cursor-pointer
+        className={`cursor-inherit m-2 bg-white/70 hover:bg-white/90 transition-all duration-300 ease-out cursor-pointer
           ${isOpen ? "w-40 p-6 rounded-lg shadow-lg" : "px-2 py-1 rounded"}
         `}
       >
