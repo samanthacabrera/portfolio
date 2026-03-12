@@ -3,12 +3,15 @@ import { useState, useRef, useEffect } from "react";
 const cursors = [
   { name: "default", emoji: "" },
   { name: "sparkles", emoji: "✨" },
+  { name: "berries", emoji: "🫐" },
+  { name: "happy", emoji: "🥰" },
+  { name: "chickie", emoji: "🐥" },
+  { name: "love", emoji: "🫰" },
+  { name: "peace", emoji: "✌️" },
+  { name: "kitty", emoji: "😿" },
+  { name: "bee", emoji: "🐝" },
   { name: "shroom", emoji: "🍄" },
   { name: "seedling", emoji: "🌱" },
-  { name: "berries", emoji: "🫐" },
-  { name: "heart", emoji: "💖" },
-  { name: "sad kitty", emoji: "😿" },
-  { name: "bumble bee", emoji: "🐝" }
 ];
 
 export default function Controls() {
