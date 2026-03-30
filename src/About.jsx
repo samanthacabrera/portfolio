@@ -19,7 +19,7 @@ function About() {
   };
 
   return (
-    <div className="flex flex-col text-left w-full max-w-2xl mx-auto py-8">
+    <div className="flex flex-col text-left w-full max-w-2xl mx-8 md:mx-auto py-8">
       <h2 className="text-4xl md:text-6xl mb-6">
         Hello <HoverEmoji word="world" emoji="🌎" />, I'm <HoverEmoji word="Sam" emoji="🧚🏼" />
       </h2>
