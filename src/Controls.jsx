@@ -19,6 +19,9 @@ export default function Controls() {
   const [selectedCursor, setSelectedCursor] = useState("default");
   const [hoverCursor, setHoverCursor] = useState(null);
 
+  const [bgColor, setBgColor] = useState("#b4eafa");
+  const [textColor, setTextColor] = useState("#0b055b");
+
   const buttonRef = useRef();
   const trailRef = useRef([]);
   const cursorRef = useRef(null);
@@ -33,6 +36,21 @@ export default function Controls() {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
+  useEffect(() => {
+    document.body.style.backgroundColor = bgColor;
+    document.body.style.color = textColor;
+
+    document.body.style.backgroundImage = `
+      repeating-linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.1) 1px,
+        transparent 12px,
+        transparent 12px
+      )
+    `;
+  }, [bgColor, textColor]);
 
   useEffect(() => {
     const cursorEl = document.createElement("div");
@@ -113,38 +131,58 @@ export default function Controls() {
         ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
         className={`cursor-inherit m-2 bg-white/70 hover:bg-white/90 transition-all duration-300 ease-out cursor-pointer
-          ${isOpen ? "w-40 p-6 rounded-lg shadow-lg" : "px-2 py-1 rounded"}
+          ${isOpen ? "w-56 p-6 rounded-lg shadow-lg" : "px-2 py-1 rounded"}
         `}
       >
-        {!isOpen && "Choose Cursor"}
+        {!isOpen && "Customize"}
 
         {isOpen && (
-          <div>
-            <h2 className="text-lg text-center font-semibold mb-4">
-              Choose Cursor
+          <div className="space-y-4">
+            <h2 className="text-lg text-center font-semibold">
+              Customize
             </h2>
 
-            <div className="flex flex-wrap gap-2">
-              {cursors.map((cursor) => (
-                <button
-                  key={cursor.name}
-                  onMouseEnter={() => setHoverCursor(cursor.name)}
-                  onMouseLeave={() => setHoverCursor(null)}
-                  onClick={() => {
-                    setSelectedCursor(cursor.name);
-                    setIsOpen(false);
-                  }}
-                  className={`px-3 py-1 border rounded transition 
-                    ${
-                      selectedCursor === cursor.name ||
-                      hoverCursor === cursor.name
-                        ? "bg-gray-300 font-bold"
-                        : "hover:bg-gray-200"
-                    }`}
-                >
-                  {cursor.name}
-                </button>
-              ))}
+            <div>
+              <h3 className="font-semibold mb-2 text-sm">Cursor</h3>
+              <div className="flex flex-wrap gap-2">
+                {cursors.map((cursor) => (
+                  <button
+                    key={cursor.name}
+                    onMouseEnter={() => setHoverCursor(cursor.name)}
+                    onMouseLeave={() => setHoverCursor(null)}
+                    onClick={() => setSelectedCursor(cursor.name)}
+                    className={`px-2 py-1 border rounded text-xs
+                      ${
+                        selectedCursor === cursor.name ||
+                        hoverCursor === cursor.name
+                          ? "bg-gray-300 font-bold"
+                          : "hover:bg-gray-200"
+                      }`}
+                  >
+                    {cursor.name}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 className="font-semibold mb-2 text-sm">Background</h3>
+              <input
+                type="color"
+                value={bgColor}
+                onChange={(e) => setBgColor(e.target.value)}
+                className="w-full h-8 cursor-pointer"
+              />
+            </div>
+
+            <div>
+              <h3 className="font-semibold mb-2 text-sm">Text</h3>
+              <input
+                type="color"
+                value={textColor}
+                onChange={(e) => setTextColor(e.target.value)}
+                className="w-full h-8 cursor-pointer"
+              />
             </div>
           </div>
         )}
