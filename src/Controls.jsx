@@ -22,20 +22,38 @@ export default function Controls() {
   const [bgColor, setBgColor] = useState("#b4eafa");
   const [textColor, setTextColor] = useState("#0b055b");
 
+  const [draftBgColor, setDraftBgColor] = useState(bgColor);
+  const [draftTextColor, setDraftTextColor] = useState(textColor);
+
   const buttonRef = useRef();
   const trailRef = useRef([]);
   const cursorRef = useRef(null);
 
   useEffect(() => {
+    const savedBg = localStorage.getItem("bgColor");
+    const savedText = localStorage.getItem("textColor");
+    if (savedBg) {
+      setBgColor(savedBg);
+      setDraftBgColor(savedBg);
+    }
+    if (savedText) {
+      setTextColor(savedText);
+      setDraftTextColor(savedText);
+    }
+  }, []);
+
+  useEffect(() => {
     function handleClickOutside(event) {
       if (buttonRef.current && !buttonRef.current.contains(event.target)) {
         setIsOpen(false);
+        setDraftBgColor(bgColor);
+        setDraftTextColor(textColor);
       }
     }
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  }, [bgColor, textColor]);
 
   useEffect(() => {
     document.body.style.backgroundColor = bgColor;
@@ -125,6 +143,13 @@ export default function Controls() {
     return () => document.removeEventListener("mousemove", handleMouseMove);
   }, [selectedCursor, hoverCursor]);
 
+  const handleSave = () => {
+    setBgColor(draftBgColor);
+    setTextColor(draftTextColor);
+    localStorage.setItem("bgColor", draftBgColor);
+    localStorage.setItem("textColor", draftTextColor);
+  };
+
   return (
     <div className="hidden md:block absolute top-0 left-0">
       <div
@@ -137,7 +162,10 @@ export default function Controls() {
         {!isOpen && "Customize"}
 
         {isOpen && (
-          <div className="space-y-4">
+          <div
+            className="space-y-4"
+            onClick={(e) => e.stopPropagation()}
+          >
             <h2 className="text-lg text-center font-semibold">
               Customize
             </h2>
@@ -169,8 +197,8 @@ export default function Controls() {
               <h3 className="font-semibold mb-2 text-sm">Background</h3>
               <input
                 type="color"
-                value={bgColor}
-                onChange={(e) => setBgColor(e.target.value)}
+                value={draftBgColor}
+                onChange={(e) => setDraftBgColor(e.target.value)}
                 className="w-full h-8 cursor-pointer"
               />
             </div>
@@ -179,11 +207,18 @@ export default function Controls() {
               <h3 className="font-semibold mb-2 text-sm">Text</h3>
               <input
                 type="color"
-                value={textColor}
-                onChange={(e) => setTextColor(e.target.value)}
+                value={draftTextColor}
+                onChange={(e) => setDraftTextColor(e.target.value)}
                 className="w-full h-8 cursor-pointer"
               />
             </div>
+
+            <button
+              onClick={handleSave}
+              className="w-full py-2 bg-gray-800 text-white rounded hover:bg-gray-700 text-sm"
+            >
+              Apply
+            </button>
           </div>
         )}
       </div>
