@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 
 const cursors = [
-  { name: "default", emoji: "" },
+  { name: "default", emoji: "🡬" },
   { name: "sparkles", emoji: "✨" },
   { name: "berries", emoji: "🫐" },
   { name: "happy", emoji: "🥰" },
@@ -150,13 +150,24 @@ export default function Controls() {
     localStorage.setItem("textColor", draftTextColor);
   };
 
+  const handleReset = () => {
+    const defaultBg = "#b4eafa";
+    const defaultText = "#0b055b";
+    setBgColor(defaultBg);
+    setTextColor(defaultText);
+    setDraftBgColor(defaultBg);
+    setDraftTextColor(defaultText);
+    localStorage.removeItem("bgColor");
+    localStorage.removeItem("textColor");
+  };
+
   return (
     <div className="hidden md:block absolute top-0 left-0">
       <div
         ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
         className={`cursor-inherit m-2 bg-white/70 hover:bg-white/90 transition-all duration-300 ease-out cursor-pointer
-          ${isOpen ? "w-56 p-6 rounded-lg shadow-lg" : "px-2 py-1 rounded"}
+          ${isOpen ? "w-56 p-6 rounded-xl shadow-lg backdrop-blur" : "px-2 py-1 rounded"}
         `}
       >
         {!isOpen && "Customize"}
@@ -179,7 +190,7 @@ export default function Controls() {
                     onMouseEnter={() => setHoverCursor(cursor.name)}
                     onMouseLeave={() => setHoverCursor(null)}
                     onClick={() => setSelectedCursor(cursor.name)}
-                    className={`px-2 py-1 border rounded text-xs
+                    className={`px-2 py-1 border rounded text-xs transition
                       ${
                         selectedCursor === cursor.name ||
                         hoverCursor === cursor.name
@@ -213,12 +224,20 @@ export default function Controls() {
               />
             </div>
 
-            <button
-              onClick={handleSave}
-              className="w-full py-2 bg-gray-800 text-white rounded hover:bg-gray-700 text-sm"
-            >
-              Apply
-            </button>
+            <div className="flex gap-2 pt-2">
+              <div
+                onClick={handleReset}
+                className="flex-1 py-1.5 text-xs text-center rounded-md border border-gray-300 hover:bg-gray-100 transition"
+              >
+                Reset
+              </div>
+              <div
+                onClick={handleSave}
+                className="flex-1 py-1.5 text-xs text-center rounded-md border border-gray-300 hover:bg-gray-100 transition"
+              >
+                Apply
+              </div>
+            </div>
           </div>
         )}
       </div>
