@@ -18,12 +18,8 @@ export default function Controls() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedCursor, setSelectedCursor] = useState("default");
   const [hoverCursor, setHoverCursor] = useState(null);
-
   const [bgColor, setBgColor] = useState("#b4eafa");
   const [textColor, setTextColor] = useState("#0b055b");
-
-  const [draftBgColor, setDraftBgColor] = useState(bgColor);
-  const [draftTextColor, setDraftTextColor] = useState(textColor);
 
   const buttonRef = useRef();
   const trailRef = useRef([]);
@@ -32,33 +28,23 @@ export default function Controls() {
   useEffect(() => {
     const savedBg = localStorage.getItem("bgColor");
     const savedText = localStorage.getItem("textColor");
-    if (savedBg) {
-      setBgColor(savedBg);
-      setDraftBgColor(savedBg);
-    }
-    if (savedText) {
-      setTextColor(savedText);
-      setDraftTextColor(savedText);
-    }
+    if (savedBg) setBgColor(savedBg);
+    if (savedText) setTextColor(savedText);
   }, []);
 
   useEffect(() => {
     function handleClickOutside(event) {
       if (buttonRef.current && !buttonRef.current.contains(event.target)) {
         setIsOpen(false);
-        setDraftBgColor(bgColor);
-        setDraftTextColor(textColor);
       }
     }
-
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [bgColor, textColor]);
+  }, []);
 
   useEffect(() => {
     document.body.style.backgroundColor = bgColor;
     document.body.style.color = textColor;
-
     document.body.style.backgroundImage = `
       repeating-linear-gradient(
         135deg,
@@ -78,10 +64,8 @@ export default function Controls() {
     cursorEl.style.fontSize = "24px";
     cursorEl.style.zIndex = "9999";
     cursorEl.style.filter = "drop-shadow(0 0 2px rgba(0,0,0,0.3))";
-
     document.body.appendChild(cursorEl);
     cursorRef.current = cursorEl;
-
     return () => {
       document.body.removeChild(cursorEl);
     };
@@ -89,7 +73,6 @@ export default function Controls() {
 
   useEffect(() => {
     const cursorName = hoverCursor || selectedCursor;
-
     if (cursorName === "default") {
       document.body.style.cursor = "auto";
     } else {
@@ -102,7 +85,6 @@ export default function Controls() {
       const currentCursor = cursors.find(
         (c) => c.name === (hoverCursor || selectedCursor)
       );
-
       if (!currentCursor) return;
 
       if (cursorRef.current) {
@@ -131,7 +113,6 @@ export default function Controls() {
       setTimeout(() => {
         trail.style.opacity = "0";
         trail.style.transform = "translate(-50%, -50%) scale(0.5)";
-
         setTimeout(() => {
           document.body.removeChild(trail);
           trailRef.current.shift();
@@ -143,20 +124,11 @@ export default function Controls() {
     return () => document.removeEventListener("mousemove", handleMouseMove);
   }, [selectedCursor, hoverCursor]);
 
-  const handleSave = () => {
-    setBgColor(draftBgColor);
-    setTextColor(draftTextColor);
-    localStorage.setItem("bgColor", draftBgColor);
-    localStorage.setItem("textColor", draftTextColor);
-  };
-
   const handleReset = () => {
     const defaultBg = "#b4eafa";
     const defaultText = "#0b055b";
     setBgColor(defaultBg);
     setTextColor(defaultText);
-    setDraftBgColor(defaultBg);
-    setDraftTextColor(defaultText);
     localStorage.removeItem("bgColor");
     localStorage.removeItem("textColor");
   };
@@ -173,10 +145,7 @@ export default function Controls() {
         {!isOpen && "Customize"}
 
         {isOpen && (
-          <div
-            className="space-y-4"
-            onClick={(e) => e.stopPropagation()}
-          >
+          <div className="space-y-4" onClick={(e) => e.stopPropagation()}>
             <h2 className="text-lg text-center font-semibold">
               Customize
             </h2>
@@ -208,8 +177,12 @@ export default function Controls() {
               <h3 className="font-semibold mb-2 text-sm">Background</h3>
               <input
                 type="color"
-                value={draftBgColor}
-                onChange={(e) => setDraftBgColor(e.target.value)}
+                value={bgColor}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  setBgColor(value);
+                  localStorage.setItem("bgColor", value);
+                }}
                 className="w-full h-8 cursor-pointer"
               />
             </div>
@@ -218,8 +191,12 @@ export default function Controls() {
               <h3 className="font-semibold mb-2 text-sm">Text</h3>
               <input
                 type="color"
-                value={draftTextColor}
-                onChange={(e) => setDraftTextColor(e.target.value)}
+                value={textColor}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  setTextColor(value);
+                  localStorage.setItem("textColor", value);
+                }}
                 className="w-full h-8 cursor-pointer"
               />
             </div>
@@ -230,12 +207,6 @@ export default function Controls() {
                 className="flex-1 py-1.5 text-xs text-center rounded-md border border-gray-300 hover:bg-gray-100 transition"
               >
                 Reset
-              </div>
-              <div
-                onClick={handleSave}
-                className="flex-1 py-1.5 text-xs text-center rounded-md border border-gray-300 hover:bg-gray-100 transition"
-              >
-                Apply
               </div>
             </div>
           </div>
