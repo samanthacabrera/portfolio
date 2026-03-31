@@ -129,6 +129,7 @@ export default function Controls() {
     const defaultText = "#0b055b";
     setBgColor(defaultBg);
     setTextColor(defaultText);
+    setSelectedCursor("default");
     localStorage.removeItem("bgColor");
     localStorage.removeItem("textColor");
   };
@@ -138,7 +139,7 @@ export default function Controls() {
       <div
         ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
-        className={`cursor-inherit m-2 bg-white/70 hover:bg-white/90 transition-all duration-300 ease-out cursor-pointer
+        className={`cursor-inherit m-2 text-[#0b055b] bg-white/70 hover:bg-white/90 transition-all duration-300 ease-out cursor-pointer
           ${isOpen ? "w-56 p-6 rounded-xl shadow-lg backdrop-blur" : "px-2 py-1 rounded"}
         `}
       >
