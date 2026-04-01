@@ -14,7 +14,7 @@ const projects = [
             "Smooth transitions and hover effects for a modern look."
 
         ],
-        insights: "I built this project to showcase my husband's photography in a way that feels clean and minimal. I focused on responsive layouts and smooth transitions to ensure the photos load beautifully across devices.",
+        insights: "I built this project to showcase my husband's photography, I used responsive layouts to ensure the photos load nicely across devices.",
     },
     {
         id: 2,
@@ -27,10 +27,9 @@ const projects = [
         desc: "Time Management Tool",
         techStack: ["Vite", "Tailwind CSS"],
         features: [
-             "Start, pause, and reset controls with clear timer display.",
-             "Responsive design for use on desktop and mobile devices."
-        ],
-        insights: "Building the this tool helped me practice handling timers and intervals in React. I also focused on creating a minimal and distraction-free UI to enhance user productivity.",
+            "Start, pause, and reset controls with clear timer display.",
+            "Minimal UI to reduce distractions and enhance user productivity.",        ],
+        insights: "Building this tool helped me get more comfortable working with timers and intervals in React.",
     },
     {
         id: 3,
@@ -46,7 +45,7 @@ const projects = [
             "Responsive and mobile-first design ensuring optimal play on any device.",
             "Real-time feedback to enhance user experience and maintain the flow of the game.",
         ],
-        insights: "Swiftle challenged me to refine skills in game logic and design. I focused on creating dynamic state updates to make the gameplay intuitive to users.",
+        insights: "I built Swiftle to improve my game logic and design skills while creating a simple and intuitive experience for players.",
     },
     // {
     //     id: 4,
@@ -78,12 +77,10 @@ const projects = [
         techStack: ["Vite", "Tailwind CSS"],
         features: [
             "Interactive visualizations for five popular sorting algorithms.",
-            "Step-by-step animation highlighting the comparisons made by the algorithm.",
-            "Clear, concise explanations for each algorithm.",
-            "Adjustable animation speed to observe algorithm behavior at different rates."
+            "Adjustable animation speed to observe behavior at different rates."
 
         ],
-        insights: "Working on this project deepened my appreciation for how sorting algorithms operate and how to make abstract concepts tangible through visualization.",
+        insights: "Working on this project deepened my understanding for how sorting algorithms operate and how to make abstract concepts tangible through visualization.",
     },
     {
         id: 6,
@@ -99,7 +96,7 @@ const projects = [
             "Real-time typing speed (WPM) and accuracy tracking.",
             "Randomized text passages to practice typing in different contexts.",
         ],
-        insights: "This project was just for fun, but it taught me how to handle real-time metrics and update the UI dynamically as users type."
+        insights: "This project gave me experience managing real-time metrics and updating the UI live as users typed."
     }
 ]
 
