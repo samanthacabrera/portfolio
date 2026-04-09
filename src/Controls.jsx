@@ -18,19 +18,10 @@ export default function Controls() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedCursor, setSelectedCursor] = useState("default");
   const [hoverCursor, setHoverCursor] = useState(null);
-  const [bgColor, setBgColor] = useState("#b4eafa");
-  const [textColor, setTextColor] = useState("#0b055b");
 
   const buttonRef = useRef();
   const trailRef = useRef([]);
   const cursorRef = useRef(null);
-
-  useEffect(() => {
-    const savedBg = localStorage.getItem("bgColor");
-    const savedText = localStorage.getItem("textColor");
-    if (savedBg) setBgColor(savedBg);
-    if (savedText) setTextColor(savedText);
-  }, []);
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -43,20 +34,6 @@ export default function Controls() {
   }, []);
 
   useEffect(() => {
-    document.body.style.backgroundColor = bgColor;
-    document.body.style.color = textColor;
-    document.body.style.backgroundImage = `
-      repeating-linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.2),
-        rgba(255, 255, 255, 0.1) 1px,
-        transparent 12px,
-        transparent 12px
-      )
-    `;
-  }, [bgColor, textColor]);
-
-  useEffect(() => {
     const cursorEl = document.createElement("div");
     cursorEl.style.position = "fixed";
     cursorEl.style.pointerEvents = "none";
@@ -66,6 +43,7 @@ export default function Controls() {
     cursorEl.style.filter = "drop-shadow(0 0 2px rgba(0,0,0,0.3))";
     document.body.appendChild(cursorEl);
     cursorRef.current = cursorEl;
+
     return () => {
       document.body.removeChild(cursorEl);
     };
@@ -73,11 +51,8 @@ export default function Controls() {
 
   useEffect(() => {
     const cursorName = hoverCursor || selectedCursor;
-    if (cursorName === "default") {
-      document.body.style.cursor = "auto";
-    } else {
-      document.body.style.cursor = "none";
-    }
+    document.body.style.cursor =
+      cursorName === "default" ? "auto" : "none";
   }, [selectedCursor, hoverCursor]);
 
   useEffect(() => {
@@ -124,22 +99,12 @@ export default function Controls() {
     return () => document.removeEventListener("mousemove", handleMouseMove);
   }, [selectedCursor, hoverCursor]);
 
-  const handleReset = () => {
-    const defaultBg = "#b4eafa";
-    const defaultText = "#0b055b";
-    setBgColor(defaultBg);
-    setTextColor(defaultText);
-    setSelectedCursor("default");
-    localStorage.removeItem("bgColor");
-    localStorage.removeItem("textColor");
-  };
-
   return (
     <div className="hidden md:block absolute top-0 left-0">
       <div
         ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
-        className={`cursor-inherit m-4 text-[#0b055b] bg-white/80 hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer
+        className={`cursor-inherit m-4 text-[#0b055b] bg-white/80 hover:-translate-y-1 transition-all duration-300 ease-out
           ${isOpen ? "w-56 p-6 rounded-xl shadow-lg backdrop-blur" : "px-2 py-1 rounded"}
         `}
       >
@@ -147,68 +112,28 @@ export default function Controls() {
 
         {isOpen && (
           <div className="space-y-4" onClick={(e) => e.stopPropagation()}>
-            <h2 className="text-lg text-center font-semibold">
-              Customize
+            <h2 className="text-sm md:text-lg text-center">
+              Customize cursor
             </h2>
 
-            <div>
-              <h3 className="font-semibold mb-2 text-sm">Cursor</h3>
-              <div className="flex flex-wrap gap-2">
-                {cursors.map((cursor) => (
-                  <button
-                    key={cursor.name}
-                    onMouseEnter={() => setHoverCursor(cursor.name)}
-                    onMouseLeave={() => setHoverCursor(null)}
-                    onClick={() => setSelectedCursor(cursor.name)}
-                    className={`px-2 py-1 border rounded text-xs transition
-                      ${
-                        selectedCursor === cursor.name ||
-                        hoverCursor === cursor.name
-                          ? "bg-gray-300 font-bold"
-                          : "hover:bg-gray-200"
-                      }`}
-                  >
-                    {cursor.name}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h3 className="font-semibold mb-2 text-sm">Background</h3>
-              <input
-                type="color"
-                value={bgColor}
-                onChange={(e) => {
-                  const value = e.target.value;
-                  setBgColor(value);
-                  localStorage.setItem("bgColor", value);
-                }}
-                className="w-full h-8 cursor-pointer"
-              />
-            </div>
-
-            <div>
-              <h3 className="font-semibold mb-2 text-sm">Text</h3>
-              <input
-                type="color"
-                value={textColor}
-                onChange={(e) => {
-                  const value = e.target.value;
-                  setTextColor(value);
-                  localStorage.setItem("textColor", value);
-                }}
-                className="w-full h-8 cursor-pointer"
-              />
-            </div>
-
-            <div className="flex gap-2 pt-2">
-              <div
-                onClick={handleReset}
-                className="flex-1 py-1.5 text-xs text-center rounded-md border border-gray-300 hover:bg-gray-100 transition"
-              >
-                Reset
-              </div>
+            <div className="flex flex-wrap gap-2">
+              {cursors.map((cursor) => (
+                <button
+                  key={cursor.name}
+                  onMouseEnter={() => setHoverCursor(cursor.name)}
+                  onMouseLeave={() => setHoverCursor(null)}
+                  onClick={() => setSelectedCursor(cursor.name)}
+                  className={`px-2 py-1 border rounded text-xs transition
+                    ${
+                      selectedCursor === cursor.name ||
+                      hoverCursor === cursor.name
+                        ? "bg-gray-300 font-bold"
+                        : "hover:bg-gray-200"
+                    }`}
+                >
+                  {cursor.name}
+                </button>
+              ))}
             </div>
           </div>
         )}
