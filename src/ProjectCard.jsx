@@ -2,7 +2,7 @@ const ProjectCard = ({ project, isOpen, onToggle }) => {
   if (!project) return null;
 
   return (
-    <article>
+    <article className="p-1">
       <div onClick={onToggle} className="text-left w-full">
         <h3 className="text-lg md:text-xl font-medium tracking-tight">
           {project.title}

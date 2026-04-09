@@ -14,7 +14,7 @@ const ProjectList = () => {
       <section className="w-full">
         <div className="flex flex-col divide-y divide-[#0b055b]/30">
           {projects.map((project, index) => (
-            <div key={index} className="py-3 transition-all duration-300 ease-out">
+            <div key={index} className="py-3 hover:scale-[101%] hover:bg-white/30 transition-all duration-300 ease-out">
               <ProjectCard
                 project={project}
                 isOpen={openIndex === index}

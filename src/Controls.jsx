@@ -104,7 +104,7 @@ export default function Controls() {
       <div
         ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
-        className={`cursor-inherit m-4 text-[#0b055b] bg-white/80 hover:-translate-y-1 transition-all duration-300 ease-out
+        className={`cursor-inherit m-4 text-[#0b055b] bg-white/80 hover:scale-[102%] transition-all duration-300 ease-out
           ${isOpen ? "w-56 p-6 rounded-xl shadow-lg backdrop-blur" : "px-2 py-1 rounded"}
         `}
       >
