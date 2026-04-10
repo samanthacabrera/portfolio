@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Gaegu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hubballi&display=swap");
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
@@ -9,7 +10,8 @@ html {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Gaegu", sans-serif;
+  /* font-family: "Gaegu", sans-serif; */
+  font-family: "Hubballi", sans-serif;
   color: #0b055b;
   background-color: #b4eafa;
 }

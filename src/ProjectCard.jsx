@@ -7,7 +7,7 @@ const ProjectCard = ({ project, isOpen, onToggle }) => {
         <h3 className="text-lg md:text-xl font-medium tracking-tight">
           {project.title}
           <span className="ml-2">{project.year}</span>
-          {project.wip && <span className="ml-2 text-xs opacity-80">(wip)</span>}
+          {project.wip && <span className="ml-2 opacity-60">(wip)</span>}
         </h3>
       </div>
 
@@ -31,7 +31,7 @@ const ProjectCard = ({ project, isOpen, onToggle }) => {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:opacity-60 transition p-1"
+                className="hover:font-semibold transition duration-200 p-1 cursor-none"
               >
                 Github
               </a>
@@ -41,7 +41,7 @@ const ProjectCard = ({ project, isOpen, onToggle }) => {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:opacity-60 transition p-1"
+                  className="hover:font-semibold transition duration-200 p-1 cursor-none"
                 >
                   Live
                 </a>
