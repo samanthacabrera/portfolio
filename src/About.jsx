@@ -3,7 +3,7 @@ import React from "react";
 function About() {
   const HoverEmoji = ({ word, emoji, small = false }) => {
     return (
-      <span className="relative inline-block group cursor-pointer mx-1">
+      <span className="relative inline-block group mx-1">
         <span className="transition-opacity duration-300 group-hover:opacity-0">{word}</span>
         <span
           className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 

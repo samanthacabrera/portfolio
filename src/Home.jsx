@@ -1,4 +1,4 @@
-import Controls from "./Controls";
+import Cursor from "./Cursor";
 import About from "./About";
 import ProjectList from "./ProjectList";
 
@@ -13,7 +13,7 @@ function Home() {
     <div className="relative w-screen h-screen overflow-hidden">
     
       <div className="h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth"      >
-        <Controls />
+        <Cursor />
 
         {componentCards.map(({ component, key }) => (
           <section
