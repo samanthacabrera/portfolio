@@ -10,8 +10,8 @@ const ProjectList = () => {
   };
 
   return (
-    <div className="flex flex-col items-center w-full max-w-2xl mx-8 md:mx-auto pb-12">
-      <section className="w-full">
+    <div className="flex flex-col items-center h-screen w-full max-w-2xl mx-8 md:mx-auto">
+      <section className="w-full mt-auto">
         <div className="flex flex-col divide-y divide-[#0b055b]/30">
           {projects.map((project, index) => (
             <div key={index} className="py-3 hover:scale-[101%] hover:bg-white/30 transition-all duration-300 ease-out">
@@ -24,6 +24,7 @@ const ProjectList = () => {
           ))}
         </div>
       </section>
+      <a href="https://github.com/samanthacabrera" target="_blank" rel="noopener noreferrer" className="text-sm mt-auto mb-2 cursor-none hover:-translate-y-0.5 transition">Made with ❤️</a>
     </div>
   );
 };

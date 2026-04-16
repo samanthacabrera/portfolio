@@ -82,22 +82,22 @@ const projects = [
         ],
         insights: "Working on this project deepened my understanding for how sorting algorithms operate and how to make abstract concepts tangible through visualization.",
     },
-    {
-        id: 6,
-        title: "Typing Test",
-        github: "https://github.com/samanthacabrera/typing-test",
-        link: "https://samanthacabrera.github.io/typing-test/",
-        wip: false,
-        deployed: true,
-        year: "2025",
-        desc: "Typing Practice Tool",
-        techStack: ["React", "Vite", "Tailwind CSS"],
-        features: [
-            "Real-time typing speed (WPM) and accuracy tracking.",
-            "Randomized text passages to practice typing in different contexts.",
-        ],
-        insights: "This project gave me experience managing real-time metrics and updating the UI live as users typed."
-    }
+    // {
+    //     id: 6,
+    //     title: "Typing Test",
+    //     github: "https://github.com/samanthacabrera/typing-test",
+    //     link: "https://samanthacabrera.github.io/typing-test/",
+    //     wip: false,
+    //     deployed: true,
+    //     year: "2025",
+    //     desc: "Typing Practice Tool",
+    //     techStack: ["React", "Vite", "Tailwind CSS"],
+    //     features: [
+    //         "Real-time typing speed (WPM) and accuracy tracking.",
+    //         "Randomized text passages to practice typing in different contexts.",
+    //     ],
+    //     insights: "This project gave me experience managing real-time metrics and updating the UI live as users typed."
+    // }
 ]
 
 export default projects;
