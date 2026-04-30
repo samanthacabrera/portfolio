@@ -3,7 +3,7 @@ import React from "react";
 function About() {
   const HoverEmoji = ({ word, emoji, small = false }) => {
     return (
-      <span className="relative inline-block group">
+      <span className="relative inline-block group mx-1">
         <span className="transition-opacity duration-300 group-hover:opacity-0">{word}</span>
         <span
           className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
@@ -25,8 +25,8 @@ function About() {
       </h2>
 
       <p className="mb-4">
-        I’m a <HoverEmoji word="self-taught" emoji="🧪" small /> , hobbyist software <HoverEmoji word="developer" emoji="👩🏽‍💻" small /> who codes simply for the <HoverEmoji word="joy" emoji="😄" small /> of it. 
-        <HoverEmoji word="Programming" emoji="💻" small /> has always been a space where I get to <HoverEmoji word="create" emoji="🖌️" small /> without <HoverEmoji word="limits" emoji="♾️" small />. 
+        I’m a <HoverEmoji word="self-taught" emoji="🧪" small />  software developer who codes simply for the <HoverEmoji word="joy" emoji="😄" small /> of it. 
+        <HoverEmoji word="Programming" emoji="👩🏽‍💻" small /> has always been a space where I get to <HoverEmoji word="create" emoji="🖌️" small /> without <HoverEmoji word="limits" emoji="♾️" small />. 
         I'm <HoverEmoji word="passionate" emoji="❤️‍🔥" small /> about creating digital solutions that combine{" "}
         <HoverEmoji word="creativity" emoji="🎨" small /> and <HoverEmoji word="functionality" emoji="🛠️" small />.
         Through this <HoverEmoji word="fusion" emoji="🤝" small />, I find <HoverEmoji word="fulfillment" emoji="💛" small /> in my work.
