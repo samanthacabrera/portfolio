@@ -24,7 +24,7 @@ const ProjectList = () => {
           ))}
         </div>
       </section>
-      <a href="https://github.com/samanthacabrera" target="_blank" rel="noopener noreferrer" className="text-sm mt-auto mb-2 cursor-none hover:-translate-y-0.5 transition">Made with ❤️</a>
+      <a href="https://github.com/samanthacabrera" target="_blank" rel="noopener noreferrer" className="text-sm mt-auto mb-2 cursor-none hover:scale-95 transition">Made with ❤️</a>
     </div>
   );
 };
