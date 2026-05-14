@@ -3,51 +3,33 @@ import React from "react";
 function About() {
   const HoverEmoji = ({ word, emoji, small = false }) => {
     return (
-      <>
-        <span className="relative hidden md:inline-block group mx-1">
-          <span className="transition-opacity duration-300 group-hover:opacity-0">
-            {word}
-          </span>
-
-          <span
-            className={`
-              absolute top-1/2 left-1/2
-              -translate-x-1/2 -translate-y-1/2
-              scale-90 opacity-0
-              group-hover:opacity-100
-              group-hover:scale-110
-              transition-all duration-300
-              pointer-events-none
-              ${small ? "text-3xl" : "text-6xl"}
-            `}
-          >
-            {emoji}
-          </span>
+      <span className="relative inline-block group mx-1">
+        <span className="transition-opacity duration-300 group-hover:opacity-0">
+          {word}
         </span>
 
-        <span className="relative inline-block md:hidden mx-[2px] pt-1 md:pt-0 align-baseline">
-          <span
-            className={`
-              absolute left-1/4 -translate-x-full -top-3
-              ${small ? "text-lg" : "text-3xl"}
-              animate-[float_3s_ease-in-out_infinite]
-            `}
-          >
-            {emoji}
-          </span>
-
-          <span className="leading-loose">
-            {word}
-          </span>
+        <span
+          className={`
+            absolute top-1/2 left-1/2
+            -translate-x-1/2 -translate-y-1/2
+            scale-90 opacity-0
+            group-hover:opacity-100
+            group-hover:scale-110
+            transition-all duration-300
+            pointer-events-none
+            ${small ? "text-3xl" : "text-6xl"}
+          `}
+        >
+          {emoji}
         </span>
-      </>
+      </span>
     );
   };
 
   return (
     <div className="flex flex-col text-left tracking-wide w-full max-w-2xl mx-8 md:mx-auto">
       <h2 className="text-lg md:text-6xl mb-4">
-        Hello <HoverEmoji word="world" emoji="🌎"/>, I'm{" "}
+        Hello <HoverEmoji word="world" emoji="🌎" />, I'm{" "}
         <HoverEmoji word="Sam" emoji="🧚🏼" />
       </h2>
 
